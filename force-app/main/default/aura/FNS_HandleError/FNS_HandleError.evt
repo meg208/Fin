@@ -1,0 +1,3 @@
+<aura:event type="COMPONENT" description="by this event we handling errors">
+    <aura:attribute name="errorState" type="String"/>
+</aura:event>

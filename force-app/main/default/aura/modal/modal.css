@@ -1,0 +1,33 @@
+.THIS .FNS-modal-container {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+
+.THIS .FNS-slds-modal__header {
+    position: relative;
+    border-top-right-radius:.25rem;
+    border-top-left-radius:.25rem;
+    text-align: center;
+}
+
+.THIS .FNS_modal-content-container {
+    min-height: 50vh;
+    border-radius: 1px;
+}
+
+.THIS .FNS_focusBorderHider {
+    outline: none;
+     padding: 0 2.5rem;
+}
+
+.THIS .FNS-margin-btn {
+    margin-top: -1.7rem;	
+}
+
+.THIS .FNS-slds-modal__header {
+    position: relative;
+    border-top-right-radius:.25rem;
+    border-top-left-radius:.25rem;
+    text-align: center;
+}

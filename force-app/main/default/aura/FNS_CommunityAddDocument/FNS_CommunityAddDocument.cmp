@@ -1,0 +1,167 @@
+<!--*****************************************************************************************
+* @description - Documents on the right panel
+* Child component of - FNS_CommunityComp
+******************************************************************************************-->
+<aura:component controller = "FNS_DocumentUploadController">
+    
+    <!-- START HANDLERS -->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:handler event="force:refreshView" action="{!c.doInit}" />
+    <!-- END HANDLERS -->
+    
+    <!-- START PUBLIC ATTRIBUTES -->
+    <aura:attribute name="uploadedDocumentsList" type="Object[]" />
+    <aura:attribute name="accept" type="List" default="['.txt','.pdf']"/>
+    <aura:attribute type="String[]" name="documentsList" />
+    <aura:attribute name="totalDocumentsCount" type="Integer"/>
+    <aura:attribute name="showSpinner" type="Boolean" default="true"/>
+    <aura:attribute name="docsList" type="Object[]" />
+    <aura:attribute name="isEdit" type="boolean" default="false" />
+    <aura:attribute  name="applicationId" type="String[]"/>
+    <aura:attribute type="String[]" name="documentExtId" />
+    <aura:attribute name="uploaded" type="String" default="false" />
+    <aura:attribute name="documentId" type="String" />
+    <aura:attribute name="documentSelectedExtId" type="String" />
+    <aura:attribute name="spinner" type="Boolean"/>
+    <!-- END PUBLIC ATTRIBUTES -->
+    
+    <!-- START MARKUP -->
+    <div class="slds-card slds-theme_default slds-container slds-m-bottom_small">
+        <lightning:layout verticalAlign="stretch" class="slds-grid_vertical slds-p-around_small">
+            <aura:if isTrue="{!!empty(v.docsList)}">
+                <lightning:layout>
+                    <lightning:layoutItem class="slds-list_horizontal">
+                        <div>
+                            <lightning:icon iconName="utility:copy_to_clipboard" size="x-small" 
+                                            class="fns-custom-icon fns-bg-color"/>
+                            
+                        </div>
+                        <div class="slds-text-heading_small slds-p-left_small slds-p-top_xxx-small">
+                            <b>{#$Label.c.FNS_DOCUMENTS}({!v.docsList.length})</b>
+                        </div>
+                    </lightning:layoutItem>
+                </lightning:layout>
+                &nbsp;
+                <aura:if isTrue="{!v.spinner}">
+                    <lightning:spinner alternativeText="Loading" class="FNS_spinner" variant="brand" size="small"/>
+                </aura:if>
+                <aura:iteration items="{!v.docsList}" var="document" indexVar="index">
+                    <lightning:layout>
+                        <lightning:layoutItem>
+                            <div>
+                                <lightning:icon iconName="doctype:txt" size="x-small" />
+                            </div>
+                        </lightning:layoutItem>
+                        <lightning:layoutItem >
+                            <div class="slds-p-left_small slds-align-middle">
+                                {!document.FNS_FileName__c}
+                            </div>
+                        </lightning:layoutItem>
+                        <lightning:layoutItem class="slds-col_bump-left"> 
+                            <div  class = "slds-p-left_small slds-float--right"  data-record="{!index}" onclick="{!c.getDocumentContentFromCME}">
+                                <lightning:icon iconName="utility:download" size="x-small"  
+                                                tabindex="-1"
+                                                title = "Download"/> &nbsp;&nbsp;&nbsp;
+                                               
+                            </div>
+                        </lightning:layoutItem>     
+                        <lightning:layoutItem>
+                            <div data-value="{!document.FNS_DocumentExtId__c}">
+                                <lightning:buttonMenu aura:id="menu" alternativeText="Show menu"  
+                                                      onselect="{! c.handleSelectMenu }" iconSize="x-small"
+                                                      class="slds-p-top_left"     
+                                                      menuAlignment="top-right"
+                                                      title = "Edit"> 
+                                    
+                                    <lightning:menuItem label="Edit" value="{!document.FNS_DocumentExtId__c}" 
+                                                        aura:id="taskselect"/>
+                                </lightning:buttonMenu>
+                            </div> &nbsp;
+                            
+                        </lightning:layoutItem>
+                    </lightning:layout>
+                    <aura:if isTrue="{!v.isEdit}">
+                        
+                        <!--###### MODAL BOX Start######--> 
+                        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                            <div class="slds-modal__container">
+                                <!-- ###### MODAL BOX HEADER Start ######-->
+                                <header class="slds-modal__header">
+                                    <lightning:buttonIcon iconName="utility:close"
+                                                          onclick="{! c.closeModel }"
+                                                          alternativeText="close"
+                                                          variant="bare-inverse"
+                                                          class="slds-modal__close"/>
+                                    <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">{!$Label.c.FNS_DOCUMENT_EDIT} 
+                                        <span class = "slds-p-left_small">{!v.documentSelectedExtId}
+                                        </span>
+                                    </h2>
+                                </header>
+                                <!--###### MODAL BOX BODY Part Start######-->
+                                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                                    <aura:if isTrue= "{!v.uploaded == 'false'}"> 
+                                        <p class="slds-p-around_medium"><b>{!$Label.c.FNS_DOCUMENT_UPLOAD_DOCS}</b><br></br></p>
+                                        
+                                        <div class="slds-box">
+                                            <lightning:fileUpload multiple="{!v.multiple}" 
+                                                                  accept="{!v.accept}" 
+                                                                  recordId="{!document.Id}" 
+                                                                  onuploadfinished="{!c.handleUploadFinished}" /> 
+                                        </div>
+                                    </aura:if>                                                        
+                                    <aura:if isTrue= "{!v.uploaded == 'true'}">
+                                        Document <b>{!v.fileName} </b> {!$Label.c.FNS_DOCUMENT_DRAG_AND_DROP}
+                                        <br></br><!--TODO Use slds padding class-->
+                                    </aura:if>
+                                    <br></br>  
+                                    <div class = "FNS_headings slds-text-heading_medium slds-p-left_medium">{!$Label.c.FNS_DOCUMENT_DETAILS} 
+                                    </div>
+                                    <br> </br>
+                                    <div class="slds-grid slds-gutters">
+                                        <lightning:layoutItem size="12">
+                                            <div class="slds-col--padded slds-p-left_large">
+                                                <lightning:textarea name="input"  value="" label="Notes/Comments" />
+                                            </div>
+                                        </lightning:layoutItem>
+                                    </div>
+                                </div>
+                                <footer class="slds-modal__footer">
+                                    <lightning:button variant="neutral" 
+                                                      label="Close"
+                                                      title="Close"
+                                                      onclick="{! c.closeModel }"/>
+                                    <span data-value="{!document.FNS_DocumentExtId__c}" class = "slds-p-left_small" onclick="{!c.sendeditToCME}">
+                                        <lightning:button variant="brand" 
+                                                          label="Submit"
+                                                          title="Submit"/>
+                                    </span>
+                                </footer>
+                            </div>
+                        </section>
+                        <div class="{!'slds-backdrop ' + ((v.isActive) ? 'slds-backdrop_open' : 'slds-backdrop_close')}"></div>
+                        <!--###### MODAL BOX Part END Here ######-->
+                        
+                    </aura:if>
+                </aura:iteration>
+                <aura:set attribute="else">
+                    <lightning:layout>
+                        <lightning:layoutItem class="slds-list_horizontal">
+                            <div>
+                                <lightning:icon iconName="utility:copy_to_clipboard" size="x-small" 
+                                                class="fns-custom-icon fns-bg-color"/>
+                                
+                            </div>
+                            <div class="slds-text-heading_small slds-p-left_small slds-p-top_xxx-small">
+                                <b>{!$Label.c.FNS_DOCUMENTS}(0)</b>
+                            </div>
+                        </lightning:layoutItem>
+                    </lightning:layout>
+                    <div class="slds-text-align_center slds-text-color_weak slds-p-around_x-large">
+                        {!$Label.c.FNS_COMMUNITY_NODOCUMENTS}
+                    </div>  
+                </aura:set>
+            </aura:if>
+        </lightning:layout>  
+    </div>
+    <!-- END MARKUP -->
+</aura:component>

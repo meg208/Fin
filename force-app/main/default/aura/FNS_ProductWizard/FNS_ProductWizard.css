@@ -1,0 +1,31 @@
+.THIS .slds-card {
+    position: relative;
+    padding: 0;
+    background: #fff;
+    border: 1px solid #dddbda!important;
+    border-radius: .25rem;
+    background-clip: padding-box;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.1);
+}
+
+.THIS .slds-modal__close{
+    top:-2rem !important;
+}
+
+.THIS .FNS_spinner{
+    background-color: rgba(255, 255, 255, 0.75);
+    margin-top: 45px;
+    margin-bottom: 45px; 
+}
+
+.THIS .fns-fieldset-form-theme{
+    background-color:#F8F8F8 !important;
+}
+
+.THIS .fns_data-table-heading{
+    padding: .5rem 0rem !important;
+}
+
+.THIS .fns_data-table-heading > .THIS .slds-th__action{
+    justify-content: center !important;
+}

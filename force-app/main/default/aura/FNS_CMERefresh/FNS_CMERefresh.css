@@ -1,0 +1,19 @@
+.THIS.fns-CHeader-bold .slds-text-heading_small{
+    font-weight:800 !important;
+}
+.THIS.fns-CHeader-bold .slds-card__header{
+    padding: .75rem 1rem 0 !important;
+    margin: 0 0 .75rem !important;
+}
+
+.THIS .slds-icon-utility-close .slds-icon-text-default {
+    fill: red;
+}
+
+.THIS .slds-icon-utility-check .slds-icon-text-default {
+    fill: green;
+}
+
+.THIS .FNS_ERROR{
+    color: red;
+}

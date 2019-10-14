@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FNS_GuaranteeFieldsValidation</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR(AND(ISBLANK(FNS_GuaranteeDollar__c), ISBLANK(FNS_GuaranteePercent__c)), AND(NOT(ISBLANK(FNS_GuaranteeDollar__c)), NOT(ISBLANK(FNS_GuaranteePercent__c))))</errorConditionFormula>
+    <errorMessage>Please enter either Guarantee Amount or Percentage</errorMessage>
+</ValidationRule>

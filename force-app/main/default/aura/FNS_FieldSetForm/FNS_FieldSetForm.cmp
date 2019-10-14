@@ -1,0 +1,109 @@
+<aura:component controller="FNS_FieldSetFormController" extends="c:FNS_BaseComponent">
+    <aura:attribute name="currentRecordId" type="String" />
+    <aura:attribute name="productId" type="String" />
+    <aura:attribute name="uniqFormId" type="String" />
+    <aura:attribute name="oppRecordId" type="String" />
+    <aura:attribute name="recordTypeId" type="String" />
+    <aura:attribute name="objectName" type="String"/>
+    <aura:attribute name="fields" type="object"/>
+    <aura:attribute name="fieldSet" type="object"/>
+    <aura:attribute name="requiredFields" type="object"/>
+    <aura:attribute name="requiredFldLst" type="object[]"/>
+    <aura:attribute name="objectLabel" type="String"/>
+    <aura:attribute name="moreFields" type="object"/>
+    <aura:attribute name="showMoreFields" type="boolean" />
+    <aura:attribute name="errorLst" type="String[]"/>
+    <aura:attribute name="tableRowCount" type="Integer" default="0"/>
+    <aura:attribute name="createNewLoan" type="boolean" />
+    <aura:attribute name="rowIndex" type="Integer" default="-1"/>
+    <aura:attribute name="rowResponse" type="Object" />
+    <aura:attribute name="isLoanEdit" type="Boolean" />
+    <aura:attribute name="picklistValues" type="object" />
+    <aura:attribute name="loanRowData" type="object" />
+    <aura:attribute name="loanRowIndex" type="Integer" />
+    <aura:attribute name="isCalledAfterEdit" type="Boolean" default="false" />
+    <aura:attribute name="showLoanFields" type="Boolean" default="false"/>
+    <aura:attribute name="objectToSave" type="object" />
+    <aura:attribute name="hasMoreFields" type="boolean" default="true" />
+    <aura:attribute name="requireFieldValidation" type="boolean" default="false" />
+    <aura:attribute name="showBorder" type="Boolean" default="false"/>
+    <aura:attribute name="showDelete" type="Boolean" default="false"/>
+    <aura:attribute name="pricingIndex" type="String"/>
+    <aura:attribute name="scrollToLocation" type="Boolean" default = "false"/>
+    <aura:registerEvent name="getResponseEvent" type="c:FNS_GetResponseEvent"/>
+    <aura:registerEvent name="deletedPricing" type="c:FNS_DeletedPricing"/>
+    <aura:registerEvent name="closeLoanEditorEvent" type="c:FNS_CloseLoanEditorEvent"/>
+    <!-- HANDLERS START-->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    <!-- HANDLERS END-->
+    <!--<aura:handler event="force:refreshView" action="{!c.doInit}" />-->
+    <!--<aura:handler name="recordEditHandler" event="c:FNS_RecordEditEvent" action="{!c.recordEditHandler}" />-->
+
+    <!--EVENTS-->
+    <aura:registerEvent name="baseCompEvent" type="c:FNS_BaseComponentEvent"/>
+    <!--EVENTS-->
+    <aura:method name="saveForm" action="{!c.saveForm}" access="PUBLIC">
+        <aura:attribute name="param" type="Object"/>       
+    </aura:method>
+    
+    <lightning:recordEditForm aura:id="recordForm" 
+                              
+                              objectApiName="{!v.objectName}" 
+                              recordTypeId="{!v.recordTypeId}" 
+                              recordId="{!v.currentRecordId}"
+                              class = "slds-p-bottom_medium"
+                              onsuccess="{!c.handleSuccess}"
+                              onerror="{!c.handleError}"
+                              onsubmit="{!c.handleSubmit}"
+                              onload="{!c.handleLoad}">
+        <div aura:id="fieldSetForm" id="{!v.uniqFormId}" class="{!(v.showBorder == true ? 'slds-box ' :'' ) +'slds-theme_default slds-text-body_regular slds-p-bottom_xx-small fns-scroll fns-fieldset-form-theme'}">
+            <lightning:messages />
+            <lightning:layout horizontalAlign="left" verticalAlign="top" multipleRows="true" class="fns-scroll">
+                <div class=" slds-size_1-of-1" style = "text-align:right;">
+                    <aura:if isTrue="{!v.showDelete}">
+                        <a onclick="{!c.removeCmp}">
+                            <lightning:icon variant="error" iconName="utility:delete" class="slds-icon slds-icon_small" size="x-small" alternativeText="icon"/>
+                        </a>
+                    </aura:if>
+                </div>
+                <aura:iteration items="{! v.fields}" var="field">
+                    <lightning:layoutItem flexibility="auto" size="12" smallDeviceSize="4" mediumDeviceSize="4" largeDeviceSize="4">
+                        <lightning:inputField aura:id="{! field.APIName }" value="{! field.Value }" fieldName="{! field.APIName }" 
+                                              onchange="{!c.setFieldValue}"        
+                                              class="slds-p-top_small slds-m-top_medium" />
+                    </lightning:layoutItem>
+                </aura:iteration>
+            </lightning:layout>
+            
+                <div class="{!(not(empty(v.moreFields))) ? 'slds-show' :'slds-hide'}">
+                    <lightning:button aura:id="btnShowMoreFields" variant="base" iconName="utility:add" iconPosition="left" label="" onclick="{! c.showMoreFields }"/>
+                    <lightning:layout horizontalAlign="left" verticalAlign="top" multipleRows="true" class="{!v.showMoreFields?'':'slds-hide'}">
+                        <aura:iteration items="{!v.moreFields}" var="field">
+                            <lightning:layoutItem flexibility="auto" size="12" smallDeviceSize="4" mediumDeviceSize="4" largeDeviceSize="4">
+                                <lightning:inputField aura:id="{! field.APIName }" value="{! field.Value }" fieldName="{! field.APIName }" 
+                                                      onchange="{!c.setFieldValue}"
+                                                      class="slds-p-top_small slds-m-top_medium" />
+                            </lightning:layoutItem>
+                        </aura:iteration>
+                    </lightning:layout>
+                </div>
+                <aura:if isTrue="{!v.objectLabel=='LOAN'}">
+                    <aura:if isTrue="{!!v.isLoanEdit}">
+                        <div class="slds-align_absolute-center">
+                            <lightning:button label="Cancel" onclick="{!c.cancelLoan}" />
+                            <lightning:button label="Save" type="submit" />
+                        </div>
+                    </aura:if>
+                </aura:if>
+                <lightning:layout horizontalAlign="left" verticalAlign="end" multipleRows="true" class="slds-hide">
+                    <aura:iteration items="{!v.requiredFields}" var="field">
+                        <lightning:layoutItem flexibility="auto" size="12" smallDeviceSize="4" mediumDeviceSize="4" largeDeviceSize="4">
+                            <lightning:inputField aura:id="{! field.APIName }" value="{! field.Value }" fieldName="{! field.APIName }" 
+                                                  class="slds-p-top_small slds-m-top_medium" />
+                        </lightning:layoutItem>
+                    </aura:iteration>
+                </lightning:layout>
+        </div>
+    </lightning:recordEditForm>    
+</aura:component>

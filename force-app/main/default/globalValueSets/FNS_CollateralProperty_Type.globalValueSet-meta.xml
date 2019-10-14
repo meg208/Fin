@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>54048</fullName>
+        <default>false</default>
+        <label>Site-Built</label>
+    </customValue>
+    <customValue>
+        <fullName>54710</fullName>
+        <default>false</default>
+        <label>Atest Property</label>
+    </customValue>
+    <customValue>
+        <fullName>6319</fullName>
+        <default>false</default>
+        <label>1-4 Family</label>
+    </customValue>
+    <customValue>
+        <fullName>6320</fullName>
+        <default>false</default>
+        <label>Agricultural &amp; Farmland</label>
+    </customValue>
+    <customValue>
+        <fullName>6321</fullName>
+        <default>false</default>
+        <label>Auto Dealership</label>
+    </customValue>
+    <customValue>
+        <fullName>6322</fullName>
+        <default>false</default>
+        <label>Condominium - Vertical Construction</label>
+    </customValue>
+    <customValue>
+        <fullName>6323</fullName>
+        <default>false</default>
+        <label>Golf Course</label>
+    </customValue>
+    <customValue>
+        <fullName>6324</fullName>
+        <default>false</default>
+        <label>Hospital</label>
+    </customValue>
+    <customValue>
+        <fullName>6325</fullName>
+        <default>false</default>
+        <label>Hotel/Motel</label>
+    </customValue>
+    <customValue>
+        <fullName>6326</fullName>
+        <default>false</default>
+        <label>Land</label>
+    </customValue>
+    <customValue>
+        <fullName>6327</fullName>
+        <default>false</default>
+        <label>Mobile Home</label>
+    </customValue>
+    <customValue>
+        <fullName>6328</fullName>
+        <default>false</default>
+        <label>Multifamily - Government Programs</label>
+    </customValue>
+    <customValue>
+        <fullName>6329</fullName>
+        <default>false</default>
+        <label>Multifamily - Market Rate Units</label>
+    </customValue>
+    <customValue>
+        <fullName>6424</fullName>
+        <default>false</default>
+        <label>Not Otherwise Identified</label>
+    </customValue>
+    <customValue>
+        <fullName>6425</fullName>
+        <default>false</default>
+        <label>Nursing Home</label>
+    </customValue>
+    <customValue>
+        <fullName>6426</fullName>
+        <default>false</default>
+        <label>Office</label>
+    </customValue>
+    <customValue>
+        <fullName>6427</fullName>
+        <default>false</default>
+        <label>Other Health Care</label>
+    </customValue>
+    <customValue>
+        <fullName>6428</fullName>
+        <default>false</default>
+        <label>Other Land Development</label>
+    </customValue>
+    <customValue>
+        <fullName>6429</fullName>
+        <default>false</default>
+        <label>Other Recreational</label>
+    </customValue>
+    <customValue>
+        <fullName>6430</fullName>
+        <default>false</default>
+        <label>Racetrack</label>
+    </customValue>
+    <customValue>
+        <fullName>6431</fullName>
+        <default>false</default>
+        <label>Retail Centers/Restaurants</label>
+    </customValue>
+    <customValue>
+        <fullName>6432</fullName>
+        <default>false</default>
+        <label>Senior Housing</label>
+    </customValue>
+    <customValue>
+        <fullName>6433</fullName>
+        <default>false</default>
+        <label>Single Family - Vertical Construction</label>
+    </customValue>
+    <customValue>
+        <fullName>6434</fullName>
+        <default>false</default>
+        <label>Single Family Land Development</label>
+    </customValue>
+    <customValue>
+        <fullName>6435</fullName>
+        <default>false</default>
+        <label>Surgery Center</label>
+    </customValue>
+    <customValue>
+        <fullName>6436</fullName>
+        <default>false</default>
+        <label>Warehouse/Industrial</label>
+    </customValue>
+    <description>This field is used to map Property Type in collateral .</description>
+    <masterLabel>CollateralPropertyType</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

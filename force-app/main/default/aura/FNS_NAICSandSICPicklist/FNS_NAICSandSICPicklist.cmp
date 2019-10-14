@@ -1,0 +1,137 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,force:hasRecordId" 
+                controller="FNS_NAICSandSICPicklistController">
+    <aura:attribute name="showSet1" type="Boolean" />
+    <aura:attribute name="options" type="List" />  
+    <aura:attribute name="optionsSet1" type="List"/>
+    <aura:attribute name="optionsSet2" type="List"/>
+    <aura:attribute name="optionsSet3" type="List"/>
+    <aura:attribute name="subCodeOptions" type= "List" />
+    <aura:attribute name="objInfo" type="account" default="{sobjectType : 'Account'}" />
+    <aura:attribute name="code" type="String" />
+    <aura:attribute name="subCode" type="String"/>
+    <aura:attribute name="optionsSic" type="List"/>
+    <aura:attribute name="optionsSicSet1" type="List"/>
+    <aura:attribute name="optionsSicSet2" type="List"/>
+    <aura:attribute name="subSicCodeOptions" type="List"/>
+    <aura:attribute name="sicCodeValue" type="String"/>
+    <aura:attribute name="subSicCode" type="String"/>
+    <aura:attribute name="showSicSet1" type="Boolean" />
+    <aura:attribute name="editClicked" type="Boolean"  default="false"/>
+    <aura:attribute name="accountDetails" type="object" />
+    <aura:attribute name="loaded" type="Boolean" default="false"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/> 
+    <aura:handler event="force:refreshView" action="{!c.doInit}" />
+    <aura:handler name="change" value="{!v.loaded}" action="{!c.itemsChange}"/>
+    
+    
+    
+    <lightning:card  class="slds-card_boundary">
+        <aura:set attribute="title">
+            <span class="slds-text-heading_small slds-text-title_bold FNS_title">
+                {!$Label.c.FNS_NAICS_AND_SIC}
+            </span>
+        </aura:set>
+        <aura:set attribute="actions">     
+            <aura:if isTrue="{!v.editClicked != true}">
+                <lightning:button  label="{!$Label.c.FNS_EDIT}" title="Edit" onclick="{!c.handleEdit}" />
+            </aura:if>
+        </aura:set>
+        
+        <aura:if isTrue="{!v.editClicked}">
+            <aura:if isTrue="{!v.loaded}" >
+                <lightning:spinner alternativeText="Loading" />
+                <aura:set attribute="else">
+                    <div class="slds-text-align_left slds-grid slds-grid--pull-padded slds-gutters">
+                        <div class="slds-col ">
+                            <lightning:layoutItem size="6">            
+                                <lightning:select aura:id="naicsCode" 
+                                                  label="{!$Label.c.FNS_NAICSCODE}"
+                                                  name="FNS_NAICSCode__c" 
+                                                  value="{!v.code}"
+                                                  onchange="{!c.onPicklistSelect}"
+                                                  class="FNS_select slds-p-left_medium \">
+                                    <aura:iteration items="{!v.options}" var="item">
+                                        <option value="{!item.value}" >{!item.value}</option>
+                                    </aura:iteration>
+                                </lightning:select>
+                            </lightning:layoutItem>
+                            <aura:if isTrue="{!v.showSet1}" >
+                                <lightning:layoutItem size="6">                 
+                                    <lightning:select aura:id="naicsSubCode" 
+                                                      label="{!$Label.c.FNS_SUBNAICSCODE}"
+                                                      name="FNS_NAICSCodeSet1__c" 
+                                                      value="{!v.subCode}"
+                                                      onchange="{!c.onSubPicklistSelect}"
+                                                      class="FNS_select slds-p-left_medium">
+                                        <aura:iteration items="{!v.subCodeOptions}" var="item">
+                                            <option value="{!item}" >{!item}</option>
+                                        </aura:iteration>
+                                    </lightning:select>
+                                </lightning:layoutItem>
+                            </aura:if>
+                        </div>
+                        
+                        <div class="slds-col ">
+                            <lightning:layoutItem size="6">            
+                                <lightning:select aura:id="sicCode" 
+                                                  label="{!$Label.c.FNS_SICCode}"
+                                                  name="FNS_SICCode__c" 
+                                                  value="{!v.sicCodeValue}"
+                                                  onchange="{!c.onSicPicklistSelect}"
+                                                  class="FNS_select slds-p-left_medium \">
+                                    <aura:iteration items="{!v.optionsSic}" var="item">
+                                        <option value="{!item.value}" >{!item.value}</option>
+                                    </aura:iteration>
+                                </lightning:select>
+                            </lightning:layoutItem>
+                            <aura:if isTrue="{!v.showSicSet1}" >
+                                <lightning:layoutItem size="6">                 
+                                    <lightning:select aura:id="sicSubCode" 
+                                                      label="{!$Label.c.FNS_SUBSICCODE}"
+                                                      name="FNS_SICCodeSet1__c" 
+                                                      value="{!v.subSicCode}"
+                                                      onchange="{!c.onSicSubPicklistSelect}"
+                                                      class="FNS_select slds-p-left_medium">
+                                        <aura:iteration items="{!v.subSicCodeOptions}" var="item">
+                                            <option value="{!item}" >{!item}</option>
+                                        </aura:iteration>
+                                    </lightning:select>
+                                </lightning:layoutItem>
+                            </aura:if>
+                        </div>
+                    </div>
+                </aura:set>
+            </aura:if>
+            <aura:set attribute="else">
+                <div class=" slds-p-left_medium slds-grid slds-grid--pull-padded slds-gutters">
+                    <div class="slds-col   slds-p-left_medium">
+                        <div class="">{!$Label.c.FNS_NAICSCODE}</div>
+                        <div class="slds-text-title_bold slds-p-vertical_small"> {!v.accountDetails.naicsCode}  </div>
+                        <div class="">{!$Label.c.FNS_SUBNAICSCODE}</div>
+                        <div class="slds-text-title_bold slds-p-vertical_small">{!v.accountDetails.subNaicsCode}  </div>
+                    </div>
+                    <div class="slds-col ">
+                        <div class="slds-p-horizontal_small slds-p-bottom_small">{!$Label.c.FNS_SICCode}</div>
+                        <div class="slds-text-title_bold slds-p-left_small">{!v.accountDetails.sicCode}  </div>
+                        <div class="slds-p-around_small">{!$Label.c.FNS_SUBSICCODE}</div>
+                        <div class="slds-text-title_bold slds-p-left_small">{!v.accountDetails.subSicCode}  </div>
+                    </div>
+                </div>
+            </aura:set>
+        </aura:if>
+        
+        
+        <br></br>
+        <aura:set attribute="footer">
+            <aura:if isTrue="{!v.editClicked}">        
+                <div class="slds-p-left_medium slds-col slds-align_absolute-center ">
+                    <lightning:button label="{!$Label.c.FNS_CANCEL}" title="Cancel" onclick="{!c.handleCancel}" />
+                    <lightning:button variant="brand"  label="{!$Label.c.FNS_SAVE}" title="Save" onclick="{!c.handleSave }" />
+                    
+                </div>
+            </aura:if> 
+        </aura:set>
+    </lightning:card>
+    
+</aura:component>

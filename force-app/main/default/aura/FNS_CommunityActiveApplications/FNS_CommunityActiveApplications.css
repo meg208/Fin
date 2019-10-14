@@ -1,0 +1,22 @@
+.THIS.fns-padding{
+    border-radius: .25rem;
+    box-shadow:-2px 3px 6px 1px rgba(2, 3, 4, .2);
+}
+
+.THIS .fns-font-size{
+    font-size: 0.875rem;
+    color:#000;
+}
+
+.THIS .fns-bg-text-color{
+    background: #7775ed;
+    color: white;
+}
+
+.THIS .fns-cursor-pointer{
+    cursor: pointer;
+}
+.THIS .FNS_Active_app{
+    overflow-y: scroll;
+    height: 37rem;
+}

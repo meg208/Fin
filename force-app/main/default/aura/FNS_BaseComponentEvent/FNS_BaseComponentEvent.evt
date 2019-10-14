@@ -1,0 +1,4 @@
+<aura:event type="COMPONENT" description="Base Component Events" access="global">
+    <aura:attribute name="action" type="String" required="true" description="Specify the action type. Ex: LOAD_STEP" access="global"/>
+    <aura:attribute name="payload" type="Object" description="Pass data as a Object" access="global"/>
+</aura:event>

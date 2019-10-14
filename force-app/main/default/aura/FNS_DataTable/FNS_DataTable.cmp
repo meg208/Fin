@@ -1,0 +1,18 @@
+<aura:component implements="flexipage:availableForAllPageTypes" controller="FNS_DataTableController">
+    <aura:attribute name="rawData" type="Object[]"/>
+    <!--<aura:attribute name="recordId" type="String[]"/>-->
+    <aura:attribute name="objectName" type="String"/>
+    <aura:attribute name="fieldSetName" type="String"/>
+    <aura:attribute name="dataByRecordId" type="Object"/>
+    <aura:attribute name="fieldSetColumns" type="List"/>
+ 	<aura:handler event="force:refreshView" action="{!c.doInit}" />
+    <aura:registerEvent name="recordEditEvent" type="c:FNS_RecordEditEvent"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    <lightning:datatable data="{! v.rawData }" 
+        columns="{! v.fieldSetColumns }" 
+        keyField="Id"
+        hideCheckboxColumn="true"
+		onrowaction="{!c.handleRowAction }"	/>
+    
+</aura:component>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FNS_FinancialAccountTransaction</fullName>
+    <fields>FNS_FinancialAccountTransactionExtId__c</fields>
+    <fields>FNS_FinancialAccount__c</fields>
+    <fields>FNS_Status__c</fields>
+    <fields>FNS_ProductApplication__c</fields>
+    <fields>FNS_LoanPurpose__c</fields>
+    <fields>FNS_Amount__c</fields>
+    <fields>FNS_LoanProductType__c</fields>
+    <label>Loan</label>
+</CompactLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>53977</fullName>
+        <default>false</default>
+        <label>Drive By</label>
+    </customValue>
+    <customValue>
+        <fullName>53978</fullName>
+        <default>false</default>
+        <label>Market Analysis</label>
+    </customValue>
+    <customValue>
+        <fullName>53979</fullName>
+        <default>false</default>
+        <label>Original</label>
+    </customValue>
+    <description>This field set is used to map appraisal type</description>
+    <masterLabel>CollateralAppraisalType</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

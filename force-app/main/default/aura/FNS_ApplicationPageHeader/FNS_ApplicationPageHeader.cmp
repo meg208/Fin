@@ -1,0 +1,96 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,force:hasRecordId" controller="FNS_SubmitApplicationCompController">
+    <aura:attribute name="record" type="Object"
+                    description="The record object to be displayed"/>
+    <aura:attribute name="OpptyRecord" type="Object"
+                    description="A simplified view record object to be displayed"/>
+    <aura:attribute name="recordError" type="String"
+                    description="An error message bound to force:recordData"/>
+    <aura:attribute name="isOpen" type="boolean" default="false"/>
+    <aura:attribute name="message" type="String"/>
+    <aura:attribute name="isDisabled" type="Boolean" default="false"/>
+    <aura:attribute name="spinner" type="boolean" default="false"/>
+     <aura:attribute name="isReadOnly" type="boolean" default="true"/>
+    <aura:attribute name="responseError" type="String"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+	 <aura:handler event="force:refreshView" action="{!c.render}" />
+    <force:recordData aura:id="record"
+                      layoutType="FULL"
+                      recordId="{!v.recordId}"
+                      targetError="{!v.recordError}"
+                      targetRecord="{!v.record}"
+                      targetFields="{!v.OpptyRecord }"
+                      mode="VIEW"/>
+    
+    <div class="slds-page-header">
+        <aura:if isTrue="{!not(empty(v.recordError))}">
+           	<div class="FNS_ERROR">{!v.recordError}</div>	
+        </aura:if>
+         <aura:if isTrue="{!not(empty(v.responseError))}">
+              	<div class="FNS_ERROR">{!v.responseError}</div>	
+             </aura:if>
+        <div class="slds-p-around_xx-small">
+            <div class="slds-grid">
+                <div class="slds-media__figure">
+                    <lightning:icon iconName="standard:opportunity" alternativeText=""/>
+                </div>
+                <div class="slds-media__body">
+                    <p class="slds-line-height_reset">Application</p>
+                    <h1 class="slds-page-header__title slds-m-right_small slds-align-middle slds-truncate" title="My Contacts">{!v.OpptyRecord.Name}</h1>
+                </div>
+                <aura:if isTrue="{!!v.isReadOnly}">
+                    <lightning:button label="Submit Application" onclick="{!c.submit}"/>
+                </aura:if>
+            </div>
+        </div>
+        <ul class="slds-grid slds-page-header__detail-row">
+            <lightning:recordForm recordId="{!v.recordId}"
+                                  objectApiName="Opportunity"
+                                  layoutType="Compact"
+                                  columns="6"
+                                  mode="readonly" />
+        </ul>
+    </div>
+    
+                
+    <aura:if isTrue="{!v.isOpen}">
+        
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open slds-var-p-around_xx-large">
+            
+            <div class="slds-modal__container FNS_submitApplicationModal">
+                
+                <header class="slds-modal__header slds-p-top_large">
+                    <lightning:buttonIcon iconName="utility:close"
+                                          onclick="{! c.closeModel }"
+                                          alternativeText="close"
+                                          variant="bare-inverse"
+                                          class="slds-modal__close slds-button slds-button_icon slds-button_icon-border-inverse"/>
+                    <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">{!$Label.c.FNS_APPLICATION_SUBMIT_HEADER}</h2>
+                
+                </header>
+                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                    <p class="FNS_submitApplicationMessage slds-var-p-around_large">{!v.message} </p>
+                </div>
+                <footer class="slds-modal__footer">
+                    <aura:if isTrue="{!v.spinner}">
+                 <div class="slds-is-relative slds-m-around_small slds-float_right ">
+					<lightning:spinner alternativeText="Loading" variant="brand" size="small" class="FNS_Spinner"/>
+				</div>
+                         <aura:set attribute="else">
+      			<lightning:button variant="neutral" 
+                                      label="Close"
+                                      title="Close"
+                                      onclick="{!c.closeModel }"/>
+                    
+                    <lightning:button variant="brand" 
+                                      label="Yes"
+                                      title="Yes" disabled = "{!v.isDisabled}"
+                                      onclick="{!c.handleYes }"/>
+   				 </aura:set>
+               </aura:if>
+                </footer>
+            </div>
+            <div></div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </aura:if>
+</aura:component>

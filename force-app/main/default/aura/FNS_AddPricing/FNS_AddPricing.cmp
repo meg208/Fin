@@ -1,0 +1,46 @@
+<aura:component >
+	<!-- PUBLIC ATTRIBUTES START-->
+    <aura:attribute name="pricingRow" type="Integer"/>
+    <aura:attribute name="pricingId" type="String" default=""/>
+    <aura:attribute name="objFields" type="object[]"/>
+    <aura:attribute name="objName" type="String"/>
+    <aura:attribute name="financialProduct" type="String"/>
+	<!-- PUBLIC ATTRIBUTES END-->
+	
+	<!-- HANDLERS START-->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:handler event="force:refreshView" action="{!c.doInit}" />
+	<!-- HANDLERS END-->
+	<!-- Aura Method START-->
+    <aura:method name="savePricing" action="{!c.savePricing}" access="PUBLIC">
+        <aura:attribute name="finAccount" type="String"/>
+    </aura:method>
+	<!-- Aura Method END-->
+	
+	<!-- Register Event START-->
+    <aura:registerEvent name="showStatus" type="c:FNS_ShowStatus"/>
+    <aura:registerEvent name="deletedPricing" type="c:FNS_DeletedPricing"/>
+    <!-- Register Event END-->
+	
+	
+	<!-- MARK UP START-->
+    <lightning:recordEditForm aura:id="pricingEditForm"
+                              onsuccess="{!c.handleSuccess}"
+                              recordId="{!v.pricingId}" 
+                              onerror="{!c.onError}"
+                              objectApiName="{!v.objName}">
+        <!-- the messages component is for error messages -->
+        <lightning:messages />
+        
+        <lightning:layout multipleRows="true" class="slds-page-header slds-grid_align-spread slds-p-around_medium">
+            
+          
+            {!v.body}
+            <lightning:inputField aura:id="finProduct" fieldName="{!v.financialProduct}" class="slds-hide"/>
+            
+         
+        </lightning:layout>
+        
+    </lightning:recordEditForm>
+	<!-- MARK UP END-->
+</aura:component>

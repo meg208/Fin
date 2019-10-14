@@ -1,0 +1,87 @@
+<aura:component implements="flexipage:availableForAllPageTypes,forceCommunity:themeLayout,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes" 
+                controller="FNS_CommHomeController">
+    <aura:attribute name="hideUpdateButton" type="Boolean" default="true" />
+    <aura:attribute name="isOpenHome" type="boolean" default="true" />
+    <aura:attribute name="activeApplicationsList" type="Object" />
+    <aura:attribute name="selectedApplication" type="Object" />
+    <aura:attribute name="relatedApplicationRoles" type="Object[]" />
+    <aura:attribute name="relatedTrackingItems" type="Object[]" />
+    <aura:attribute name="relatedDocs" type="Object[]" />
+    <aura:attribute name="showSpinner" type="Boolean" default="true" />
+    <aura:attribute name="isLoading" type="Boolean" default="true" />
+    <aura:attribute name="showComponent" type="Boolean" default="true" />
+    <aura:attribute name="willHandleCompActions" type="String[]" default="['LOAD_APPLICATION_DATA']" />
+    <aura:attribute name="responseError" type="String"/>
+    <aura:handler name="init" action="{!c.doInit}" value="{!this}"/>
+    <aura:handler event="force:refreshView" action="{!c.doInit}" />
+
+    <!--This event handles when each application is clicked for a User-->
+    <aura:handler name="communityCompEvent" event="c:FNS_CommunityCompEvent" action="{!c.handleCommunityCompEvent}" />
+    <aura:handler event="c:FNS_CommunityCompHeaderEvent" action="{!c.handleComponentEvent}"/> 
+    <aura:handler name="change" value="{!v.selectedApplication}" action="{!c.changeApplication}"/>
+
+    <aura:if isTrue="{!v.showComponent}">
+    <div class="slds-box slds-p-bottom_large  boxcontainer">
+        <div class="slds-grid">
+			 <aura:if isTrue="{!not(empty(v.responseError))}">
+                <div class="FNS_ERROR">{!v.responseError}</div>
+                <aura:set attribute="else">
+            <!--Left side panel to fetch list of Applications -->
+            <c:FNS_CommunityActiveApplications activeApplicationsList="{!v.activeApplicationsList}" showSpinner="{!v.showSpinner}"/>
+
+            <div class="slds-large-size_10-of-12 slds-p-left_small">
+                <!--Application Banner to display Application CloseDate, Description, Name-->
+                <c:FNS_CommunityApplicationBanner activeApplication="{!v.selectedApplication}" showSpinner="{!v.showSpinner}"/>
+
+                <!--Application Stage Path-->
+                <div class="slds-col slds-p-top_small slds-p-bottom_small">
+                    <aura:if isTrue="{!v.selectedApplication != null}">
+                        <c:FNS_CommunityPath  selectedRecordStage="{!v.selectedApplication.FNS_ApplicationStage__c}" aura:id="pathValue" />
+                    </aura:if>
+                </div>
+
+                <div class="slds-grid slds-gutters">
+                    <div class="slds-size_7-of-12 slds-p-left_small  ">
+                        <!--Application related tracking items which are assigned to current logged in User-->
+                         <c:FNS_CommunityTrackingItemsComp trackingItemsList = "{!v.relatedTrackingItems}" showSpinner="{!v.showSpinner}" applicationId = "{!v.selectedApplication.FNS_ApplicationExtId__c}"/>
+                    </div>
+                    
+                    <div class="slds-col slds-size_5-of-12 ">
+                        <!--Application Documents-->
+                        <c:FNS_CommunityAddDocument docsList = "{!v.relatedDocs}" applicationId = "{!v.selectedApplication.FNS_ApplicationExtId__c}" showSpinner="{!v.showSpinner}"/>
+                          <!--TODO add slds padding class here-->
+                         <!-- Applicaiton Related Roles-->
+                        <div>
+                          <c:FNS_CommunityAddRelatedRoles applicationRelatedRoleslist="{!v.relatedApplicationRoles}" showSpinner="{!v.showSpinner}"/>
+                        </div>
+                        <lightning:layout class="slds-card slds-theme--default slds-container slds-p-around_small">
+                            <div class="slds-size_12-of-12">
+                                <lightning:layoutItem>
+                                    <!--Quip proposal document-->
+                                    <div class="custom-box">
+                                        <aura:if isTrue="{!v.selectedApplication.FNS_ApplicationQuip__c != undefined}">
+                                                <c:FNS_CommunityProposals  proposalUrl="{!v.selectedApplication.FNS_ApplicationQuip__c}"/> 
+                                            <aura:set attribute="else">
+                                                <c:FNS_CommunityProposals />
+                                            </aura:set>
+                                        </aura:if> 
+                                    </div>
+                                </lightning:layoutItem>
+                            </div>
+                        </lightning:layout>
+                    </div>
+                </div>
+            </div>
+ 				</aura:set>
+            </aura:if> 
+        </div>     
+        <div style="height: 180px;">
+            <div class="slds-docked-form-footer"><!--TODO Custom label-->
+                <p>&copy; Copyright 2019 Finastra. All Rights Reserved.
+                </p>
+            </div>
+        </div>        
+    </div>
+    </aura:if>
+    
+</aura:component>

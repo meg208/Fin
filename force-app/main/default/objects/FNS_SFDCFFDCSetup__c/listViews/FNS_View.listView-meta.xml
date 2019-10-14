@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FNS_View</fullName>
+    <columns>SETUP_OWNER_NAME</columns>
+    <columns>SETUP_TYPE</columns>
+    <columns>FNS_AccessTokenUrl__c</columns>
+    <columns>FNS_ConsumerKey__c</columns>
+    <columns>FNS_ConsumerSecret__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>FNS View</label>
+</ListView>

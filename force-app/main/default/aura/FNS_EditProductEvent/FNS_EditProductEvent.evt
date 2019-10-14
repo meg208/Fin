@@ -1,0 +1,9 @@
+<aura:event type="COMPONENT" description="Event template">
+    <aura:attribute name="productId" type="String"/>
+    <aura:attribute name="productSummary" type="String"/>
+    <aura:attribute name="loanList" type="List"/>
+    <aura:attribute name="roleList" type="List"/>
+    <aura:attribute name="feeList" type="List"/>
+    <aura:attribute name="pricingList" type="List"/>
+    <aura:attribute name="error" type="String"/>
+</aura:event>

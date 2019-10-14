@@ -1,0 +1,36 @@
+.THIS .FNS_PredictiveAnalytics {
+    height: 284px !important;
+}
+.THIS .FNS_popover:hover {
+    
+   right: 0;
+    display: inline;
+    max-width: 300px;
+    visibility: visible;
+    position: absolute;
+    opacity: 1;
+    z-index: 1;
+    top: 1.8rem;
+    min-height: 50px;
+    border-radius: 0rem;
+}
+.THIS .slds-card__body{
+    height: 11.1rem;    
+}
+.THIS .FNS_body{
+    height: 11rem;
+}
+.THIS .FNS_header{
+    font-size : 1rem !important;
+    padding-top: 14px;
+}
+.THIS .FNS_icon{
+    margin-top: 4px; 
+}
+.THIS .container{
+    min-width: 1200 px;
+    width: auto;
+}
+.THIS .FNS_ERROR{
+    color: red;
+}

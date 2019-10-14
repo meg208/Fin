@@ -1,0 +1,60 @@
+.THIS.FNS_clear-both{
+    clear:both;
+}
+.THIS .FNS_dropdown
+{
+    margin-top:-2rem;
+}
+.THIS .FNS_headings{
+        background-color: rgb(243, 242, 242);
+    color: rgb(81, 79, 77);
+    border-bottom: 1px solid #ccc;
+    text-transform:uppercase;
+}
+.THIS .slds-th__action:focus, .THIS .slds-th__action:hover
+{
+        background-color: transparent;
+}
+.THIS.FNS_cardBackground{
+     background-color: rgb(255, 255, 255);
+}
+
+.THIS .showComponent{
+     display:block;
+}
+
+.THIS .hideComponent{
+     display:none;
+}
+.THIS .FNS_font-size
+{
+ font-size:.87rem;   
+}
+.THIS .FNS_prodacc
+{
+    cursor:pointer;
+    font-size:.75rem;
+}
+.THIS .FNS_fontsize87{
+    font-size:.87rem;
+}
+.THIS .FNS_iconcolor {
+    background-color: #F592DF;
+    padding: 0.15rem;
+    color: white;
+}
+.THIS .FNS_iconcolor .slds-icon-text-default{
+    fill:#fff;
+}
+.THIS .FNS_spinner{
+    top:6.5%;
+    bottom:6.5%;
+}
+.THIS .FNS_EditProduct{
+    transform: translateX(-1rem);
+}
+
+.THIS .FNS_ProductRecordList{
+    padding-right: 1rem !important;
+    word-break: break-word !important;
+}

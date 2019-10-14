@@ -1,0 +1,47 @@
+<!--*****************************************************************************************
+* @description Banner for Community
+* Child component of - FNS_CommunityComp
+******************************************************************************************-->
+<aura:component>
+    
+    <!-- START PUBLIC ATTRIBUTES -->
+    <aura:attribute name="activeApplication" type="Object" />
+    <aura:attribute name="showSpinner" type="Boolean" />
+    <!-- END PUBLIC ATTRIBUTES -->
+    
+    <!-- START MARKUP -->
+    <div class="slds-card slds-theme_default slds-container slds-p-bottom_x-small">
+        
+        <aura:if isTrue="{!!v.showSpinner}">
+            <lightning:layout verticalAlign="stretch" class="slds-grid_vertical">            
+                
+                <lightning:layoutItem class="slds-size-12_of-12 fns-application-heading slds-p-around_small slds-text-title_caps">
+                    <b>{!v.activeApplication.FNS_ApplicationName__c}</b>
+                </lightning:layoutItem>
+                
+                <lightning:layoutItem size="12"> 
+                    
+                    <lightning:layout class="slds-p-around_small">
+                        <lightning:layoutItem class="slds-list_vertical" size="3" smallDeviceSize="4">
+                            <div class="fns-weak-font-color">{#$Label.c.FNS_REQUESTED_CLOSING_DATE}</div>
+                            <div>{!empty(v.activeApplication.FNS_ApplicationCloseDate__c) ? '-' : v.activeApplication.FNS_ApplicationCloseDate__c}</div> 
+                        </lightning:layoutItem>             
+                        <lightning:layoutItem class="slds-list_vertical" size="9" smallDeviceSize="8">
+                            <div class="fns-weak-font-color">{#$Label.c.FNS_DESCRIPTION}</div>                         
+                            <div>{!empty(v.activeApplication.FNS_ApplicationDescription__c) ? '-' : v.activeApplication.FNS_ApplicationDescription__c}</div>
+                        </lightning:layoutItem>
+                    </lightning:layout>
+                    
+                </lightning:layoutItem>
+                
+            </lightning:layout>
+            <aura:set attribute="else">
+                <div class="slds-is-relative  slds-p-around_xx-large">
+                    <lightning:spinner variant="brand" size="small" class="slds-m-top_small"/>
+                </div>
+            </aura:set>
+        </aura:if>
+    </div>
+    <!-- END MARKUP -->
+    
+</aura:component>

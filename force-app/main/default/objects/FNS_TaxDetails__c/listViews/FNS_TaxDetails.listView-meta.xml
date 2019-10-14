@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FNS_TaxDetails</fullName>
+    <columns>NAME</columns>
+    <columns>FNS_TaxRegion__c</columns>
+    <columns>FNS_TaxType__c</columns>
+    <columns>OWNER.ALIAS</columns>
+    <columns>CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <label>Tax Details</label>
+</ListView>

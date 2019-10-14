@@ -1,0 +1,58 @@
+.THIS .fns-fieldset-form-theme{
+    background-color:#F8F8F8 !important;
+}
+
+.THIS .slds-icon-text-error{
+    fill : gray !important;
+}
+
+
+.THIS .FNS_DeletePricing{
+    text-align:right;
+    margin : -1% 0 -2% !important;
+}
+
+.THIS .slds-box{
+    /*padding-bottom: 1rem !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    padding-top: 0rem !important;*/
+    
+}
+
+.THIS .slds-has-error > .slds-form-element__help {
+       position: absolute !important;
+}
+
+.THIS .requiredFields {
+    display:none !important;
+}
+
+.THIS .slds-form-element_horizontal > .THIS .slds-form-element__control, .THIS .slds-form_horizontal > .THIS .slds-form-element > .THIS .slds-form-element__control, .THIS .slds-form_stacked > .THIS .slds-form-element_horizontal, .THIS .slds-form-element__control {
+    padding: 0 !important;
+    clear: both !important;
+    word-break: keep-all !important;
+}
+
+.THIS .slds-form-element__label{
+    display : contents !important;
+}
+
+.THIS .slds-form_compound{
+   width: 100% !important;
+   vertical-align:sub !important;
+}
+
+.THIS lightning-timepicker, .THIS .slds-form_compound .slds-form-element__row .slds-form-element__label{
+    display: none !important;
+}
+
+.THIS lightning-datepicker{
+    width : 100% !important;
+}
+
+.THIS lightning-calendar > .slds-datepicker{
+    position: absolute!important;
+    top: 0!important;
+    transform: translateY(-100%)!important;    
+}

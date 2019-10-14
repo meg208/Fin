@@ -1,0 +1,13 @@
+<aura:component implements="lightning:appHomeTemplate" description="Full-width header above a main column and collapsible right sidebar.">
+
+    <aura:attribute name="header" type="Aura.Component[]" description="Header region"/>
+    <aura:attribute name="main" type="Aura.Component[]" description="Main region"/>
+    <div>
+        <div>{!v.header}</div>
+        <lightning:layout class="slds-m-top_large">
+            <lightning:layoutItem flexibility="auto">
+                {!v.main}
+            </lightning:layoutItem>
+        </lightning:layout>
+    </div>
+</aura:component>

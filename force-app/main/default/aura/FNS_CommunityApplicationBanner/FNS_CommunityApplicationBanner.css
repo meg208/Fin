@@ -1,0 +1,16 @@
+.THIS.fns-border-radius{
+    border-radius: .25rem;
+    box-shadow:-2px 3px 6px 1px rgba(2, 3, 4, .2);
+}
+
+.THIS .fns-application-heading{
+    background: #7775ed;
+    color: white;
+    font-size: 1rem;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+}
+
+.THIS .fns-weak-font-color{
+    color: #3e3e3c;
+}

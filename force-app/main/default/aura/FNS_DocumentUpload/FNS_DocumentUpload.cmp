@@ -1,0 +1,250 @@
+<aura:component  controller = "FNS_DocumentUploadController" implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId">
+    <aura:handler name="init" action="{!c.doInit}" value="{!this}" />
+    <aura:handler event="force:refreshView" action="{! c.doInit}" />
+    <aura:attribute name="recordId" type="Id" />
+    <aura:attribute name="accept" type="List" default="['.txt','.pdf']"/>
+    <aura:attribute name="multiple" type="Boolean" default="false"/>
+    <aura:attribute name="disabled" type="Boolean" default="false"/>
+    <aura:attribute name="showLoadingSpinner" type="boolean" default="false" />
+    <aura:attribute name="documentId" type="String" />
+    <aura:attribute name="documentEditId" type="String" />
+    <aura:attribute name="fileName" type="String" />
+    <aura:attribute name="fileEditName" type="String" />
+    <aura:attribute name="isOpen" type="boolean" default="false" />
+    <aura:attribute name="Vals" type="boolean" default="true"/>
+    <aura:attribute name="taskPicklist" type="String[]" />
+    <aura:attribute name="TaskextIdvaluesSelected" type="String[]" />
+    <aura:attribute name="selectedLookUpRecord" type="sObject" default="{}" />
+    <aura:attribute type="String[]" name="items" />
+    <aura:attribute name="totalRecordsCount" type="Integer"/>
+    <aura:attribute name="uploaded" type="String" default="false" />
+    <aura:attribute name="Edituploaded" type="String" default="false" />
+    <aura:attribute name="valueedited" type="String" default="false" />
+    <aura:attribute name="isEdit" type="boolean" default="false" />
+    <aura:attribute name="showSpinner" type="Boolean" default="true" />
+    <aura:attribute name="documentExtId" type="String"  />
+    <aura:attribute name="ItemsError" type="String" />
+    <aura:attribute name="TrackingItemsError" type="String" />
+    <aura:attribute name="trackingDocId" type="String" />
+    <div class="slds-box mybox">
+        <aura:if isTrue="{!v.ItemsError != 'Empty'}">
+            <div class="FNS_ERROR">{!v.ItemsError}</div>							
+        </aura:if>
+          <aura:if isTrue="{!v.TrackingItemsError != 'Empty'}">
+            <div class="FNS_ERROR">{!v.ItemsError}</div>							
+        </aura:if>
+        <aura:if isTrue="{!!v.showSpinner}">
+            <div>
+                <lightning:icon iconName="utility:copy_to_clipboard" class="fns-custom-icon fns-bg-color" size="xx-small" /> &nbsp;
+                <span class="FNS_textSize"><b>{!$Label.c.FNS_DOCUMENTS} ({!v.totalRecordsCount})</b></span>
+                <lightning:button variant="Neutral" label="Upload Files" title="Upload Files" class="slds-float--right" onclick="{!c.openModel }" />
+                <aura:if isTrue = "{!v.Vals}">
+                    <div class = "FNS_textSize slds-p-top_medium">
+                        <span class= "FNS_Heading">{!$Label.c.FNS_DOCUMENT_UPLOAD_AVAILABLE}</span>
+                    </div>
+                    <div class="slds-p-top_large">
+                        <div class="slds-grid slds-gutters">
+                            <lightning:layoutItem size="12">
+                                
+                                <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+                                    <thead>
+                                        <tr class="slds-line-height_reset">
+                                            <th class = "slds-p-left_small" scope="col" style="width:33%">
+                                                <div class="slds-truncate" title="Opportunity Name">DOCUMENT</div>
+                                            </th>
+                                            <th class = "slds-p-left_xx-large" scope="col" style="width:33%">
+                                                <div class="slds-truncate" title="Account Name">SHARED ON COMMUNITY</div>
+                                            </th>
+                                            <th class = "slds-p-left_large" scope="col" style="width:53%">
+                                                <div class="slds-truncate" title="Account Name">AVAILABLE ACTIONS</div>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <aura:iteration items="{!v.items}" var="item" indexVar="idx">
+                                            <tr class="">
+                                                <th data-label="File Name" scope="row">
+                                                    <div class="slds-truncate" title="Cloudhub">{!item.FNS_FileName__c} </div>
+                                                </th>
+                                                <td data-label="IsShared" scope = "row">
+                                                    <span >
+                                                        <aura:if isTrue = "{!item.FNS_IsShared__c}">
+                                                            <div class="slds-truncate" title="Cloudhub"> YES </div>  
+                                                            <aura:set attribute="else">
+                                                                <div class="slds-truncate" title="Cloudhub"> NO </div> 
+                                                            </aura:set>
+                                                        </aura:if>                                            
+                                                    </span> 
+                                                </td>
+                                                <td data-label="">
+                                                    <span  class = "slds-p-left_small" onclick="{!c.getDocumentContentFromCME}" data-record="{!idx}">
+                                                        <lightning:icon iconName="utility:download" size="x-small" />
+                                                    </span> &nbsp;
+                                                    <lightning:buttonMenu aura:id="menu" alternativeText="Show menu" onselect="{! c.handleSelectMenu }"
+                                                                          class="" menuAlignment="top-right">
+                                                        <lightning:menuItem label="Edit" value="{!join(',', item.FNS_DocumentExtId__c, 'edit', item.Id)}" aura:id="taskselect"  /> 
+                                                        <aura:if isTrue = "{!item.FNS_IsShared__c}">
+                                                            <lightning:menuItem label="Unshare Document" value="{!join(',', item.FNS_DocumentExtId__c, 'sharedoc', item.FNS_IsShared__c)}" aura:id="docshare"  /> 
+                                                            <aura:set attribute="else">
+                                                                <lightning:menuItem label="Share Document" value="{!join(',', item.FNS_DocumentExtId__c, 'sharedoc', item.FNS_IsShared__c)}" aura:id="docshare"  /> 
+                                                            </aura:set>
+                                                        </aura:if>
+                                                        
+                                                    </lightning:buttonMenu>
+                                                </td>
+                                            </tr>
+                                        </aura:iteration>
+                                    </tbody>
+                                </table>
+                            </lightning:layoutItem>
+                        </div>
+                    </div>
+                </aura:if>
+                <aura:set attribute="else">
+                    <p>{!$Label.c.FNS_DOCUMENT_UPLOAD_NOT_AVAILABLE}</p>
+                </aura:set>
+            </div>
+            <aura:if isTrue="{!v.isOpen}">
+                <div class="demo-only">
+                    <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                        <div class="slds-modal__container">
+                            <header class="slds-modal__header">
+                                <lightning:buttonIcon iconName="utility:close" onclick="{! c.closeModel }" alternativeText="close" variant="bare-inverse" class="slds-modal__close" />
+                                <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">{!$Label.c.FNS_DOCUMENT_SUBMIT}</h2>
+                            </header>
+                            <!--###### MODAL BOX BODY Part Start######-->
+                            <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                                
+                                <aura:if isTrue= "{!v.uploaded == 'false'}">
+                                    <p class="slds-p-around_medium"><b>{!$Label.c.FNS_DOCUMENT_UPLOAD_DOCS}</b><br></br></p>
+                                    <div class="slds-box">
+                                        <lightning:fileUpload multiple="{!v.multiple}" 
+                                                              accept="{!v.accept}" recordId="{!v.recordId}" 
+                                                              onuploadfinished="{!c.handleUploadFinished}" /> 
+                                    </div>
+                                </aura:if>
+                                
+                                <aura:if isTrue= "{!v.uploaded == 'true'}">
+                                    Document <b>{!v.fileName} </b> <span class= "slds-p-left_xxx-small">{!$Label.c.FNS_DOCUMENT_DRAG_AND_DROP} </span>
+                                    <br></br>
+                                </aura:if>
+                                <br></br>  
+                                <div class = "FNS_headings slds-text-heading_medium slds-p-left_medium">Document Details  
+                                </div>
+                                <div class="slds-grid slds-gutters">
+                                    <lightning:layoutItem size="4">
+                                        <div class="slds-col--padded slds-p-left_large ">
+                                            <div class="slds-input-has-icon slds-input-has-icon--right">
+                                                <c:FNS_ActivitylookupComponent objectAPIName="Account" IconName="standard:account" selectedRecord="{!v.selectedLookUpRecord}"
+                                                                               label="Customer" />
+                                            </div>
+                                        </div>
+                                    </lightning:layoutItem>
+                                    <lightning:layoutItem size="4">
+                                        <div class="slds-col--padded slds-p-top_medium">
+                                            <lightning:select aura:id="taskPicklist" onchange="{!c.onTaskChange}" name="taskPicklist" label="Tracking Item" >
+                                                <option value="">--None--</option>
+                                                <aura:iteration items="{!v.taskPicklist}" var="ind" indexVar="key">
+                                                    <option text="{!ind.Subject}" value="{!ind.FNS_TrackingItemExtId__c}"></option> 
+                                                </aura:iteration>
+                                            </lightning:select>
+                                        </div>
+                                    </lightning:layoutItem>
+                                </div>
+                                <br> </br>
+                                <div class="slds-grid slds-gutters">
+                                    <lightning:layoutItem size="12">
+                                        <div class="slds-col--padded slds-p-left_large">
+                                            <lightning:textarea name="input"  value="" label="Notes/Comments" />
+                                        </div>
+                                    </lightning:layoutItem>
+                                </div>
+                            </div>
+                            <footer class="slds-modal__footer ">
+                                <lightning:button variant="neutral" label="Close" title="Close" onclick="{! c.closeModel }" />
+                                <lightning:button variant="brand" label="Submit" title="Send" onclick="{!c.doSave}" />
+                            </footer>
+                        </div>
+                    </section>
+                    <div class="slds-backdrop slds-backdrop_open"></div>
+                </div>
+            </aura:if>
+            <aura:if isTrue="{!v.isEdit}">
+                <div class="demo-only" style="height: 640px;">
+                    <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                        <div class="slds-modal__container">
+                            <header class="slds-modal__header">
+                                <lightning:buttonIcon iconName="utility:close"  alternativeText="close" variant="bare-inverse" class="slds-modal__close" />
+                                <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">{!$Label.c.FNS_DOCUMENT_EDIT}</h2>
+                            </header>
+                            <!--###### MODAL BOX BODY Part Start######-->
+                            <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                                <aura:if isTrue= "{!v.Edituploaded == 'false'}">
+                                    <p class=""><b>{!$Label.c.FNS_DOCUMENT_UPLOAD_DOCS}</b></p> <br></br>
+                                    <div class="slds-box">
+                                        <lightning:fileUpload multiple="{!v.multiple}" 
+                                                              accept="{!v.accept}" recordId="{!v.recordId}" 
+                                                              onuploadfinished="{!c.handleEditUploadFinished}" /> 
+                                    </div>
+                                </aura:if>
+                                <aura:if isTrue= "{!v.Edituploaded == 'true'}">
+                                    Document <b>{!v.fileName} </b> {!$Label.c.FNS_DOCUMENT_UPLOAD_DOCS}
+                                    <br></br>
+                                </aura:if>
+                                <br></br>  
+                                <div class = "FNS_headings slds-text-heading_medium slds-p-left_medium">{!$Label.c.FNS_DOCUMENT_DETAILS}
+                                </div> <br></br>
+                                <div class = "slds-p-left_large">
+                                    {!$Label.c.FNS_DOCUMENTUPLOAD_UPLOADED_DOC}
+                                    <p>{!v.fileEditName}</p>
+                                </div>
+                                <div class="slds-grid slds-gutters">
+                                    <lightning:layoutItem size="4">
+                                        <div class="slds-col--padded slds-p-left_large ">
+                                            <div class="slds-input-has-icon slds-input-has-icon--right">
+                                                <c:FNS_ActivitylookupComponent objectAPIName="Account" IconName="standard:account" 
+                                                                               selectedRecord="{!v.selectedLookUpRecord}"
+                                                                               label="Search Customer" />
+                                            </div>
+                                        </div>
+                                    </lightning:layoutItem>
+                                    <lightning:layoutItem size="4">
+                                        <div class="slds-col--padded slds-p-top_medium">
+                                            <lightning:select aura:id="taskPicklist" onchange="{!c.onTaskChange}" name="taskPicklist" label="Tracking Item" >
+                                                <option value="">--None--</option>
+                                                <aura:iteration items="{!v.taskPicklist}" var="ind" indexVar="key">
+                                                    <option text="{!ind.Subject}" value="{!ind.FNS_TrackingItemExtId__c}"></option> 
+                                                </aura:iteration>
+                                            </lightning:select>
+                                        </div>
+                                    </lightning:layoutItem>
+                                </div>
+                                <br> </br>
+                                <div class="slds-grid slds-gutters">
+                                    <lightning:layoutItem size="12">
+                                        <div class="slds-col--padded slds-p-left_large">
+                                            <lightning:textarea name="input"  value="" label="Notes/Comments" />
+                                        </div>
+                                    </lightning:layoutItem>
+                                </div>
+                            </div>
+                            <footer class="slds-modal__footer ">
+                                <lightning:button variant="neutral" label="Close" title="Close" onclick="{! c.closeEditModel }" />
+                                <span data-value="{!v.documentExtId}" class = "slds-p-left_small" onclick="{!c.sendeditToCME}">
+                                    <lightning:button variant="brand" label="Submit" title="Save">
+                                    </lightning:button>
+                                </span>
+                            </footer>
+                        </div>
+                    </section>
+                    <div class="slds-backdrop slds-backdrop_open"></div>
+                </div>
+            </aura:if>
+            <aura:set attribute="else">
+                <div class="slds-is-relative  slds-p-around_xx-large">
+                    <lightning:spinner variant="brand" size="small" class="slds-m-top_small"/>
+                </div>
+            </aura:set>
+        </aura:if>
+    </div>
+</aura:component>

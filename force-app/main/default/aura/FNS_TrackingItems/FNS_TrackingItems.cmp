@@ -1,0 +1,417 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes"
+                controller="FNS_TrackingItemsController">
+    <aura:handler name="init" action="{!c.doInit}" value="{!this}" />
+    <aura:handler event="force:refreshView" action="{!c.doInit}" />
+    <aura:attribute type="Task[]" name="tasklist" />
+    <aura:attribute type="List" name="taskWrapperList" />
+    <aura:attribute name="newTask" type="Task" default="{ 'sobjectType': 'Task','WhoId': '','WhatId':'' }" access="Public" />
+    <aura:attribute name="recordId" type="Id" />
+    <aura:attribute name="isOpen" type="boolean" default="false" />
+    <aura:attribute name="isavailable" type="String"/>
+    <aura:attribute name="isOpenforTask" type="boolean" default="false" />
+    <aura:attribute name="isOpenForComments" type="boolean" default="false" />
+    <aura:attribute name="disableCME" type="Boolean" default="false" />
+    <aura:attribute name="selectedLookUpRecord" type="sObject" default="{}" />
+    <aura:attribute name="selectedLookUpRecordTask" type="sObject" default="{}" />
+    <aura:attribute name="selectedLookUpRecordOpportunity" type="sObject" default="{}"/>
+    <aura:attribute name="modalContext" type="String" default="New" />
+    <aura:attribute name="stagename" type="String" default="rest" />
+    <aura:attribute name="tskIds" type="String" default="New" />
+    <aura:attribute name="subjectIds" type="String" />
+    <aura:attribute name="priorityPicklist" type="String[]" />
+    <aura:attribute name="statusPicklist" type="String[]" />
+    <aura:attribute name="commentvaluesSelected" type="String[]" />
+    <aura:attribute name="datevalueSelected" type="Date" />
+    <aura:attribute name="taskIdselected" type="String[]" />
+    <aura:attribute name="statusvaluesSelected" type="String[]" />
+    <aura:attribute name="priorityvaluesSelected" type="String[]" />
+    <aura:attribute name="priorityaftersubmit" type="String" default="" />
+    <aura:attribute name="relatedTo" type="String[]" />
+    <aura:attribute name="isSaved" type="boolean" default="false" />
+    <aura:attribute name="objInfo" type="Task" default="{sobjectType : 'Task'}" />
+    <aura:attribute name="statusMap" type="Map"/>
+    <aura:attribute name="priorityMap" type="Map"/>
+    <aura:attribute name="isOpenDocument" type="boolean" default="false" />
+    <aura:attribute name="uploaded" type="String" default="false" /> 
+    <aura:attribute name="documentId" type="String" />
+    <aura:attribute name="fileName" type="String" />
+    <aura:attribute name="TaskextIdvaluesSelected" type="String[]" />
+    <aura:attribute name="showSpinner" type="Boolean" default="true" />
+	<aura:attribute name="ItemsError" type="String" />
+    
+    <lightning:card title="{!$Label.c.FNS_TRACKING_ITEMS_OWNER}" iconName="standard:task"  class=" slds-card_boundary MainHeading">
+      <aura:if isTrue="{!!v.showSpinner}">
+        <article class="slds-card individual-box">
+          	<aura:if isTrue="{!v.ItemsError != 'Empty'}">
+			  <div class="FNS_ERROR">{!v.ItemsError}</div>							
+			</aura:if>
+            <aura:if isTrue="{!v.isavailable=='available'}">
+                
+                <aura:if isTrue="{!v.stagename=='rest'}">
+                    <div class="slds-card__body slds-p-left_x-large">
+                        <div class="slds-text-small">
+                            <span class = " slds-p-right_xx-large">
+                             <lightning:button variant="Neutral" label="Upload Files" title="Upload Files" class="slds-float--right " onclick="{!c.openModelDocument }" />
+                           </span>
+                                <p class = "subheading slds-p-left_xx-large">{!$Label.c.FNS_TRACKING_ITEMS_HEADING}</p> 
+                            <span class = "subheadingBold slds-p-left_xx-large">{!$Label.c.FNS_TRACKINGITEMSMARKCHECKBOX}</span> <span class = "slds-p-left_xxx-small">{!$Label.c.FNS_TRACKINGITEMSPROCEEDTEXT}</span>
+                            
+                        </div>
+                        <div class="slds-box slds-card_boundary">
+                            <lightning:accordion allowMultipleSectionsOpen="false" aura:id="schedAccordion" class="FNS_font-size"> 
+                                <aura:iteration items="{!v.taskWrapperList}" var="wrapper" indexVar="taskIndex">
+                                    
+                                    <lightning:accordionSection name="Accordion" label="{!wrapper.task.Subject}">
+                                        
+                                        <aura:set attribute="actions">
+                                            <div class="c-container">
+                                                <lightning:layout horizontalAlign="spread" verticalAlign="center">
+                                                    <lightning:layoutItem padding="around-small">
+                                                        <div data-value="{!wrapper.task.Id}">
+                                                            <!--TODO  label needs to be interpreted based on color-->
+                                                            <lightning:badge label="{!wrapper.task.FNS_Status__c}" class="slleftal" style="{! 'background-color:' + wrapper.task.FNS_SLAIndicator__c }" />
+                                                        </div>
+                                                    </lightning:layoutItem>
+                                                    <lightning:layoutItem padding="around-small">
+                                                        <div data-value="{!join(',', wrapper.task.Id, wrapper.task.Subject)}"  onclick="{! c.openModel }">
+                                                            <lightning:buttonIcon iconName="utility:change_owner" variant="bare" title = "Re-assign" class = ""/>
+                                                        </div>
+                                                    </lightning:layoutItem>
+                                                </lightning:layout>
+                                            </div>
+                                            <aura:if isTrue="{!v.isOpen}">
+                                                <div class="demo">
+                                                    <section role="dialog" aura:id="Modalbox" tabindex="-1" aria-labelledby="modal-heading-01"
+                                                             aria-modal="true" aria-describedby="modal-content-id-1"
+                                                             class="slds-modal slds-fade-in-open custommodalwindow">
+                                                        <div class="slds-modal__container">
+                                                            <header class="slds-modal__header">
+                                                                <lightning:buttonIcon iconName="utility:close" onclick="{! c.closeModel }" alternativeText="close"
+                                                                                      variant="bare-inverse"
+                                                                                      class="slds-modal__close"/>
+                                                                <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">{!$Label.c.FNS_TRACKING_ITEMS_ASSIGN}
+                                                                </h2>
+                                                            </header>
+                                                            <!--###### MODAL BOX BODY Part Start######-->
+                                                            <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                                                                <c:FNS_ActivitylookupComponent objectAPIName="User" IconName="standard:user" selectedRecord="{!v.selectedLookUpRecord}"
+                                                                                               label="User Name" />
+                                                        
+                                                                <p class="slds-p-around_medium">{!$Label.c.FNS_TRACKING_ITEMS_OWNER_CHANGE}
+                                                                    <div class="slds-p-top_xxx-small">
+                                                                        {!v.subjectIds}.
+                                                                    </div>
+                                                                    
+                                                                    <b></b>
+                                                                    <br></br>
+                                                                    
+                                                                </p>
+                                                                
+                                                                
+                                                            </div>
+                                                            <footer class="slds-modal__footer ">
+                                                                <lightning:button variant="neutral" label="Close" title="Close" onclick="{! c.closeModel }" />
+                                                                <lightning:button variant="brand" label="Assign" title="Assign" onclick="{!c.reAssignOwner }" />
+                                                            </footer>
+                                                        </div>
+                                                    </section>
+                                                    <!-- TODO remove isActive field-->
+                                                    <div class="{!'slds-backdrop ' + ((v.isActive) ? 'slds-backdrop_open' : 'slds-backdrop_close')}"></div>
+                                                </div>
+                                            </aura:if>
+                                            <aura:if isTrue="{!v.isOpenDocument}">
+                                                <div class="demo-only">
+                                                    <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                                                        <div class="slds-modal__container">
+                                                            <header class="slds-modal__header">
+                                                                <lightning:buttonIcon iconName="utility:close" onclick="{! c.closeModelDocument }" alternativeText="close" variant="bare-inverse" class="slds-modal__close" />
+                                                                <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">{!$Label.c.FNS_DOCUMENT_SUBMIT}</h2>
+                                                            </header>
+                                                            <!--###### MODAL BOX BODY Part Start######-->
+                                                            <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                                                                
+                                                                <aura:if isTrue= "{!v.uploaded== 'false'}">
+                                                                    <p class="slds-p-around_medium"><b>{!$Label.c.FNS_DOCUMENT_UPLOAD_DOCS}</b><br></br></p>
+                                                                    <div class="slds-box">
+                                                                        <lightning:fileUpload multiple="{!v.multiple}" 
+                                                                                              accept="{!v.accept}" recordId="{!v.recordId}" 
+                                                                                              onuploadfinished="{!c.handleUploadFinished}" /> 
+                                                                    </div>
+                                                                </aura:if>
+                                                                
+                                                                <aura:if isTrue= "{!v.uploaded == 'true'}">
+                                                                    Document <b>{!v.fileName} </b> <span class= "slds-p-left_xxx-small">{!$Label.c.FNS_DOCUMENT_DRAG_AND_DROP} </span>
+                                                                    <br></br>
+                                                                </aura:if>
+                                                                <br></br>  
+                                                                <div class = "FNS_headings slds-text-heading_medium slds-p-left_medium">Document Details  
+                                                                </div>
+                                                                <div class="slds-grid slds-gutters">
+                                                                    <lightning:layoutItem size="4">
+                                                                        <div class="slds-col--padded slds-p-left_large ">
+                                                                            <div class="slds-input-has-icon slds-input-has-icon--right">
+                                                                                <c:FNS_ActivitylookupComponent objectAPIName="Account" IconName="standard:account" selectedRecord="{!v.selectedLookUpRecord}"
+                                                                                                               label="Customer" />
+                                                                            </div>
+                                                                        </div>
+                                                                    </lightning:layoutItem>
+                                                                    <lightning:layoutItem size="4">
+                                                                        <div class="slds-col--padded slds-p-top_medium">
+                                                                            <lightning:select aura:id="taskPicklist" onchange="{!c.onTaskChange}" name="taskPicklist" label="Tracking Item" >
+                                                                                <option value="">--None--</option>
+                                                                                <aura:iteration items="{!v.taskWrapperList}" var="ind" indexVar="key">
+                                                                                    <option text="{!ind.task.Subject}" value="{!ind.task.FNS_TrackingItemExtId__c}"></option> 
+                                                                                </aura:iteration>
+                                                                            </lightning:select>
+                                                                        </div>
+                                                                    </lightning:layoutItem>
+                                                                </div>
+                                                                <br> </br>
+                                                                <div class="slds-grid slds-gutters">
+                                                                    <lightning:layoutItem size="12">
+                                                                        <div class="slds-col--padded slds-p-left_large">
+                                                                            <lightning:textarea name="input"  value="" label="Notes/Comments" />
+                                                                        </div>
+                                                                    </lightning:layoutItem>
+                                                                </div>
+                                                            </div>
+                                                            <footer class="slds-modal__footer ">
+                                                                <lightning:button variant="neutral" label="Close" title="Close" onclick="{! c.closeModelDocument }" />
+                                                                <lightning:button variant="brand" label="Submit" title="Send" onclick="{!c.doSaveDocument}" />
+                                                            </footer>
+                                                        </div>
+                                                    </section>
+                                                    <div class="slds-backdrop slds-backdrop_open"></div>
+                                                </div>
+                                            </aura:if>
+                                            <lightning:buttonMenu aura:id="menu" alternativeText="Show menu" onselect="{! c.handleSelectMenu }"
+                                                                  class="slds-p-top_medium" menuAlignment="right">
+                                                <lightning:menuItem label="Edit" aura:id="taskselect" value="{!join(',', wrapper.task.Id, 'Edit')}" />
+                                                <lightning:menuItem value="NewTask" label="Create a Follow Up Task" />
+                                            </lightning:buttonMenu>
+                                        </aura:set>
+                                        
+                                        <aura:set attribute="body">
+                                            <aura:if isTrue="{!v.modalContext=='New'}">
+                                                <div class="c-container">
+                                                    <div class="slds-grid slds-grid--pull-padded slds-gutters">
+                                                        <aura:if isTrue="{!v.modalContext=='New'}">
+                                                            <lightning:layoutItem size="6">
+                                                                <div class="slds-col--padded">
+                                                                    <span class="subContentHeading">{!$Label.c.FNS_TRACKING_ITEMS_STATUS}</span>
+                                                                    <div class="subContent">{!wrapper.task.FNS_Status__c}
+                                                                    </div>
+                                                                </div>
+                                                            </lightning:layoutItem>
+                                                        </aura:if>
+                                                        <lightning:layoutItem size="6">
+                                                            <div class="slds-col--padded">
+                                                                <span class="subContentHeading"> {!$Label.c.FNS_TRACKING_ITEMS_PRIORITY}</span>
+                                                                <div class="subContent">{!wrapper.task.FNS_Priority__c}</div>
+                                                            </div>
+                                                        </lightning:layoutItem>
+                                                    </div>  <div class="slds-p-top_x-small"></div>
+                                                    <div class="slds-grid slds-grid--pull-padded slds-gutters">
+                                                        <lightning:layoutItem size="6">
+                                                            <div class="slds-col--padded">
+                                                                <span class="subContentHeading">{!$Label.c.FNS_TRACKING_ITEMS_DATE}</span>
+                                                                <div class="subContent">{!wrapper.task.FNS_DueDate__c}</div>
+                                                            </div>
+                                                        </lightning:layoutItem>
+                                                        <lightning:layoutItem size="6">
+                                                            <div class="slds-col--padded ">
+                                                                <span class="subContentHeading">{!$Label.c.FNS_TRACKING_ITEMS_ASSIGN_TO}</span>
+                                                                <div class="subContent">{!wrapper.task.FNS_Borrower__c}</div>
+                                                            </div>
+                                                        </lightning:layoutItem>
+                                                        
+                                                    </div>  <div class="slds-p-top_x-small"></div>
+                                                    <div class="slds-grid slds-grid--pull-padded slds-gutters">
+                                                        <lightning:layoutItem size="6">
+                                                            <div class="slds-col--padded ">
+                                                                <!--TODO  Custom label-->
+                                                                <span class="subContentHeading">{!$Label.c.FNS_TRACKINGITEM_PRODUCTRELATED}</span>
+                                                                <div>
+                                                                    <aura:if isTrue="{!not(empty(wrapper.task.FNS_FinancialAccountTransactionRecordId__c))}">
+                                                                        <lightning:icon iconName="standard:product" size="x-small" />
+                                                                        <a href="{!'/one/one.app?#/sObject/'+ wrapper.task.FNS_FinancialAccountTransactionRecordId__c + '/view'}"
+                                                                           target="_blank" class="subContent">Product</a>
+                                                                        <aura:set attribute="else">
+                                                                            {!$Label.c.FNS_TRACKINGITEM_NORECORDS}
+                                                                        </aura:set>
+                                                                    </aura:if> 
+                                                                    
+                                                                </div>
+                                                            </div>
+                                                        </lightning:layoutItem>
+                                                        <lightning:layoutItem size="6">
+                                                            <div class="slds-col--padded ">
+                                                                <!--TODO  Custom label-->
+                                                                <span class="subContentHeading">{!$Label.c.FNS_TRACKINGITEM_CUSTOMERRELATED}</span>
+                                                                <div>
+                                                                    <aura:if isTrue="{!not(empty(wrapper.task.FNS_CustomerRecordIds__c))}">
+                                                                        <lightning:icon iconName="standard:account" size="x-small"  />
+                                                                        <a href="{!'/one/one.app?#/sObject/'+ wrapper.task.FNS_CustomerRecordIds__c + '/view'}" target="_blank"
+                                                                           class="subContent slds-p-left_xxx-small">{!wrapper.customerName}</a>
+                                                                        <aura:set attribute="else">
+                                                                            {!$Label.c.FNS_TRACKINGITEM_NORECORDS}
+                                                                        </aura:set>
+                                                                    </aura:if> 
+                                                                </div>
+                                                            </div>
+                                                        </lightning:layoutItem>
+                                                        
+                                                        
+                                                    </div>
+                                                    <div class="slds-p-top_x-small"></div>
+                                                    <div class="slds-grid slds-grid--pull-padded slds-gutters">
+                                                        
+                                                        <lightning:layoutItem size="6">
+                                                            <div class="slds-col--padded ">
+                                                                <span class="subContentHeading">{!$Label.c.FNS_TRACKINGITEM_USERRRELATED}</span>
+                                                                <div>
+                                                                    <aura:if isTrue="{!not(empty(wrapper.task.FNS_UserRecordIds__c))}">
+                                                                        <lightning:icon iconName="standard:user" size="x-small" />
+                                                                        <a href="{!'/one/one.app?#/sObject/'+ wrapper.task.FNS_UserRecordIds__c + '/view'}"
+                                                                           target="_blank" class="subContent slds-p-left_xxx-small">{!wrapper.relatedUserName}</a>
+                                                                        <aura:set attribute="else">
+                                                                            {!$Label.c.FNS_TRACKINGITEM_NORECORDS}
+                                                                        </aura:set>
+                                                                    </aura:if> 
+                                                                    
+                                                                </div>
+                                                            </div>
+                                                        </lightning:layoutItem>
+                                                        <lightning:layoutItem size="6" class="right-align">
+                                                            <div class="slds-col--padded ">
+                                                                <span class="subContentHeading">{!$Label.c.FNS_TRACKING_ITEMS_ATTACHMENT}</span>
+                                                                <br></br>
+                                                                <aura:iteration items="{!wrapper.documentIds}" var="attach" indexVar="index">
+                                                                    <aura:if isTrue="{!not(empty(wrapper.documentIds))}">
+                                                                        <p> {!attach.FNS_FileName__c}
+                                                                            <span data-record="{!index}" 
+                                                                                  class = " subContent slds-p-left_small" 
+                                                                                  onclick="{!c.getDocumentCalloutContentFromCME}"
+                                                                                  data-value="{!join(',', attach.FNS_FileName__c, attach.FNS_DocumentExtId__c)}">
+                                                                                <lightning:icon iconName="utility:download" size="xx-small" />
+                                                                                
+                                                                            </span> </p>
+                                                                        <aura:set attribute="else">
+                                                                            {!$Label.c.FNS_TRACKINGITEM_NORECORDS}
+                                                                        </aura:set>
+                                                                    </aura:if> 
+                                                                </aura:iteration>
+                                                            </div>
+                                                        </lightning:layoutItem>
+                                                    </div>  <div class="slds-p-top_x-small"></div>
+                                                    <div class="slds-grid slds-grid--pull-padded slds-gutters">
+                                                        <lightning:layoutItem size="6">
+                                                            <div class="slds-col--padded">
+                                                                <span class="subContentHeading">{!$Label.c.FNS_TRACKINGITEM_UNDERWRITERCOMM}</span>
+                                                                <div class="subContent">{!wrapper.task.FNS_Comments__c}</div>
+                                                            </div>
+                                                        </lightning:layoutItem>
+                                                    </div> <div class="slds-p-top_xx-small"></div>
+                                                    <div class="slds-grid slds-gutters">
+                                                        <div class="slds-col slds-size_10-of-12">
+                                                            <span class="subContentHeading">Responds</span>
+                                                            <lightning:textarea name="input5" disabled="true" value="{!v.commentvaluesSelected}"  />
+                                                        </div>
+                                                    </div>
+                                                    <div class="slds-p-top_xx-small"></div>
+                                                </div>
+                                            </aura:if>
+                                            <aura:if isTrue="{!v.modalContext== wrapper.task.Id}">
+                                                <div class="c-container">
+                                                    <div class="slds-grid slds-grid--pull-padded slds-gutters">
+                                                        <lightning:layoutItem size="3">
+                                                            
+                                                            <div class="slds-col--padded slds-p-left_large">
+                                                                <lightning:select label="Status" aura:id="mySelect" onchange="{!c.onStatusChange}" value="{!v.statusvaluesSelected}"> 
+                                                                    <aura:iteration items="{!v.statusMap}" var="val">
+                                                                        <option text="{!val.key}" value="{!val.key}" selected="{!val.key == wrapper.task.FNS_Status__c}"> </option>
+                                                                    </aura:iteration>
+                                                                </lightning:select>
+                                                            </div>
+                                                        </lightning:layoutItem>
+                                                        <lightning:layoutItem size="2">
+                                                        </lightning:layoutItem>
+                                                        <lightning:layoutItem size="3">
+                                                            <div class="slds-col--padded slds-p-left_large">
+                                                                <lightning:select label="Priority" aura:id="prioritySelected" onchange="{!c.onPriorityChange}" value="{!wrapper.task.FNS_Priority__c}">
+                                                                    <aura:iteration items="{!v.priorityMap}" var="val">
+                                                                        <option  text="{!val.key}" value="{!val.key}" selected="{!val.key == wrapper.task.FNS_Priority__c}"> </option>
+                                                                    </aura:iteration>
+                                                                </lightning:select>
+                                                            </div>
+                                                        </lightning:layoutItem>
+                                                    </div>
+                                                    <div class="slds-p-top_xx-small"></div>
+                                                    <div class="slds-grid slds-grid--pull-padded slds-gutters">
+                                                        <lightning:layoutItem size="3">
+                                                            <div class="slds-col--padded slds-p-left_large">
+                                                                <lightning:input type="date" name="input1" label="Due date" aura:id="dateSelected" onchange="{!c.onDateSelected}" value="{!wrapper.task.FNS_DueDate__c}" />
+                                                            </div>
+                                                        </lightning:layoutItem>
+                                                    </div>
+                                                    <div class="slds-p-top_x-small"></div>
+                                                    <div class="slds-grid slds-grid--pull-padded slds-gutters">
+                                                        <lightning:layoutItem size="6">
+                                                            <div class="slds-col--padded slds-p-left_large">
+                                                                <span class="">{!$Label.c.FNS_TRACKINGITEM_UNDERWRITERCOMM}</span>
+                                                                <div class="slds-text-body_regular">{!wrapper.task.FNS_Comments__c}</div>
+                                                            </div>
+                                                        </lightning:layoutItem>
+                                                    </div>
+                                                    
+                                                    &nbsp; &nbsp;
+                                                    <div class="slds-grid slds-gutters">
+                                                        <div class="slds-col slds-size_10-of-12">
+                                                            <force:outputField aura:id="Type" value="{!wrapper.task.WhatId}" class="slds-hidden" /><!--TODO  Custom label-->
+                                                            <lightning:textarea name="input7" aura:id="commentSelected" placeholder="Enter your Comment"
+                                                                                label="Response" maxlength="220"
+                                                                                messageWhenTooLong="A maximum of 220 characters are allowed in comments"
+                                                                                messageWhenValueMissing="Comment is required if this needs to be submitted."
+                                                                                onchange="{!c.onCommentEntered}" />
+                                                        </div>
+                                                    </div>
+                                                    &nbsp;&nbsp;
+                                                    <div class="disableafterselect">
+                                                        <footer class="slds-modal__footer ">
+                                                            <div class="slds-col slds-size_6-of-12">
+                                                                <lightning:button variant="neutral" label="Cancel" title="Close" onclick="{! c.closeEdit }"/>
+                                                                <span data-value="{!wrapper.task.Id}" class = "slds-p-left_small" onclick="{!c.sendToCME}">
+                                                                    <lightning:button variant="brand" label="Submit" title="Save" 
+                                                                                      disabled="{!v.disableCME}" />
+                                                                </span>
+                                                            </div>
+                                                        </footer>
+                                                    </div>
+                                                </div>
+                                            </aura:if>
+                                            
+                                        </aura:set>
+                                    </lightning:accordionSection>
+                                </aura:iteration>
+                            </lightning:accordion>
+                            
+                        </div>
+                    </div>
+                </aura:if>
+                <aura:if isTrue="{!v.stagename=='proposal'}">
+                    <h1><b>{!$Label.c.FNS_TRACKING_ITEMS_PROPOSAL_STAGE}</b></h1>
+                </aura:if>
+            </aura:if>
+            <aura:if isTrue="{!v.isavailable=='none'}"><!--TODO  Custom label-->
+                <h1><b>{!$Label.c.FNS_TRACKINGITEM_NONE}</b></h1>
+            </aura:if>
+        </article>
+           <aura:set attribute="else">
+                <div class="slds-is-relative  slds-p-around_xx-large">
+                    <lightning:spinner variant="brand" size="small" class="slds-m-top_small"/>
+                </div>
+            </aura:set>
+        </aura:if>
+    </lightning:card>
+    
+</aura:component>

@@ -1,0 +1,4 @@
+<aura:event type="Component" description="Event template" >
+<aura:attribute name="rowNo" type="Integer"/>
+<aura:attribute name="productRoleId" type="Id"/>
+</aura:event>

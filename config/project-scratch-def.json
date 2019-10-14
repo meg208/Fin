@@ -1,0 +1,21 @@
+{
+  "orgName": "Finastra Technical Debt Org",
+  "country": "US",
+  "edition": "Developer",
+  "description": "Finastra Technical Debt",
+  "hasSampleData": false,
+  "language": "en_US",
+  "features": [
+    "Communities",
+    "MultiCurrency",
+    "ContactsToMultipleAccounts"
+  ],
+  "orgPreferences": {
+    "enabled": [
+      "S1DesktopEnabled",
+      "ChatterEnabled",
+      "NetworksEnabled",
+      "IsOpportunityTeamEnabled"      
+    ]
+  }
+}

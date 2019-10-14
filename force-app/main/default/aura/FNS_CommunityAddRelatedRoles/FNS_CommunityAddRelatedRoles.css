@@ -1,0 +1,14 @@
+.THIS .fns-custom-icon{
+    background-color:#b264bc;
+    padding:0.3rem;
+}
+
+.THIS .fns-bg-color svg{
+    fill:white;
+    width: 0.9rem;
+    height: 0.9rem;
+}
+
+.THIS .fns-font-size{
+    font-size: 0.9rem;
+}

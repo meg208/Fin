@@ -1,0 +1,24 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,force:hasRecordId" access="global" controller="FNS_ViewProductController">
+    <aura:attribute name="responseError" type="String"/>
+    <aura:attribute name="objName" type="String"/>
+    <aura:attribute name="recordId" type="String"/>
+    <aura:attribute name="objRecordTypeId" type="String"/>
+    <aura:attribute name="isLoadSuccess" type="Boolean" default="false" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:handler event="force:refreshView" action="{!c.doInit}" />
+    <aura:if isTrue="{!v.isLoadSuccess}">
+        <aura:if isTrue="{!empty(v.responseError)}">
+            <lightning:recordForm
+                                  recordId="{!v.recordId}"
+                                  recordtypeId = "{!v.objRecordTypeId}"
+                                  objectApiName="{!v.objName}"
+                                  layoutType="Full"
+                                  columns="2"
+                                  mode="readonly" />	
+        </aura:if>
+        <aura:set attribute="else">
+            <div class="FNS_ERROR">{!v.responseError}</div>
+            
+        </aura:set>
+    </aura:if>
+</aura:component>

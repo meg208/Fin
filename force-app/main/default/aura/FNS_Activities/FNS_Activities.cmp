@@ -1,0 +1,92 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" 
+                access="global" 
+                controller="FNS_ActivityComponentController">
+    <aura:attribute name="activitiesList" type="List" />
+    <aura:attribute name="routeActivitiesList" type="List" />
+    <aura:attribute name="userId" type="String"/>
+    <aura:attribute name="notes" type="String"/>
+    <aura:attribute name="isOpen" type= "Boolean"  default="false"/>
+    <aura:attribute name="selectedLookUpRecord" type="sObject" default="{}" />
+    <aura:attribute name="expandAccordians" type="Boolean" default="false"/>
+    <aura:attribute name="activitySections" type="List" />
+    <aura:attribute name="loaded" type="Boolean" default="true" />
+    <aura:attribute name="activitiesError" type="String"/>
+    <aura:attribute name="spinner" type="Boolean"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:handler event="force:refreshView" action="{!c.doInit}" />
+    <aura:handler name="change" value="{!v.loaded}" action="{!c.itemsChange}"/>
+    <aura:handler name="change" value="{!v.activitiesError}" action="{!c.errorChange}"/>
+     <lightning:card title="" >    
+        <aura:if isTrue="{!v.loaded}">
+            <aura:if isTrue="{!v.spinner}">
+                <lightning:spinner alternativeText="Loading" class="FNS_spinner" variant="brand" size="medium"/>
+            </aura:if>
+
+            <aura:if isTrue="{!v.activitiesError != 'Empty'}"> 
+                <div class="FNS_ERROR">{!v.activitiesError}</div>
+                <aura:set attribute="else">       
+                    <div class="slds-box FNS_ActivitySpecifications">
+                        <lightning:select name="activity" label="{!$Label.c.FNS_ROUTE_ACTIVITY}" aura:id="activity" required="true" class="slds-m-bottom_medium">
+                            <option value="">
+                                {!$Label.c.FNS_PENDING_DEALS_NONE}
+                            </option>
+                            <aura:iteration items="{!v.routeActivitiesList}" var="activityVal" indexVar="index">
+                                <aura:if isTrue="{!activityVal.key != ''}">
+                                    <option value="{!activityVal.value.ActivityExternalId}">{!activityVal.value.Description}</option>
+                                </aura:if>
+                            </aura:iteration>
+                        </lightning:select>
+                        
+                        <div class="slds-form-element slds-lookup slds-m-bottom_medium" data-select="single" aura:id="userId">
+                            <div class="slds-form-element__control">
+                                <div class="slds-input-has-icon slds-input-has-icon--right" onclick="{!v.openModel}">
+                                    <c:FNS_ActivitylookupComponent objectAPIName="User" IconName="standard:user" selectedRecord="{!v.selectedLookUpRecord}" label="{!$Label.c.FNS_ASSIGN_TO}" />
+                                </div>
+                            </div>
+                        </div>            
+                        <lightning:textarea aura:id="notesValue" label="{!$Label.c.FNS_NOTES}" name="notesValue" value="{!v.notes}" class="slds-m-bottom_medium"/>            
+                        <lightning:button class="slds-float_right slds-m-bottom_medium" variant="brand" label="{!$Label.c.FNS_SUBMIT}" title="Submit" onclick="{!c.sendToCME}" />
+                        <br/><br/>
+                    </div>                    
+                    <div class="slds-progress slds-progress_vertical slds-p-top_medium">
+                        <ol class="slds-progress__list FNS_ActivitySpecifications">
+                            <lightning:accordion aura:id="accordion" activeSectionName="{!v.activitySections}" allowMultipleSectionsOpen ="{!v.expandAccordians}">
+                                <aura:iteration items="{!v.activitiesList}" var="item" indexVar="index">
+                                    <aura:if isTrue="{!item.Status =='Completed'}">
+                                        <li class="slds-progress__item slds-is-completed">
+                                            <div class="slds-icon-utility-success slds-progress__marker slds-progress__marker_icon slds-progress__marker_icon-success">
+                                                <lightning:icon iconName="utility:success" size="x-small" class="FNS_SuccessIcon"  />
+                                            </div>
+                                            <div class="slds-grid slds-grid_align-spread">
+                                                <lightning:accordionSection name="{!item.Description}" label="{!item.Description}" >
+                                                    <lightning:textarea aura:id="notes" label="Notes" disabled="{!item.Status == 'Completed'}"
+                                                                        name="notes" value="{!item.ActivityNotes}" class="slds-is-completed"/>
+                                                </lightning:accordionSection> 
+                                            </div>
+                                        </li>
+                                        <aura:set attribute="else">
+                                            <!-- TODO need to change the icon for current activity -->
+                                            <li class="{!item.Status == 'Current' ? 'slds-progress__item slds-is-active' : 'slds-progress__item'}">
+                                                <div class=" slds-progress__marker"></div>
+                                                <div class="slds-grid slds-grid_align-spread">
+                                                    <lightning:accordionSection name="{!item.Description}" label="{!item.Description}" >
+                                                        <lightning:textarea aura:id="notes" label="Notes" disabled="true"
+                                                                            name="notes" value="{!item.ActivityNotes}"/>
+                                                    </lightning:accordionSection>                                
+                                                </div>
+                                            </li>
+                                        </aura:set>
+                                    </aura:if>
+                                </aura:iteration>
+                            </lightning:accordion>                
+                        </ol>
+                    </div>
+                </aura:set>
+            </aura:if>
+            <aura:set attribute="else">
+                <lightning:spinner alternativeText="Loading" />
+            </aura:set>
+        </aura:if>
+    </lightning:card>
+</aura:component>

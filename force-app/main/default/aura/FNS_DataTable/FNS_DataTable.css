@@ -1,0 +1,10 @@
+.THIS {
+    background-color: white;
+    padding: 1rem;
+}
+.THIS slds-button {
+    vertical-align: middle;
+}
+.THIS .slds-grid_align-end {
+    justify-content: normal;
+}

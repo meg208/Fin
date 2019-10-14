@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Records</fullName>
+    <columns>MasterLabel</columns>
+    <columns>DeveloperName</columns>
+    <columns>FNS_AccessToken__c</columns>
+    <columns>FNS_AccessTokenValidityTime__c</columns>
+    <columns>FNS_RefreshToken__c</columns>
+    <columns>FNS_RefreshTokenValidityTime__c</columns>
+    <columns>FNS_Scope__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All Records</label>
+</ListView>

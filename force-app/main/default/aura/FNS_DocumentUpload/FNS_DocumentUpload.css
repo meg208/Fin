@@ -1,0 +1,24 @@
+.THIS .FNS_headings{
+    background-color: rgb(243, 242, 242);
+    color: rgb(81, 79, 77);
+    border-bottom: 1px solid #ccc;
+}
+
+.THIS .fns-bg-color svg{
+    fill:white;
+    width: 0.9rem;
+    height: 0.9rem;
+}
+
+.THIS .fns-custom-icon{
+    background-color:#036464;
+    padding:0.3rem;
+}
+
+.THIS .FNS_Heading {
+    font-size: 16px;
+}
+
+.THIS .FNS_textSize {
+     font-size: 16px;
+}

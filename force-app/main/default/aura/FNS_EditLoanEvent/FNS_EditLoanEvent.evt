@@ -1,0 +1,6 @@
+<aura:event type="COMPONENT" description="Event template">
+    <aura:attribute name="loanId" type="String"/>
+    <aura:attribute name="isLoanEdit" type="Boolean"/>
+    <aura:attribute name="loanSummary" type="String"/>
+    <aura:attribute name="error" type="String"/>
+</aura:event>

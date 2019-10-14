@@ -1,0 +1,152 @@
+<aura:component implements="flexipage:availableForAllPageTypes" controller="FNS_ReferralsService">
+    
+    <aura:attribute name="LeadDetails" type="Object" />
+    <aura:attribute name="filterValue" type="String" default="null" />
+    <aura:attribute name="hoverRow" type="Integer" default="-1" />
+    <aura:attribute name="dateValues" type="String[]" default="Today, Last Week, Last 15 Days, Last Month, Last 90 Days"/>
+    <aura:attribute name="leadsError" type="String"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:handler event="force:refreshView" action="{!c.doInit}" />
+
+    <lightning:navigation aura:id="navigation"/>
+    
+    <div id="main" class="container">
+        <lightning:card class="FNS_ReferralsCardSpecifications"> 
+            <aura:set attribute="title">
+                <lightning:icon iconName="standard:lead" size="small" /> 
+                <span class="slds-p-left_small slds-text-title_bold slds-LeadsTitle">
+                    {!$Label.c.FNS_LEADS} ({!v.LeadDetails.leadListLength})
+                </span>            
+            </aura:set>
+            <aura:set attribute="actions">
+                <lightning:buttonMenu aura:id="menu" onselect="{! c.filterDataByDate }" menuAlignment="right" iconName="utility:filter" iconSize="medium"
+                                      class="FNS_ButtonIcon" alternativeText="Show menu">
+                    <aura:iteration items="{!v.dateValues}" var="s">
+                        <lightning:menuItem value="{!s}" label="{!s}" class="FNS_filter_li_fontSize" />
+                    </aura:iteration>
+                </lightning:buttonMenu>
+            </aura:set>
+            <aura:set attribute="footer">
+                <aura:if isTrue="{!v.LeadDetails.leadListLength >= 5}"> 
+                    <div class=" slds-align_absolute-center"><a onclick="{!c.viewAll}">
+                        {!$Label.c.FNS_VIEW_ALL} ({!v.LeadDetails.leadListLength})
+                        </a>
+                    </div>
+                </aura:if>
+            </aura:set>
+            <aura:if isTrue="{!v.leadsError != 'Empty'}"> 
+                <div class="FNS_ERROR">{!v.leadsError}</div>
+                <aura:set attribute="else">  
+                    <p class="slds-p-horizontal_small FNS_body slds-m-top_small" aura:id="objList">
+                        <aura:if isTrue="{!v.LeadDetails.leadListLength > 0}">
+                            <aura:iteration items="{!v.LeadDetails.leadWrapperList}" var="lead" end="5" indexVar="index">         
+                                <div class="{!(!equals(v.LeadDetails.leadListLength-1, index) ? 'slds-border_bottom' : '') + (' slds-grid slds-wrap slds-p-vertical_x-small')}">                                                
+                                    <div class="slds-col slds-size_9-of-12">
+                                        <span class="FNS_Position FNS_PositionContact FNS_PaddingRight FNS_MarginLeft">
+                                            <span class="FNS_Location"  data-index="{!index}">
+                                                <aura:if isTrue="{!lead.ContactId}">
+                                                    <!-- TO NAVIGATE ON SAME PAGE AND OPEN IN NEW TAB  -->        
+                                                    <!--<a id="{!lead.ContactId}" href="#" value="{!lead}"
+                                                                                                onclick="{!c.navigateToContact}"
+                                                                                                class="{!lead.LeadName ? ' slds-is-relative FNS_popover': ' slds-is-relative FNS_popover'}"
+                                                                                                data-field-name="{!lead.ContactId}">-->
+                                                    <a href="{!'/one/one.app?#/sObject/'+ lead.ContactId + '/view'}"  target="_blank"
+                                                       class="{!lead.LeadName ? ' slds-is-relative FNS_popover': ' slds-is-relative FNS_popover'}">
+                                                        {!lead.ContactName}                                                                                        
+                                                        <span id="{!lead.ContactId}" data-field-name="{!lead.ContactName}" 
+                                                              class="FNS_popover_body slds-nubbin_left-bottom slds-popover slds-popover_tooltip FNS_Location_Text slds-m-left_small">
+                                                            <div class="slds-popover__body_xx-small FNS_popoverHeight FNS_popoverText" 
+                                                                 id="{!lead.ContactId}" role="tooltip"> 
+                                                                <lightning:card iconName="standard:lead" title="{!lead.ContactName}" class="FNS_NoBorder"></lightning:card>                 
+                                                                <div class="slds-p-around_small">                                
+                                                                    <div class="slds-list_horizontal">
+                                                                        <div title="Phone" class="slds-size_1-of-2">
+                                                                            <strong>{!$Label.c.FNS_PHONE}: </strong>
+                                                                            <div class="slds-hyphenate">{!lead.ContactPhone}</div>
+                                                                        </div>                                                        
+                                                                        <div title="Email" class="slds-size_1-of-2">
+                                                                            <strong>{!$Label.c.FNS_EMAIL}: </strong>
+                                                                            <div class="slds-hyphenate">{!lead.ContactEmail}</div>
+                                                                        </div>                                        
+                                                                    </div>
+                                                                    <div class="slds-list_horizontal slds-m-top_x-small">
+                                                                        <div title="Company" class="slds-size_1-of-2">
+                                                                            <strong>{!$Label.c.FNS_COMPANY}: </strong>
+                                                                            <div class="slds-hyphenate">{!lead.ContactTitle}</div>
+                                                                        </div>                                           
+                                                                    </div>                              
+                                                                </div>
+                                                                
+                                                            </div>
+                                                        </span>
+                                                    </a>
+                                                    <aura:set attribute="else">
+                                                        {!lead.ContactName}
+                                                    </aura:set>
+                                                </aura:if>
+                                            </span>                                                
+                                        </span>                                                        
+                                        <span class="FNS_PaddingRight">
+                                            {!$Label.c.FNS_REFERRED}
+                                        </span>
+                                        <span class="FNS_Position FNS_PositionLead">
+                                            <span class="FNS_Location"  data-index="{!index}">
+                                                <!-- TO NAVIGATE ON SAME PAGE AND OPEN IN NEW TAB  --> 
+                                                <!--<a id="{!lead.LeadId}" href="#" value="{!lead}" onclick="{!c.navigateToLead}"
+                                                                                        data-contact-value="{!lead}" data-field-name="{!lead.LeadId}"                                                          
+                                                                                        class="{!lead.LeadName ? ' slds-is-relative FNS_popover': ' slds-is-relative FNS_popover'}">-->
+                                                <a href="{!'/one/one.app?#/sObject/'+ lead.LeadId + '/view'}"  target="_blank"
+                                                   class="{!lead.LeadName ? ' slds-is-relative FNS_popover': ' slds-is-relative FNS_popover'}">    
+                                                    {!lead.LeadName}
+                                                    <span id="{!lead.LeadId}" data-field-name="{!lead.LeadName}" 
+                                                          class="FNS_popover_body slds-nubbin_left-bottom slds-popover slds-popover_tooltip FNS_Location_Text slds-m-left_small">
+                                                        <div class="slds-popover__body_xx-small FNS_popoverHeight FNS_popoverText" 
+                                                             id="{!lead.LeadId}" role="tooltip"> 
+                                                            <lightning:card iconName="standard:lead" title="{!lead.LeadName}" class="FNS_NoBorder"></lightning:card>                 
+                                                            <div class="slds-p-around_small">   
+                                                                <div class="slds-list_horizontal">
+                                                                    <div title="Phone" class="slds-size_1-of-2">
+                                                                        <strong>{!$Label.c.FNS_PHONE}: </strong>
+                                                                        <div class="slds-hyphenate">{!lead.LeadPhone}</div>
+                                                                    </div>                                                        
+                                                                    <div title="Email" class="slds-size_1-of-2">
+                                                                        <strong>{!$Label.c.FNS_EMAIL}: </strong>
+                                                                        <div class="slds-hyphenate">{!lead.LeadEmail}</div>
+                                                                    </div>                                        
+                                                                </div>
+                                                                <div class="slds-list_horizontal slds-m-top_x-small">
+                                                                    <div title="Company" class="slds-size_1-of-2">
+                                                                        <strong>{!$Label.c.FNS_COMPANY}: </strong>
+                                                                        <div class="slds-hyphenate">{!lead.LeadCompany}</div>
+                                                                    </div>
+                                                                    <div title="Lead Status" class="slds-size_1-of-2">
+                                                                        <strong>{!$Label.c.FNS_LEAD_STATUS}: </strong>
+                                                                        <div class="slds-hyphenate">{!lead.LeadStatus}</div>
+                                                                    </div>                                            
+                                                                </div>                              
+                                                                
+                                                            </div>
+                                                        </div>
+                                                    </span>
+                                                </a>
+                                            </span>                          
+                                        </span>
+                                    </div>                             
+                                    
+                                    <div class="slds-col slds-size_3-of-12">
+                                        <span>
+                                            <lightning:formattedDateTime value="{!lead.LeadCreatedDate}" month="short" day="2-digit" class="FNS_DateFormat"/>                                                        
+                                        </span>
+                                    </div>                                                        
+                                </div>
+                            </aura:iteration>
+                            <aura:set attribute="else">
+                                {!$Label.c.FNS_NO_LEADS}
+                            </aura:set>
+                        </aura:if>
+                    </p>   
+                </aura:set>
+            </aura:if>                     
+        </lightning:card>
+    </div>
+</aura:component>

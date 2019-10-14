@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FNS_TermUnit__c</fullName>
+    <externalId>false</externalId>
+    <label>Term Unit</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>false</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Month</fullName>
+                <default>false</default>
+                <label>Month</label>
+            </value>
+            <value>
+                <fullName>Year</fullName>
+                <default>false</default>
+                <label>Year</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

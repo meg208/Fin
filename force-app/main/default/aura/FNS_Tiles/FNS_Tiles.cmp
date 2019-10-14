@@ -1,0 +1,182 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes" access="global" >
+    <!--Attributes -->
+    <aura:attribute name="isRestoreDefault" type="Boolean"/>
+    <aura:attribute name="buttonOrder" type="Integer" default="0"/>
+    <aura:attribute name="oppWrapper" type="Object"/>
+    <!--Attributes ..-->
+    
+    <!--Registers ..-->
+    <aura:registerEvent name="cmpEvent" type="c:FNS_SelectTileEvent"/>
+    <!--Registers ..-->
+    
+    <lightning:layout multipleRows="true">
+        <lightning:layoutItem class="{!v.buttonOrder==1 ? 'FNS_isClicked
+                                     slds-box
+                                     slds-m-bottom_small
+                                     slds-size_2-of-12
+                                     slds-small-size_4-of-8
+                                     slds-medium-size_4-of-8
+                                     slds-large-size_2-of-8
+                                     slds-is-relative
+                                     slds-m-right_small
+                                     FNS_tiles' :
+                                     'slds-box
+                                     slds-m-bottom_small
+                                     slds-size_2-of-12
+                                     slds-small-size_4-of-8
+                                     slds-medium-size_4-of-8
+                                     slds-large-size_2-of-8
+                                     slds-is-relative
+                                     slds-m-right_small
+                                     FNS_tiles'}">
+            <div onclick="{!c.boxClicked}" data-value = "RED">
+                <div class="{!v.buttonOrder==1 ? 'FNS_isClicked FNS_smallTiles slds-text-title_bold FNS_popoverTile' :
+                            'FNS_smallTiles slds-text-title_bold FNS_popoverTile FNS_isRed'}">
+                    <aura:if isTrue="{!v.oppWrapper.opportunityRed>0}">
+                        {!v.oppWrapper.opportunityRed}
+                        <aura:Set attribute="else">
+                            0
+                        </aura:Set>
+                    </aura:if>
+                    <div class="{!v.buttonOrder==1 ? 'FNS_tileTextClicked slds-truncate' : 'FNS_tileText slds-truncate'}">
+                        {!$Label.c.FNS_NEEDS_ACTION}
+                    </div>
+                </div>
+            </div>
+        </lightning:layoutItem>
+        <lightning:layoutItem class="{!v.buttonOrder==2 ? 'FNS_isClicked
+                                     slds-box
+                                     slds-m-bottom_small
+                                     slds-size_2-of-12
+                                     slds-small-size_4-of-8
+                                     slds-medium-size_4-of-8
+                                     slds-large-size_2-of-8
+                                     slds-m-right_small
+                                     slds-is-relative
+                                     FNS_tiles' :
+                                     'slds-box
+                                     slds-m-bottom_small
+                                     slds-size_2-of-12
+                                     slds-small-size_4-of-8
+                                     slds-medium-size_4-of-8
+                                     slds-large-size_2-of-8
+                                     slds-m-right_small
+                                     slds-is-relative
+                                     FNS_tiles'}">
+            <div onclick="{!c.boxClicked}" data-value = "YELLOW">
+                <div class="{!v.buttonOrder==2 ? 'FNS_isClicked FNS_smallTiles slds-text-title_bold FNS_popoverTile FNS_isOrange' :
+                            'FNS_smallTiles slds-text-title_bold FNS_popoverTile FNS_isOrange'}">
+                    <aura:if isTrue="{!v.oppWrapper.opportunityOrange>0}">
+                        {!v.oppWrapper.opportunityOrange}
+                        <aura:Set attribute="else">
+                            0
+                        </aura:Set>
+                    </aura:if>
+                    <div class="{!v.buttonOrder==2 ? 'FNS_tileTextClicked FNS_tileText slds-truncate' : 'FNS_tileText slds-truncate'}">
+                        {!$Label.c.FNS_PAST_DUE}
+                    </div>
+                </div>
+            </div>
+        </lightning:layoutItem>
+        <lightning:layoutItem class="{!v.buttonOrder==3 ? 'FNS_isClicked
+                                     slds-box
+                                     slds-m-bottom_small
+                                     slds-size_2-of-12
+                                     slds-small-size_4-of-8
+                                     slds-medium-size_4-of-8
+                                     slds-large-size_2-of-8
+                                     slds-m-right_small
+                                     slds-is-relative
+                                     FNS_tiles' :
+                                     'slds-box
+                                     slds-m-bottom_small
+                                     slds-size_2-of-12
+                                     slds-small-size_4-of-8
+                                     slds-medium-size_4-of-8
+                                     slds-large-size_2-of-8
+                                     slds-m-right_small
+                                     slds-is-relative
+                                     FNS_tiles'}">
+            <div onclick="{!c.boxClicked}" data-value = "GREEN">
+                <div class="{!v.buttonOrder==3 ? 'FNS_isClicked FNS_smallTiles slds-text-title_bold FNS_popoverTile FNS_isGreen' :
+                            'FNS_smallTiles slds-text-title_bold FNS_popoverTile FNS_isGreen'}">
+                    <aura:if isTrue="{!v.oppWrapper.opportunityGreen>0}">
+                        {!v.oppWrapper.opportunityGreen}
+                        <aura:Set attribute="else">
+                            0
+                        </aura:Set>
+                    </aura:if>
+                    <div class="{!v.buttonOrder==3 ? 'FNS_tileTextClicked FNS_tileText slds-truncate' : 'FNS_tileText slds-truncate'}">
+                        {!$Label.c.FNS_ON_SCHEDULE}
+                    </div>
+                </div>
+            </div>
+        </lightning:layoutItem>
+        <lightning:layoutItem class="{!v.buttonOrder==4? 'FNS_isClicked
+                                     slds-box
+                                     slds-m-bottom_small
+                                     slds-size_2-of-12
+                                     slds-small-size_4-of-8
+                                     slds-medium-size_4-of-8
+                                     slds-large-size_2-of-8
+                                     slds-is-relative
+                                     slds-m-right_small
+                                     FNS_tiles' : 
+                                     'slds-box
+                                     slds-m-bottom_small
+                                     slds-size_2-of-12
+                                     slds-small-size_4-of-8
+                                     slds-medium-size_4-of-8
+                                     slds-large-size_2-of-8
+                                     slds-m-right_small
+                                     slds-is-relative
+                                     FNS_tiles'}">
+            <div onclick="{!c.boxClicked}" data-value = "GREY">
+                <div class="{!v.buttonOrder==4 ? 'FNS_isClicked FNS_smallTiles slds-text-title_bold FNS_popoverTile FNS_isGrey' : 
+                            'FNS_smallTiles slds-text-title_bold FNS_popoverTile FNS_isGrey'}">
+                    <aura:if isTrue="{!v.oppWrapper.opportunityGrey>0}">
+                        {!v.oppWrapper.opportunityGrey}
+                        <aura:Set attribute="else">
+                            0
+                        </aura:Set>
+                    </aura:if>
+                    <div class="{!v.buttonOrder==4 ? 'FNS_tileTextClicked FNS_tileText slds-truncate' : 'FNS_tileText slds-truncate'}">
+                        {!$Label.c.FNS_CLOSING_APPLICATION}
+                    </div>
+                </div>
+            </div>
+        </lightning:layoutItem>
+        <lightning:layoutItem class="{!v.buttonOrder==5 ? 'FNS_isClicked
+                                     slds-box
+                                     slds-m-bottom_small
+                                     slds-size_2-of-12
+                                     slds-small-size_4-of-8
+                                     slds-medium-size_4-of-8
+                                     slds-large-size_2-of-8
+                                     slds-is-relative
+                                     FNS_tiles' : 
+                                     'slds-box
+                                     slds-m-bottom_small
+                                     slds-size_2-of-12
+                                     slds-small-size_4-of-8
+                                     slds-medium-size_4-of-8
+                                     slds-large-size_2-of-8
+                                     slds-is-relative
+                                     FNS_tiles'}">
+            <div onclick="{!c.boxClicked}" data-value = "PROPOSAL">
+                <div class="{!v.buttonOrder==5 ? 'FNS_isClicked FNS_smallTiles slds-text-title_bold FNS_popoverTile FNS_isBlack' : 
+                            'FNS_smallTiles slds-text-title_bold FNS_popoverTile FNS_isGrey'}">
+                    <aura:if isTrue="{!v.oppWrapper.opportunityProposal>0}">
+                        {!v.oppWrapper.opportunityProposal}
+                        <aura:Set attribute="else">
+                            0
+                        </aura:Set>
+                    </aura:if>
+                    <div class="{!v.buttonOrder==5 ? 'FNS_tileTextClicked FNS_tileText slds-truncate' : 'FNS_tileText slds-truncate'}">
+                        {!$Label.c.FNS_PROPOSAL}
+                    </div>
+                </div>
+            </div>
+        </lightning:layoutItem>
+    </lightning:layout>
+</aura:component>

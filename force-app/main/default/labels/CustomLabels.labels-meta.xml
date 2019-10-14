@@ -1,0 +1,1399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">    
+      <labels>
+        <fullName>FNS_INVALID_API_URL</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>API URL is Invalid</shortDescription>
+        <value>API URL is Invalid</value>
+    </labels>
+     
+     <labels>
+        <fullName>FNS_FIELD_NOT_READABLE</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Field Is Not Readable</shortDescription>
+        <value>User Does not have access to Read the Field</value>
+    </labels>
+    <labels>
+        <fullName>FNS_CustomException</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Custom Exception</shortDescription>
+        <value>Something went wrong.Please contact Admin.</value>
+    </labels>
+
+     <labels>
+        <fullName>FNS_FIELD_NOT_UPDATEABLE</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Field Is Not Updateable</shortDescription>
+        <value>User Does not have access to Edit the Field</value>
+    </labels>
+
+
+     <labels>
+        <fullName>FNS_FIELD_INVALIDNAME</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Field Name Is Invalid</shortDescription>
+        <value>Field Name is Invalid</value>
+    </labels>
+
+
+    <labels>
+        <fullName>FNS_OBJECT_NOT_DELETABLE</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Object Can Not Be Deleted</shortDescription>
+        <value>User does not have access to Delet the Object</value>
+    </labels>
+
+
+    <labels>
+        <fullName>FNS_OBJECT_ERROR</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Object Name Is Invalid</shortDescription>
+        <value>Object Name is Invalid</value>
+    </labels>
+
+    <labels>
+        <fullName>FNS_AUTH_FAILED</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Authentication Has Failed</shortDescription>
+        <value>Authentication has failed</value>
+    </labels>
+  <labels>
+        <fullName>FNS_GURANTEE_ERROR</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Gurantee Error</shortDescription>
+        <value>Please enter either Guarantee Amount or Percentage</value>
+    </labels>
+  	<labels>
+        <fullName>FNS_TERM_AND_REQ_AMT_ERROR</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Product Screen</shortDescription>
+        <value>Please enter a valid number for Term and Requested amount.</value>
+    </labels>
+    <labels>
+        <fullName>FNS_ERROR</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Product Screen</shortDescription>
+        <value>Please enter a valid number for Loan Amount and Term.</value>
+    </labels>
+    <labels>
+        <fullName>FNS_APPLICATION_SUBMIT_HEADER</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Submit Application Header</shortDescription>
+        <value>Submit Application</value>
+    </labels>
+   <labels>
+        <fullName>FNS_APPLICATION_SUBMIT_ERROR</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Submit Application Error Message</shortDescription>
+        <value>User cannot submit application as no Product is associated with it.</value>
+    </labels>
+  <labels>
+        <fullName>FNS_APPLICATION_SUBMIT_ERROR_MSG</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Application Is Not Submitted</shortDescription>
+        <value>There was some Error. Application is not submitted.</value>
+    </labels>
+    <labels>
+        <fullName>FNS_APPLICATION_SUBMIT_MESSAGE</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Submit Application Message</shortDescription>
+        <value>Are you sure you want to submit this application to CME ?</value>
+    </labels>
+    <labels>
+        <fullName>FNS_APPLICATION_SUBMIT_SUCCESS</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Application Is Submitted Successfully</shortDescription>
+        <value>Application is submitted successfully</value>
+    </labels>
+    <labels>
+        <fullName>FNS_AUTH_SUCCESSFUL</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Authentication Is Successful</shortDescription>
+        <value>Authentication is successful</value>
+    </labels>
+  <labels>
+        <fullName>FNS_ADD_PRODUCT_LOAN</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Add Product Loan</shortDescription>
+        <value>+ New Loan</value>
+    </labels>
+    <labels>
+        <fullName>FNS_CLOSE</fullName>
+        <categories>Product Creation Screen</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Close</shortDescription>
+        <value>Close</value>
+    </labels>
+    <labels>
+        <fullName>FNS_ADD_PRODUCT_ROLE</fullName>
+        <categories>Product Creation Screen</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Add Product Role</shortDescription>
+        <value>+ New Product Role</value>
+    </labels>
+    <labels>
+        <fullName>FNS_APPLY</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Apply</shortDescription>
+        <value>Apply</value>
+    </labels>
+    <labels>
+        <fullName>FNS_BACK</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>FNS_BACK</shortDescription>
+        <value>Back</value>
+    </labels>
+    <labels>
+        <fullName>FNS_CANCEL</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Cancel</shortDescription>
+        <value>Cancel</value>
+    </labels>
+    <labels>
+        <fullName>FNS_CLOSING_APPLICATION</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Closing Application</shortDescription>
+        <value>Closing Soon</value>
+    </labels>
+    <labels>
+        <fullName>FNS_CONSUMER_KEY</fullName>
+        <categories>Setup Connection</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Consumer Key</shortDescription>
+        <value>Consumer Key</value>
+    </labels>
+    <labels>
+        <fullName>FNS_CONSUMER_SECRET</fullName>
+        <categories>Setup Connection</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Consumer Secret</shortDescription>
+        <value>Consumer Secret</value>
+    </labels>
+    <labels>
+        <fullName>FNS_DISPOSITION</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Disposition</shortDescription>
+        <value>Disposition</value>
+    </labels>
+    <labels>
+        <fullName>FNS_DUE</fullName>
+        <categories>Exception Message</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>FIELD INACCESSIBLE</shortDescription>
+        <value>Due Date</value>
+    </labels>
+    <labels>
+        <fullName>FNS_EDIT</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Edit</shortDescription>
+        <value>Edit</value>
+    </labels>
+    <labels>
+        <fullName>FNS_FFDC_SFDC_CONNECT</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>FFDC-SFDC Connect</shortDescription>
+        <value>FFDC to SFDC Connection</value>
+    </labels>
+    <labels>
+        <fullName>FNS_FEES</fullName>
+        <categories>Product Creation Screen</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Fees</shortDescription>
+        <value>Fees</value>
+    </labels>
+    <labels>
+        <fullName>FNS_GENERATE_URI_FAILED</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Generate URI Failed</shortDescription>
+        <value>Something wrong while generating url. Please check custom setting details.</value>
+    </labels>
+    <labels>
+        <fullName>FNS_MAPPING_DELETE</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Mapping Delete</shortDescription>
+        <value>Delete</value>
+    </labels>
+    <labels>
+        <fullName>FNS_NEEDS_ACTION</fullName>
+        <categories>Exception Message</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Needs Urgent Action</shortDescription>
+        <value>Attention Needed</value>
+    </labels>
+    <labels>
+        <fullName>FNS_NO_OF_LOANS</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>No Of Loans</shortDescription>
+        <value>Number Of Loans</value>
+    </labels>
+    <labels>
+        <fullName>FNS_NEW_PRICING_FEES</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>New Pricing Fees</shortDescription>
+        <value>Pricing &amp; Fees</value>
+    </labels>
+    <labels>
+        <fullName>FNS_NEW_PRODUCT</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>New Product</shortDescription>
+        <value>New Product</value>
+    </labels>
+    <labels>
+        <fullName>FNS_NEW_PRODUCT_LOAN</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>New Product Loan</shortDescription>
+        <value>Product Loan</value>
+    </labels>
+    <labels>
+        <fullName>FNS_NEW_PRODUCT_ROLE</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>New Product Role</shortDescription>
+        <value>Product Role</value>
+    </labels>
+    <labels>
+        <fullName>FNS_NEXT</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Next</shortDescription>
+        <value>Next</value>
+    </labels>
+    <labels>
+        <fullName>FNS_ON_SCHEDULE</fullName>
+        <categories>Exception Message</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>On Schedule</shortDescription>
+        <value>On Track</value>
+    </labels>
+    <labels>
+        <fullName>FNS_PAST_DUE</fullName>
+        <categories>Exception Message</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Past Due</shortDescription>
+        <value>Needs Caution</value>
+    </labels>
+    <labels>
+        <fullName>FNS_PENDING_DEALS</fullName>
+        <categories>Exception Message</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Pending Deals</shortDescription>
+        <value>Active Deals</value>
+    </labels>
+    <labels>
+        <fullName>FNS_PENDING_DEALS_CLEAR_FILTERS</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Pending Deals Clear Filters</shortDescription>
+        <value>Restore Defaults</value>
+    </labels>
+    <labels>
+        <fullName>FNS_PENDING_DEALS_EQUALS</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Pending Deals Equals</shortDescription>
+        <value>Equals</value>
+    </labels>
+    <labels>
+        <fullName>FNS_PENDING_DEALS_FILTER_LABEL</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Pending Deals Filter Label</shortDescription>
+        <value>Filters</value>
+    </labels>
+    <labels>
+        <fullName>FNS_PENDING_DEALS_GREATER_THAN</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Pending Deals Greater Than</shortDescription>
+        <value>Greater Than</value>
+    </labels>
+    <labels>
+        <fullName>FNS_PENDING_DEALS_GREATER_THAN_EQUAL_TO</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Pending Deals Greater Than Equal To</shortDescription>
+        <value>Greater Than or Equals</value>
+    </labels>
+    <labels>
+        <fullName>FNS_PENDING_DEALS_LESS_THAN</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Pending Deals Less Than</shortDescription>
+        <value>Less Than</value>
+    </labels>
+    <labels>
+        <fullName>FNS_PENDING_DEALS_LESS_THAN_EQUAL_TO</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Pending Deals Less Than Equal To</shortDescription>
+        <value>Less Than or Equals</value>
+    </labels>
+    <labels>
+        <fullName>FNS_PENDING_DEALS_NONE</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Pending Deals None</shortDescription>
+        <value>--None--</value>
+    </labels>
+    <labels>
+        <fullName>FNS_PENDING_DEALS_NOT_EQUALS</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Pending Deals Not Equals</shortDescription>
+        <value>Not Equals</value>
+    </labels>
+    <labels>
+        <fullName>FNS_PENDING_DEALS_OPERATOR</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Pending Deals Operator</shortDescription>
+        <value>Operator</value>
+    </labels>
+    <labels>
+        <fullName>FNS_PENDING_DEALS_VALUE</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Pending Deals Value</shortDescription>
+        <value>Value</value>
+    </labels>
+    <labels>
+        <fullName>FNS_PENDING_DEALS_FILTER_SELECTED_RESOURCE</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Pending Deals Filter Selected Resource</shortDescription>
+        <value>Resource</value>
+    </labels>
+    <labels>
+        <fullName>FNS_PRICING</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Pricing</shortDescription>
+        <value>Pricing</value>
+    </labels>
+    <labels>
+        <fullName>FNS_PRODUCT_LOAN</fullName>
+        <categories>Product Creation Screen</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Product Loan</shortDescription>
+        <value>Loan(s)</value>
+    </labels>
+    <labels>
+        <fullName>FNS_PRODUCT_ROLE</fullName>
+        <categories>Product Creation Screen</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Product Role</shortDescription>
+        <value>Product Role(s)</value>
+    </labels>
+    <labels>
+        <fullName>FNS_PROPOSAL</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Proposal</shortDescription>
+        <value>Proposal</value>
+    </labels>
+  <labels>
+        <fullName>FNS_PRODUCT_TYPE</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Product Type</shortDescription>
+        <value>Product Type</value>
+    </labels>
+  <labels>
+        <fullName>FNS_REQUESTED_AMOUNT</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Requested Amount</shortDescription>
+        <value>Requested Amount</value>
+    </labels>
+	<labels>
+        <fullName>FNS_PRODUCTSUMMARY</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Product Summary</shortDescription>
+        <value>Product Summary</value>
+    </labels>
+	<labels>
+        <fullName>FNS_PURPOSE</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Purpose</shortDescription>
+        <value>Purpose</value>
+    </labels>
+    <labels>
+        <fullName>FNS_RECORD_DELETE_SUCCESS</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Record Delete Success</shortDescription>
+        <value>Record Deleted Successfully</value>
+    </labels>
+    <labels>
+        <fullName>FNS_RECORD_NOT_FOUND</fullName>
+        <categories>Finastra Setup</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Record Not Found</shortDescription>
+        <value>Record Not Found.</value>
+    </labels>
+    <labels>
+        <fullName>FNS_RECORD_UPDATE_FAILED</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Record Update Failed</shortDescription>
+        <value>Something Went wrong while updating Record</value>
+    </labels>
+    <labels>
+        <fullName>FNS_RECORD_UPDATE_SUCCESS</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Record Update Success</shortDescription>
+        <value>Record Updated Successfully</value>
+    </labels>
+    <labels>
+        <fullName>FNS_SFDC_FFDC_Connect</fullName>
+        <categories>Finastra Setup</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>SFDC-FFDC Connect</shortDescription>
+        <value>SFDC to FFDC Connection</value>
+    </labels>
+    <labels>
+        <fullName>FNS_STR_CUSTOMER</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Customer</shortDescription>
+        <value>Customer</value>
+    </labels>
+    <labels>
+        <fullName>FNS_SAVE</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Save</shortDescription>
+        <value>Save</value>
+    </labels>
+    <labels>
+        <fullName>FNS_SETUP_AUTHORIZE_BTN</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Setup Authorize Btn</shortDescription>
+        <value>Authorize</value>
+    </labels>
+    <labels>
+        <fullName>FNS_SETUP_FIN_ORG_ID</fullName>
+        <categories>Finastra Setup</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Setup Fin Org ID</shortDescription>
+        <value>Finastra Organisation ID:</value>
+    </labels>
+    <labels>
+        <fullName>FNS_SETUP_FIN_ORG_MSG</fullName>
+        <categories>Finastra Setup</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Setup Fin Org Msg</shortDescription>
+        <value>To Authenticate with a Finastra Organization:</value>
+    </labels>
+    <labels>
+        <fullName>FNS_SETUP_INSTANCE_URL</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Setup Instance URL</shortDescription>
+        <value>Middleware Instance URL</value>
+    </labels>
+    <labels>
+        <fullName>FNS_SETUP_OAUTH_MSG</fullName>
+        <categories>Finastra Setup</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Setup OAuth Msg</shortDescription>
+        <value>OAuth(Open Authorization) is an open protocol to allow API authorization is a simple standardized way from desktop and web Application. Utilize the OAuth so website users can directly authenticate to access data without the presence of an end user.</value>
+    </labels>
+    <labels>
+        <fullName>FNS_SETUP_USER_MSG</fullName>
+        <categories>Finastra Setup</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Setup User Msg</shortDescription>
+        <value>Select an organization and the click the Authorize Button</value>
+    </labels>
+    <labels>
+        <fullName>FNS_VIEW_ALL</fullName>
+        <categories>Exception Message</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>View All</shortDescription>
+        <value>View All</value>
+    </labels>
+    <labels>
+        <fullName>FNS_REFRESH_DATA_FROM_CME_BUTTON</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Refresh Data from FFDC</shortDescription>
+        <value>Refresh Data from FFDC</value>
+    </labels>
+    <labels>
+        <fullName>fflib_QueryFactory_crossobject_fieldsets_not_allowed_error</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Error when selecting a cross-object fieldsset is not allowed and attempted.</shortDescription>
+        <value>Cross-object fields not allowed and field &quot;{0}&quot; is a cross-object field.</value>
+    </labels>
+    <labels>
+        <fullName>fflib_QueryFactory_fieldset_wrong_sobject_error</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Error when selecting a field set for a different sobject type.</shortDescription>
+        <value>Field set &quot;{0}&quot; is not for SObject type &quot;{1}&quot;</value>
+    </labels>
+    <labels>
+        <fullName>fflib_QueryFactory_recursive_subquery_error</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Presented when attempting to nest subqueries.</shortDescription>
+        <value>Invalid call to subselectQuery.  You may not add a subselect query to a subselect query.</value>
+    </labels>
+    <labels>
+        <fullName>fflib_QueryFactory_subquery_invalid_relationship</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Presented when attempting to create a subquery from an invalid relationship.</shortDescription>
+        <value>Invalid call to subselectQuery.  Invalid relationship for table.</value>
+    </labels>
+    <labels>
+        <fullName>fflib_security_error_field_not_insertable</fullName>
+        <categories>security,error</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>fflib_security_error_field_not_insertable</shortDescription>
+        <value>You do not have permission to insert field {1} on {0}</value>
+    </labels>
+    <labels>
+        <fullName>fflib_security_error_field_not_readable</fullName>
+        <categories>security,error</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>fflib_security_error_field_not_readable</shortDescription>
+        <value>You do not have permission to read the field {1} on {0}</value>
+    </labels>
+    <labels>
+        <fullName>fflib_security_error_field_not_updateable</fullName>
+        <categories>security,error</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>fflib_security_error_field_not_updateable</shortDescription>
+        <value>You do not have permission to update the field {1} on {0}</value>
+    </labels>
+    <labels>
+        <fullName>fflib_security_error_object_not_deletable</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>fflib_security_error_object_not_deletable</shortDescription>
+        <value>You do not have permission to delete {0}</value>
+    </labels>
+    <labels>
+        <fullName>fflib_security_error_object_not_insertable</fullName>
+        <categories>security,error</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>fflib_security_error_object_not_insertable</shortDescription>
+        <value>You do not have permission to insert {0}</value>
+    </labels>
+    <labels>
+        <fullName>fflib_security_error_object_not_readable</fullName>
+        <categories>security,error</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>fflib_security_error_object_not_readable</shortDescription>
+        <value>You do not have permission to read {0}</value>
+    </labels>
+    <labels>
+        <fullName>fflib_security_error_object_not_updateable</fullName>
+        <categories>security,error</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>fflib_security_error_object_not_updateable</shortDescription>
+        <value>You do not have permission to update {0}</value>
+    </labels>
+    <!-- Kavya - Activitites Labels - START -->
+    <labels>
+        <fullName>FNS_ASSIGN_TO</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Assign To</shortDescription>
+        <value>Assign To</value>
+    </labels>
+      
+    <labels>
+        <fullName>FNS_ROUTE_ACTIVITY</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Route Activity</shortDescription>
+        <value>Route Activity/New Activity</value>
+    </labels>
+   
+    <labels>
+        <fullName>FNS_ACTIVITIES_NO_CONFIG_DATA</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Activities No Config Data</shortDescription>
+        <value>There are no Activities for this Application</value>
+    </labels>
+    <labels>
+        <fullName>FNS_ACTIVITY_API_FAILURE</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Activity API Failure</shortDescription>
+        <value>Unable to retrieve activities at this point of time. Please try again later.</value>
+    </labels>
+    <!-- Kavya - Activitites Labels - END -->
+    <!-- Kavya - Predictive Analytics  START -->
+    
+    <labels>
+        <fullName>FNS_PREDICTIVE_ANALYTICS</fullName>
+        <categories>FNS_PredictiveAnalytics</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Predictive Analytics</shortDescription>
+        <value>Predictive Analytics</value>
+    </labels>
+    <!-- Kavya - Predictive Analytics  END -->
+   <labels>
+        <fullName>FNS_REQUIRED_FIELD_ERROR</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Required Field Error</shortDescription>
+        <value>Please provide all the required values</value>
+    </labels>
+    <labels>
+        <fullName>FNS_INITIAL_INPUT</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Initial Input</shortDescription>
+        <value>INITIAL INPUT</value>
+    </labels>
+    <labels>
+        <fullName>FNS_NEED_IMMEDIATE_ATTENTION</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Need Immediate Attention</shortDescription>
+        <value>need immediate attention</value>
+    </labels>
+    <labels>
+        <fullName>FNS_NEEDS_REVIEW</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Needs Review</shortDescription>
+        <value>needs review</value>
+    </labels>
+    <labels>
+        <fullName>FNS_REMAINING</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Remaining</shortDescription>
+        <value>are remaining</value>
+    </labels>
+    <labels>
+        <fullName>FNS_UNDERWRITING</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>UNDERWRITING</shortDescription>
+        <value>UNDERWRITING</value>
+    </labels>
+    <labels>
+        <fullName>FNS_YOU_HAVE</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>You Have</shortDescription>
+        <value>You have</value>
+    </labels>
+     <labels>
+        <fullName>FNS_RECORD_DELETE_ERROR</fullName>
+        <categories>Record Delete</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Record Delete Error</shortDescription>
+        <value>Something went wrong, Please try again.</value>
+    </labels>
+    <labels>
+        <fullName>FNS_NEW</fullName>
+        <categories>New Button</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>New Button</shortDescription>
+        <value>New</value>
+    </labels>
+    <!--Saylis Label Start -->
+    <labels>
+        <fullName>FNS_REQUESTED_CLOSING_DATE</fullName>
+        <categories>Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Requested Closing Date</shortDescription>
+        <value>Requested Closing Date</value>
+    </labels>
+    <labels>
+        <fullName>FNS_ROLE</fullName>
+        <categories>Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Role</shortDescription>
+        <value>Role</value>
+    </labels>
+    <labels>
+        <fullName>FNS_DESCRIPTION</fullName>
+        <categories>Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Description</shortDescription>
+        <value>Description</value>
+    </labels>
+    <labels>
+        <fullName>FNS_DOCUMENTS</fullName>
+        <categories>Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Documents</shortDescription>
+        <value>Documents</value>
+    </labels>
+    <labels>
+        <fullName>FNS_NO_RECORDS_TO_DISPLAY</fullName>
+        <categories>Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>No Records To Display</shortDescription>
+        <value>No records to display</value>
+    </labels>
+    <labels>
+        <fullName>FNS_TYPE</fullName>
+        <categories>Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Type</shortDescription>
+        <value>Type</value>
+    </labels>
+    <labels>
+        <fullName>FNS_APPLICATION_ROLES</fullName>
+        <categories>Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Application Roles</shortDescription>
+        <value>Application Roles</value>
+    </labels>
+    <!--Sayli Label End-->
+
+    <labels>
+        <fullName>FNS_ACTIVE_APPLICATIONS</fullName>
+        <categories>Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Community Active Application</shortDescription>
+        <value>Active Applications</value>
+    </labels>
+    
+     <labels>
+        <fullName>FNS_APPLICATION_SUBMIT_QUIP_ERROR</fullName>
+        <categories>Submit Application</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Submit Application Error Message for Quip</shortDescription>
+        <value>Please Finalize Quip before you can Submit the Application</value>
+    </labels>
+
+  <labels>
+        <fullName>FNS_NO_DOCUMENT_TEXT</fullName>
+        <categories>Community Component</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>No Document Text</shortDescription>
+        <value>Your document hasn&#39;t been created yet.</value>
+    </labels>
+    <labels>
+        <fullName>FNS_NO_PREDICTIVE_ANALYTICS</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>No Predictive Analytics</shortDescription>
+        <value>No Predictive Analytics Records found</value>
+    </labels>
+  <labels>
+        <fullName>FNS_JRM_OPPORTUNITY_ACCESS_ERROR</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>JRM Opportunity Access Error</shortDescription>
+        <value>JRM Users are not allowed to create Application</value>
+    </labels>
+    <labels>
+        <fullName>FNS_EMAIL</fullName>
+        <categories>Leads</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Email</shortDescription>
+        <value>Email</value>
+    </labels>
+    <labels>
+        <fullName>FNS_FEETYPE</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Fee Type</shortDescription>
+        <value>Fee Type</value>
+    </labels>
+  <labels>
+        <fullName>FNS_ACTIVITIES</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Activities</shortDescription>
+        <value>Activities</value>
+    </labels>
+  <labels>
+        <fullName>FNS_BANK</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Bank</shortDescription>
+        <value>Bank</value>
+    </labels>
+    <labels>
+        <fullName>FNS_COMPANY</fullName>
+        <categories>Leads</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Company</shortDescription>
+        <value>Company</value>
+    </labels>
+    <labels>
+        <fullName>FNS_CONFIGURATION_DATA_PICKLISTS</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Configuration Data Picklists</shortDescription>
+        <value>Configuration Data Picklists</value>
+    </labels>
+  <labels>
+        <fullName>FNS_LEAD_STATUS</fullName>
+        <categories>Leads</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Lead Status</shortDescription>
+        <value>Lead Status</value>
+    </labels>
+   
+  <labels>
+        <fullName>FNS_NO_LEADS</fullName>
+        <categories>Leads</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>No Leads</shortDescription>
+        <value>No Leads found</value>
+    </labels>
+  <labels>
+        <fullName>FNS_PHONE</fullName>
+        <categories>Leads</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Phone</shortDescription>
+        <value>Phone</value>
+    </labels>
+    <labels>
+        <fullName>FNS_PROCESS_CENTER</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Process Center</shortDescription>
+        <value>Process Center</value>
+    </labels>
+  <labels>
+        <fullName>FNS_PROCESS_GROUP</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Process Group</shortDescription>
+        <value>Process Group</value>
+    </labels>
+   <labels>
+        <fullName>FNS_REFERRED</fullName>
+        <categories>Leads</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Referred</shortDescription>
+        <value>referred</value>
+    </labels>
+    <labels>
+        <fullName>FNS_REFRESH_DATA_ON_CLICK</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Refresh Data On Click</shortDescription>
+        <value>On click of the button the below Objects in Salesforce will be populated with the data from FFDC</value>
+    </labels>
+  <labels>
+        <fullName>FNS_YOU</fullName>
+        <categories>Leads</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>You</shortDescription>
+        <value>You</value>
+    </labels>
+  
+     <labels>
+        <fullName>FNS_NAICSCODE</fullName>
+        <categories>Naics and Sic</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>FNS_NAICSCODE</shortDescription>
+        <value>NAICS Code</value>
+    </labels>
+    <labels>
+        <fullName>FNS_NAICS_AND_SIC</fullName>
+        <categories>Naics and Sic</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>FNS_NAICS_AND_SIC</shortDescription>
+        <value>NAICS &amp; SIC</value>
+    </labels>
+  <labels>
+        <fullName>FNS_SICCode</fullName>
+        <categories>Naics and Sic</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>FNS_SICCode</shortDescription>
+        <value>SIC Code</value>
+    </labels>
+    <labels>
+        <fullName>FNS_SUBNAICSCODE</fullName>
+        <categories>Naics and Sic</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>FNS_SUBNAICSCODE</shortDescription>
+        <value>Sub NAICS Code</value>
+    </labels>
+    <labels>
+        <fullName>FNS_SUBSICCODE</fullName>
+        <categories>Naics and Sic</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>FNS_SUBSICCODE</shortDescription>
+        <value>Sub SIC Code</value>
+    </labels>
+    <labels>
+        <fullName>FNS_COPYRIGHT</fullName>
+        <categories>Copyright</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Copyright</shortDescription>
+        <value>Copyright 2019 Finastra. All Rights Reserved.</value>
+    </labels>
+
+    <labels>
+        <fullName>FNS_TRACKINGITEMSMARKCHECKBOX</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>FNS_TRACKINGITEMSMARKCHECKBOX</shortDescription>
+        <value>To Submit a Tracking Item,</value>
+    </labels>
+    <labels>
+        <fullName>FNS_TRACKINGITEMSPROCEEDTEXT</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>FNS_TRACKINGITEMSPROCEEDTEXT</shortDescription>
+        <value>proceed to the dropdown and edit the tracking item then click &quot;Submit&quot;</value>
+    </labels>
+    <labels>
+        <fullName>FNS_TRACKINGITEM_CUSTOMERRELATED</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>FNS_TRACKINGITEM_CUSTOMERRELATED</shortDescription>
+        <value>Customer Related To</value>
+    </labels>
+    <labels>
+        <fullName>FNS_TRACKINGITEM_NONE</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>FNS_TRACKINGITEM_NONE</shortDescription>
+        <value>There are no Tracking Items for this Application.</value>
+    </labels>
+    <labels>
+        <fullName>FNS_TRACKINGITEM_NORECORDS</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>FNS_TRACKINGITEM_NORECORDS</shortDescription>
+        <value>No Records Found</value>
+    </labels>
+    <labels>
+        <fullName>FNS_TRACKINGITEM_PRODUCTRELATED</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>FNS_TRACKINGITEM_PRODUCTRELATED</shortDescription>
+        <value>Product Related To</value>
+    </labels>
+    <labels>
+        <fullName>FNS_TRACKINGITEM_UNDERWRITERCOMM</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>FNS_TRACKINGITEM_UNDERWRITERCOMM</shortDescription>
+        <value>Underwriter Comment</value>
+    </labels>
+    <labels>
+        <fullName>FNS_TRACKINGITEM_USERRRELATED</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>FNS_TRACKINGITEM_USERRRELATED</shortDescription>
+        <value>User Related To</value>
+    </labels>
+    <labels>
+        <fullName>FNS_TRACKING_ITEMS</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Tracking Items</shortDescription>
+        <value>Tracking items</value>
+    </labels>
+    <labels>
+        <fullName>FNS_TRACKING_ITEMS_ASSIGN</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Tracking Items Assign</shortDescription>
+        <value>Re-Assign Tracking Item</value>
+    </labels>
+    <labels>
+        <fullName>FNS_TRACKING_ITEMS_ASSIGN_TO</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Tracking Items Assign To</shortDescription>
+        <value>Assign To</value>
+    </labels>
+    <labels>
+        <fullName>FNS_TRACKING_ITEMS_ATTACHMENT</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Tracking Items Attachment</shortDescription>
+        <value>Related Documents</value>
+    </labels>
+    <labels>
+        <fullName>FNS_TRACKING_ITEMS_DATE</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Tracking Items Date</shortDescription>
+        <value>Due Date</value>
+    </labels>
+    <labels>
+        <fullName>FNS_TRACKING_ITEMS_HEADING</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Tracking Items Heading</shortDescription>
+        <value>Complete the below listed activities to proceed to the next disposition.</value>
+    </labels>
+    <labels>
+        <fullName>FNS_TRACKING_ITEMS_OWNER</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Tracking Items Owner</shortDescription>
+        <value>Tracking Items</value>
+    </labels>
+    <labels>
+        <fullName>FNS_TRACKING_ITEMS_OWNER_CHANGE</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Tracking Items Owner Change</shortDescription>
+        <value>The new owner will also become the owner of these records related to the Tracking Item</value>
+    </labels>
+    <labels>
+        <fullName>FNS_TRACKING_ITEMS_PRIORITY</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Tracking Items Priority</shortDescription>
+        <value>Priority</value>
+    </labels>
+    <labels>
+        <fullName>FNS_TRACKING_ITEMS_PROPOSAL_STAGE</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Tracking Items Proposal Stage</shortDescription>
+        <value>Currently, There are no Tracking Items on Proposal Stage.</value>
+    </labels>
+    <labels>
+        <fullName>FNS_TRACKING_ITEMS_SEND_NOTIFICATION</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Tracking Items Send Notification</shortDescription>
+        <value>Send notification email</value>
+    </labels>
+    <labels>
+        <fullName>FNS_TRACKING_ITEMS_STATUS</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Tracking Items Status</shortDescription>
+        <value>Status</value>
+    </labels>
+    <labels>
+        <fullName>FNS_DOCUMENTUPLOAD_UPLOADED_DOC</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>FNS_DOCUMENTUPLOAD_UPLOADED_DOC</shortDescription>
+        <value>Uploaded Document</value>
+    </labels>
+    <labels>
+        <fullName>FNS_DOCUMENT_DETAILS</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>FNS_DOCUMENT_DETAILS</shortDescription>
+        <value>Document Details</value>
+    </labels>
+    <labels>
+        <fullName>FNS_DOCUMENT_DRAG_AND_DROP</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>FNS_DOCUMENT_DRAG_AND_DROP</shortDescription>
+        <value>has been uploaded. Click on Submit to send it to CME.</value>
+    </labels>
+    <labels>
+        <fullName>FNS_DOCUMENT_EDIT</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>FNS_DOCUMENT_EDIT</shortDescription>
+        <value>Edit Document</value>
+    </labels>
+    <labels>
+        <fullName>FNS_DOCUMENT_SUBMIT</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>FNS_DOCUMENT_UPLOAD</shortDescription>
+        <value>New Document</value>
+    </labels>
+    <labels>
+        <fullName>FNS_DOCUMENT_UPLOAD_AVAILABLE</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>FNS_DOCUMENT_UPLOAD_AVAILABLE</shortDescription>
+        <value>To make this document available/unavailable to the borrower, click on the dropdown.</value>
+    </labels>
+    <labels>
+        <fullName>FNS_DOCUMENT_UPLOAD_DOCS</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>FNS_DOCUMENT_UPLOAD_DOCS</shortDescription>
+        <value>Drag and drop or upload documents</value>
+    </labels>
+    <labels>
+        <fullName>FNS_DOCUMENT_UPLOAD_NOT_AVAILABLE</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>FNS_DOCUMENT_UPLOAD_NOT_AVAILABLE</shortDescription>
+        <value>There are no uploaded documents.</value>
+    </labels>
+    <labels>
+        <fullName>FNS_COMMUNITY_NODOCUMENTS</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>FNS_COMMUNITY_NODOCUMENTS</shortDescription>
+        <value>There are no Documents for this Application.</value>
+    </labels>
+    <labels>
+        <fullName>FNS_COMMUNITY_NOREQUESTS</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>FNS_COMMUNITY_NOREQUESTS</shortDescription>
+        <value>There are no Requests for this Application.</value>
+    </labels>
+    <labels>
+        <fullName>FNS_COMMUNITY_REQUESTS</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>FNS_COMMUNITY_REQUESTS</shortDescription>
+        <value>Requests</value>
+    </labels>
+    <labels>
+        <fullName>FNS_COMMUNITY_TRACKINGITEM_TEXT</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>FNS_COMMUNITY_TRACKINGITEM_TEXT</shortDescription>
+        <value>Upload documents on the correspondent tracking items by clicking on the upload icon.</value>
+    </labels>
+    <labels>
+        <fullName>FNS_COMMUNITY_UPLOAD</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>FNS_COMMUNITY_UPLOAD</shortDescription>
+        <value>You have uploaded</value>
+    </labels>
+    <labels>
+        <fullName>FNS_REVIEW</fullName>
+        <categories>Predictive Analysis</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Review</shortDescription>
+        <value>Review</value>
+    </labels>
+	<labels>
+        <fullName>FNS_LEADS</fullName>
+        <categories>Leads</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Leads</shortDescription>
+        <value>Leads</value>
+    </labels>
+	<labels>
+        <fullName>FNS_NOTES</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Notes</shortDescription>
+        <value>Notes</value>
+    </labels>
+	<labels>
+        <fullName>FNS_PROPOSAL_TEXT</fullName>
+        <categories>Community Component</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Proposal Text</shortDescription>
+        <value>To View your proposal, click on the link.</value>
+    </labels>
+	<labels>
+        <fullName>FNS_COMMUNITY_APPLICATION</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>FNS_COMMUNITY_APPLICATION</shortDescription>
+        <value>application successfully.</value>
+    </labels>
+	<labels>
+        <fullName>FNS_OFFICER</fullName>
+        <categories>Application Related List</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Officers</shortDescription>
+        <value>Officers</value>
+    </labels>
+    <labels>
+        <fullName>FNS_SUBMIT</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Submit</shortDescription>
+        <value>Submit</value>
+    </labels>
+	<labels>
+        <fullName>FNS_SUCCESS</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Success</shortDescription>
+        <value>SUCCESS</value>
+    </labels>
+    <labels>
+       <fullName>FNS_QUIP</fullName>
+       <categories>Community Component</categories>
+       <language>en_US</language>
+       <protected>true</protected>
+       <shortDescription>Quip</shortDescription>
+       <value>Quip</value>
+    </labels>
+	<labels>
+        <fullName>FNS_WARNING</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Warning</shortDescription>
+        <value>WARNING</value>
+    </labels>
+	<labels>
+        <fullName>FNS_INFO</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Info</shortDescription>
+        <value>INFO</value>
+    </labels>
+	<labels>
+        <fullName>FNS_ERROR_HEADER</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Error</shortDescription>
+        <value>ERROR</value>
+    </labels>
+	<labels>
+        <fullName>FNS_REQUIRED</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Required</shortDescription>
+        <value>Required field:</value>
+    </labels>
+	<labels>
+        <fullName>FNS_ADDLOAN</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Add Loan</shortDescription>
+        <value>Add Loan</value>
+    </labels>    
+	<labels>
+        <fullName>FNS_ADDPRICING</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Add Pricing</shortDescription>
+        <value>Add Pricing</value>
+    </labels>
+	<labels>
+        <fullName>FNS_PRODUCT</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Product</shortDescription>
+        <value>PRODUCT</value>
+    </labels>    
+    <labels>
+        <fullName>FNS_APPLICATION_READ_ONLY</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>API URL is Invalid</shortDescription>
+        <value>Application cannot be edited at this time because its has been already submitted.</value>
+    </labels>
+    <labels>
+        <fullName>FNS_DOCUMENT_DOWNLOAD_ERROR</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>FNS_DOCUMENT_DOWNLOAD_ERROR</shortDescription>
+        <value>There was an error attempting to download the file. Please try again. If the problem persists, contact Salesforce Administrator.</value>
+    </labels>
+    <labels>
+        <fullName>FNS_DOCUMENT_UPLOADED</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>FNS_DOCUMENT_UPLOADED</shortDescription>
+        <value>has been uploaded.</value>
+    </labels>
+    <labels>
+        <fullName>FNS_NEW_COLLATERAL</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>New Collateral</shortDescription>
+        <value>New Collateral</value>
+    </labels>
+</CustomLabels>

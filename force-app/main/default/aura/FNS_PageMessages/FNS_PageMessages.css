@@ -1,0 +1,47 @@
+.THIS .slds-tree__item {
+    padding-left: 0.5rem !important;
+  }
+  
+  .THIS .slds-tree [aria-level="1"] > .fns-tree__item {
+    padding-left: 0.5rem;
+  }
+  
+  .THIS .slds-tree [aria-level="2"] > .fns-tree__item {
+    padding-left: 0.5rem;
+  }
+  
+  .THIS .fns-errors_display-max-height {
+     -webkit-overflow-scrolling: auto;
+    max-height: 11.5rem;
+    overflow: hidden;
+    overflow-y: auto;
+  }
+  
+  .THIS .fns-errors_background1 {
+     background-color: #FFFBF4;
+  }
+  
+  .THIS .fns-errors_background2 {
+     background-color: #FFF8F6;
+  }
+  
+  .THIS .fns-errors_background3 {
+     background-color: #FFF3F3;
+  }
+  
+  .THIS .fns-errors_background4 {
+     background-color: #FFEFEF;
+  }
+  
+  .THIS .fns-crossIcon_Margin{
+      margin-top: -0.1rem !important;
+  }
+  .THIS .fns-box_border
+  {
+      border: 2px solid rgb(255, 183, 93);
+      border-radius:4px;
+  }
+  .THIS .fns-box_border  a
+  {
+      font-size:.95rem;
+  }

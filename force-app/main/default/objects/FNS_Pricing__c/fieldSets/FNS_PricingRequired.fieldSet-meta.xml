@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FieldSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FNS_PricingRequired</fullName>
+    <description>These fields will be used in creating Pricing record</description>
+    <displayedFields>
+        <field>FNS_FinancialAccount__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>false</isRequired>
+    </displayedFields>
+    <label>Pricing Required</label>
+</FieldSet>

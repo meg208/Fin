@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FNS_SLAStatus__c</fullName>
+    <externalId>false</externalId>
+    <label>SLA Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>false</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>RED</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>YELLOW</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>GREEN</fullName>
+                <default>true</default>
+            </value>
+            <value>
+                <fullName>Full</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+            </value>
+            <value>
+                <fullName>Partial</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

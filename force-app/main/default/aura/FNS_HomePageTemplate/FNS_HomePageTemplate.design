@@ -1,0 +1,7 @@
+<design:component label="Finastra Default Home Page">
+    <flexipage:template >
+        <flexipage:region name="column1" defaultWidth="Medium" />
+        <flexipage:region name="column2" defaultWidth="small" />
+        <flexipage:region name="column3" defaultWidth="small" />
+    </flexipage:template>
+</design:component>

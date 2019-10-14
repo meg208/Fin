@@ -1,0 +1,91 @@
+.THIS .bold {
+    font-weight: bold;
+}
+
+.THIS .italic {
+    font-weight: italic;
+}
+.THIS .myCheckbox{
+    display: inline-block;
+    float: left;
+    width:2rem;
+    height:2rem;
+}
+.THIS .c-container {
+    border: 1px ;
+    margin: 10px 0 20px 0;
+}
+.THIS .header-column {
+    padding: 0 2rem;
+}
+.THIS .field-title {
+    font-size: .75rem;
+    line-height: 1.25;
+    color: #54698d;
+    margin-bottom: .25rem;
+}
+
+.THIS .slcustompadding{
+    padding-left: 2.3rem;
+}
+
+.THIS.slds-spinner_container {  
+    z-index: 10000;
+    position: fixed;   
+}
+
+.THIS .FNS_modalFooter .slds-modal__footer {
+    box-shadow : none;
+}
+
+.THIS .slds-backdrop_close {
+    visibility: visible;
+    opacity: 0.8;
+    transition: opacity .8s linear;
+}
+
+.THIS .MainHeading{
+    font-family: 'Salesforce Sans';
+    font-weight: bold;
+    font-size: 1rem;
+    color:#080707;
+}
+
+.THIS .subheading {
+    font-family: 'Salesforce Sans';
+    font-weight: Regular;
+    font-size: 0.875rem;
+    color:#080707;
+}
+
+.THIS .subheadingBold {
+    font-family: 'Salesforce Sans';
+    font-weight: 550;
+    font-size: 0.875rem;
+    color:#080707;
+}
+
+.THIS .subContentHeading {
+    font-family: 'Salesforce Sans';
+    font-weight: Regular;
+    font-size: 0.75rem;
+    color:#706E6B;
+}
+
+.THIS .subContent {
+    font-family: 'Salesforce Sans';
+    font-weight: Regular;
+    font-size: 0.75rem;
+    color:#080707;
+}
+
+.THIS .FNS_font-size {
+    font-size:.87rem;   
+}
+
+.THIS .customborder {
+    border-bottom:1px solid;
+    border-right:1px solid;
+    border-left :1px solid;
+    border-top:0.7px solid;
+}

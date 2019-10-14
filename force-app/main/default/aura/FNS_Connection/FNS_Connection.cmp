@@ -1,0 +1,104 @@
+<aura:component controller="FNS_SetupController">
+    <!-- PUBLIC ATTRIBUTES START-->
+    <aura:attribute name="connectData" type="object"/>
+    <aura:attribute name="edit" type="boolean" default="false"/>
+    <aura:attribute name="authType" type="String"/>
+    <aura:attribute name="authCode" type="String" access="Private"/>
+    <!-- PUBLIC ATTRIBUTES END-->
+	
+    <!-- Aura Handler Start-->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:handler event="force:refreshView" action="{!c.doInit}" />
+    <!-- Aura Handler END-->
+	
+	<!-- MARK UP START-->
+    <lightning:card title="{!(v.authType=='SFDC_FFDC' ? $Label.c.FNS_SFDC_FFDC_Connect :$Label.c.FNS_FFDC_SFDC_CONNECT )}" iconName="standard:account" class="slds-card_boundary fns-CHeader-bold">
+        <aura:if isTrue="{!!v.edit}">
+            <div class="slds-p-left_medium">
+                <i>{!$Label.c.FNS_SETUP_OAUTH_MSG}</i><br/>
+                <div class="slds-p-top_x-small">
+                    <p class="font_weight"> {!$Label.c.FNS_SETUP_FIN_ORG_MSG}</p>  
+                    <p>{!$Label.c.FNS_SETUP_USER_MSG}</p>
+                </div>
+                
+                <div class="slds-p-top_large">
+                    <aura:if isTrue="{!(v.authType=='SFDC_FFDC')}">
+                    <label class='slds-form-element__label'>{!$Label.c.FNS_SETUP_INSTANCE_URL}</label>
+                    <aura:set attribute="else">
+                        <label class='slds-form-element__label'>Redirect URI</label>
+                        </aura:set>
+                    </aura:if>
+                    <aura:if isTrue="{!(v.authType=='SFDC_FFDC')}">
+                        <ui:outputText value="{!v.connectData.FNS_AuthorizationURL__c}"/>
+                       
+                        <aura:set attribute="else">
+                            <ui:outputText value="{!v.connectData.FNS_RedirectURI__c}"/>
+                        </aura:set>
+                    </aura:if> 		
+                    
+                </div>
+                
+            </div>
+            <aura:set attribute="else">
+                <!--Edit Form Start-->
+                <div class="c-container">
+                    <lightning:layout class="slds-wrap">
+                        <lightning:layoutItem class="slds-size_12-of-12 slds-grid slds-wrap slds-col ">
+                            <lightning:layoutItem class="slds-col slds-medium-size_12-of-12 slds-large-size_6-of-12 slds-p-around_small">
+                                <lightning:input aura:id="setup"  label="{!$Label.c.FNS_CONSUMER_KEY}" 
+                                                 value="{!v.connectData.FNS_ConsumerKey__c}"
+                                                 required="true"/>
+                            </lightning:layoutItem>
+                            <lightning:layoutItem class="slds-col slds-medium-size_12-of-12 slds-large-size_6-of-12 slds-p-around_small">
+                                <lightning:input aura:id="setup" type="password" label="{!$Label.c.FNS_CONSUMER_SECRET}" 
+                                                 value="{!v.connectData.FNS_ConsumerSecret__c}"
+                                                 required="true"/> 
+                            </lightning:layoutItem>
+                        </lightning:layoutItem>
+                        
+                        <lightning:layoutItem class="slds-size_12-of-12 slds-grid slds-wrap slds-col">
+                          <lightning:layoutItem class="slds-col slds-medium-size_12-of-12 slds-large-size_12-of-12 ">
+                                <aura:if isTrue="{!(v.authType=='SFDC_FFDC')}">
+                                    <lightning:layoutItem class="slds-size_12-of-12 slds-grid slds-wrap slds-col ">
+                                        <lightning:layoutItem class="slds-col slds-medium-size_6-of-12 slds-large-size_6-of-12 slds-p-around_small">
+                                            <lightning:input aura:id="setup"  label="Authorization URL" 
+                                                             value="{!v.connectData.FNS_AuthorizationURL__c}"
+                                                             required="true"/>
+                                        </lightning:layoutItem>
+                                        <lightning:layoutItem class="slds-col slds-medium-size_6-of-12 slds-large-size_6-of-12 slds-p-around_small">
+                                            <lightning:input aura:id="setup" label="Access Token URL" 
+                                                             value="{!v.connectData.FNS_AccessTokenURL__c}"
+                                                             required="true"/> 
+                                        </lightning:layoutItem>
+                                    </lightning:layoutItem>
+                                   <!--
+                                    <lightning:input aura:id="setup"  label="{!$Label.c.FNS_SETUP_INSTANCE_URL}" 
+                                                     value="{!v.connectData.FNS_AuthorizationURL__c}"
+                                                     required="true"/>--> 
+                                    <aura:set attribute="else">
+                                        <lightning:input aura:id="setup"  label="Redirect URI" 
+                                                         value="{!v.connectData.FNS_RedirectURI__c}"
+                                                         required="true"/> 
+                                    </aura:set>
+                                </aura:if> 	
+                                
+                            </lightning:layoutItem>
+                        </lightning:layoutItem>
+                    </lightning:layout>
+                </div>
+                <!--Edit form End-->
+            </aura:set>
+        </aura:if> 
+        <div class="slds-align_absolute-center">
+            <aura:if isTrue="{!!v.edit}">
+                <lightning:button variant="neutral" label="{!$Label.c.FNS_EDIT}" onclick="{!c.edit}"/>
+                <lightning:button variant="neutral" label="{!$Label.c.FNS_SETUP_AUTHORIZE_BTN}" onclick="{!c.authorize}"/>
+                <aura:set attribute="else">
+                    <lightning:button variant="neutral" label="{!$Label.c.FNS_SAVE}" onclick="{!c.save}"/>
+                    <lightning:button variant="neutral" label="{!$Label.c.FNS_CANCEL}" onclick="{!c.cancel}"/>
+                </aura:set>
+            </aura:if>
+        </div>
+    </lightning:card>
+	<!-- MARK UP END-->
+</aura:component>

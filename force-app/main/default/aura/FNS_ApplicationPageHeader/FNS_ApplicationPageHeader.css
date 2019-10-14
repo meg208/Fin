@@ -1,0 +1,58 @@
+.THIS .FNS_ERROR{
+    color: red;
+    margin-left: 12px;
+}
+
+.THIS .slds-form-element {
+    white-space: nowrap !important;
+}
+
+.THIS .slds-spinner {
+    position:fixed;
+    top: 20% !important;
+    right: 50% !important;
+}
+
+.THIS .FNS_submitApplicationMessage{
+    text-align: center;
+    vertical-align: middle;
+}
+
+.THIS .FNS_submitApplicationModal{
+    	
+	position: absolute;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+  	margin: auto;
+}
+
+.THIS .slds-form-element__label{
+    max-width:100% !important;
+    display:flex !important;
+}
+
+.THIS .slds-form-element__control{
+    padding-left: 0 !important;
+white-space: nowrap !important;
+}
+
+.THIS .slds-form-element__static{
+    max-width: 100% !important;
+    display:flex !important;
+}
+
+.THIS .slds-has-flexi-truncate {
+    flex: auto;
+    min-width: 0;
+}
+
+.THIS .FNS_Spinner{
+   transform:translateY(10%) !important;
+}
+
+.THIS lightning-record-form{
+    width:100% !important;
+    margin-left:3px !important;
+}

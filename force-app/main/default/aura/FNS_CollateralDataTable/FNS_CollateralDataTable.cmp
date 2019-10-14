@@ -1,0 +1,45 @@
+<aura:component controller="FNS_CollateralCmpController" implements="flexipage:availableForRecordHome,flexipage:availableForAllPageTypes">
+    <aura:attribute name="rowData" type="object[]" />
+	<aura:attribute name="columnNames" type="String" />
+    <aura:attribute name="isLoading" type="boolean" default="true" />
+    
+    <!-- handlers-->
+    <aura:handler name="init" value="{! this }" action="{! c.doInit }"/>
+    
+   
+    <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_fixed-layout">
+        <thead>
+            <tr class="slds-line-height_reset">
+                <aura:iteration items="{!v.columnNames}" var="col"> 
+                    <th class="fns_thead" scope="col">
+                        <div class="slds-truncate" title="Opportunity Name">{!col.label}</div>
+                    </th>
+                </aura:iteration>    
+            </tr>
+        </thead>
+        <tbody>  
+             {!v.rowData}          
+            <aura:iteration items="{!v.rowData}" var="data"> 
+                <tr class="slds-hint-parent"> 
+                    <td >
+                        <div class="slds-truncate fns-table-record" title="{!data.CollateralDocuments[0].FNS_DocumentId__c}">
+                            <a href="{! '/'+data.CollateralDocuments[0].FNS_DocumentId__c}" tabindex="-1">{!data.CollateralDocuments[0].FNS_FileName__c}</a>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="slds-truncate fns-table-record" title="{!data.Collateral.FNS_Collateral__r.FNS_CollateralType__c}">{!data.collateralTypeName}</div>
+                    </td>                           
+                    <td >
+                        <div class="slds-truncate fns-table-record" title="{!data.Collateral.FNS_Product__r}">
+                            <a href="{! '/'+data.Collateral.FNS_Product__r.Id}" data-value="{#data.Collateral.FNS_Product__r.FNS_ProductSummary__c}" tabindex="-1">{!data.Collateral.FNS_Product__r.FNS_ProductSummary__c}</a>
+                        </div>
+                    </td>
+                    <td >
+                        <div class="slds-truncate fns-table-record" title="{!data.Collateral.FNS_Collateral__r.FNS_CollateralCategory__c}">{!data.collateralCatName}</div>
+                    </td> 
+                </tr>
+            </aura:iteration>            
+        </tbody>
+    </table>    
+     
+</aura:component>

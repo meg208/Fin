@@ -1,0 +1,45 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global">
+
+    <!-- GLOBAL ATTRIBUTES -->
+    <aura:attribute name="messages" type="Object[]" required="true" access="global" description='Read Only Body. Pass a list of Error with Type and Message. Ex: [{"type":"error", "message": "Check your internet connection"}]'/>
+    <aura:attribute name="isExpanded" type="Boolean" default="true"/>
+    <!-- GLOBAL ATTRIBUTES END -->
+    
+    <!-- MARK UP -->
+    <lightning:layoutItem flexibility="auto" class="{!'slds-grid slds-wrap ' + ( (empty(v.messages)) ? 'slds-hide ' : 'slds-show slds-p-bottom_small') + ( $Browser.isTablet ? ' slds-theme_default' : ' ')}">
+        <lightning:layoutItem flexibility="auto" class=" " size="12" largeDeviceSize="12" mediumDeviceSize="12" smallDeviceSize="12">
+            <div class="{!'slds-p-around_small fns-box_border ' + (v.messages.length le 2 ? 'fns-errors_background1 ' : ' ') + (and(v.messages.length gt 2, v.messages.length le 4) ? 'fns-errors_background2 ' : ' ') + (and(v.messages.length gt 4, v.messages.length le 6) ? 'fns-errors_background3 ' : ' ') + (v.messages.length gt 6 ? 'fns-errors_background4 ' : ' ')}">
+                <ul class="slds-tree" aria-labelledby="treeheading" aria-activedescendant="tree0-node1">
+                    <li aria-level="1">
+                        <div class="slds-tree__item " onclick="{!c.toggleExpansion}">
+                            <lightning:button variant="default" class="slds-button_icon slds-m-right_x-small" iconName="{!v.isExpanded ? 'utility:chevrondown': 'utility:chevronright'}"/>
+                            <a href="javascript:void(0);" tabindex="-1" class="slds-truncate "><b>Errors ({!v.messages.length})</b></a>
+                        </div>
+                        <ul class="{!'slds-is-expanded ' + ($Browser.isTablet ? ' ' : 'slds-scrollable fns-errors_display-max-height ') + (v.isExpanded ? 'slds-show' : 'slds-hide')}" aria-labelledby="tree0-node1__label">
+                            <aura:iteration items="{!v.messages}" var="item" indexVar="index">
+                                    <li aria-level="2">
+                                        <div class="fns-tree__item slds-m-top_xx-small">
+                                            <lightning:layout >
+                                                <lightning:layoutItem >
+                                                    <lightning:icon iconName="{!'utility:'+item.type}" variant="{!item.type}" size="x-small" class="  slds-float_left " alternativeText="Error Icon"/>
+                                                </lightning:layoutItem>
+                                                <lightning:layoutItem class="slds-p-left_medium" size="11" flexibility="grow">
+                                                    <span class="{!'slds-text-color_' + item.type}">
+                                                        {!item.message}
+                                                        <!-- a href="javascript:void(0);">Go to..</a -->
+                                                        <lightning:buttonIcon aura:id="{!index}" value="{!index}" iconName="utility:close" variant="bare" alternativeText="close button" class="slds-m-left_x-small fns-crossIcon_Margin" iconClass="dark" onclick="{!c.removeMessage}"/>
+                                                    </span>
+                                                </lightning:layoutItem>
+                                            </lightning:layout>
+                                        </div>
+                                    </li>
+                            </aura:iteration>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </lightning:layoutItem>
+    </lightning:layoutItem>
+    <!-- MARK UP ENDS -->
+
+</aura:component>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FNS_FinancialAccountTransactions</fullName>
+    <columns>NAME</columns>
+    <columns>FNS_FinancialAccount__c</columns>
+    <columns>FNS_Application__c</columns>
+    <columns>FNS_Status__c</columns>
+    <columns>OWNER.ALIAS</columns>
+    <columns>CREATEDBY_USER</columns>
+    <filterScope>Everything</filterScope>
+    <label>Loans</label>
+</ListView>

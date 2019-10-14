@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FNS_Fee</fullName>
+    <active>true</active>
+    <label>Fee</label>
+    <picklistValues>
+        <picklist>FNS_FeeType__c</picklist>
+    </picklistValues>
+</RecordType>

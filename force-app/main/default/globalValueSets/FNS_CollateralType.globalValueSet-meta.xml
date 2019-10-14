@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>84_5699</fullName>
+        <default>false</default>
+        <label>Land Under Development - Commercial</label>
+    </customValue>
+    <customValue>
+        <fullName>83_5699</fullName>
+        <default>false</default>
+        <label>Land Under Development - Residential</label>
+    </customValue>
+    <customValue>
+        <fullName>82_5699</fullName>
+        <default>false</default>
+        <label>Assignment of Leases and Rents</label>
+    </customValue>
+    <customValue>
+        <fullName>81_5699</fullName>
+        <default>false</default>
+        <label>Developed Commercial Land</label>
+    </customValue>
+    <customValue>
+        <fullName>88_7059</fullName>
+        <default>false</default>
+        <label>Bank Stock</label>
+    </customValue>
+    <customValue>
+        <fullName>Eqiupment and Fixtures</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Eqiupment and Fixtures</label>
+    </customValue>
+    <customValue>
+        <fullName>Licensed Vehicle</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Licensed Vehicle</label>
+    </customValue>
+    <customValue>
+        <fullName>Insurance as Collateral</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Insurance as Collateral</label>
+    </customValue>
+    <customValue>
+        <fullName>Promisorry Note</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Promisorry Note</label>
+    </customValue>
+    <customValue>
+        <fullName>Misc. Collateral</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Misc. Collateral</label>
+    </customValue>
+    <customValue>
+        <fullName>Watercraft</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Watercraft</label>
+    </customValue>
+    <customValue>
+        <fullName>Aircraft</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Aircraft</label>
+    </customValue>
+    <customValue>
+        <fullName>Livestock</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Livestock</label>
+    </customValue>
+    <customValue>
+        <fullName>Crops</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Crops</label>
+    </customValue>
+    <customValue>
+        <fullName>Hazard</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Hazard</label>
+    </customValue>
+    <customValue>
+        <fullName>Flood</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Flood</label>
+    </customValue>
+    <customValue>
+        <fullName>17</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>17</label>
+    </customValue>
+    <customValue>
+        <fullName>Business Assets, Accounts &amp; Inventory</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Business Assets, Accounts &amp; Inventory</label>
+    </customValue>
+    <customValue>
+        <fullName>Misc. Assignment</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Misc. Assignment</label>
+    </customValue>
+    <customValue>
+        <fullName>Securities</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Securities</label>
+    </customValue>
+    <customValue>
+        <fullName>Deposit Account</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Deposit Account</label>
+    </customValue>
+    <customValue>
+        <fullName>Base_Collateral</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Base_Collateral</label>
+    </customValue>
+    <customValue>
+        <fullName>Real_Estate</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Real_Estate</label>
+    </customValue>
+    <masterLabel>CollateralType</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

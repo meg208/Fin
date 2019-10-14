@@ -1,0 +1,44 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,force:hasRecordId" controller="FNS_ApplicationWithOfficerController">
+    <!-- PUBLIC ATTRIBUTES START-->
+    <aura:attribute name="wrapperList" type="object"/>
+    <aura:attribute name="officerCount" type="Integer" default="0"/>
+    <aura:attribute name="responseError" type="String"/>
+    <!-- PUBLIC ATTRIBUTES END-->
+	
+	<!-- Aura Handler Start-->
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}" /> 
+    <aura:handler event="force:refreshView" action="{!c.doInit}" />
+	<!-- Aura Handler END-->
+	
+	<!-- MARK UP START-->
+    <lightning:card title="{! $Label.c.FNS_OFFICER +' '+ '(' + v.officerCount + ')'}" iconName="standard:groups"  class="slds-text-heading_small slds-card_boundary FNS_iconcolor ">
+        <aura:set attribute="actions">
+        </aura:set>
+        <lightning:layout multipleRows="true">  
+            
+             <aura:if isTrue="{!not(empty(v.responseError))}">
+              	<div class="FNS_ERROR">{!v.responseError}</div>	
+             </aura:if>
+            <aura:iteration items="{!v.wrapperList.officerList}" var="records" >
+                <lightning:layoutItem padding="around-small" size="6">  
+                    
+                    <lightning:tile label="{!records.Name}" href="{!'/'+records.officerId}">
+                        <aura:set attribute="media">
+                            <lightning:icon iconName="standard:user"/>
+                        </aura:set>
+                        <div class="slds-tile__detail">
+                            <dl class="slds-list_horizontal slds-wrap">
+                                <dt class="slds-item_label slds-text-color_weak slds-truncate" title="First Label">Officer Type : </dt>
+                                <dd class="slds-item_detail slds-truncate" title="Description for first label">{!records.officerType}</dd>
+                                <dt class="slds-item_label slds-text-color_weak slds-truncate" title="Second Label">Branch : </dt>
+                                <dd class="slds-item_detail slds-truncate" title="Description for second label">{!records.branch}</dd>
+                            </dl>
+                        </div>
+                    </lightning:tile>
+                    
+                </lightning:layoutItem>
+            </aura:iteration>
+        </lightning:layout>
+    </lightning:card>
+	<!-- MARK UP END-->
+</aura:component>

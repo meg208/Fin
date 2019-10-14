@@ -1,0 +1,1135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>7311 Advertising Agencies</fullName>
+        <default>false</default>
+        <label>7311 Advertising Agencies</label>
+    </customValue>
+    <customValue>
+        <fullName>7312 Outdoor Advertising</fullName>
+        <default>false</default>
+        <label>7312 Outdoor Advertising</label>
+    </customValue>
+    <customValue>
+        <fullName>7313 Media Representatives</fullName>
+        <default>false</default>
+        <label>7313 Media Representatives</label>
+    </customValue>
+    <customValue>
+        <fullName>7319 Media Buying Agencies</fullName>
+        <default>false</default>
+        <label>7319 Media Buying Agencies</label>
+    </customValue>
+    <customValue>
+        <fullName>7322 Collection Agencies</fullName>
+        <default>false</default>
+        <label>7322 Collection Agencies</label>
+    </customValue>
+    <customValue>
+        <fullName>7323 Credit Bureaus</fullName>
+        <default>false</default>
+        <label>7323 Credit Bureaus</label>
+    </customValue>
+    <customValue>
+        <fullName>7331 Direct Mail Advertising</fullName>
+        <default>false</default>
+        <label>7331 Direct Mail Advertising</label>
+    </customValue>
+    <customValue>
+        <fullName>7334 Other Business Service Centers (Including Copy Shops)</fullName>
+        <default>false</default>
+        <label>7334 Other Business Service Centers (Including Copy Shops)</label>
+    </customValue>
+    <customValue>
+        <fullName>7335 Other Nonscheduled Air Transportation</fullName>
+        <default>false</default>
+        <label>7335 Other Nonscheduled Air Transportation</label>
+    </customValue>
+    <customValue>
+        <fullName>7338 Court Reporting and Stenotype Services</fullName>
+        <default>false</default>
+        <label>7338 Court Reporting and Stenotype Services</label>
+    </customValue>
+    <customValue>
+        <fullName>7338 Telemarketing Bureaus and Other Contact Centers</fullName>
+        <default>false</default>
+        <label>7338 Telemarketing Bureaus and Other Contact Centers</label>
+    </customValue>
+    <customValue>
+        <fullName>7338 Document Preparation Services</fullName>
+        <default>false</default>
+        <label>7338 Document Preparation Services</label>
+    </customValue>
+    <customValue>
+        <fullName>7342 Exterminating and Pest Control Services</fullName>
+        <default>false</default>
+        <label>7342 Exterminating and Pest Control Services</label>
+    </customValue>
+    <customValue>
+        <fullName>7349 Janitorial Services</fullName>
+        <default>false</default>
+        <label>7349 Janitorial Services</label>
+    </customValue>
+    <customValue>
+        <fullName>7349 Other Services to Buildings and Dwellings</fullName>
+        <default>false</default>
+        <label>7349 Other Services to Buildings and Dwellings</label>
+    </customValue>
+    <customValue>
+        <fullName>7352 Home Health Equipment Rental</fullName>
+        <default>false</default>
+        <label>7352 Home Health Equipment Rental</label>
+    </customValue>
+    <customValue>
+        <fullName>7352 Other Commercial and Industrial Machinery and Equipment Rental and Leasing</fullName>
+        <default>false</default>
+        <label>7352 Other Commercial and Industrial Machinery and Equipment Rental and Leasing</label>
+    </customValue>
+    <customValue>
+        <fullName>7353 All Other Specialty Trade Contractors</fullName>
+        <default>false</default>
+        <label>7353 All Other Specialty Trade Contractors</label>
+    </customValue>
+    <customValue>
+        <fullName>7353 Construction, Mining, and Forestry Machinery and Equipment Rental and Leasing</fullName>
+        <default>false</default>
+        <label>7353 Construction, Mining, and Forestry Machinery and Equipment Rental and Leasing</label>
+    </customValue>
+    <customValue>
+        <fullName>7359 General Rental Centers</fullName>
+        <default>false</default>
+        <label>7359 General Rental Centers</label>
+    </customValue>
+    <customValue>
+        <fullName>7359 Consumer Electronics and Appliances Rental</fullName>
+        <default>false</default>
+        <label>7359 Consumer Electronics and Appliances Rental</label>
+    </customValue>
+    <customValue>
+        <fullName>7359 All Other Consumer Goods Rental</fullName>
+        <default>false</default>
+        <label>7359 All Other Consumer Goods Rental</label>
+    </customValue>
+    <customValue>
+        <fullName>7363 Temporary Help Services</fullName>
+        <default>false</default>
+        <label>7363 Temporary Help Services</label>
+    </customValue>
+    <customValue>
+        <fullName>7363 Professional Employer Organizations</fullName>
+        <default>false</default>
+        <label>7363 Professional Employer Organizations</label>
+    </customValue>
+    <customValue>
+        <fullName>7371 Custom Computer Programming Services</fullName>
+        <default>false</default>
+        <label>7371 Custom Computer Programming Services</label>
+    </customValue>
+    <customValue>
+        <fullName>7372 Software and Other Prerecorded Compact Disc, Tape, and Record Reproducing</fullName>
+        <default>false</default>
+        <label>7372 Software and Other Prerecorded Compact Disc, Tape, and Record Reproducing</label>
+    </customValue>
+    <customValue>
+        <fullName>7372 Software Publishers</fullName>
+        <default>false</default>
+        <label>7372 Software Publishers</label>
+    </customValue>
+    <customValue>
+        <fullName>7373 Computer Systems Design Services</fullName>
+        <default>false</default>
+        <label>7373 Computer Systems Design Services</label>
+    </customValue>
+    <customValue>
+        <fullName>7374 Data Processing, Hosting, and Related Services</fullName>
+        <default>false</default>
+        <label>7374 Data Processing, Hosting, and Related Services</label>
+    </customValue>
+    <customValue>
+        <fullName>7376 Computer Facilities Management Services</fullName>
+        <default>false</default>
+        <label>7376 Computer Facilities Management Services</label>
+    </customValue>
+    <customValue>
+        <fullName>7378 Computer and Office Machine Repair and Maintenance</fullName>
+        <default>false</default>
+        <label>7378 Computer and Office Machine Repair and Maintenance</label>
+    </customValue>
+    <customValue>
+        <fullName>7379 Other Computer Related Services</fullName>
+        <default>false</default>
+        <label>7379 Other Computer Related Services</label>
+    </customValue>
+    <customValue>
+        <fullName>7381 Security Guards and Patrol Services</fullName>
+        <default>false</default>
+        <label>7381 Security Guards and Patrol Services</label>
+    </customValue>
+    <customValue>
+        <fullName>7381 Armored Car Services</fullName>
+        <default>false</default>
+        <label>7381 Armored Car Services</label>
+    </customValue>
+    <customValue>
+        <fullName>7381 Investigation Services</fullName>
+        <default>false</default>
+        <label>7381 Investigation Services</label>
+    </customValue>
+    <customValue>
+        <fullName>7382 Security Systems Services (Except Locksmiths)</fullName>
+        <default>false</default>
+        <label>7382 Security Systems Services (Except Locksmiths)</label>
+    </customValue>
+    <customValue>
+        <fullName>7383 News Syndicates</fullName>
+        <default>false</default>
+        <label>7383 News Syndicates</label>
+    </customValue>
+    <customValue>
+        <fullName>7384 Photofinishing Laboratories (Except One-Hour)</fullName>
+        <default>false</default>
+        <label>7384 Photofinishing Laboratories (Except One-Hour)</label>
+    </customValue>
+    <customValue>
+        <fullName>7384 One-Hour Photofinishing</fullName>
+        <default>false</default>
+        <label>7384 One-Hour Photofinishing</label>
+    </customValue>
+    <customValue>
+        <fullName>7389 All Other Misc. Chemical Product and Preparation Mfg.</fullName>
+        <default>false</default>
+        <label>7389 All Other Misc. Chemical Product and Preparation Mfg.</label>
+    </customValue>
+    <customValue>
+        <fullName>7389 Other Specialized Design Services</fullName>
+        <default>false</default>
+        <label>7389 Other Specialized Design Services</label>
+    </customValue>
+    <customValue>
+        <fullName>7389 Sound Recording Studios</fullName>
+        <default>false</default>
+        <label>7389 Sound Recording Studios</label>
+    </customValue>
+    <customValue>
+        <fullName>7389 Other Sound Recording Industries</fullName>
+        <default>false</default>
+        <label>7389 Other Sound Recording Industries</label>
+    </customValue>
+    <customValue>
+        <fullName>7389 Other Services to Buildings and Dwellings</fullName>
+        <default>false</default>
+        <label>7389 Other Services to Buildings and Dwellings</label>
+    </customValue>
+    <customValue>
+        <fullName>7389 Interior Design Services</fullName>
+        <default>false</default>
+        <label>7389 Interior Design Services</label>
+    </customValue>
+    <customValue>
+        <fullName>7389 Repossession Services</fullName>
+        <default>false</default>
+        <label>7389 Repossession Services</label>
+    </customValue>
+    <customValue>
+        <fullName>7389 All Other Support Services</fullName>
+        <default>false</default>
+        <label>7389 All Other Support Services</label>
+    </customValue>
+    <customValue>
+        <fullName>7389 Packaging and Labeling Services</fullName>
+        <default>false</default>
+        <label>7389 Packaging and Labeling Services</label>
+    </customValue>
+    <customValue>
+        <fullName>7389 Industrial Design Services</fullName>
+        <default>false</default>
+        <label>7389 Industrial Design Services</label>
+    </customValue>
+    <customValue>
+        <fullName>7389 Drafting Services</fullName>
+        <default>false</default>
+        <label>7389 Drafting Services</label>
+    </customValue>
+    <customValue>
+        <fullName>7389 Building Inspection Services</fullName>
+        <default>false</default>
+        <label>7389 Building Inspection Services</label>
+    </customValue>
+    <customValue>
+        <fullName>7389 Convention and Visitors Bureaus</fullName>
+        <default>false</default>
+        <label>7389 Convention and Visitors Bureaus</label>
+    </customValue>
+    <customValue>
+        <fullName>7389 All Other Business Support Services</fullName>
+        <default>false</default>
+        <label>7389 All Other Business Support Services</label>
+    </customValue>
+    <customValue>
+        <fullName>7389 Translation and Interpretation Services</fullName>
+        <default>false</default>
+        <label>7389 Translation and Interpretation Services</label>
+    </customValue>
+    <customValue>
+        <fullName>7389 Private Mail Centers</fullName>
+        <default>false</default>
+        <label>7389 Private Mail Centers</label>
+    </customValue>
+    <customValue>
+        <fullName>7389 All Other Information Services</fullName>
+        <default>false</default>
+        <label>7389 All Other Information Services</label>
+    </customValue>
+    <customValue>
+        <fullName>7389 Telephone Answering Services</fullName>
+        <default>false</default>
+        <label>7389 Telephone Answering Services</label>
+    </customValue>
+    <customValue>
+        <fullName>7389 All Other Legal Services</fullName>
+        <default>false</default>
+        <label>7389 All Other Legal Services</label>
+    </customValue>
+    <customValue>
+        <fullName>7389 Other Services Related to Advertising</fullName>
+        <default>false</default>
+        <label>7389 Other Services Related to Advertising</label>
+    </customValue>
+    <customValue>
+        <fullName>7389 Convention and Trade Show Organizers</fullName>
+        <default>false</default>
+        <label>7389 Convention and Trade Show Organizers</label>
+    </customValue>
+    <customValue>
+        <fullName>7513 Truck, Utility Trailer, and RV (Recreational Vehicle) Rental and Leasing</fullName>
+        <default>false</default>
+        <label>7513 Truck, Utility Trailer, and RV (Recreational Vehicle) Rental and Leasing</label>
+    </customValue>
+    <customValue>
+        <fullName>7514 Passenger Car Rental</fullName>
+        <default>false</default>
+        <label>7514 Passenger Car Rental</label>
+    </customValue>
+    <customValue>
+        <fullName>7515 Passenger Car Leasing</fullName>
+        <default>false</default>
+        <label>7515 Passenger Car Leasing</label>
+    </customValue>
+    <customValue>
+        <fullName>7519 Truck, Utility Trailer, and RV (Recreational Vehicle) Rental and Leasing</fullName>
+        <default>false</default>
+        <label>7519 Truck, Utility Trailer, and RV (Recreational Vehicle) Rental and Leasing</label>
+    </customValue>
+    <customValue>
+        <fullName>7521 Parking Lots and Garages</fullName>
+        <default>false</default>
+        <label>7521 Parking Lots and Garages</label>
+    </customValue>
+    <customValue>
+        <fullName>7532 Automotive Body, Paint, and Interior Repair and Maintenance</fullName>
+        <default>false</default>
+        <label>7532 Automotive Body, Paint, and Interior Repair and Maintenance</label>
+    </customValue>
+    <customValue>
+        <fullName>7533 Automotive Exhaust System Repair</fullName>
+        <default>false</default>
+        <label>7533 Automotive Exhaust System Repair</label>
+    </customValue>
+    <customValue>
+        <fullName>7534 Tire Retreading</fullName>
+        <default>false</default>
+        <label>7534 Tire Retreading</label>
+    </customValue>
+    <customValue>
+        <fullName>7536 Automotive Glass Replacement Shops</fullName>
+        <default>false</default>
+        <label>7536 Automotive Glass Replacement Shops</label>
+    </customValue>
+    <customValue>
+        <fullName>7537 Automotive Transmission Repair</fullName>
+        <default>false</default>
+        <label>7537 Automotive Transmission Repair</label>
+    </customValue>
+    <customValue>
+        <fullName>7538 General Automotive Repair</fullName>
+        <default>false</default>
+        <label>7538 General Automotive Repair</label>
+    </customValue>
+    <customValue>
+        <fullName>7539 Other Automotive Mechanical and Electrical Repair and Maintenance</fullName>
+        <default>false</default>
+        <label>7539 Other Automotive Mechanical and Electrical Repair and Maintenance</label>
+    </customValue>
+    <customValue>
+        <fullName>7539 All Other Automotive Repair and Maintenance</fullName>
+        <default>false</default>
+        <label>7539 All Other Automotive Repair and Maintenance</label>
+    </customValue>
+    <customValue>
+        <fullName>7542 Car Washes</fullName>
+        <default>false</default>
+        <label>7542 Car Washes</label>
+    </customValue>
+    <customValue>
+        <fullName>7549 Motor Vehicle Towing</fullName>
+        <default>false</default>
+        <label>7549 Motor Vehicle Towing</label>
+    </customValue>
+    <customValue>
+        <fullName>7549 Automotive Oil Change and Lubrication Shops</fullName>
+        <default>false</default>
+        <label>7549 Automotive Oil Change and Lubrication Shops</label>
+    </customValue>
+    <customValue>
+        <fullName>7622 Communication Equipment Repair and Maintenance</fullName>
+        <default>false</default>
+        <label>7622 Communication Equipment Repair and Maintenance</label>
+    </customValue>
+    <customValue>
+        <fullName>7623 Commercial and Industrial Machinery and Equipment (Except Automotive and Electronic) Repair and Maintenance</fullName>
+        <default>false</default>
+        <label>7623 Commercial and Industrial Machinery and Equipment (Except Automotive and Electronic) Repair and Maintenance</label>
+    </customValue>
+    <customValue>
+        <fullName>7623 Household Appliance Stores</fullName>
+        <default>false</default>
+        <label>7623 Household Appliance Stores</label>
+    </customValue>
+    <customValue>
+        <fullName>7623 Appliance Repair and Maintenance</fullName>
+        <default>false</default>
+        <label>7623 Appliance Repair and Maintenance</label>
+    </customValue>
+    <customValue>
+        <fullName>7629 Consumer Electronics Repair and Maintenance</fullName>
+        <default>false</default>
+        <label>7629 Consumer Electronics Repair and Maintenance</label>
+    </customValue>
+    <customValue>
+        <fullName>7629 Computer and Office Machine Repair and Maintenance</fullName>
+        <default>false</default>
+        <label>7629 Computer and Office Machine Repair and Maintenance</label>
+    </customValue>
+    <customValue>
+        <fullName>7629 Household Appliance Stores</fullName>
+        <default>false</default>
+        <label>7629 Household Appliance Stores</label>
+    </customValue>
+    <customValue>
+        <fullName>7641 Reupholstery and Furniture Repair</fullName>
+        <default>false</default>
+        <label>7641 Reupholstery and Furniture Repair</label>
+    </customValue>
+    <customValue>
+        <fullName>7692 Other Personal and Household Goods Repair and Maintenance</fullName>
+        <default>false</default>
+        <label>7692 Other Personal and Household Goods Repair and Maintenance</label>
+    </customValue>
+    <customValue>
+        <fullName>7699 Support Activities for Animal Production</fullName>
+        <default>false</default>
+        <label>7699 Support Activities for Animal Production</label>
+    </customValue>
+    <customValue>
+        <fullName>7699 Home and Garden Equipment Repair and Maintenance</fullName>
+        <default>false</default>
+        <label>7699 Home and Garden Equipment Repair and Maintenance</label>
+    </customValue>
+    <customValue>
+        <fullName>7699 Commercial and Industrial Machinery and Equipment (Except Automotive and Electronic) Repair and Maintenance</fullName>
+        <default>false</default>
+        <label>7699 Commercial and Industrial Machinery and Equipment (Except Automotive and Electronic) Repair and Maintenance</label>
+    </customValue>
+    <customValue>
+        <fullName>7699 Septic Tank and Related Services</fullName>
+        <default>false</default>
+        <label>7699 Septic Tank and Related Services</label>
+    </customValue>
+    <customValue>
+        <fullName>7699 Other Electronic and Precision Equipment Repair and Maintenance</fullName>
+        <default>false</default>
+        <label>7699 Other Electronic and Precision Equipment Repair and Maintenance</label>
+    </customValue>
+    <customValue>
+        <fullName>7699 Other Personal and Household Goods Repair and Maintenance</fullName>
+        <default>false</default>
+        <label>7699 Other Personal and Household Goods Repair and Maintenance</label>
+    </customValue>
+    <customValue>
+        <fullName>7699 Other Support Activities for Water Transportation</fullName>
+        <default>false</default>
+        <label>7699 Other Support Activities for Water Transportation</label>
+    </customValue>
+    <customValue>
+        <fullName>7699 Locksmiths</fullName>
+        <default>false</default>
+        <label>7699 Locksmiths</label>
+    </customValue>
+    <customValue>
+        <fullName>7699 All Other Home Furnishings Stores</fullName>
+        <default>false</default>
+        <label>7699 All Other Home Furnishings Stores</label>
+    </customValue>
+    <customValue>
+        <fullName>7699 Other Services to Buildings and Dwellings</fullName>
+        <default>false</default>
+        <label>7699 Other Services to Buildings and Dwellings</label>
+    </customValue>
+    <customValue>
+        <fullName>7812 Motion Picture and Video Production</fullName>
+        <default>false</default>
+        <label>7812 Motion Picture and Video Production</label>
+    </customValue>
+    <customValue>
+        <fullName>7819 Teleproduction and Other Postproduction Services</fullName>
+        <default>false</default>
+        <label>7819 Teleproduction and Other Postproduction Services</label>
+    </customValue>
+    <customValue>
+        <fullName>7819 Prerecorded Compact Disc (Except Software), Tape, and Record Producing</fullName>
+        <default>false</default>
+        <label>7819 Prerecorded Compact Disc (Except Software), Tape, and Record Producing</label>
+    </customValue>
+    <customValue>
+        <fullName>7819 Other Motion Picture and Video Industries</fullName>
+        <default>false</default>
+        <label>7819 Other Motion Picture and Video Industries</label>
+    </customValue>
+    <customValue>
+        <fullName>782 Landscaping Services</fullName>
+        <default>false</default>
+        <label>782 Landscaping Services</label>
+    </customValue>
+    <customValue>
+        <fullName>7822 Motion Picture and Video Distribution</fullName>
+        <default>false</default>
+        <label>7822 Motion Picture and Video Distribution</label>
+    </customValue>
+    <customValue>
+        <fullName>7829 Motion Picture and Video Distribution</fullName>
+        <default>false</default>
+        <label>7829 Motion Picture and Video Distribution</label>
+    </customValue>
+    <customValue>
+        <fullName>7832 Motion Picture Theaters (Except Drive-Ins)</fullName>
+        <default>false</default>
+        <label>7832 Motion Picture Theaters (Except Drive-Ins)</label>
+    </customValue>
+    <customValue>
+        <fullName>7833 Drive-in Motion Picture Theaters</fullName>
+        <default>false</default>
+        <label>7833 Drive-in Motion Picture Theaters</label>
+    </customValue>
+    <customValue>
+        <fullName>7841 Video Tape and Disc Rental</fullName>
+        <default>false</default>
+        <label>7841 Video Tape and Disc Rental</label>
+    </customValue>
+    <customValue>
+        <fullName>7911 All Other Amusement and Recreation Industries</fullName>
+        <default>false</default>
+        <label>7911 All Other Amusement and Recreation Industries</label>
+    </customValue>
+    <customValue>
+        <fullName>7922 Theater Cos. and Dinner Theaters</fullName>
+        <default>false</default>
+        <label>7922 Theater Cos. and Dinner Theaters</label>
+    </customValue>
+    <customValue>
+        <fullName>7922 Dance Cos.</fullName>
+        <default>false</default>
+        <label>7922 Dance Cos.</label>
+    </customValue>
+    <customValue>
+        <fullName>7922 Musical Groups and Artists</fullName>
+        <default>false</default>
+        <label>7922 Musical Groups and Artists</label>
+    </customValue>
+    <customValue>
+        <fullName>7933 Bowling Centers</fullName>
+        <default>false</default>
+        <label>7933 Bowling Centers</label>
+    </customValue>
+    <customValue>
+        <fullName>7941 Promoters of Performing Arts, Sports, and Similar Events with Facilities</fullName>
+        <default>false</default>
+        <label>7941 Promoters of Performing Arts, Sports, and Similar Events with Facilities</label>
+    </customValue>
+    <customValue>
+        <fullName>7941 Promoters of Performing Arts, Sports, and Similar Events without Facilities</fullName>
+        <default>false</default>
+        <label>7941 Promoters of Performing Arts, Sports, and Similar Events without Facilities</label>
+    </customValue>
+    <customValue>
+        <fullName>7948 Racetracks</fullName>
+        <default>false</default>
+        <label>7948 Racetracks</label>
+    </customValue>
+    <customValue>
+        <fullName>7948 Other Spectator Sports</fullName>
+        <default>false</default>
+        <label>7948 Other Spectator Sports</label>
+    </customValue>
+    <customValue>
+        <fullName>7991 Fitness and Recreational Sports Centers</fullName>
+        <default>false</default>
+        <label>7991 Fitness and Recreational Sports Centers</label>
+    </customValue>
+    <customValue>
+        <fullName>7992 Golf Courses and Country Clubs</fullName>
+        <default>false</default>
+        <label>7992 Golf Courses and Country Clubs</label>
+    </customValue>
+    <customValue>
+        <fullName>7993 Amusement Arcades</fullName>
+        <default>false</default>
+        <label>7993 Amusement Arcades</label>
+    </customValue>
+    <customValue>
+        <fullName>7996 Amusement and Theme Parks</fullName>
+        <default>false</default>
+        <label>7996 Amusement and Theme Parks</label>
+    </customValue>
+    <customValue>
+        <fullName>7997 All Other Amusement and Recreation Industries</fullName>
+        <default>false</default>
+        <label>7997 All Other Amusement and Recreation Industries</label>
+    </customValue>
+    <customValue>
+        <fullName>7997 Golf Courses and Country Clubs</fullName>
+        <default>false</default>
+        <label>7997 Golf Courses and Country Clubs</label>
+    </customValue>
+    <customValue>
+        <fullName>7997 Fitness and Recreational Sports Centers</fullName>
+        <default>false</default>
+        <label>7997 Fitness and Recreational Sports Centers</label>
+    </customValue>
+    <customValue>
+        <fullName>7999 All Other Amusement and Recreation Industries</fullName>
+        <default>false</default>
+        <label>7999 All Other Amusement and Recreation Industries</label>
+    </customValue>
+    <customValue>
+        <fullName>7999 Recreational Goods Rental</fullName>
+        <default>false</default>
+        <label>7999 Recreational Goods Rental</label>
+    </customValue>
+    <customValue>
+        <fullName>7999 Fitness and Recreational Sports Centers</fullName>
+        <default>false</default>
+        <label>7999 Fitness and Recreational Sports Centers</label>
+    </customValue>
+    <customValue>
+        <fullName>7999 Nature Parks and Other Similar Institutions</fullName>
+        <default>false</default>
+        <label>7999 Nature Parks and Other Similar Institutions</label>
+    </customValue>
+    <customValue>
+        <fullName>7999 Promoters of Performing Arts, Sports, and Similar Events with Facilities</fullName>
+        <default>false</default>
+        <label>7999 Promoters of Performing Arts, Sports, and Similar Events with Facilities</label>
+    </customValue>
+    <customValue>
+        <fullName>7999 Sports and Recreation Instruction</fullName>
+        <default>false</default>
+        <label>7999 Sports and Recreation Instruction</label>
+    </customValue>
+    <customValue>
+        <fullName>7999 Skiing Facilities</fullName>
+        <default>false</default>
+        <label>7999 Skiing Facilities</label>
+    </customValue>
+    <customValue>
+        <fullName>7999 Other Gambling Industries</fullName>
+        <default>false</default>
+        <label>7999 Other Gambling Industries</label>
+    </customValue>
+    <customValue>
+        <fullName>7999 Casinos (Except Casino Hotels)</fullName>
+        <default>false</default>
+        <label>7999 Casinos (Except Casino Hotels)</label>
+    </customValue>
+    <customValue>
+        <fullName>7999 Other Similar Organizations (Except Business, Professional, Labor, and Political Organizations)</fullName>
+        <default>false</default>
+        <label>7999 Other Similar Organizations (Except Business, Professional, Labor, and Political Organizations)</label>
+    </customValue>
+    <customValue>
+        <fullName>7999 Other Performing Arts Cos.</fullName>
+        <default>false</default>
+        <label>7999 Other Performing Arts Cos.</label>
+    </customValue>
+    <customValue>
+        <fullName>8011 Freestanding Ambulatory Surgical and Emergency Centers</fullName>
+        <default>false</default>
+        <label>8011 Freestanding Ambulatory Surgical and Emergency Centers</label>
+    </customValue>
+    <customValue>
+        <fullName>8011 HMO Medical Centers</fullName>
+        <default>false</default>
+        <label>8011 HMO Medical Centers</label>
+    </customValue>
+    <customValue>
+        <fullName>8011 Offices of Physicians (Except Mental Health Specialists)</fullName>
+        <default>false</default>
+        <label>8011 Offices of Physicians (Except Mental Health Specialists)</label>
+    </customValue>
+    <customValue>
+        <fullName>8011 Offices of Physicians, Mental Health Specialists</fullName>
+        <default>false</default>
+        <label>8011 Offices of Physicians, Mental Health Specialists</label>
+    </customValue>
+    <customValue>
+        <fullName>8021 Offices of Dentists</fullName>
+        <default>false</default>
+        <label>8021 Offices of Dentists</label>
+    </customValue>
+    <customValue>
+        <fullName>8041 Offices of Chiropractors</fullName>
+        <default>false</default>
+        <label>8041 Offices of Chiropractors</label>
+    </customValue>
+    <customValue>
+        <fullName>8042 Offices of Optometrists</fullName>
+        <default>false</default>
+        <label>8042 Offices of Optometrists</label>
+    </customValue>
+    <customValue>
+        <fullName>8043 Offices of Podiatrists</fullName>
+        <default>false</default>
+        <label>8043 Offices of Podiatrists</label>
+    </customValue>
+    <customValue>
+        <fullName>8049 Offices of Mental Health Practitioners (Except Physicians)</fullName>
+        <default>false</default>
+        <label>8049 Offices of Mental Health Practitioners (Except Physicians)</label>
+    </customValue>
+    <customValue>
+        <fullName>8049 Offices of All Other Misc. Health Practitioners</fullName>
+        <default>false</default>
+        <label>8049 Offices of All Other Misc. Health Practitioners</label>
+    </customValue>
+    <customValue>
+        <fullName>8049 Offices of Physical, Occupational and Speech Therapists, and Audiologists</fullName>
+        <default>false</default>
+        <label>8049 Offices of Physical, Occupational and Speech Therapists, and Audiologists</label>
+    </customValue>
+    <customValue>
+        <fullName>8051 Nursing Care Facilities (Skilled Nursing Facilities)</fullName>
+        <default>false</default>
+        <label>8051 Nursing Care Facilities (Skilled Nursing Facilities)</label>
+    </customValue>
+    <customValue>
+        <fullName>8052 Nursing Care Facilities (Skilled Nursing Facilities)</fullName>
+        <default>false</default>
+        <label>8052 Nursing Care Facilities (Skilled Nursing Facilities)</label>
+    </customValue>
+    <customValue>
+        <fullName>8052 Residential Intellectual and Developmental Disability Facilities</fullName>
+        <default>false</default>
+        <label>8052 Residential Intellectual and Developmental Disability Facilities</label>
+    </customValue>
+    <customValue>
+        <fullName>8059 Continuing Care Retirement Centers</fullName>
+        <default>false</default>
+        <label>8059 Continuing Care Retirement Centers</label>
+    </customValue>
+    <customValue>
+        <fullName>8059 Nursing Care Facilities (Skilled Nursing Facilities)</fullName>
+        <default>false</default>
+        <label>8059 Nursing Care Facilities (Skilled Nursing Facilities)</label>
+    </customValue>
+    <customValue>
+        <fullName>8062 General Medical and Surgical Hospitals</fullName>
+        <default>false</default>
+        <label>8062 General Medical and Surgical Hospitals</label>
+    </customValue>
+    <customValue>
+        <fullName>8063 Psychiatric and Substance Abuse Hospitals</fullName>
+        <default>false</default>
+        <label>8063 Psychiatric and Substance Abuse Hospitals</label>
+    </customValue>
+    <customValue>
+        <fullName>8069 Psychiatric and Substance Abuse Hospitals</fullName>
+        <default>false</default>
+        <label>8069 Psychiatric and Substance Abuse Hospitals</label>
+    </customValue>
+    <customValue>
+        <fullName>8069 Specialty (Except Psychiatric and Substance Abuse) Hospitals</fullName>
+        <default>false</default>
+        <label>8069 Specialty (Except Psychiatric and Substance Abuse) Hospitals</label>
+    </customValue>
+    <customValue>
+        <fullName>8071 Diagnostic Imaging Centers</fullName>
+        <default>false</default>
+        <label>8071 Diagnostic Imaging Centers</label>
+    </customValue>
+    <customValue>
+        <fullName>8071 Medical Laboratories</fullName>
+        <default>false</default>
+        <label>8071 Medical Laboratories</label>
+    </customValue>
+    <customValue>
+        <fullName>8072 Dental Laboratories</fullName>
+        <default>false</default>
+        <label>8072 Dental Laboratories</label>
+    </customValue>
+    <customValue>
+        <fullName>8082 Home Health Care Services</fullName>
+        <default>false</default>
+        <label>8082 Home Health Care Services</label>
+    </customValue>
+    <customValue>
+        <fullName>8092 Kidney Dialysis Centers</fullName>
+        <default>false</default>
+        <label>8092 Kidney Dialysis Centers</label>
+    </customValue>
+    <customValue>
+        <fullName>8093 Family Planning Centers</fullName>
+        <default>false</default>
+        <label>8093 Family Planning Centers</label>
+    </customValue>
+    <customValue>
+        <fullName>8093 Outpatient Mental Health and Substance Abuse Centers</fullName>
+        <default>false</default>
+        <label>8093 Outpatient Mental Health and Substance Abuse Centers</label>
+    </customValue>
+    <customValue>
+        <fullName>8093 All Other Outpatient Care Centers</fullName>
+        <default>false</default>
+        <label>8093 All Other Outpatient Care Centers</label>
+    </customValue>
+    <customValue>
+        <fullName>8099 All Other Misc. Ambulatory Health Care Services</fullName>
+        <default>false</default>
+        <label>8099 All Other Misc. Ambulatory Health Care Services</label>
+    </customValue>
+    <customValue>
+        <fullName>8099 Blood and Organ Banks</fullName>
+        <default>false</default>
+        <label>8099 Blood and Organ Banks</label>
+    </customValue>
+    <customValue>
+        <fullName>8111 Offices of Lawyers</fullName>
+        <default>false</default>
+        <label>8111 Offices of Lawyers</label>
+    </customValue>
+    <customValue>
+        <fullName>8211 Elementary and Secondary Schools</fullName>
+        <default>false</default>
+        <label>8211 Elementary and Secondary Schools</label>
+    </customValue>
+    <customValue>
+        <fullName>8221 Colleges, Universities, and Professional Schools</fullName>
+        <default>false</default>
+        <label>8221 Colleges, Universities, and Professional Schools</label>
+    </customValue>
+    <customValue>
+        <fullName>8221 Junior Colleges</fullName>
+        <default>false</default>
+        <label>8221 Junior Colleges</label>
+    </customValue>
+    <customValue>
+        <fullName>8231 Libraries and Archives</fullName>
+        <default>false</default>
+        <label>8231 Libraries and Archives</label>
+    </customValue>
+    <customValue>
+        <fullName>8243 Computer Training</fullName>
+        <default>false</default>
+        <label>8243 Computer Training</label>
+    </customValue>
+    <customValue>
+        <fullName>8249 Flight Training</fullName>
+        <default>false</default>
+        <label>8249 Flight Training</label>
+    </customValue>
+    <customValue>
+        <fullName>8249 Apprenticeship Training</fullName>
+        <default>false</default>
+        <label>8249 Apprenticeship Training</label>
+    </customValue>
+    <customValue>
+        <fullName>8299 Professional and Management Development Training</fullName>
+        <default>false</default>
+        <label>8299 Professional and Management Development Training</label>
+    </customValue>
+    <customValue>
+        <fullName>8299 Exam Preparation and Tutoring</fullName>
+        <default>false</default>
+        <label>8299 Exam Preparation and Tutoring</label>
+    </customValue>
+    <customValue>
+        <fullName>8299 Language Schools</fullName>
+        <default>false</default>
+        <label>8299 Language Schools</label>
+    </customValue>
+    <customValue>
+        <fullName>8299 Automobile Driving Schools</fullName>
+        <default>false</default>
+        <label>8299 Automobile Driving Schools</label>
+    </customValue>
+    <customValue>
+        <fullName>8322 Temporary Shelters</fullName>
+        <default>false</default>
+        <label>8322 Temporary Shelters</label>
+    </customValue>
+    <customValue>
+        <fullName>8322 Community Food Services</fullName>
+        <default>false</default>
+        <label>8322 Community Food Services</label>
+    </customValue>
+    <customValue>
+        <fullName>8322 Other Community Housing Services</fullName>
+        <default>false</default>
+        <label>8322 Other Community Housing Services</label>
+    </customValue>
+    <customValue>
+        <fullName>8322 Emergency and Other Relief Services</fullName>
+        <default>false</default>
+        <label>8322 Emergency and Other Relief Services</label>
+    </customValue>
+    <customValue>
+        <fullName>8322 Other Individual and Family Services</fullName>
+        <default>false</default>
+        <label>8322 Other Individual and Family Services</label>
+    </customValue>
+    <customValue>
+        <fullName>8322 Services for the Elderly and Persons with Disabilities</fullName>
+        <default>false</default>
+        <label>8322 Services for the Elderly and Persons with Disabilities</label>
+    </customValue>
+    <customValue>
+        <fullName>8331 Vocational Rehabilitation Services</fullName>
+        <default>false</default>
+        <label>8331 Vocational Rehabilitation Services</label>
+    </customValue>
+    <customValue>
+        <fullName>8351 Child Day Care Services</fullName>
+        <default>false</default>
+        <label>8351 Child Day Care Services</label>
+    </customValue>
+    <customValue>
+        <fullName>8361 Other Residential Care Facilities</fullName>
+        <default>false</default>
+        <label>8361 Other Residential Care Facilities</label>
+    </customValue>
+    <customValue>
+        <fullName>8361 Assisted Living Facilities for the Elderly</fullName>
+        <default>false</default>
+        <label>8361 Assisted Living Facilities for the Elderly</label>
+    </customValue>
+    <customValue>
+        <fullName>8361 Residential Mental Health and Substance Abuse Facilities</fullName>
+        <default>false</default>
+        <label>8361 Residential Mental Health and Substance Abuse Facilities</label>
+    </customValue>
+    <customValue>
+        <fullName>8361 Nursing Care Facilities (Skilled Nursing Facilities)</fullName>
+        <default>false</default>
+        <label>8361 Nursing Care Facilities (Skilled Nursing Facilities)</label>
+    </customValue>
+    <customValue>
+        <fullName>8399 Environment, Conservation, and Wildlife Organizations</fullName>
+        <default>false</default>
+        <label>8399 Environment, Conservation, and Wildlife Organizations</label>
+    </customValue>
+    <customValue>
+        <fullName>8399 Other Grantmaking and Giving Services</fullName>
+        <default>false</default>
+        <label>8399 Other Grantmaking and Giving Services</label>
+    </customValue>
+    <customValue>
+        <fullName>8399 Human Rights Organizations</fullName>
+        <default>false</default>
+        <label>8399 Human Rights Organizations</label>
+    </customValue>
+    <customValue>
+        <fullName>8412 Museums</fullName>
+        <default>false</default>
+        <label>8412 Museums</label>
+    </customValue>
+    <customValue>
+        <fullName>8412 Historical Sites</fullName>
+        <default>false</default>
+        <label>8412 Historical Sites</label>
+    </customValue>
+    <customValue>
+        <fullName>8422 Zoos and Botanical Gardens</fullName>
+        <default>false</default>
+        <label>8422 Zoos and Botanical Gardens</label>
+    </customValue>
+    <customValue>
+        <fullName>8621 Professional Organizations</fullName>
+        <default>false</default>
+        <label>8621 Professional Organizations</label>
+    </customValue>
+    <customValue>
+        <fullName>8631 Labor Unions and Similar Labor Organizations</fullName>
+        <default>false</default>
+        <label>8631 Labor Unions and Similar Labor Organizations</label>
+    </customValue>
+    <customValue>
+        <fullName>8641 Civic and Social Organizations</fullName>
+        <default>false</default>
+        <label>8641 Civic and Social Organizations</label>
+    </customValue>
+    <customValue>
+        <fullName>8641 Other Similar Organizations (Except Business, Professional, Labor, and Political Organizations)</fullName>
+        <default>false</default>
+        <label>8641 Other Similar Organizations (Except Business, Professional, Labor, and Political Organizations)</label>
+    </customValue>
+    <customValue>
+        <fullName>8641 Child and Youth Services</fullName>
+        <default>false</default>
+        <label>8641 Child and Youth Services</label>
+    </customValue>
+    <customValue>
+        <fullName>8651 Political Organizations</fullName>
+        <default>false</default>
+        <label>8651 Political Organizations</label>
+    </customValue>
+    <customValue>
+        <fullName>8661 Religious Organizations</fullName>
+        <default>false</default>
+        <label>8661 Religious Organizations</label>
+    </customValue>
+    <customValue>
+        <fullName>8699 Other Similar Organizations (Except Business, Professional, Labor, and Political Organizations)</fullName>
+        <default>false</default>
+        <label>8699 Other Similar Organizations (Except Business, Professional, Labor, and Political Organizations)</label>
+    </customValue>
+    <customValue>
+        <fullName>8711 Engineering Services</fullName>
+        <default>false</default>
+        <label>8711 Engineering Services</label>
+    </customValue>
+    <customValue>
+        <fullName>8712 Architectural Services</fullName>
+        <default>false</default>
+        <label>8712 Architectural Services</label>
+    </customValue>
+    <customValue>
+        <fullName>8713 Surveying and Mapping (Except Geophysical) Services</fullName>
+        <default>false</default>
+        <label>8713 Surveying and Mapping (Except Geophysical) Services</label>
+    </customValue>
+    <customValue>
+        <fullName>8721 Other Accounting Services</fullName>
+        <default>false</default>
+        <label>8721 Other Accounting Services</label>
+    </customValue>
+    <customValue>
+        <fullName>8721 Offices of Certified Public Accountants</fullName>
+        <default>false</default>
+        <label>8721 Offices of Certified Public Accountants</label>
+    </customValue>
+    <customValue>
+        <fullName>8732 Research and Development in Biotechnology</fullName>
+        <default>false</default>
+        <label>8732 Research and Development in Biotechnology</label>
+    </customValue>
+    <customValue>
+        <fullName>8732 Marketing Research and Public Opinion Polling</fullName>
+        <default>false</default>
+        <label>8732 Marketing Research and Public Opinion Polling</label>
+    </customValue>
+    <customValue>
+        <fullName>8734 Testing Laboratories</fullName>
+        <default>false</default>
+        <label>8734 Testing Laboratories</label>
+    </customValue>
+    <customValue>
+        <fullName>8741 Other Heavy and Civil Engineering Construction</fullName>
+        <default>false</default>
+        <label>8741 Other Heavy and Civil Engineering Construction</label>
+    </customValue>
+    <customValue>
+        <fullName>8741 Office Administrative Services</fullName>
+        <default>false</default>
+        <label>8741 Office Administrative Services</label>
+    </customValue>
+    <customValue>
+        <fullName>8742 Administrative Management and General Management Consulting Services</fullName>
+        <default>false</default>
+        <label>8742 Administrative Management and General Management Consulting Services</label>
+    </customValue>
+    <customValue>
+        <fullName>8742 Marketing Consulting Services</fullName>
+        <default>false</default>
+        <label>8742 Marketing Consulting Services</label>
+    </customValue>
+    <customValue>
+        <fullName>8743 Public Relations Agencies</fullName>
+        <default>false</default>
+        <label>8743 Public Relations Agencies</label>
+    </customValue>
+    <customValue>
+        <fullName>8744 Facilities Support Services</fullName>
+        <default>false</default>
+        <label>8744 Facilities Support Services</label>
+    </customValue>
+    <customValue>
+        <fullName>8748 Other Management Consulting Services</fullName>
+        <default>false</default>
+        <label>8748 Other Management Consulting Services</label>
+    </customValue>
+    <customValue>
+        <fullName>8811 Private Households</fullName>
+        <default>false</default>
+        <label>8811 Private Households</label>
+    </customValue>
+    <customValue>
+        <fullName>8999 Record Production</fullName>
+        <default>false</default>
+        <label>8999 Record Production</label>
+    </customValue>
+    <customValue>
+        <fullName>8999 Environmental Consulting Services</fullName>
+        <default>false</default>
+        <label>8999 Environmental Consulting Services</label>
+    </customValue>
+    <customValue>
+        <fullName>9199 Other General Government Support</fullName>
+        <default>false</default>
+        <label>9199 Other General Government Support</label>
+    </customValue>
+    <customValue>
+        <fullName>9221 Police Protection</fullName>
+        <default>false</default>
+        <label>9221 Police Protection</label>
+    </customValue>
+    <customValue>
+        <fullName>9223 Correctional Institutions</fullName>
+        <default>false</default>
+        <label>9223 Correctional Institutions</label>
+    </customValue>
+    <customValue>
+        <fullName>9224 Fire Protection</fullName>
+        <default>false</default>
+        <label>9224 Fire Protection</label>
+    </customValue>
+    <customValue>
+        <fullName>9511 Administration of Air and Water Resource and Solid Waste Management Programs</fullName>
+        <default>false</default>
+        <label>9511 Administration of Air and Water Resource and Solid Waste Management Programs</label>
+    </customValue>
+    <customValue>
+        <fullName>9531 Administration of Housing Programs</fullName>
+        <default>false</default>
+        <label>9531 Administration of Housing Programs</label>
+    </customValue>
+    <customValue>
+        <fullName>9661 Space Research and Technology</fullName>
+        <default>false</default>
+        <label>9661 Space Research and Technology</label>
+    </customValue>
+    <customValue>
+        <fullName>9711 National Security</fullName>
+        <default>false</default>
+        <label>9711 National Security</label>
+    </customValue>
+    <masterLabel>Sub SIC Code Set2</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

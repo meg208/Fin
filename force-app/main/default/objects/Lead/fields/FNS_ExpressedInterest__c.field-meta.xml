@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FNS_ExpressedInterest__c</fullName>
+    <externalId>false</externalId>
+    <label>Expressed Interest (Non FSC)</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Mortgage</fullName>
+                <default>false</default>
+                <label>Mortgage</label>
+            </value>
+            <value>
+                <fullName>Personal Loan</fullName>
+                <default>false</default>
+                <label>Personal Loan</label>
+            </value>
+            <value>
+                <fullName>Credit Card</fullName>
+                <default>false</default>
+                <label>Credit Card</label>
+            </value>
+            <value>
+                <fullName>Savings Account</fullName>
+                <default>false</default>
+                <label>Savings Account</label>
+            </value>
+            <value>
+                <fullName>Checking Account</fullName>
+                <default>false</default>
+                <label>Checking Account</label>
+            </value>
+            <value>
+                <fullName>HELOC</fullName>
+                <default>false</default>
+                <label>HELOC</label>
+            </value>
+            <value>
+                <fullName>Day to Day Banking</fullName>
+                <default>false</default>
+                <label>Day to Day Banking</label>
+            </value>
+            <value>
+                <fullName>Manage Money</fullName>
+                <default>false</default>
+                <label>Manage Money</label>
+            </value>
+            <value>
+                <fullName>Property Purchase</fullName>
+                <default>false</default>
+                <label>Property Purchase</label>
+            </value>
+            <value>
+                <fullName>Investments</fullName>
+                <default>false</default>
+                <label>Investments</label>
+            </value>
+            <value>
+                <fullName>Education</fullName>
+                <default>false</default>
+                <label>Education</label>
+            </value>
+            <value>
+                <fullName>Manage Debt</fullName>
+                <default>false</default>
+                <label>Manage Debt</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

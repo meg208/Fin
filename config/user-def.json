@@ -1,0 +1,12 @@
+{
+    "LastName": "venkateshtest",
+    "Email": "venkatesh.malasani@gmail.com",
+    "Alias": "AdmUser",
+    "TimeZoneSidKey": "America/Denver",
+    "LocaleSidKey": "en_US",
+    "EmailEncodingKey": "UTF-8",
+    "LanguageLocaleKey": "en_US",
+    "profileName": "System Administrator",
+    "permsets": ["FinancialServicesCloudStandard","FinancialServicesCloudBasic"],
+    "generatePassword": true
+}

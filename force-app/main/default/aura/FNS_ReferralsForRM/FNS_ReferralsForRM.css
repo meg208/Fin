@@ -1,0 +1,196 @@
+.THIS .cardWidth{
+    color: #009CBE;
+    width: 657px;
+}
+.THIS .headingStyle{
+    font-family: Salesforce Sans Bold;
+    size : 16px;
+    color : #F88962;
+}
+.THIS .leadStyle{
+    font-family: Salesforce Sans Regular;
+    size : 14px;
+    margin-left:22px;
+}
+.THIS.popoverclass {
+    min-height: 100px;
+    min-width: 100px;
+}
+.THIS.no-pointer .pointer{
+    visibility: hidden;
+}
+.THIS .textFormat{
+    color:blue;
+    text-decoration-line: underline;
+    text-decoration-style: double dashed;
+}
+.THIS .FNS_DateFormat{
+    position: absolute;
+    right:5%;
+}
+
+
+.THIS .container{
+    min-width: 1200 px;
+    width: auto;
+}
+.THIS .FNS_root {
+    padding: 2em;
+}
+.THIS .FNS_Location {
+    position: relative;
+}
+.THIS .FNS_Location + .THIS .FNS_Location_Text {
+    display:none;
+}
+.THIS .FNS_Location:hover + .THIS .FNS_Location_Text {    
+    position: relative;
+    border: 1px solid;
+    width: 12rel;
+    height: 10rel;
+    display: inline-block;
+}
+.THIS .FNS_position{
+    position: absolute !important;
+    margin-left: 70%;
+    top: -80px;
+}
+.THIS .post-item:hover {    
+    padding-top : 30px;
+    padding-bottom : 30px;
+}
+.THIS .FNS_NoReferrals{
+    margin-left:8%;
+}
+.THIS .FNS_cardTextViewAll{
+    font-style: Salesforce Sans Regular;
+    color: #006ED6;
+    font-size: 14px;
+}
+.THIS .FNS_PaddingRight{
+    margin-right: 0.5%;
+}
+.THIS .FNS_MarginLeft{
+    margin-left: 2%;
+}
+.THIS .FNS_Width{
+    width : 30rem !important;
+}
+
+@media only screen and (min-width: 760px) and (max-width: 800px) {
+    .THIS .FNS_FilterPosition{
+        position: absolute !important;
+        margin-left: 77%;
+        top: 20px;
+    }
+
+    .THIS .FNS_DropdownPosition{
+        margin-top: 2px;
+        padding-left: 4%;
+        margin-right: 3%;
+        width: 38%;
+    }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1366px) {
+    .THIS .FNS_FilterPosition{
+        position: absolute !important;
+        margin-left: 83%;
+        top: 20px;
+    }
+}
+@media only screen and (min-width: 1366px)  {
+    .THIS .FNS_FilterPosition{
+        position: absolute !important;
+        margin-left: 85%;
+        top: 20px;
+    }
+    .THIS .FNS_DropdownPosition{
+        margin-top: 3px;
+        padding-left: 2%;
+        margin-right: 4%;
+    }
+}
+@media only screen and (min-width: 300px) and (max-width: 600px) {
+    .THIS .FNS_FilterPosition{
+        position: absolute !important;
+        margin-left: 50%;
+        top: 33px;
+    }
+
+    .THIS .FNS_DropdownPosition{
+        margin-top: 14px;
+        padding-left: 4%;
+        margin-right: 15%;
+    }
+}
+
+.THIS .FNS_BackgroundColor{
+    background-color: none;
+}
+
+.THIS .FNS_BackgroundColor:hover{
+    background-color:lightgray;
+}
+
+.THIS .FNS_NoBorder{
+    border :none !important;
+    box-shadow: none !important;
+}
+.THIS .FNS_popoverTextOpportunityName{  
+    color: black;
+    line-height: 2rem;
+}
+
+.THIS .FNS_popoverText{  
+    color: black;
+}
+
+.THIS .FNS_popoverHeight{    
+    overflow: auto;
+}
+
+.THIS .FNS_popover_body{
+    visibility: hidden;
+    height: 0;
+    opacity: 0;
+    position: absolute;
+}
+
+.THIS .FNS_popover:hover .FNS_popover_body {
+    min-width: 400px;
+    max-width: 300px;
+    visibility: visible;
+    position: absolute;
+    background-color: white;
+    opacity: 1;
+    z-index: 1;
+    bottom: -1rem;
+    height: auto;
+    border: 1px solid rgb(221, 219, 218) !important;
+}
+
+.THIS .FNS_ButtonIcon{
+    width: auto;
+    line-height: 1.875rem;
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(221, 219, 218);
+    color: rgb(112, 110, 107);
+    
+}
+.THIS .slds-card__body{
+    height:10.8rem;
+}
+.THIS .FNS_ReferralsCardSpecifications{
+    height: 284px !important;
+}
+
+.THIS .slds-LeadsTitle{
+    font-size : 1rem !important;
+}
+
+.THIS .FNS_filter_li_fontSize{
+    font-size: 0.875rem;
+}
+.THIS .FNS_ERROR{
+    color: red;
+}

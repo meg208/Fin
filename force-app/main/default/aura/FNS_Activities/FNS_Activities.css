@@ -1,0 +1,12 @@
+.THIS .FNS_ActivitySpecifications{
+    /*margin-left:5%;*/
+}
+.THIS .FNS_SuccessIcon {
+    background-color:white !important;
+}
+.THIS .FNS_activeIcon{
+    background-color:white !important;
+}
+.THIS .FNS_ERROR{
+    color: red;
+}

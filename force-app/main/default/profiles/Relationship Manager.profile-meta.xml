@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Profile xmlns="http://soap.sforce.com/2006/04/metadata">
+    <applicationVisibilities>
+        <application>Finastra</application>
+        <default>true</default>
+        <visible>true</visible>
+    </applicationVisibilities>
+    <custom>true</custom>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.AccountNumber</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.AccountSource</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.AnnualRevenue</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.BillingAddress</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.Description</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.Industry</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.NumberOfEmployees</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.Ownership</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.ParentId</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.Phone</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.Rating</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.ShippingAddress</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.Site</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.Type</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.Website</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Lead.Address</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Lead.AnnualRevenue</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Lead.Description</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Lead.DoNotCall</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Lead.Email</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Lead.Fax</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Lead.Industry</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Lead.LastTransferDate</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Lead.LeadSource</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Lead.MobilePhone</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Lead.NumberOfEmployees</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Lead.Phone</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Lead.Rating</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Lead.Title</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Lead.Website</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Opportunity.AccountId</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Opportunity.Amount</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Opportunity.CampaignId</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Opportunity.ContractId</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Opportunity.Description</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Opportunity.ExpectedRevenue</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>Account</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>Lead</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>Opportunity</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+	<objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>Contact</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <tabVisibilities>
+        <tab>standard-Account</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+	<tabVisibilities>
+        <tab>FNS_FinastraSetup</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>standard-Lead</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>standard-Opportunity</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <userLicense>Salesforce</userLicense>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ActivitiesAccess</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>AllowUniversalSearch</name>
+    </userPermissions>
+   
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ApexRestServices</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ApiEnabled</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>AssignTopics</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ChatterFileLink</name>
+    </userPermissions>
+  
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ConvertLeads</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>CreateCustomizeFilters</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>CreateTopics</name>
+    </userPermissions>
+    
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>EditEvent</name>
+    </userPermissions>
+    
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>EditTask</name>
+    </userPermissions>
+   
+   
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>EmailSingle</name>
+    </userPermissions>
+ 
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>EnableNotifications</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ExportReport</name>
+    </userPermissions>
+   
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>LightningConsoleAllowedForUser</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>LightningExperienceUser</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ListEmailSend</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>MassInlineEdit</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>RunReports</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>SelectFilesFromSalesforce</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>SendSitRequests</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ShowCompanyNameAsUserBadge</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>SubmitMacrosAllowed</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>SubscribeToLightningReports</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>TransactionalEmailSend</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>UseWebLink</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ViewHelpLink</name>
+    </userPermissions>
+   
+   <layoutAssignments>
+      <layout>FNS_Activity__c-Activity Layout</layout>
+      <recordType>FNS_Activity__c.FNS_TrackingItem</recordType>
+	</layoutAssignments>
+	
+   <layoutAssignments>
+      <layout>FNS_Address__c-Address Layout</layout>
+      <recordType>FNS_Address__c.FNS_Address</recordType>
+	</layoutAssignments>
+	
+   <layoutAssignments>
+      <layout>FNS_ApplicationWithOfficer__c-Application with Officer Layout</layout>
+      <recordType>FNS_ApplicationWithOfficer__c.FNS_ApplicationWithOfficer</recordType>
+	</layoutAssignments>
+	
+	<layoutAssignments>
+      <layout>FNS_ApplicationWithOfficer__c-Application With Officer Read Only Layout</layout>
+      <recordType>FNS_ApplicationWithOfficer__c.FNS_ApplicationWithOfficerReadOnly</recordType>
+	</layoutAssignments>
+	
+   <layoutAssignments>
+      <layout>FNS_Bank__c-Bank Layout</layout>
+      <recordType>FNS_Bank__c.FNS_Bank</recordType>
+	</layoutAssignments>
+	
+   <layoutAssignments>
+      <layout>FNS_CustomerProfile__c-Customer Profile Layout</layout>
+      <recordType>FNS_CustomerProfile__c.FNS_Customer</recordType>
+	</layoutAssignments>
+	
+   <layoutAssignments>
+      <layout>FNS_FeeType__c-Fee Type Layout</layout>
+      <recordType>FNS_FeeType__c.FNS_FeeType</recordType>
+	</layoutAssignments>
+	
+   <layoutAssignments>
+      <layout>FNS_Fee__c-Fee Layout</layout>
+      <recordType>FNS_Fee__c.FNS_Fee</recordType>
+	</layoutAssignments>
+	
+   <layoutAssignments>
+      <layout>FNS_Fee__c-Fee Read Only Layout</layout>
+      <recordType>FNS_Fee__c.FNS_FeeReadOnly</recordType>
+	</layoutAssignments>
+	
+   <layoutAssignments>
+      <layout>FNS_FinancialAccountRole__c-Financial Account Role Layout</layout>
+      <recordType>FNS_FinancialAccountRole__c.FNS_FinancialAccountRole</recordType>
+	</layoutAssignments>
+	
+   <layoutAssignments>
+      <layout>FNS_FinancialAccountTransaction__c-Loan Layout</layout>
+      <recordType>FNS_FinancialAccountTransaction__c.FNS_FinancialAccountTransaction</recordType>
+	</layoutAssignments>
+	
+   <layoutAssignments>
+      <layout>FNS_FinancialAccountTransaction__c-Loan Read Only Layout</layout>
+      <recordType>FNS_FinancialAccountTransaction__c.FNS_FinancialAccountTransactionReadOnly</recordType>
+	</layoutAssignments>
+	
+   <layoutAssignments>
+      <layout>FNS_FinancialAccount__c-Product Layout</layout>
+      <recordType>FNS_FinancialAccount__c.FNS_FinancialAccount</recordType>
+	</layoutAssignments>
+	
+   <layoutAssignments>
+      <layout>FNS_FinancialAccount__c-Product Read Only Layout</layout>
+      <recordType>FNS_FinancialAccount__c.FNS_FinancialAccountReadOnly</recordType>
+	</layoutAssignments>
+	
+   <layoutAssignments>
+      <layout>FNS_Officer__c-Officer Layout</layout>
+      <recordType>FNS_Officer__c.FNS_Officer</recordType>
+	</layoutAssignments>
+	
+   <layoutAssignments>
+      <layout>FNS_Pricing__c-Pricing Layout</layout>
+      <recordType>FNS_Pricing__c.FNS_Pricing</recordType>
+	</layoutAssignments>
+	
+   <layoutAssignments>
+      <layout>FNS_Pricing__c-Pricing Read Only Layout</layout>
+      <recordType>FNS_Pricing__c.FNS_PricingReadOnly</recordType>
+	</layoutAssignments>
+	
+   <layoutAssignments>
+      <layout>FNS_ProcessCenter__c-ProcessCenter Layout</layout>
+      <recordType>FNS_ProcessCenter__c.FNS_ProcessCenter</recordType>
+	</layoutAssignments>
+	
+   <layoutAssignments>
+      <layout>FNS_ProcessGroup__c-Process Group Layout</layout>
+      <recordType>FNS_ProcessGroup__c.FNS_ProcessGroup</recordType>
+	</layoutAssignments>
+	
+   <layoutAssignments>
+      <layout>FNS_ProductType__c-Product Type Layout</layout>
+      <recordType>FNS_ProductType__c.FNS_ProductType</recordType>
+	</layoutAssignments>
+	
+   <layoutAssignments>
+      <layout>FNS_RateIndex__c-Rate Index Layout</layout>
+      <recordType>FNS_RateIndex__c.FNS_RateIndex</recordType>
+	</layoutAssignments>
+	
+   <layoutAssignments>
+      <layout>FNS_TaxDetails__c-TaxDetails Layout</layout>
+      <recordType>FNS_TaxDetails__c.FNS_TaxDetails</recordType>
+	</layoutAssignments>
+	
+   <layoutAssignments>
+      <layout>Opportunity-ApplicationLayout</layout>
+      <recordType>Opportunity.FNS_Application</recordType>
+	</layoutAssignments>
+
+     <layoutAssignments>
+      <layout>Opportunity-ApplicationReadOnlyLayout</layout>
+      <recordType>Opportunity.FNS_ApplicationReadOnly</recordType>
+	</layoutAssignments>
+	<recordTypeVisibilities>
+        <default>true</default>
+        <personAccountDefault>true</personAccountDefault>
+        <recordType>Account.FNS_Customer</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>true</default>
+        <recordType>FNS_Activity__c.FNS_TrackingItem</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>true</default>
+        <recordType>FNS_Address__c.FNS_Address</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>true</default>
+        <recordType>FNS_ApplicationWithOfficer__c.FNS_ApplicationWithOfficer</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>true</default>
+        <recordType>FNS_Bank__c.FNS_Bank</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>true</default>
+        <recordType>FNS_CustomerProfile__c.FNS_Customer</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>true</default>
+        <recordType>FNS_FeeType__c.FNS_FeeType</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>true</default>
+        <recordType>FNS_Fee__c.FNS_Fee</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>true</default>
+        <recordType>FNS_Officer__c.FNS_Officer</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>true</default>
+        <recordType>FNS_Pricing__c.FNS_Pricing</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>true</default>
+        <recordType>FNS_ProcessCenter__c.FNS_ProcessCenter</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>true</default>
+        <recordType>FNS_RateIndex__c.FNS_RateIndex</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>true</default>
+        <recordType>FNS_TaxDetails__c.FNS_TaxDetails</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>true</default>
+        <recordType>Opportunity.FNS_Application</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+	<recordTypeVisibilities>
+        <default>true</default>
+        <recordType>FNS_FinancialAccountRole__c.FNS_FinancialAccountRole</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+	<recordTypeVisibilities>
+        <default>true</default>
+        <recordType>FNS_FinancialAccountTransaction__c.FNS_FinancialAccountTransaction</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+	<recordTypeVisibilities>
+        <default>true</default>
+        <recordType>FNS_FinancialAccount__c.FNS_FinancialAccount</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+	<recordTypeVisibilities>
+		<default>true</default>
+        <recordType>Lead.FNS_Leads</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+	<recordTypeVisibilities>
+		<default>true</default>
+        <recordType>Contact.FNS_Contact</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+</Profile>

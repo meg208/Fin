@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FNS_Applications</fullName>
+    <fields>FNS_ApplicationExtId__c</fields>
+    <fields>AccountId</fields>
+    <fields>FNS_Contact__c</fields>
+    <fields>FNS_PhoneNumber__c</fields>
+    <fields>FNS_TotalRequestedAmount__c</fields>
+    <label>Applications</label>
+</CompactLayout>

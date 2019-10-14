@@ -1,0 +1,43 @@
+<!--*****************************************************************************************
+* @description Active Applications Lightning component 
+* Child component of - FNS_CommunityComp
+******************************************************************************************-->
+<aura:component >
+    
+    <!-- START PUBLIC ATTRIBUTES -->
+    <aura:attribute name="activeApplicationsList" type="Object" />
+    <aura:attribute name="showSpinner" type="Boolean" />
+    <!-- END PUBLIC ATTRIBUTES -->
+    
+    <!-- START REGISTERED EVENT -->
+    <aura:registerEvent name="communityCompEvent" type="c:FNS_CommunityCompEvent"/>
+    <!-- END REGISTERED EVENT -->
+    
+    <!-- START MARKUP -->
+    <div class="slds-card slds-theme_default slds-container  FNS_CommunityActiveApplications slds-large-size_2-of-12">
+        <lightning:layout verticalAlign="stretch" class="slds-grid_vertical" multipleRows="true">
+            <div class="fns-font-size slds-p-around_small slds-text-title_caps"><b>{#$Label.c.FNS_ACTIVE_APPLICATIONS}</b></div>
+            <aura:if isTrue="{!!v.showSpinner}">
+                <div class="{!!empty(v.activeApplicationsList.oppList) ? ' slds-large-size_12-of-12 FNS_Active_app' : 'slds-hide'}">
+                    <aura:iteration items="{!v.activeApplicationsList.oppList}" var="application" indexVar="index">
+                        <div onclick="{!c.updateRecord}" id="{!index}" data-rec="{!application}" class=" fns-cursor-pointer slds-hyphenate">
+                            <lightning:layoutItem class="{!(application.isSelected ? 'fns-bg-text-color' : '') + ' slds-p-around_small'}">                                
+                                {!application.FNS_ApplicationName__c}                                
+                            </lightning:layoutItem>
+                        </div>
+                    </aura:iteration>
+                </div>
+                <div class="{!empty(v.activeApplicationsList.oppList) ? 'slds-is-relative  slds-p-around_xx-large slds-m-bottom_large' : 'slds-hide'}">
+                    {#$Label.c.FNS_NO_RECORDS_TO_DISPLAY}
+                </div>
+                <aura:set attribute="else">
+                    <div class="slds-is-relative  slds-p-around_xx-large slds-m-bottom_large">
+                        <lightning:spinner variant="brand" size="small" />
+                    </div>
+                </aura:set>
+            </aura:if>
+        </lightning:layout>
+    </div>
+    <!-- END MARKUP -->
+    
+</aura:component>

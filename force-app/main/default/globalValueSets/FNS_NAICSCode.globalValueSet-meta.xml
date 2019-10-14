@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>11    Agriculture, Forestry, Fishing and Hunting</fullName>
+        <default>false</default>
+        <label>11    Agriculture, Forestry, Fishing and Hunting</label>
+    </customValue>
+    <customValue>
+        <fullName>21	Mining, Quarrying, and Oil and Gas Extraction</fullName>
+        <default>false</default>
+        <label>21	Mining, Quarrying, and Oil and Gas Extraction</label>
+    </customValue>
+    <customValue>
+        <fullName>22	Utilities</fullName>
+        <default>false</default>
+        <label>22	Utilities</label>
+    </customValue>
+    <customValue>
+        <fullName>23	Construction</fullName>
+        <default>false</default>
+        <label>23	Construction</label>
+    </customValue>
+    <customValue>
+        <fullName>31-33	Manufacturing</fullName>
+        <default>false</default>
+        <label>31-33	Manufacturing</label>
+    </customValue>
+    <customValue>
+        <fullName>42	Wholesale Trade</fullName>
+        <default>false</default>
+        <label>42	Wholesale Trade</label>
+    </customValue>
+    <customValue>
+        <fullName>44-45	Retail Trade</fullName>
+        <default>false</default>
+        <label>44-45	Retail Trade</label>
+    </customValue>
+    <customValue>
+        <fullName>48-49	Transportation and Warehousing</fullName>
+        <default>false</default>
+        <label>48-49	Transportation and Warehousing</label>
+    </customValue>
+    <customValue>
+        <fullName>51	Information</fullName>
+        <default>false</default>
+        <label>51	Information</label>
+    </customValue>
+    <customValue>
+        <fullName>52	Finance and Insurance</fullName>
+        <default>false</default>
+        <label>52	Finance and Insurance</label>
+    </customValue>
+    <customValue>
+        <fullName>53	Real Estate and Rental and Leasing</fullName>
+        <default>false</default>
+        <label>53	Real Estate and Rental and Leasing</label>
+    </customValue>
+    <customValue>
+        <fullName>54	Professional, Scientific, and Technical Services</fullName>
+        <default>false</default>
+        <label>54	Professional, Scientific, and Technical Services</label>
+    </customValue>
+    <customValue>
+        <fullName>55	Management of Companies and Enterprises</fullName>
+        <default>false</default>
+        <label>55	Management of Companies and Enterprises</label>
+    </customValue>
+    <customValue>
+        <fullName>56	Administrative and Support and Waste Management and Remediation Services</fullName>
+        <default>false</default>
+        <label>56	Administrative and Support and Waste Management and Remediation Services</label>
+    </customValue>
+    <customValue>
+        <fullName>61	Educational Services</fullName>
+        <default>false</default>
+        <label>61	Educational Services</label>
+    </customValue>
+    <customValue>
+        <fullName>62	Health Care and Social Assistance</fullName>
+        <default>false</default>
+        <label>62	Health Care and Social Assistance</label>
+    </customValue>
+    <customValue>
+        <fullName>71	Arts, Entertainment, and Recreation</fullName>
+        <default>false</default>
+        <label>71	Arts, Entertainment, and Recreation</label>
+    </customValue>
+    <customValue>
+        <fullName>72	Accommodation and Food Services</fullName>
+        <default>false</default>
+        <label>72	Accommodation and Food Services</label>
+    </customValue>
+    <customValue>
+        <fullName>81	Other Services (except Public Administration)</fullName>
+        <default>false</default>
+        <label>81	Other Services (except Public Administration)</label>
+    </customValue>
+    <customValue>
+        <fullName>92	Public Administration</fullName>
+        <default>false</default>
+        <label>92	Public Administration</label>
+    </customValue>
+    <masterLabel>NAICSCode</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

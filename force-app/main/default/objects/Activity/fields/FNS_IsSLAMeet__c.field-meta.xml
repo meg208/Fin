@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FNS_IsSLAMeet__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( IsClosed, true, if( ActivityDate &lt; TODAY() , false, true ) )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Is SLA Meet</label>
+    <type>Checkbox</type>
+</CustomField>

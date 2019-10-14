@@ -1,0 +1,104 @@
+<aura:component controller="FNS_RefreshDataFromCMEController">
+	<aura:attribute name="isActivityRefreshed" type="Boolean" default="false" />
+	<aura:attribute name="isBankDomainRefreshed" type="Boolean" default="false" />
+	<aura:attribute name="isFeeRefreshed" type="Boolean" default="false" />
+	<aura:attribute name="isProcessCenterRefreshed" type="Boolean" default="false" />
+	<aura:attribute name="isProcessGroupRefreshed" type="Boolean" default="false" />
+	<aura:attribute name="isProductTypeRefreshed" type="Boolean" default="false" />
+	<aura:attribute name="isConfigurationTypeRefreshed" type="Boolean" default="false" />
+
+	<aura:attribute name="isActivityRefreshCalled" type="Boolean" default="false" />
+	<aura:attribute name="isBankDomainRefreshCalled" type="Boolean" default="false" />
+	<aura:attribute name="isFeeRefreshCalled" type="Boolean" default="false" />
+	<aura:attribute name="isProcessCenterRefreshCalled" type="Boolean" default="false" />
+	<aura:attribute name="isProcessGroupRefreshCalled" type="Boolean" default="false" />
+	<aura:attribute name="isProductTypeRefreshCalled" type="Boolean" default="false" />
+	<aura:attribute name="isConfigurationTypeRefreshCalled" type="Boolean" default="false" />
+
+	<aura:attribute name="activitiesError" type="String" />
+	<aura:attribute name="banksError" type="String" />
+	<aura:attribute name="feeTypeError" type="String" />
+	<aura:attribute name="processCenterError" type="String" />
+	<aura:attribute name="processGroupError" type="String" />
+	<aura:attribute name="productTypeError" type="String" />
+	<aura:attribute name="ConfigTypeError" type="String" />
+
+	<lightning:card title="{!$Label.c.FNS_REFRESH_DATA_FROM_CME_BUTTON}" iconName="standard:announcement" class="slds-card_boundary fns-CHeader-bold">
+		<div class="slds-p-left_medium">
+			<i>{!$Label.c.FNS_REFRESH_DATA_ON_CLICK}</i><br/> 
+			<div class="slds-p-top_x-small">
+				<ul class="slds-list--dotted">
+                    <li>
+						<lightning:icon iconName="{!v.isConfigurationTypeRefreshed ? 'utility:check': 'utility:close'}" 
+						class="{!v.isConfigurationTypeRefreshCalled ? 'slds-m-right_x-small':'slds-hide'}" 
+						size="xx-small" alternativeText="Approved" />{!$Label.c.FNS_CONFIGURATION_DATA_PICKLISTS}
+						<aura:if isTrue="{!v.configPicklistError != 'Empty'}">
+							<div class="FNS_ERROR">{!v.configPicklistError}</div>							
+						</aura:if>
+					</li>
+					<li>
+						<lightning:icon iconName="{!v.isActivityRefreshed ? 'utility:check': 'utility:close'}" 
+						class="{!v.isActivityRefreshCalled ? 'slds-m-right_x-small':'slds-hide'}" size="xx-small" 
+						alternativeText="Approved" />{!$Label.c.FNS_ACTIVITIES}						
+						<aura:if isTrue="{!v.activitiesError != 'Empty'}">
+							<div class="FNS_ERROR">{!v.activitiesError}</div>							
+						</aura:if>
+					</li>
+
+					   
+					<li>
+						<lightning:icon iconName="{!v.isBankDomainRefreshed ? 'utility:check': 'utility:close'}" 
+						class="{!v.isBankDomainRefreshCalled ? 'slds-m-right_x-small':'slds-hide'}" size="xx-small" 
+						alternativeText="Approved" />{!$Label.c.FNS_BANK}
+						<aura:if isTrue="{!v.banksError != 'Empty'}">
+							<div class="FNS_ERROR">{!v.banksError}</div>							
+						</aura:if>
+					</li>   
+
+					<li>
+						<lightning:icon iconName="{!v.isFeeRefreshed ? 'utility:check': 'utility:close'}" 
+						class="{!v.isFeeRefreshCalled ? 'slds-m-right_x-small':'slds-hide'}" size="xx-small" 
+						alternativeText="Approved" />{!$Label.c.FNS_FEETYPE}
+						<aura:if isTrue="{!v.feeTypeError != 'Empty'}">
+							<div class="FNS_ERROR">{!v.feeTypeError}</div>							
+						</aura:if>
+					</li>
+
+					<li>
+						<lightning:icon iconName="{!v.isProcessCenterRefreshed ? 'utility:check': 'utility:close'}"
+						class="{!v.isProcessCenterRefreshCalled ? 'slds-m-right_x-small':'slds-hide'}" size="xx-small" 
+						alternativeText="Approved" />{!$Label.c.FNS_PROCESS_CENTER}
+						<aura:if isTrue="{!v.processCenterError != 'Empty'}">
+							<div class="FNS_ERROR">{!v.processCenterError}</div>							
+						</aura:if>
+					</li>
+
+					<li>
+						<lightning:icon iconName="{!v.isProcessGroupRefreshed ? 'utility:check': 'utility:close'}" 
+						class="{!v.isProcessGroupRefreshCalled ? 'slds-m-right_x-small':'slds-hide'}" size="xx-small" 
+						alternativeText="Approved" />{!$Label.c.FNS_PROCESS_GROUP}
+						<aura:if isTrue="{!v.processGroupError != 'Empty'}">
+							<div class="FNS_ERROR">{!v.processGroupError}</div>							
+						</aura:if>
+					</li>   
+
+					<li>
+						<lightning:icon iconName="{!v.isProductTypeRefreshed ? 'utility:check': 'utility:close'}" 
+						class="{!v.isProductTypeRefreshCalled ? 'slds-m-right_x-small':'slds-hide'}" 
+						size="xx-small" alternativeText="Approved" />{!$Label.c.FNS_PRODUCT_TYPE}
+						<aura:if isTrue="{!v.productTypeError != 'Empty'}">
+							<div class="FNS_ERROR">{!v.productTypeError}</div>							
+						</aura:if>
+					</li>
+
+					
+
+				</ul>
+			</div> 
+		</div>
+		<div class="slds-align_absolute-center">
+			<lightning:button variant="neutral" label="{!$Label.c.FNS_REFRESH_DATA_FROM_CME_BUTTON }" 
+			onclick="{!c.refreshAllCME}"/>
+		</div>
+	</lightning:card>
+</aura:component>

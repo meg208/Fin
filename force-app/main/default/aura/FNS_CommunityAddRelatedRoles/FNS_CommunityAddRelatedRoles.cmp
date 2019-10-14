@@ -1,0 +1,84 @@
+<!--*****************************************************************************************
+* @description Related roles on the right panel
+* Child component of - FNS_CommunityComp
+******************************************************************************************-->
+<aura:component controller="FNS_CommunityRelatedRoleController">
+    
+    <!-- START HANDLERS -->
+    <!--<aura:handler name="init" value="{!this}" action="{!c.doInit}"/>-->
+    <!-- END HANDLERS -->
+    
+    <!-- START PUBLIC ATTRIBUTES -->
+    <aura:attribute name="applicationRelatedRoleslist" type="Object[]" />
+    <aura:attribute name="applicationRelatedRoleslistToDisplay" type="FNS_RelatedRoles__c[]" />
+    <aura:attribute name="showViewAll" type="Boolean" default="false" />
+    <aura:attribute name="showSpinner" type="Boolean" default="true"/>
+    <!-- END PUBLIC ATTRIBUTES -->
+    
+    <!-- START MARKUP -->
+    <div class="slds-card slds-theme_default slds-container slds-m-vertical_small">
+        
+        <aura:if isTrue="{!!v.showSpinner}">
+            <lightning:layout verticalAlign="stretch" class="slds-grid_vertical slds-p-around_small">
+            
+            <lightning:layoutItem class="slds-list_horizontal">
+                <div>
+                    <lightning:icon iconName="utility:dock_panel" size="x-small" class="fns-custom-icon fns-bg-color"/>
+                </div>
+                <div class="slds-text-heading_small slds-p-left_small slds-align-middle">
+                    <b>{#$Label.c.FNS_APPLICATION_ROLES} 
+                        <aura:if isTrue="{!(empty(v.applicationRelatedRoleslist))}">
+                            (0)
+                     	<aura:set attribute="else">
+          					({!v.applicationRelatedRoleslist.length})
+    					</aura:set>
+  						</aura:if> 
+                    </b>
+                </div>
+            </lightning:layoutItem>
+            
+            <aura:if isTrue="{!!empty(v.applicationRelatedRoleslist)}">
+                
+                <aura:iteration items="{!v.applicationRelatedRoleslist}" var="application">
+                    
+                    <lightning:layoutItem class="slds-m-top_medium slds-list_horizontal">
+                        <div>
+                            <lightning:icon iconName="utility:dock_panel" size="x-small" class="fns-custom-icon fns-bg-color"/>
+                        </div>
+                        <div class="slds-p-left_small">
+                            <a class="fns-font-size" onclick="{!c.openRecord}" id="{!application.Id}">{!application.Name}</a>                
+                            <div class="slds-m-top_xx-small slds-grid">
+                                <div class="slds-text-color_weak slds-p-right_medium">{#$Label.c.FNS_ROLE}:</div> 
+                                <div class="slds-wrap">{!empty(application.FNS_RoleOfEntity__c) ? '-' : application.FNS_RoleOfEntity__c}</div>
+                            </div>
+                            <div class="slds-m-top_xxx-small slds-grid">
+                                <div class="slds-text-color_weak slds-p-right_medium">{#$Label.c.FNS_TYPE}:</div> 
+                                <div class="slds-wrap">{!empty(application.FNS_Type__c) ? '-' : application.FNS_Type__c}</div>
+                            </div>
+                        </div>
+                    </lightning:layoutItem>
+                    
+                </aura:iteration>
+                
+                <aura:set attribute="else">
+                    <div class="slds-align_absolute-center slds-text-color_weak slds-p-around_x-large">
+                         {#$Label.c.FNS_NO_RECORDS_TO_DISPLAY}
+                    </div>
+                </aura:set>
+                
+            </aura:if>
+            
+        </lightning:layout>  
+            <aura:set attribute="else">
+                <div class="slds-is-relative  slds-p-around_xx-large">
+                    <lightning:spinner variant="brand" size="small" class="slds-m-top_small"/>
+                </div>
+            </aura:set>
+        </aura:if>
+        <!--<div class="{!v.showViewAll ? 'slds-border_top slds-align_absolute-center slds-p-around_small' : 'slds-hide'}">            
+            <a onclick="{!c.viewAll}"> {!$Label.c.FNS_VIEW_ALL}  ({!v.applicationRelatedRoleslist.length}) </a>            
+        </div>-->
+    </div>
+    <!-- END MARKUP -->
+    
+</aura:component>

@@ -1,0 +1,25 @@
+<!--*****************************************************************************************
+* @Author - Kavya@comitydesigns.com - Kavya Papasani
+* @description - Proposals on the right panel
+* Child component of - FNS_CommunityComp
+******************************************************************************************-->
+<aura:component >
+    <aura:attribute name="isProposalURL" type="boolean" default="false"/>
+    <aura:attribute name="proposalUrl" type="String" />
+    
+    <aura:handler name="init" action="{!c.doInit}" value="{!this}" />
+    <aura:handler event="force:refreshView" action="{!c.doInit}" />
+   
+    <div class="slds-align-middle slds-text-heading_small" >
+        <b>{!$Label.c.FNS_QUIP}</b>
+    </div>
+    <aura:if isTrue="{!v.isProposalURL}" >
+        <div class="slds-p-top_small slds-text-body_small">
+            {!$Label.c.FNS_PROPOSAL_TEXT} 
+           <div aura:id="address"> <a href="{!v.proposalUrl}" target="_blank">{!v.proposalUrl}</a></div>
+        </div>
+        <aura:set attribute="else">
+            <div class="slds-align_absolute-center slds-text-color_weak slds-p-around_x-large">{!$Label.c.FNS_NO_DOCUMENT_TEXT}</div>
+        </aura:set>
+    </aura:if>    
+</aura:component>

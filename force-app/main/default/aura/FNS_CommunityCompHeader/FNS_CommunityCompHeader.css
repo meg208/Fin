@@ -1,0 +1,17 @@
+.THIS .FNS_header_background {
+    background:#fff;
+    border-bottom:2px solid #8079FB;
+}
+.THIS .FNS_tabcontent-hide .slds-tabs_default__content{
+  display:none;  
+}
+.THIS .FNS_tabcontent-hide .slds-tabs_default__nav{
+    border-bottom:none;
+}
+.THIS .fns-notification-color .slds-icon-text-default {
+    fill: #B1B0AC;
+}
+.THIS .FNS_Dropdown {
+    right: -30%;
+    top: 95%;    
+}

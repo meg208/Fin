@@ -1,0 +1,359 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes"  controller="FNS_ApplicationService" access="global" >
+    
+    <!-- Attributes -->
+    <aura:attribute name="oppWrapper" type="Object"/>
+    <aura:attribute name="isLoaded" type="Boolean" default="false"/>
+    <aura:attribute name="isFilterApply" type="Boolean" default="false"/>
+    <aura:attribute name="isEmptyFilter" type="Boolean" default="false"/>
+    <aura:attribute name="isFilterOpen" type="Boolean" default="false"/>
+    <aura:attribute name="isCustomer" type="Boolean" default="false"/>
+    <aura:attribute name="isDisposition" type="Boolean" default="false"/>
+    <aura:attribute name="isLoan" type="Boolean" default="false"/>
+    <aura:attribute name="selectedLookUpRecord" type="sObject"/>
+    <aura:attribute name="selectedResource" type="String"/>
+    <aura:attribute name="selectedOperator" type="String"/>
+    <aura:attribute name="selectedValue" type="String"/>
+    <aura:attribute name="filterSelectedResource" type="String"/>
+    <aura:attribute name="filterSelectedOperator" type="String"/>
+    <aura:attribute name="filterSelectedValue" type="String"/>
+    <aura:attribute name="isRestoreDefault" type="Boolean" default="false"/>
+    <aura:attribute name="isSpinner" type="Boolean" default="false"/>
+    
+    <aura:attribute name="stageName" type="String"/>
+    <aura:attribute name="responseError" type="String"/>
+    <aura:attribute name="selectedResourceDefault" type="String" default="Recently Viewed Deals"/>
+    <aura:attribute name="selectedOperatorDefault" type="String" default="Equals"/>
+    <aura:attribute name="selectedValueDefault" type="String" default="All Time"/>
+    <aura:attribute name="filterSelectedValuePrevious" type="String" default=""/>
+    <aura:attribute name="filterSelectedOperatorPrevious" type="String" default=""/>
+    <aura:attribute name="filterSelectedResourcePrevious" type="String" default=""/>
+    <aura:attribute name="buttonOrder" type="Integer" default="0"/>
+    <aura:attribute name="isFilterIcon" type="Boolean"/>
+    <aura:attribute name="opportunityShow" type="Boolean" default="true"/>
+    <aura:attribute name="isViewAll" type="Boolean"/>
+    <!-- Attributes -->
+    
+    <!-- Handlers -->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:handler event="force:navigateToSObject" action="{!c.navigateToRecord}"/>
+    <aura:handler name="cmpEvent" event="c:FNS_SelectTileEvent" action="{!c.handleComponentEvent}"/>
+    <!-- Handlers -->
+    
+    <div class="slds-card">
+        <aura:if isTrue="{!v.isSpinner}">
+            <lightning:spinner alternativeText="Loading" variant="brand" size="medium"/>
+        </aura:if>
+        
+        <aura:if isTrue="{!not(empty(v.responseError))}">
+            <div class="FNS_ERROR">{!v.responseError}</div>	
+        </aura:if>
+        
+        <div class="slds-p-horizontal_medium slds-grid slds-card__header">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                <div class="slds-media__figure">
+                    <lightning:icon iconName="standard:partner_fund_claim" size="small" class="FNS_fillIcon"/>
+                </div>
+                <div class="slds-media__body">
+                    <h2 class="slds-card__header-title">
+                        <div class="FNS_textSize slds-text-title_bold">
+                            <aura:if isTrue="{!v.oppWrapper.totalOppCount>0}">
+                                {!$Label.c.FNS_PENDING_DEALS + ' (' + v.oppWrapper.totalOppCount + ')'}
+                                <aura:set attribute="else">
+                                    {!$Label.c.FNS_PENDING_DEALS + ' (0)'}
+                                </aura:set>
+                            </aura:if>
+                        </div>
+                    </h2>
+                </div>
+                <div class="slds-no-flex slds-list_horizontal slds-is-relative">
+                    <div class="FNS_margin-filter slds-m-right_x-small slds-p-top_xxx-small">
+                        <span class="slds-text-title_bold">
+                            {!$Label.c.FNS_PENDING_DEALS_FILTER_LABEL} : 
+                        </span>
+                        {!v.selectedResource}
+                        • {!v.selectedOperator}
+                        • {!v.selectedValue}
+                    </div>
+                    <div class="slds-float_right">
+                        <div class="slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open">
+                            <lightning:buttonIcon iconName="utility:filterList" size="small" variant="border-filled" disabled="{!v.isFilterIcon}"
+                                                  onclick="{!c.filter}" alternativeText="Filter"/> 
+                        </div>
+                        <aura:if isTrue="{!v.isFilterOpen}">
+                            <div class="slds-dropdown slds-dropdown_right slds-nubbin_top-right FNS_filterModal">
+                                <!--<lightning:card title="" class="FNS_filterBody">-->
+                                <div class="slds-card__header FNS_filterBody">
+                                    {!$Label.c.FNS_PENDING_DEALS_FILTER_LABEL}
+                                    <aura:if isTrue="{!v.isEmptyFilter}">
+                                        <span class="slds-text-color_error slds-float_right">
+                                            {!$Label.c.FNS_REQUIRED_FIELD_ERROR}
+                                        </span>
+                                    </aura:if>
+                                </div>
+                                <div class="slds-p-horizontal_medium slds-card__body slds-card__body_inner">
+                                    <div class="slds-grid slds-m-top_small" onclick="{!c.ShowFilter}">
+                                        <span class="slds-float_right slds-size_2-of-6 slds-m-right_small" onclick="{!c.ShowFilter}">
+                                            <lightning:select aura:id="filterSelectedResource"
+                                                              required="true"
+                                                              label="{!$Label.c.FNS_PENDING_DEALS_FILTER_SELECTED_RESOURCE}"
+                                                              value="{!v.filterSelectedResource}"
+                                                              onchange="{!c.filterSelected}">
+                                                <option value="">
+                                                    {!$Label.c.FNS_PENDING_DEALS_NONE}
+                                                </option>
+                                                <aura:iteration items="{!v.oppWrapper.filterAttList}" var="field">
+                                                    <option value="{!field.fieldName}">{!field.fieldName}</option>
+                                                </aura:iteration>
+                                            </lightning:select>
+                                        </span>
+                                        <span class="slds-float_right slds-size_2-of-6 slds-m-right_small">
+                                            <lightning:select aura:id="filterSelectedAmountOperator"
+                                                              required="true"
+                                                              label="{!$Label.c.FNS_PENDING_DEALS_OPERATOR}"
+                                                              value="{!v.filterSelectedOperator}">
+                                                <option value="">
+                                                    {!$Label.c.FNS_PENDING_DEALS_NONE}
+                                                </option>
+                                                <option value="{!$Label.c.FNS_PENDING_DEALS_EQUALS}">
+                                                    {!$Label.c.FNS_PENDING_DEALS_EQUALS}
+                                                </option>
+                                                <option value="{!$Label.c.FNS_PENDING_DEALS_NOT_EQUALS}">
+                                                    {!$Label.c.FNS_PENDING_DEALS_NOT_EQUALS}
+                                                </option>
+                                                <aura:if isTrue="{!v.isLoan}">
+                                                    <option value="{!$Label.c.FNS_PENDING_DEALS_LESS_THAN}" >
+                                                        {!$Label.c.FNS_PENDING_DEALS_LESS_THAN}
+                                                    </option>
+                                                    <option value="{!$Label.c.FNS_PENDING_DEALS_LESS_THAN_EQUAL_TO}" >
+                                                        {!$Label.c.FNS_PENDING_DEALS_LESS_THAN_EQUAL_TO}
+                                                    </option>
+                                                    <option value="{!$Label.c.FNS_PENDING_DEALS_GREATER_THAN}" >
+                                                        {!$Label.c.FNS_PENDING_DEALS_GREATER_THAN}
+                                                    </option>
+                                                    <option value="{!$Label.c.FNS_PENDING_DEALS_GREATER_THAN_EQUAL_TO}" >
+                                                        {!$Label.c.FNS_PENDING_DEALS_GREATER_THAN_EQUAL_TO}
+                                                    </option>
+                                                </aura:if>
+                                            </lightning:select>
+                                        </span>
+                                        <aura:if isTrue="{!v.isLoan}">
+                                            <lightning:input aura:id="filterSelectedAmountValue"
+                                                             required="true"
+                                                             type="number"
+                                                             label="{!$Label.c.FNS_PENDING_DEALS_VALUE}"
+                                                             value="{!v.filterSelectedValue}"/>
+                                        </aura:if>
+                                        <div class="{!v.isDisposition ? 'slds-show' :'slds-hide'}">
+                                            <lightning:recordEditForm aura:id="dispositionRecord"
+                                                                      recordTypeId="{!v.oppWrapper.opportunityRecordTypeID}"
+                                                                      objectApiName="Opportunity"
+                                                                      >
+                                                <lightning:inputField aura:id="stage" fieldName="StageName" value="{!v.stageName}"/>
+                                            </lightning:recordEditForm>
+                                        </div>
+                                        
+                                        <aura:if isTrue="{!v.isCustomer}">
+                                            <c:FNS_CustomLookup objectAPIName="Account"
+                                                                IconName="standard:account"
+                                                                selectedRecord="{!v.selectedLookUpRecord}"
+                                                                label="Value"/>
+                                        </aura:if>
+                                        
+                                    </div>
+                                </div>
+                                <footer class="slds-card__footer slds-show_inline-block slds-size_1-of-1 slds-float_left Fns_background">
+                                    <div class="{!v.isFilterApply ? 'slds-hide' : 'slds-show ' }">
+                                        <span class="{!v.isRestoreDefault ? 'slds-hide' : 'slds-show slds-float_left FNS_disable-link'}">
+                                            {!$Label.c.FNS_PENDING_DEALS_CLEAR_FILTERS}
+                                        </span>
+                                        <span class="{!v.isRestoreDefault ? 'slds-show slds-float_left' : 'slds-hide'}">
+                                            <a class="slds-float_left" onclick="{!c.clearFilters}">
+                                                {!$Label.c.FNS_PENDING_DEALS_CLEAR_FILTERS}
+                                            </a>
+                                        </span>
+                                        
+                                        
+                                        <lightning:button variant="brand" class="slds-float_right" label="{!$Label.c.FNS_APPLY}" onclick="{!c.applyFilter}"/>
+                                        <lightning:button label="{!$Label.c.FNS_CANCEL}" class="slds-m-right_small slds-float_right" onclick="{!c.cancel}"/>
+                                    </div>      
+                                    
+                                    <div class="{!v.isFilterApply ? 'slds-show slds-is-relative slds-p-around_medium slds-float_right FNS_spinnerBackground' : 'slds-hide'}">
+                                        <lightning:spinner alternativeText="Loading" variant="brand" size="small"/>
+                                    </div>
+                                </footer>
+                                
+                            </div>
+                        </aura:if>
+                    </div>
+                </div>
+            </header>
+        </div> 
+        <aura:if isTrue="{!v.opportunityShow}">
+            <div  class="slds-card__body">
+                <!--briefTiles component ..-->
+                <div class="slds-m-horizontal_medium">
+                    <aura:if isTrue="{!or(v.oppWrapper.oppDetails.length==0, v.oppWrapper.oppDetails.length==null)}">
+                        <aura:Set attribute="else">
+                            <c:FNS_Tiles oppWrapper= "{!v.oppWrapper}"
+                                         isRestoreDefault="{!v.isRestoreDefault}"
+                                         buttonOrder="{!v.buttonOrder}"
+                                         />
+                        </aura:Set>
+                    </aura:if>
+                </div>
+                <lightning:layout class="slds-grid slds-wrap slds-m-left_medium slds-m-right_x-small slds-media__body slds-p-bottom_xxx-small" multipleRows="true">
+                    <aura:iteration items="{!v.oppWrapper.oppDetails}" var="opportunity" end="8" indexVar="index">
+                        <lightning:layoutItem class="slds-size_2-of-8
+                                                     slds-small-size_8-of-8
+                                                     slds-medium-size_4-of-8
+                                                     slds-large-size_2-of-8
+                                                     FNS_tileSize
+                                                     slds-p-bottom_small">
+                            <div class="slds-box FNS_tile">
+                                <lightning:tile label="">
+                                    <div class="slds-grid">
+                                        <div class="slds-size_7-of-8 slds-truncate">
+                                            <ui:outputURL value="{!'/lightning/r/Opportunity/'+opportunity.oppId+'/view'}"  target="_blank" label="{!opportunity.name}" class="FNS_cardTextOpportunityName" />
+                                           <!--<a title="{!opportunity.name}"
+                                               class="FNS_cardTextOpportunityName"
+                                               onclick="{!c.opportunityView}"
+                                               data-index="{!index}">
+                                                {!opportunity.name}
+                                            </a>-->
+                                        </div>                                            
+                                    </div>
+                                    <div class="FNS_cardTextAmount slds-truncate">
+                                        <!--£{!opportunity.Amount}-->
+                                        <aura:if isTrue="{!opportunity.amount == null}">
+                                            <div>-</div>
+                                            <aura:set attribute="else">
+                                                <ui:outputCurrency value="{!opportunity.amount}" currencySymbol="{!opportunity.currencySymbol}"/>
+                                            </aura:set>
+                                        </aura:if>
+                                    </div>
+                                    <div class="slds-size_3-of-4 slds-truncate">
+                                        <aura:if isTrue="{!opportunity.borrower == null}">
+                                            <div class="FNS_DashedFont">-</div>
+                                            <aura:set attribute="else">  
+                                                <ui:outputURL value="{!'/lightning/r/Account/'+opportunity.accountId+'/view'}"  target="_blank" label="{!opportunity.borrower}" class="FNS_cardTextAccountName" />
+                                               <!-- <a title="{!opportunity.Account}"
+                                                   class="FNS_cardTextAccountName"
+                                                   onclick="{!c.accountView}"
+                                                   data-index="{!index}">
+                                                    {!opportunity.borrower}
+                                                </a> -->
+                                            </aura:set> 
+                                        </aura:if>
+                                    </div>
+                                    <div class="FNS_cardTextStageAndDate slds-m-top_xxx-small slds-m-bottom_xxx-small">
+                                        <aura:if isTrue="{!opportunity.stage == null}">
+                                            <div>-</div>
+                                            <aura:set attribute="else"> 
+                                                <div>
+                                                    {!opportunity.stage}
+                                                </div>
+                                            </aura:set>
+                                        </aura:if>
+                                        
+                                        {!$Label.c.FNS_DUE} : <aura:if isTrue="{!opportunity.closeDate == null}">
+                                        <div>-</div>
+                                        <aura:set attribute="else"> 
+                                            <ui:outputDate value="{!opportunity.closeDate}" format="MM/DD/YYYY"/>
+                                        </aura:set>
+                                        </aura:if>
+                                    </div>
+                                    <div aura:id="popover" data-value="{!index}" onblur="{!c.hidePopover}" tabindex="0" class="FNS_popoverHide">
+                                        <div class="{!opportunity.slaStatus=='RED' ? 'FNS_backgroundRed slds-is-relative FNS_popover':
+                                                    opportunity.slaStatus=='YELLOW' ? 'FNS_backgroundOrange slds-is-relative FNS_popover' :
+                                                    opportunity.slaStatus=='GREEN' ? 'FNS_backgroundGreen slds-is-relative FNS_popover' :
+                                                    'FNS_backgroundGreen slds-is-relative FNS_popover'}" onclick="{!c.showHover}" data-index="{!index}">
+                                            <span class="FNS_texttrnasform-set slds-p-around_xxx-small"> {!opportunity.taskMessage}</span>
+                                            <div class="{!opportunity.Clicked ? opportunity.slaStatus=='RED' ? 'FNS_popover_bodyRedClicked slds-nubbin_top-left' :
+                                                        opportunity.slaStatus=='YELLOW' ? 'FNS_popover_bodyOrangeClicked slds-nubbin_top-left' :
+                                                        opportunity.slaStatus=='GREEN' ? 'FNS_popover_bodyGreenClicked slds-nubbin_top-left' :
+                                                        'FNS_popover_bodyGreenClicked slds-nubbin_top-left' :
+                                                        opportunity.slaStatus=='RED' ? 'FNS_popover_bodyRed slds-nubbin_top-left' :
+                                                        opportunity.slaStatus=='YELLOW' ? 'FNS_popover_bodyOrange slds-nubbin_top-left' :
+                                                        'FNS_popover_bodyGreen slds-nubbin_top-left'}">
+                                                <div class="{!opportunity.slaStatus=='RED' ? 'slds-p-around_small slds-popover slds-popover_tooltip FNS_Red' :
+                                                            opportunity.slaStatus=='YELLOW' ? 'slds-p-around_small slds-popover slds-popover_tooltip FNS_Orange' :
+                                                            opportunity.slaStatus=='GREEN' ? 'slds-p-around_small slds-popover slds-popover_tooltip FNS_Green' :
+                                                            'slds-p-around_small slds-popover slds-popover_tooltip FNS_Green'}">
+                                                    <div>
+                                                        <div class="{!opportunity.slaStatus=='RED' ? 'slds-show' : 'slds-hide'}">
+                                                            {!$Label.c.FNS_INITIAL_INPUT}
+                                                            <div class="slds-m-bottom_small">
+                                                                <span> 
+                                                                    &#8231; 
+                                                                </span>
+                                                                <ui:outputURL value="{!'/lightning/r/Opportunity/'+opportunity.oppId+'/view'}"  target="_blank" label="{!$Label.c.FNS_TRACKING_ITEMS}" class="FNS_trackingItemsText slds-p-right_xx-small" />
+                                                                <!--<a class="FNS_trackingItemsText slds-p-right_xx-small"
+                                                                   onclick="{!c.handleTrackingItems}"
+                                                                   data-index="{!index}">
+                                                                    {!$Label.c.FNS_TRACKING_ITEMS}
+                                                                </a>-->
+                                                                <span class="slds-p-left_xxx-small">{!$Label.c.FNS_NEED_IMMEDIATE_ATTENTION}.</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="{!opportunity.slaStatus=='YELLOW' ? 'slds-show' : 'slds-hide'}">
+                                                            {!$Label.c.FNS_UNDERWRITING}
+                                                            <div class="slds-m-bottom_small">
+                                                                <span> 
+                                                                    &#8231; 
+                                                                </span>
+                                                                <ui:outputURL value="{!'/lightning/r/Opportunity/'+opportunity.oppId+'/view'}"  target="_blank" label="{!$Label.c.FNS_TRACKING_ITEMS}" class="FNS_trackingItemsText slds-p-right_xx-small" />
+                                                                <!-- <a class="FNS_trackingItemsText slds-p-right_xx-small"
+                                                                   onclick="{!c.handleTrackingItems}"
+                                                                   data-index="{!index}">
+                                                                    {!$Label.c.FNS_TRACKING_ITEMS}
+                                                                </a>-->
+                                                                {!$Label.c.FNS_NEEDS_REVIEW}.
+                                                            </div>
+                                                        </div>
+                                                        <div class="{!or(opportunity.slaStatus=='GREEN', opportunity.slaStatus==null) ?
+                                                                    'slds-show' : 'slds-hide'}">
+                                                            {!$Label.c.FNS_UNDERWRITING}
+                                                            <div class="slds-m-bottom_small">
+                                                            	<span> 
+                                                                    &#8231; 
+                                                                </span>
+                                                                {!v.opportunityTaskListLength}
+                                                                <ui:outputURL value="{!'/lightning/r/Opportunity/'+opportunity.oppId+'/view'}"  target="_blank" label="{!$Label.c.FNS_TRACKING_ITEMS}" class="FNS_trackingItemsText slds-p-right_xx-small" />
+                                                                <!-- <a class="FNS_trackingItemsText slds-p-horizontal_xx-small"
+                                                                   onclick="{!c.handleTrackingItems}"
+                                                                   data-index="{!index}">
+                                                                    {!$Label.c.FNS_TRACKING_ITEMS}
+                                                                </a> -->
+                                                                {!$Label.c.FNS_REMAINING}.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </lightning:tile>
+                            </div>
+                        </lightning:layoutItem>
+                    </aura:iteration>
+                </lightning:layout>
+                <div class="{!v.isViewAll ? 'slds-show slds-text-align_center FNS_cardTextViewAll slds-card__footer slds-m-top_none' : 'slds-hide'}">
+                    <a onclick="{!c.viewAll}">
+                        View All ({!v.oppWrapper.oppList.length})
+                    </a>
+                </div>
+            </div>
+            <aura:set attribute="else">
+                <div class="slds-m-horizontal_medium">
+                    <c:FNS_Tiles oppWrapper= "{!v.oppWrapper}"
+                                 isRestoreDefault="{!v.isRestoreDefault}"
+                                 buttonOrder="{!v.buttonOrder}"
+                                 />
+                </div>
+                <div class="slds-align_absolute-center slds-text-title_bold slds-card__footer slds-p-around_medium">
+                    No records found
+                </div>
+            </aura:set>
+        </aura:if>
+    </div>
+</aura:component>

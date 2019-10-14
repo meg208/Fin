@@ -1,0 +1,24 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome"
+                controller="FNS_SetupController">
+    <aura:attribute name="showFFDCRefresh" type="Boolean" default="false"/> 
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/> 
+    <aura:handler event="force:refreshView" action="{!c.doInit}" />
+    <!-- MARK UP START-->
+    <lightning:card class="remove_top_padding">
+        <lightning:layout>
+            <lightning:layoutItem padding="around-small" size="12" smallDeviceSize="12" mediumDeviceSize="12" largeDeviceSize="12">
+                <lightning:tabset selectedTabId="connection">
+                    <lightning:tab label="Connection" id="connection">
+                        <c:FNS_Connection authType="SFDC_FFDC"/>
+                        <c:FNS_Connection authType="FFDC_SFDC"/>
+                        <aura:if isTrue ="{!v.showFFDCRefresh}" >
+                            <c:FNS_CMERefresh/>
+                        </aura:if>
+                    </lightning:tab>
+                </lightning:tabset>
+            </lightning:layoutItem>
+        </lightning:layout>
+    </lightning:card>
+    <!-- MARK UP END-->
+</aura:component>

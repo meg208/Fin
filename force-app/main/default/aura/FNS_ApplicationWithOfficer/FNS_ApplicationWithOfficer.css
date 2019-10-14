@@ -1,0 +1,8 @@
+.THIS.FNS_iconcolor .slds-card__header h2
+{
+    font-weight:bold;
+}
+.THIS .FNS_ERROR{
+    color: red;
+    margin-left: 12px;
+}

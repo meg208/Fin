@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FNS_RiskType__c</fullName>
+    <externalId>false</externalId>
+    <label>Risk Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Acceptances</fullName>
+                <default>false</default>
+                <label>Acceptances</label>
+            </value>
+            <value>
+                <fullName>Acceptances Financing</fullName>
+                <default>false</default>
+                <label>Acceptances Financing</label>
+            </value>
+            <value>
+                <fullName>Acquisition loans</fullName>
+                <default>false</default>
+                <label>Acquisition loans</label>
+            </value>
+            <value>
+                <fullName>Bankers Acceptance</fullName>
+                <default>false</default>
+                <label>Bankers Acceptance</label>
+            </value>
+            <value>
+                <fullName>Bankers Acceptance (Sumitomo) SBLC NB</fullName>
+                <default>false</default>
+                <label>Bankers Acceptance (Sumitomo) SBLC NB</label>
+            </value>
+            <value>
+                <fullName>Bills of Exchange</fullName>
+                <default>false</default>
+                <label>Bills of Exchange</label>
+            </value>
+            <value>
+                <fullName>Collateral</fullName>
+                <default>false</default>
+                <label>Collateral</label>
+            </value>
+            <value>
+                <fullName>Competitive Bids/Money Market Loans</fullName>
+                <default>false</default>
+                <label>Competitive Bids/Money Market Loans</label>
+            </value>
+            <value>
+                <fullName>Current account</fullName>
+                <default>false</default>
+                <label>Current account</label>
+            </value>
+            <value>
+                <fullName>Debt Instrument</fullName>
+                <default>false</default>
+                <label>Debt Instrument</label>
+            </value>
+            <value>
+                <fullName>Deposits</fullName>
+                <default>false</default>
+                <label>Deposits</label>
+            </value>
+            <value>
+                <fullName>Discount Loans</fullName>
+                <default>false</default>
+                <label>Discount Loans</label>
+            </value>
+            <value>
+                <fullName>Escrow Deposit</fullName>
+                <default>false</default>
+                <label>Escrow Deposit</label>
+            </value>
+            <value>
+                <fullName>Fee</fullName>
+                <default>false</default>
+                <label>Fee</label>
+            </value>
+            <value>
+                <fullName>Guidance</fullName>
+                <default>false</default>
+                <label>Guidance</label>
+            </value>
+            <value>
+                <fullName>Intraday</fullName>
+                <default>false</default>
+                <label>Intraday</label>
+            </value>
+            <value>
+                <fullName>Letter of Credit - Standby Advised</fullName>
+                <default>false</default>
+                <label>Letter of Credit - Standby Advised</label>
+            </value>
+            <value>
+                <fullName>Letter of Credit - Trade</fullName>
+                <default>false</default>
+                <label>Letter of Credit - Trade</label>
+            </value>
+            <value>
+                <fullName>Loans</fullName>
+                <default>false</default>
+                <label>Loans</label>
+            </value>
+            <value>
+                <fullName>Loans - Long Term</fullName>
+                <default>false</default>
+                <label>Loans - Long Term</label>
+            </value>
+            <value>
+                <fullName>Loans - Revolving</fullName>
+                <default>false</default>
+                <label>Loans - Revolving</label>
+            </value>
+            <value>
+                <fullName>Loans Construction</fullName>
+                <default>false</default>
+                <label>Loans Construction</label>
+            </value>
+            <value>
+                <fullName>Multi Currency Non-Loan</fullName>
+                <default>false</default>
+                <label>Multi Currency Non-Loan</label>
+            </value>
+            <value>
+                <fullName>Non-Loan Guaranty</fullName>
+                <default>false</default>
+                <label>Non-Loan Guaranty</label>
+            </value>
+            <value>
+                <fullName>Repo Loans</fullName>
+                <default>false</default>
+                <label>Repo Loans</label>
+            </value>
+            <value>
+                <fullName>SBLC</fullName>
+                <default>false</default>
+                <label>SBLC</label>
+            </value>
+            <value>
+                <fullName>Swing Lines</fullName>
+                <default>false</default>
+                <label>Swing Lines</label>
+            </value>
+            <value>
+                <fullName>Warehouse Lines</fullName>
+                <default>false</default>
+                <label>Warehouse Lines</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

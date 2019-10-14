@@ -1,0 +1,1325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>721 AccommodationT</fullName>
+        <default>false</default>
+        <label>721 AccommodationT</label>
+    </customValue>
+    <customValue>
+        <fullName>7211 Traveler AccommodationT</fullName>
+        <default>false</default>
+        <label>7211 Traveler AccommodationT</label>
+    </customValue>
+    <customValue>
+        <fullName>72111 Hotels (except Casino Hotels) and MotelsT</fullName>
+        <default>false</default>
+        <label>72111 Hotels (except Casino Hotels) and MotelsT</label>
+    </customValue>
+    <customValue>
+        <fullName>721110 Hotels (except Casino Hotels) and Motels</fullName>
+        <default>false</default>
+        <label>721110 Hotels (except Casino Hotels) and Motels</label>
+    </customValue>
+    <customValue>
+        <fullName>72112 Casino HotelsT</fullName>
+        <default>false</default>
+        <label>72112 Casino HotelsT</label>
+    </customValue>
+    <customValue>
+        <fullName>721120 Casino Hotels</fullName>
+        <default>false</default>
+        <label>721120 Casino Hotels</label>
+    </customValue>
+    <customValue>
+        <fullName>72119 Other Traveler AccommodationT</fullName>
+        <default>false</default>
+        <label>72119 Other Traveler AccommodationT</label>
+    </customValue>
+    <customValue>
+        <fullName>721191 Bed-and-Breakfast Inns</fullName>
+        <default>false</default>
+        <label>721191 Bed-and-Breakfast Inns</label>
+    </customValue>
+    <customValue>
+        <fullName>721199 All Other Traveler Accommodation</fullName>
+        <default>false</default>
+        <label>721199 All Other Traveler Accommodation</label>
+    </customValue>
+    <customValue>
+        <fullName>7212 RV (Recreational Vehicle) Parks and Recreational CampsT</fullName>
+        <default>false</default>
+        <label>7212 RV (Recreational Vehicle) Parks and Recreational CampsT</label>
+    </customValue>
+    <customValue>
+        <fullName>72121 RV (Recreational Vehicle) Parks and Recreational CampsT</fullName>
+        <default>false</default>
+        <label>72121 RV (Recreational Vehicle) Parks and Recreational CampsT</label>
+    </customValue>
+    <customValue>
+        <fullName>721211 RV (Recreational Vehicle) Parks and Campgrounds</fullName>
+        <default>false</default>
+        <label>721211 RV (Recreational Vehicle) Parks and Campgrounds</label>
+    </customValue>
+    <customValue>
+        <fullName>721214 Recreational and Vacation Camps (except Campgrounds)</fullName>
+        <default>false</default>
+        <label>721214 Recreational and Vacation Camps (except Campgrounds)</label>
+    </customValue>
+    <customValue>
+        <fullName>7213 Rooming and Boarding Houses, Dormitories, and Workers&#39; CampsT</fullName>
+        <default>false</default>
+        <label>7213 Rooming and Boarding Houses, Dormitories, and Workers&#39; CampsT</label>
+    </customValue>
+    <customValue>
+        <fullName>72131 Rooming and Boarding Houses, Dormitories, and Workers&#39; CampsT</fullName>
+        <default>false</default>
+        <label>72131 Rooming and Boarding Houses, Dormitories, and Workers&#39; CampsT</label>
+    </customValue>
+    <customValue>
+        <fullName>721310 Rooming and Boarding Houses, Dormitories, and Workers&#39; Camps</fullName>
+        <default>false</default>
+        <label>721310 Rooming and Boarding Houses, Dormitories, and Workers&#39; Camps</label>
+    </customValue>
+    <customValue>
+        <fullName>722 Food Services and Drinking PlacesT</fullName>
+        <default>false</default>
+        <label>722 Food Services and Drinking PlacesT</label>
+    </customValue>
+    <customValue>
+        <fullName>7223 Special Food ServicesT</fullName>
+        <default>false</default>
+        <label>7223 Special Food ServicesT</label>
+    </customValue>
+    <customValue>
+        <fullName>72231 Food Service ContractorsT</fullName>
+        <default>false</default>
+        <label>72231 Food Service ContractorsT</label>
+    </customValue>
+    <customValue>
+        <fullName>722310 Food Service Contractors</fullName>
+        <default>false</default>
+        <label>722310 Food Service Contractors</label>
+    </customValue>
+    <customValue>
+        <fullName>72232 CaterersT</fullName>
+        <default>false</default>
+        <label>72232 CaterersT</label>
+    </customValue>
+    <customValue>
+        <fullName>722320 Caterers</fullName>
+        <default>false</default>
+        <label>722320 Caterers</label>
+    </customValue>
+    <customValue>
+        <fullName>72233 Mobile Food ServicesT</fullName>
+        <default>false</default>
+        <label>72233 Mobile Food ServicesT</label>
+    </customValue>
+    <customValue>
+        <fullName>722330 Mobile Food Services</fullName>
+        <default>false</default>
+        <label>722330 Mobile Food Services</label>
+    </customValue>
+    <customValue>
+        <fullName>7224 Drinking Places (Alcoholic Beverages)T</fullName>
+        <default>false</default>
+        <label>7224 Drinking Places (Alcoholic Beverages)T</label>
+    </customValue>
+    <customValue>
+        <fullName>72241 Drinking Places (Alcoholic Beverages)T</fullName>
+        <default>false</default>
+        <label>72241 Drinking Places (Alcoholic Beverages)T</label>
+    </customValue>
+    <customValue>
+        <fullName>722410 Drinking Places (Alcoholic Beverages)</fullName>
+        <default>false</default>
+        <label>722410 Drinking Places (Alcoholic Beverages)</label>
+    </customValue>
+    <customValue>
+        <fullName>7225 Restaurants and Other Eating PlacesT</fullName>
+        <default>false</default>
+        <label>7225 Restaurants and Other Eating PlacesT</label>
+    </customValue>
+    <customValue>
+        <fullName>72251 Restaurants and Other Eating PlacesT</fullName>
+        <default>false</default>
+        <label>72251 Restaurants and Other Eating PlacesT</label>
+    </customValue>
+    <customValue>
+        <fullName>722511 Full-Service Restaurants</fullName>
+        <default>false</default>
+        <label>722511 Full-Service Restaurants</label>
+    </customValue>
+    <customValue>
+        <fullName>722513 Limited-Service Restaurants</fullName>
+        <default>false</default>
+        <label>722513 Limited-Service Restaurants</label>
+    </customValue>
+    <customValue>
+        <fullName>722514 Cafeterias, Grill Buffets, and Buffets</fullName>
+        <default>false</default>
+        <label>722514 Cafeterias, Grill Buffets, and Buffets</label>
+    </customValue>
+    <customValue>
+        <fullName>722515 Snack and Nonalcoholic Beverage Bars</fullName>
+        <default>false</default>
+        <label>722515 Snack and Nonalcoholic Beverage Bars</label>
+    </customValue>
+    <customValue>
+        <fullName>811 Repair and MaintenanceT</fullName>
+        <default>false</default>
+        <label>811 Repair and MaintenanceT</label>
+    </customValue>
+    <customValue>
+        <fullName>8111 Automotive Repair and MaintenanceT</fullName>
+        <default>false</default>
+        <label>8111 Automotive Repair and MaintenanceT</label>
+    </customValue>
+    <customValue>
+        <fullName>81111 Automotive Mechanical and Electrical Repair and MaintenanceT</fullName>
+        <default>false</default>
+        <label>81111 Automotive Mechanical and Electrical Repair and MaintenanceT</label>
+    </customValue>
+    <customValue>
+        <fullName>811111 General Automotive Repair</fullName>
+        <default>false</default>
+        <label>811111 General Automotive Repair</label>
+    </customValue>
+    <customValue>
+        <fullName>811112 Automotive Exhaust System Repair</fullName>
+        <default>false</default>
+        <label>811112 Automotive Exhaust System Repair</label>
+    </customValue>
+    <customValue>
+        <fullName>811113 Automotive Transmission Repair</fullName>
+        <default>false</default>
+        <label>811113 Automotive Transmission Repair</label>
+    </customValue>
+    <customValue>
+        <fullName>811118 Other Automotive Mechanical and Electrical Repair and Maintenance</fullName>
+        <default>false</default>
+        <label>811118 Other Automotive Mechanical and Electrical Repair and Maintenance</label>
+    </customValue>
+    <customValue>
+        <fullName>81112 Automotive Body, Paint, Interior, and Glass RepairT</fullName>
+        <default>false</default>
+        <label>81112 Automotive Body, Paint, Interior, and Glass RepairT</label>
+    </customValue>
+    <customValue>
+        <fullName>811121 Automotive Body, Paint, and Interior Repair and Maintenance</fullName>
+        <default>false</default>
+        <label>811121 Automotive Body, Paint, and Interior Repair and Maintenance</label>
+    </customValue>
+    <customValue>
+        <fullName>811122 Automotive Glass Replacement Shops</fullName>
+        <default>false</default>
+        <label>811122 Automotive Glass Replacement Shops</label>
+    </customValue>
+    <customValue>
+        <fullName>81119 Other Automotive Repair and MaintenanceT</fullName>
+        <default>false</default>
+        <label>81119 Other Automotive Repair and MaintenanceT</label>
+    </customValue>
+    <customValue>
+        <fullName>811191 Automotive Oil Change and Lubrication Shops</fullName>
+        <default>false</default>
+        <label>811191 Automotive Oil Change and Lubrication Shops</label>
+    </customValue>
+    <customValue>
+        <fullName>811192 Car Washes</fullName>
+        <default>false</default>
+        <label>811192 Car Washes</label>
+    </customValue>
+    <customValue>
+        <fullName>811198 All Other Automotive Repair and Maintenance</fullName>
+        <default>false</default>
+        <label>811198 All Other Automotive Repair and Maintenance</label>
+    </customValue>
+    <customValue>
+        <fullName>8112 Electronic and Precision Equipment Repair and MaintenanceT</fullName>
+        <default>false</default>
+        <label>8112 Electronic and Precision Equipment Repair and MaintenanceT</label>
+    </customValue>
+    <customValue>
+        <fullName>81121 Electronic and Precision Equipment Repair and MaintenanceT</fullName>
+        <default>false</default>
+        <label>81121 Electronic and Precision Equipment Repair and MaintenanceT</label>
+    </customValue>
+    <customValue>
+        <fullName>811211 Consumer Electronics Repair and Maintenance</fullName>
+        <default>false</default>
+        <label>811211 Consumer Electronics Repair and Maintenance</label>
+    </customValue>
+    <customValue>
+        <fullName>811212 Computer and Office Machine Repair and Maintenance</fullName>
+        <default>false</default>
+        <label>811212 Computer and Office Machine Repair and Maintenance</label>
+    </customValue>
+    <customValue>
+        <fullName>811213 Communication Equipment Repair and Maintenance</fullName>
+        <default>false</default>
+        <label>811213 Communication Equipment Repair and Maintenance</label>
+    </customValue>
+    <customValue>
+        <fullName>811219 Other Electronic and Precision Equipment Repair and Maintenance</fullName>
+        <default>false</default>
+        <label>811219 Other Electronic and Precision Equipment Repair and Maintenance</label>
+    </customValue>
+    <customValue>
+        <fullName>8113 Commercial and Industrial Machinery and Equipment (except Automotive and Electronic) Repair and MaintenanceT</fullName>
+        <default>false</default>
+        <label>8113 Commercial and Industrial Machinery and Equipment (except Automotive and Electronic) Repair and MaintenanceT</label>
+    </customValue>
+    <customValue>
+        <fullName>81131 Commercial and Industrial Machinery and Equipment (except Automotive and Electronic) Repair and MaintenanceT</fullName>
+        <default>false</default>
+        <label>81131 Commercial and Industrial Machinery and Equipment (except Automotive and Electronic) Repair and MaintenanceT</label>
+    </customValue>
+    <customValue>
+        <fullName>811310 Commercial and Industrial Machinery and Equipment (except Automotive and Electronic) Repair and Maintenance</fullName>
+        <default>false</default>
+        <label>811310 Commercial and Industrial Machinery and Equipment (except Automotive and Electronic) Repair and Maintenance</label>
+    </customValue>
+    <customValue>
+        <fullName>8114 Personal and Household Goods Repair and MaintenanceT</fullName>
+        <default>false</default>
+        <label>8114 Personal and Household Goods Repair and MaintenanceT</label>
+    </customValue>
+    <customValue>
+        <fullName>81141 Home and Garden Equipment and Appliance Repair and MaintenanceT</fullName>
+        <default>false</default>
+        <label>81141 Home and Garden Equipment and Appliance Repair and MaintenanceT</label>
+    </customValue>
+    <customValue>
+        <fullName>811411 Home and Garden Equipment Repair and Maintenance</fullName>
+        <default>false</default>
+        <label>811411 Home and Garden Equipment Repair and Maintenance</label>
+    </customValue>
+    <customValue>
+        <fullName>811412 Appliance Repair and Maintenance</fullName>
+        <default>false</default>
+        <label>811412 Appliance Repair and Maintenance</label>
+    </customValue>
+    <customValue>
+        <fullName>81142 Reupholstery and Furniture RepairT</fullName>
+        <default>false</default>
+        <label>81142 Reupholstery and Furniture RepairT</label>
+    </customValue>
+    <customValue>
+        <fullName>811420 Reupholstery and Furniture Repair</fullName>
+        <default>false</default>
+        <label>811420 Reupholstery and Furniture Repair</label>
+    </customValue>
+    <customValue>
+        <fullName>81143 Footwear and Leather Goods RepairT</fullName>
+        <default>false</default>
+        <label>81143 Footwear and Leather Goods RepairT</label>
+    </customValue>
+    <customValue>
+        <fullName>811430 Footwear and Leather Goods Repair</fullName>
+        <default>false</default>
+        <label>811430 Footwear and Leather Goods Repair</label>
+    </customValue>
+    <customValue>
+        <fullName>81149 Other Personal and Household Goods Repair and MaintenanceT</fullName>
+        <default>false</default>
+        <label>81149 Other Personal and Household Goods Repair and MaintenanceT</label>
+    </customValue>
+    <customValue>
+        <fullName>811490 Other Personal and Household Goods Repair and Maintenance</fullName>
+        <default>false</default>
+        <label>811490 Other Personal and Household Goods Repair and Maintenance</label>
+    </customValue>
+    <customValue>
+        <fullName>812 Personal and Laundry ServicesT</fullName>
+        <default>false</default>
+        <label>812 Personal and Laundry ServicesT</label>
+    </customValue>
+    <customValue>
+        <fullName>8121 Personal Care Services</fullName>
+        <default>false</default>
+        <label>8121 Personal Care Services</label>
+    </customValue>
+    <customValue>
+        <fullName>81211 Hair, Nail, and Skin Care Services</fullName>
+        <default>false</default>
+        <label>81211 Hair, Nail, and Skin Care Services</label>
+    </customValue>
+    <customValue>
+        <fullName>812111 Barber Shops</fullName>
+        <default>false</default>
+        <label>812111 Barber Shops</label>
+    </customValue>
+    <customValue>
+        <fullName>812112 Beauty Salons</fullName>
+        <default>false</default>
+        <label>812112 Beauty Salons</label>
+    </customValue>
+    <customValue>
+        <fullName>812113 Nail Salons</fullName>
+        <default>false</default>
+        <label>812113 Nail Salons</label>
+    </customValue>
+    <customValue>
+        <fullName>81219 Other Personal Care Services</fullName>
+        <default>false</default>
+        <label>81219 Other Personal Care Services</label>
+    </customValue>
+    <customValue>
+        <fullName>812191 Diet and Weight Reducing Centers</fullName>
+        <default>false</default>
+        <label>812191 Diet and Weight Reducing Centers</label>
+    </customValue>
+    <customValue>
+        <fullName>812199 Other Personal Care Services</fullName>
+        <default>false</default>
+        <label>812199 Other Personal Care Services</label>
+    </customValue>
+    <customValue>
+        <fullName>8122 Death Care Services</fullName>
+        <default>false</default>
+        <label>8122 Death Care Services</label>
+    </customValue>
+    <customValue>
+        <fullName>81221 Funeral Homes and Funeral Services</fullName>
+        <default>false</default>
+        <label>81221 Funeral Homes and Funeral Services</label>
+    </customValue>
+    <customValue>
+        <fullName>812210 Funeral Homes and Funeral Services</fullName>
+        <default>false</default>
+        <label>812210 Funeral Homes and Funeral Services</label>
+    </customValue>
+    <customValue>
+        <fullName>81222 Cemeteries and Crematories</fullName>
+        <default>false</default>
+        <label>81222 Cemeteries and Crematories</label>
+    </customValue>
+    <customValue>
+        <fullName>812220 Cemeteries and Crematories</fullName>
+        <default>false</default>
+        <label>812220 Cemeteries and Crematories</label>
+    </customValue>
+    <customValue>
+        <fullName>8123 Drycleaning and Laundry Services</fullName>
+        <default>false</default>
+        <label>8123 Drycleaning and Laundry Services</label>
+    </customValue>
+    <customValue>
+        <fullName>81231 Coin-Operated Laundries and Drycleaners</fullName>
+        <default>false</default>
+        <label>81231 Coin-Operated Laundries and Drycleaners</label>
+    </customValue>
+    <customValue>
+        <fullName>812310 Coin-Operated Laundries and Drycleaners</fullName>
+        <default>false</default>
+        <label>812310 Coin-Operated Laundries and Drycleaners</label>
+    </customValue>
+    <customValue>
+        <fullName>81232 Drycleaning and Laundry Services (except Coin-Operated)</fullName>
+        <default>false</default>
+        <label>81232 Drycleaning and Laundry Services (except Coin-Operated)</label>
+    </customValue>
+    <customValue>
+        <fullName>812320 Drycleaning and Laundry Services (except Coin-Operated)</fullName>
+        <default>false</default>
+        <label>812320 Drycleaning and Laundry Services (except Coin-Operated)</label>
+    </customValue>
+    <customValue>
+        <fullName>81233 Linen and Uniform Supply</fullName>
+        <default>false</default>
+        <label>81233 Linen and Uniform Supply</label>
+    </customValue>
+    <customValue>
+        <fullName>812331 Linen Supply</fullName>
+        <default>false</default>
+        <label>812331 Linen Supply</label>
+    </customValue>
+    <customValue>
+        <fullName>812332 Industrial Launderers</fullName>
+        <default>false</default>
+        <label>812332 Industrial Launderers</label>
+    </customValue>
+    <customValue>
+        <fullName>8129 Other Personal Services</fullName>
+        <default>false</default>
+        <label>8129 Other Personal Services</label>
+    </customValue>
+    <customValue>
+        <fullName>81291 Pet Care (except Veterinary) Services</fullName>
+        <default>false</default>
+        <label>81291 Pet Care (except Veterinary) Services</label>
+    </customValue>
+    <customValue>
+        <fullName>812910 Pet Care (except Veterinary) Services</fullName>
+        <default>false</default>
+        <label>812910 Pet Care (except Veterinary) Services</label>
+    </customValue>
+    <customValue>
+        <fullName>81292 Photofinishing</fullName>
+        <default>false</default>
+        <label>81292 Photofinishing</label>
+    </customValue>
+    <customValue>
+        <fullName>812921 Photofinishing Laboratories (except One-Hour)</fullName>
+        <default>false</default>
+        <label>812921 Photofinishing Laboratories (except One-Hour)</label>
+    </customValue>
+    <customValue>
+        <fullName>812922 One-Hour Photofinishing</fullName>
+        <default>false</default>
+        <label>812922 One-Hour Photofinishing</label>
+    </customValue>
+    <customValue>
+        <fullName>81293 Parking Lots and Garages</fullName>
+        <default>false</default>
+        <label>81293 Parking Lots and Garages</label>
+    </customValue>
+    <customValue>
+        <fullName>812930 Parking Lots and Garages</fullName>
+        <default>false</default>
+        <label>812930 Parking Lots and Garages</label>
+    </customValue>
+    <customValue>
+        <fullName>81299 All Other Personal Services</fullName>
+        <default>false</default>
+        <label>81299 All Other Personal Services</label>
+    </customValue>
+    <customValue>
+        <fullName>812990 All Other Personal Services</fullName>
+        <default>false</default>
+        <label>812990 All Other Personal Services</label>
+    </customValue>
+    <customValue>
+        <fullName>813 Religious, Grantmaking, Civic, Professional, and Similar OrganizationsT</fullName>
+        <default>false</default>
+        <label>813 Religious, Grantmaking, Civic, Professional, and Similar OrganizationsT</label>
+    </customValue>
+    <customValue>
+        <fullName>8131 Religious Organizations</fullName>
+        <default>false</default>
+        <label>8131 Religious Organizations</label>
+    </customValue>
+    <customValue>
+        <fullName>81311 Religious Organizations</fullName>
+        <default>false</default>
+        <label>81311 Religious Organizations</label>
+    </customValue>
+    <customValue>
+        <fullName>813110 Religious Organizations</fullName>
+        <default>false</default>
+        <label>813110 Religious Organizations</label>
+    </customValue>
+    <customValue>
+        <fullName>8132 Grantmaking and Giving Services</fullName>
+        <default>false</default>
+        <label>8132 Grantmaking and Giving Services</label>
+    </customValue>
+    <customValue>
+        <fullName>81321 Grantmaking and Giving Services</fullName>
+        <default>false</default>
+        <label>81321 Grantmaking and Giving Services</label>
+    </customValue>
+    <customValue>
+        <fullName>813211 Grantmaking Foundations</fullName>
+        <default>false</default>
+        <label>813211 Grantmaking Foundations</label>
+    </customValue>
+    <customValue>
+        <fullName>813212 Voluntary Health Organizations</fullName>
+        <default>false</default>
+        <label>813212 Voluntary Health Organizations</label>
+    </customValue>
+    <customValue>
+        <fullName>813219 Other Grantmaking and Giving Services</fullName>
+        <default>false</default>
+        <label>813219 Other Grantmaking and Giving Services</label>
+    </customValue>
+    <customValue>
+        <fullName>8133 Social Advocacy Organizations</fullName>
+        <default>false</default>
+        <label>8133 Social Advocacy Organizations</label>
+    </customValue>
+    <customValue>
+        <fullName>81331 Social Advocacy Organizations</fullName>
+        <default>false</default>
+        <label>81331 Social Advocacy Organizations</label>
+    </customValue>
+    <customValue>
+        <fullName>813311 Human Rights Organizations</fullName>
+        <default>false</default>
+        <label>813311 Human Rights Organizations</label>
+    </customValue>
+    <customValue>
+        <fullName>813312 Environment, Conservation and Wildlife Organizations</fullName>
+        <default>false</default>
+        <label>813312 Environment, Conservation and Wildlife Organizations</label>
+    </customValue>
+    <customValue>
+        <fullName>813319 Other Social Advocacy Organizations</fullName>
+        <default>false</default>
+        <label>813319 Other Social Advocacy Organizations</label>
+    </customValue>
+    <customValue>
+        <fullName>8134 Civic and Social Organizations</fullName>
+        <default>false</default>
+        <label>8134 Civic and Social Organizations</label>
+    </customValue>
+    <customValue>
+        <fullName>81341 Civic and Social Organizations</fullName>
+        <default>false</default>
+        <label>81341 Civic and Social Organizations</label>
+    </customValue>
+    <customValue>
+        <fullName>813410 Civic and Social Organizations</fullName>
+        <default>false</default>
+        <label>813410 Civic and Social Organizations</label>
+    </customValue>
+    <customValue>
+        <fullName>8139 Business, Professional, Labor, Political, and Similar Organizations</fullName>
+        <default>false</default>
+        <label>8139 Business, Professional, Labor, Political, and Similar Organizations</label>
+    </customValue>
+    <customValue>
+        <fullName>81391 Business Associations</fullName>
+        <default>false</default>
+        <label>81391 Business Associations</label>
+    </customValue>
+    <customValue>
+        <fullName>813910 Business Associations</fullName>
+        <default>false</default>
+        <label>813910 Business Associations</label>
+    </customValue>
+    <customValue>
+        <fullName>81392 Professional Organizations</fullName>
+        <default>false</default>
+        <label>81392 Professional Organizations</label>
+    </customValue>
+    <customValue>
+        <fullName>813920 Professional Organizations</fullName>
+        <default>false</default>
+        <label>813920 Professional Organizations</label>
+    </customValue>
+    <customValue>
+        <fullName>81393 Labor Unions and Similar Labor Organizations</fullName>
+        <default>false</default>
+        <label>81393 Labor Unions and Similar Labor Organizations</label>
+    </customValue>
+    <customValue>
+        <fullName>813930 Labor Unions and Similar Labor Organizations</fullName>
+        <default>false</default>
+        <label>813930 Labor Unions and Similar Labor Organizations</label>
+    </customValue>
+    <customValue>
+        <fullName>81394 Political Organizations</fullName>
+        <default>false</default>
+        <label>81394 Political Organizations</label>
+    </customValue>
+    <customValue>
+        <fullName>813940 Political Organizations</fullName>
+        <default>false</default>
+        <label>813940 Political Organizations</label>
+    </customValue>
+    <customValue>
+        <fullName>81399 Other Similar Organizations (except Business, Professional, Labor, and Political Organizations)</fullName>
+        <default>false</default>
+        <label>81399 Other Similar Organizations (except Business, Professional, Labor, and Political Organizations)</label>
+    </customValue>
+    <customValue>
+        <fullName>813990 Other Similar Organizations (except Business, Professional, Labor, and Political Organizations)</fullName>
+        <default>false</default>
+        <label>813990 Other Similar Organizations (except Business, Professional, Labor, and Political Organizations)</label>
+    </customValue>
+    <customValue>
+        <fullName>814 Private HouseholdsT</fullName>
+        <default>false</default>
+        <label>814 Private HouseholdsT</label>
+    </customValue>
+    <customValue>
+        <fullName>8141 Private HouseholdsT</fullName>
+        <default>false</default>
+        <label>8141 Private HouseholdsT</label>
+    </customValue>
+    <customValue>
+        <fullName>81411 Private HouseholdsT</fullName>
+        <default>false</default>
+        <label>81411 Private HouseholdsT</label>
+    </customValue>
+    <customValue>
+        <fullName>814110 Private Households</fullName>
+        <default>false</default>
+        <label>814110 Private Households</label>
+    </customValue>
+    <customValue>
+        <fullName>921 Executive, Legislative, and Other General Government Support</fullName>
+        <default>false</default>
+        <label>921 Executive, Legislative, and Other General Government Support</label>
+    </customValue>
+    <customValue>
+        <fullName>9211 Executive, Legislative, and Other General Government Support</fullName>
+        <default>false</default>
+        <label>9211 Executive, Legislative, and Other General Government Support</label>
+    </customValue>
+    <customValue>
+        <fullName>92111 Executive Offices</fullName>
+        <default>false</default>
+        <label>92111 Executive Offices</label>
+    </customValue>
+    <customValue>
+        <fullName>921110 Executive Offices</fullName>
+        <default>false</default>
+        <label>921110 Executive Offices</label>
+    </customValue>
+    <customValue>
+        <fullName>92112 Legislative Bodies</fullName>
+        <default>false</default>
+        <label>92112 Legislative Bodies</label>
+    </customValue>
+    <customValue>
+        <fullName>921120 Legislative Bodies</fullName>
+        <default>false</default>
+        <label>921120 Legislative Bodies</label>
+    </customValue>
+    <customValue>
+        <fullName>92113 Public Finance Activities</fullName>
+        <default>false</default>
+        <label>92113 Public Finance Activities</label>
+    </customValue>
+    <customValue>
+        <fullName>921130 Public Finance Activities</fullName>
+        <default>false</default>
+        <label>921130 Public Finance Activities</label>
+    </customValue>
+    <customValue>
+        <fullName>92114 Executive and Legislative Offices, Combined</fullName>
+        <default>false</default>
+        <label>92114 Executive and Legislative Offices, Combined</label>
+    </customValue>
+    <customValue>
+        <fullName>921140 Executive and Legislative Offices, Combined</fullName>
+        <default>false</default>
+        <label>921140 Executive and Legislative Offices, Combined</label>
+    </customValue>
+    <customValue>
+        <fullName>92115 American Indian and Alaska Native Tribal Governments</fullName>
+        <default>false</default>
+        <label>92115 American Indian and Alaska Native Tribal Governments</label>
+    </customValue>
+    <customValue>
+        <fullName>921150 American Indian and Alaska Native Tribal Governments</fullName>
+        <default>false</default>
+        <label>921150 American Indian and Alaska Native Tribal Governments</label>
+    </customValue>
+    <customValue>
+        <fullName>92119 Other General Government Support</fullName>
+        <default>false</default>
+        <label>92119 Other General Government Support</label>
+    </customValue>
+    <customValue>
+        <fullName>921190 Other General Government Support</fullName>
+        <default>false</default>
+        <label>921190 Other General Government Support</label>
+    </customValue>
+    <customValue>
+        <fullName>922 Justice, Public Order, and Safety Activities</fullName>
+        <default>false</default>
+        <label>922 Justice, Public Order, and Safety Activities</label>
+    </customValue>
+    <customValue>
+        <fullName>9221 Justice, Public Order, and Safety Activities</fullName>
+        <default>false</default>
+        <label>9221 Justice, Public Order, and Safety Activities</label>
+    </customValue>
+    <customValue>
+        <fullName>92211 Courts</fullName>
+        <default>false</default>
+        <label>92211 Courts</label>
+    </customValue>
+    <customValue>
+        <fullName>922110 Courts</fullName>
+        <default>false</default>
+        <label>922110 Courts</label>
+    </customValue>
+    <customValue>
+        <fullName>92212 Police Protection</fullName>
+        <default>false</default>
+        <label>92212 Police Protection</label>
+    </customValue>
+    <customValue>
+        <fullName>922120 Police Protection</fullName>
+        <default>false</default>
+        <label>922120 Police Protection</label>
+    </customValue>
+    <customValue>
+        <fullName>92213 Legal Counsel and Prosecution</fullName>
+        <default>false</default>
+        <label>92213 Legal Counsel and Prosecution</label>
+    </customValue>
+    <customValue>
+        <fullName>922130 Legal Counsel and Prosecution</fullName>
+        <default>false</default>
+        <label>922130 Legal Counsel and Prosecution</label>
+    </customValue>
+    <customValue>
+        <fullName>92214 Correctional Institutions</fullName>
+        <default>false</default>
+        <label>92214 Correctional Institutions</label>
+    </customValue>
+    <customValue>
+        <fullName>922140 Correctional Institutions</fullName>
+        <default>false</default>
+        <label>922140 Correctional Institutions</label>
+    </customValue>
+    <customValue>
+        <fullName>92215 Parole Offices and Probation Offices</fullName>
+        <default>false</default>
+        <label>92215 Parole Offices and Probation Offices</label>
+    </customValue>
+    <customValue>
+        <fullName>922150 Parole Offices and Probation Offices</fullName>
+        <default>false</default>
+        <label>922150 Parole Offices and Probation Offices</label>
+    </customValue>
+    <customValue>
+        <fullName>92216 Fire Protection</fullName>
+        <default>false</default>
+        <label>92216 Fire Protection</label>
+    </customValue>
+    <customValue>
+        <fullName>922160 Fire Protection</fullName>
+        <default>false</default>
+        <label>922160 Fire Protection</label>
+    </customValue>
+    <customValue>
+        <fullName>92219 Other Justice, Public Order, and Safety Activities</fullName>
+        <default>false</default>
+        <label>92219 Other Justice, Public Order, and Safety Activities</label>
+    </customValue>
+    <customValue>
+        <fullName>922190 Other Justice, Public Order, and Safety Activities</fullName>
+        <default>false</default>
+        <label>922190 Other Justice, Public Order, and Safety Activities</label>
+    </customValue>
+    <customValue>
+        <fullName>923 Administration of Human Resource Programs</fullName>
+        <default>false</default>
+        <label>923 Administration of Human Resource Programs</label>
+    </customValue>
+    <customValue>
+        <fullName>9231 Administration of Human Resource Programs</fullName>
+        <default>false</default>
+        <label>9231 Administration of Human Resource Programs</label>
+    </customValue>
+    <customValue>
+        <fullName>92311 Administration of Education Programs</fullName>
+        <default>false</default>
+        <label>92311 Administration of Education Programs</label>
+    </customValue>
+    <customValue>
+        <fullName>923110 Administration of Education Programs</fullName>
+        <default>false</default>
+        <label>923110 Administration of Education Programs</label>
+    </customValue>
+    <customValue>
+        <fullName>92312 Administration of Public Health Programs</fullName>
+        <default>false</default>
+        <label>92312 Administration of Public Health Programs</label>
+    </customValue>
+    <customValue>
+        <fullName>923120 Administration of Public Health Programs</fullName>
+        <default>false</default>
+        <label>923120 Administration of Public Health Programs</label>
+    </customValue>
+    <customValue>
+        <fullName>92313 Administration of Human Resource Programs (except Education, Public Health, and Veterans&#39; Affairs Programs)</fullName>
+        <default>false</default>
+        <label>92313 Administration of Human Resource Programs (except Education, Public Health, and Veterans&#39; Affairs Programs)</label>
+    </customValue>
+    <customValue>
+        <fullName>923130 Administration of Human Resource Programs (except Education, Public Health, and Veterans&#39; Affairs Programs)</fullName>
+        <default>false</default>
+        <label>923130 Administration of Human Resource Programs (except Education, Public Health, and Veterans&#39; Affairs Programs)</label>
+    </customValue>
+    <customValue>
+        <fullName>92314 Administration of Veterans&#39; Affairs</fullName>
+        <default>false</default>
+        <label>92314 Administration of Veterans&#39; Affairs</label>
+    </customValue>
+    <customValue>
+        <fullName>923140 Administration of Veterans&#39; Affairs</fullName>
+        <default>false</default>
+        <label>923140 Administration of Veterans&#39; Affairs</label>
+    </customValue>
+    <customValue>
+        <fullName>924 Administration of Environmental Quality Programs</fullName>
+        <default>false</default>
+        <label>924 Administration of Environmental Quality Programs</label>
+    </customValue>
+    <customValue>
+        <fullName>9241 Administration of Environmental Quality Programs</fullName>
+        <default>false</default>
+        <label>9241 Administration of Environmental Quality Programs</label>
+    </customValue>
+    <customValue>
+        <fullName>92411 Administration of Air and Water Resource and Solid Waste Management Programs</fullName>
+        <default>false</default>
+        <label>92411 Administration of Air and Water Resource and Solid Waste Management Programs</label>
+    </customValue>
+    <customValue>
+        <fullName>924110 Administration of Air and Water Resource and Solid Waste Management Programs</fullName>
+        <default>false</default>
+        <label>924110 Administration of Air and Water Resource and Solid Waste Management Programs</label>
+    </customValue>
+    <customValue>
+        <fullName>92412 Administration of Conservation Programs</fullName>
+        <default>false</default>
+        <label>92412 Administration of Conservation Programs</label>
+    </customValue>
+    <customValue>
+        <fullName>924120 Administration of Conservation Programs</fullName>
+        <default>false</default>
+        <label>924120 Administration of Conservation Programs</label>
+    </customValue>
+    <customValue>
+        <fullName>925 Administration of Housing Programs, Urban Planning, and Community Development</fullName>
+        <default>false</default>
+        <label>925 Administration of Housing Programs, Urban Planning, and Community Development</label>
+    </customValue>
+    <customValue>
+        <fullName>9251 Administration of Housing Programs, Urban Planning, and Community Development</fullName>
+        <default>false</default>
+        <label>9251 Administration of Housing Programs, Urban Planning, and Community Development</label>
+    </customValue>
+    <customValue>
+        <fullName>92511 Administration of Housing Programs</fullName>
+        <default>false</default>
+        <label>92511 Administration of Housing Programs</label>
+    </customValue>
+    <customValue>
+        <fullName>925110 Administration of Housing Programs</fullName>
+        <default>false</default>
+        <label>925110 Administration of Housing Programs</label>
+    </customValue>
+    <customValue>
+        <fullName>92512 Administration of Urban Planning and Community and Rural Development</fullName>
+        <default>false</default>
+        <label>92512 Administration of Urban Planning and Community and Rural Development</label>
+    </customValue>
+    <customValue>
+        <fullName>925120 Administration of Urban Planning and Community and Rural Development</fullName>
+        <default>false</default>
+        <label>925120 Administration of Urban Planning and Community and Rural Development</label>
+    </customValue>
+    <customValue>
+        <fullName>926 Administration of Economic Programs</fullName>
+        <default>false</default>
+        <label>926 Administration of Economic Programs</label>
+    </customValue>
+    <customValue>
+        <fullName>9261 Administration of Economic Programs</fullName>
+        <default>false</default>
+        <label>9261 Administration of Economic Programs</label>
+    </customValue>
+    <customValue>
+        <fullName>92611 Administration of General Economic Programs</fullName>
+        <default>false</default>
+        <label>92611 Administration of General Economic Programs</label>
+    </customValue>
+    <customValue>
+        <fullName>926110 Administration of General Economic Programs</fullName>
+        <default>false</default>
+        <label>926110 Administration of General Economic Programs</label>
+    </customValue>
+    <customValue>
+        <fullName>92612 Regulation and Administration of Transportation Programs</fullName>
+        <default>false</default>
+        <label>92612 Regulation and Administration of Transportation Programs</label>
+    </customValue>
+    <customValue>
+        <fullName>926120 Regulation and Administration of Transportation Programs</fullName>
+        <default>false</default>
+        <label>926120 Regulation and Administration of Transportation Programs</label>
+    </customValue>
+    <customValue>
+        <fullName>92613 Regulation and Administration of Communications, Electric, Gas, and Other Utilities</fullName>
+        <default>false</default>
+        <label>92613 Regulation and Administration of Communications, Electric, Gas, and Other Utilities</label>
+    </customValue>
+    <customValue>
+        <fullName>926130 Regulation and Administration of Communications, Electric, Gas, and Other Utilities</fullName>
+        <default>false</default>
+        <label>926130 Regulation and Administration of Communications, Electric, Gas, and Other Utilities</label>
+    </customValue>
+    <customValue>
+        <fullName>92614 Regulation of Agricultural Marketing and Commodities</fullName>
+        <default>false</default>
+        <label>92614 Regulation of Agricultural Marketing and Commodities</label>
+    </customValue>
+    <customValue>
+        <fullName>926140 Regulation of Agricultural Marketing and Commodities</fullName>
+        <default>false</default>
+        <label>926140 Regulation of Agricultural Marketing and Commodities</label>
+    </customValue>
+    <customValue>
+        <fullName>92615 Regulation, Licensing, and Inspection of Miscellaneous Commercial Sectors</fullName>
+        <default>false</default>
+        <label>92615 Regulation, Licensing, and Inspection of Miscellaneous Commercial Sectors</label>
+    </customValue>
+    <customValue>
+        <fullName>926150 Regulation, Licensing, and Inspection of Miscellaneous Commercial Sectors</fullName>
+        <default>false</default>
+        <label>926150 Regulation, Licensing, and Inspection of Miscellaneous Commercial Sectors</label>
+    </customValue>
+    <customValue>
+        <fullName>927 Space Research and Technology</fullName>
+        <default>false</default>
+        <label>927 Space Research and Technology</label>
+    </customValue>
+    <customValue>
+        <fullName>9271 Space Research and Technology</fullName>
+        <default>false</default>
+        <label>9271 Space Research and Technology</label>
+    </customValue>
+    <customValue>
+        <fullName>92711 Space Research and Technology</fullName>
+        <default>false</default>
+        <label>92711 Space Research and Technology</label>
+    </customValue>
+    <customValue>
+        <fullName>927110 Space Research and Technology</fullName>
+        <default>false</default>
+        <label>927110 Space Research and Technology</label>
+    </customValue>
+    <customValue>
+        <fullName>928 National Security and International Affairs</fullName>
+        <default>false</default>
+        <label>928 National Security and International Affairs</label>
+    </customValue>
+    <customValue>
+        <fullName>9281 National Security and International Affairs</fullName>
+        <default>false</default>
+        <label>9281 National Security and International Affairs</label>
+    </customValue>
+    <customValue>
+        <fullName>92811 National Security</fullName>
+        <default>false</default>
+        <label>92811 National Security</label>
+    </customValue>
+    <customValue>
+        <fullName>928110 National Security</fullName>
+        <default>false</default>
+        <label>928110 National Security</label>
+    </customValue>
+    <customValue>
+        <fullName>92812 International Affairs</fullName>
+        <default>false</default>
+        <label>92812 International Affairs</label>
+    </customValue>
+    <customValue>
+        <fullName>928120 International Affairs</fullName>
+        <default>false</default>
+        <label>928120 International Affairs</label>
+    </customValue>
+    <customValue>
+        <fullName>711 Performing Arts, Spectator Sports, and Related IndustriesT</fullName>
+        <default>false</default>
+        <label>711 Performing Arts, Spectator Sports, and Related IndustriesT</label>
+    </customValue>
+    <customValue>
+        <fullName>7111 Performing Arts CompaniesT</fullName>
+        <default>false</default>
+        <label>7111 Performing Arts CompaniesT</label>
+    </customValue>
+    <customValue>
+        <fullName>71111 Theater Companies and Dinner TheatersT</fullName>
+        <default>false</default>
+        <label>71111 Theater Companies and Dinner TheatersT</label>
+    </customValue>
+    <customValue>
+        <fullName>711110 Theater Companies and Dinner Theaters</fullName>
+        <default>false</default>
+        <label>711110 Theater Companies and Dinner Theaters</label>
+    </customValue>
+    <customValue>
+        <fullName>71112 Dance CompaniesT</fullName>
+        <default>false</default>
+        <label>71112 Dance CompaniesT</label>
+    </customValue>
+    <customValue>
+        <fullName>711120 Dance Companies</fullName>
+        <default>false</default>
+        <label>711120 Dance Companies</label>
+    </customValue>
+    <customValue>
+        <fullName>71113 Musical Groups and ArtistsT</fullName>
+        <default>false</default>
+        <label>71113 Musical Groups and ArtistsT</label>
+    </customValue>
+    <customValue>
+        <fullName>711130 Musical Groups and Artists</fullName>
+        <default>false</default>
+        <label>711130 Musical Groups and Artists</label>
+    </customValue>
+    <customValue>
+        <fullName>71119 Other Performing Arts CompaniesT</fullName>
+        <default>false</default>
+        <label>71119 Other Performing Arts CompaniesT</label>
+    </customValue>
+    <customValue>
+        <fullName>711190 Other Performing Arts Companies</fullName>
+        <default>false</default>
+        <label>711190 Other Performing Arts Companies</label>
+    </customValue>
+    <customValue>
+        <fullName>7112 Spectator SportsT</fullName>
+        <default>false</default>
+        <label>7112 Spectator SportsT</label>
+    </customValue>
+    <customValue>
+        <fullName>71121 Spectator SportsT</fullName>
+        <default>false</default>
+        <label>71121 Spectator SportsT</label>
+    </customValue>
+    <customValue>
+        <fullName>711211 Sports Teams and Clubs</fullName>
+        <default>false</default>
+        <label>711211 Sports Teams and Clubs</label>
+    </customValue>
+    <customValue>
+        <fullName>711212 Racetracks</fullName>
+        <default>false</default>
+        <label>711212 Racetracks</label>
+    </customValue>
+    <customValue>
+        <fullName>711219 Other Spectator Sports</fullName>
+        <default>false</default>
+        <label>711219 Other Spectator Sports</label>
+    </customValue>
+    <customValue>
+        <fullName>7113 Promoters of Performing Arts, Sports, and Similar EventsT</fullName>
+        <default>false</default>
+        <label>7113 Promoters of Performing Arts, Sports, and Similar EventsT</label>
+    </customValue>
+    <customValue>
+        <fullName>71131 Promoters of Performing Arts, Sports, and Similar Events with FacilitiesT</fullName>
+        <default>false</default>
+        <label>71131 Promoters of Performing Arts, Sports, and Similar Events with FacilitiesT</label>
+    </customValue>
+    <customValue>
+        <fullName>711310 Promoters of Performing Arts, Sports, and Similar Events with Facilities</fullName>
+        <default>false</default>
+        <label>711310 Promoters of Performing Arts, Sports, and Similar Events with Facilities</label>
+    </customValue>
+    <customValue>
+        <fullName>71132 Promoters of Performing Arts, Sports, and Similar Events without FacilitiesT</fullName>
+        <default>false</default>
+        <label>71132 Promoters of Performing Arts, Sports, and Similar Events without FacilitiesT</label>
+    </customValue>
+    <customValue>
+        <fullName>711320 Promoters of Performing Arts, Sports, and Similar Events without Facilities</fullName>
+        <default>false</default>
+        <label>711320 Promoters of Performing Arts, Sports, and Similar Events without Facilities</label>
+    </customValue>
+    <customValue>
+        <fullName>7114 Agents and Managers for Artists, Athletes, Entertainers, and Other Public FiguresT</fullName>
+        <default>false</default>
+        <label>7114 Agents and Managers for Artists, Athletes, Entertainers, and Other Public FiguresT</label>
+    </customValue>
+    <customValue>
+        <fullName>71141 Agents and Managers for Artists, Athletes, Entertainers, and Other Public FiguresT</fullName>
+        <default>false</default>
+        <label>71141 Agents and Managers for Artists, Athletes, Entertainers, and Other Public FiguresT</label>
+    </customValue>
+    <customValue>
+        <fullName>711410 Agents and Managers for Artists, Athletes, Entertainers, and Other Public Figures</fullName>
+        <default>false</default>
+        <label>711410 Agents and Managers for Artists, Athletes, Entertainers, and Other Public Figures</label>
+    </customValue>
+    <customValue>
+        <fullName>7115 Independent Artists, Writers, and PerformersT</fullName>
+        <default>false</default>
+        <label>7115 Independent Artists, Writers, and PerformersT</label>
+    </customValue>
+    <customValue>
+        <fullName>71151 Independent Artists, Writers, and PerformersT</fullName>
+        <default>false</default>
+        <label>71151 Independent Artists, Writers, and PerformersT</label>
+    </customValue>
+    <customValue>
+        <fullName>711510 Independent Artists, Writers, and Performers</fullName>
+        <default>false</default>
+        <label>711510 Independent Artists, Writers, and Performers</label>
+    </customValue>
+    <customValue>
+        <fullName>712 Museums, Historical Sites, and Similar InstitutionsT</fullName>
+        <default>false</default>
+        <label>712 Museums, Historical Sites, and Similar InstitutionsT</label>
+    </customValue>
+    <customValue>
+        <fullName>7121 Museums, Historical Sites, and Similar InstitutionsT</fullName>
+        <default>false</default>
+        <label>7121 Museums, Historical Sites, and Similar InstitutionsT</label>
+    </customValue>
+    <customValue>
+        <fullName>71211 MuseumsT</fullName>
+        <default>false</default>
+        <label>71211 MuseumsT</label>
+    </customValue>
+    <customValue>
+        <fullName>712110 Museums</fullName>
+        <default>false</default>
+        <label>712110 Museums</label>
+    </customValue>
+    <customValue>
+        <fullName>71212 Historical SitesT</fullName>
+        <default>false</default>
+        <label>71212 Historical SitesT</label>
+    </customValue>
+    <customValue>
+        <fullName>712120 Historical Sites</fullName>
+        <default>false</default>
+        <label>712120 Historical Sites</label>
+    </customValue>
+    <customValue>
+        <fullName>71213 Zoos and Botanical GardensT</fullName>
+        <default>false</default>
+        <label>71213 Zoos and Botanical GardensT</label>
+    </customValue>
+    <customValue>
+        <fullName>712130 Zoos and Botanical Gardens</fullName>
+        <default>false</default>
+        <label>712130 Zoos and Botanical Gardens</label>
+    </customValue>
+    <customValue>
+        <fullName>71219 Nature Parks and Other Similar InstitutionsT</fullName>
+        <default>false</default>
+        <label>71219 Nature Parks and Other Similar InstitutionsT</label>
+    </customValue>
+    <customValue>
+        <fullName>712190 Nature Parks and Other Similar Institutions</fullName>
+        <default>false</default>
+        <label>712190 Nature Parks and Other Similar Institutions</label>
+    </customValue>
+    <customValue>
+        <fullName>713 Amusement, Gambling, and Recreation IndustriesT</fullName>
+        <default>false</default>
+        <label>713 Amusement, Gambling, and Recreation IndustriesT</label>
+    </customValue>
+    <customValue>
+        <fullName>7131 Amusement Parks and ArcadesT</fullName>
+        <default>false</default>
+        <label>7131 Amusement Parks and ArcadesT</label>
+    </customValue>
+    <customValue>
+        <fullName>71311 Amusement and Theme ParksT</fullName>
+        <default>false</default>
+        <label>71311 Amusement and Theme ParksT</label>
+    </customValue>
+    <customValue>
+        <fullName>713110 Amusement and Theme Parks</fullName>
+        <default>false</default>
+        <label>713110 Amusement and Theme Parks</label>
+    </customValue>
+    <customValue>
+        <fullName>71312 Amusement ArcadesT</fullName>
+        <default>false</default>
+        <label>71312 Amusement ArcadesT</label>
+    </customValue>
+    <customValue>
+        <fullName>713120 Amusement Arcades</fullName>
+        <default>false</default>
+        <label>713120 Amusement Arcades</label>
+    </customValue>
+    <customValue>
+        <fullName>7132 Gambling IndustriesT</fullName>
+        <default>false</default>
+        <label>7132 Gambling IndustriesT</label>
+    </customValue>
+    <customValue>
+        <fullName>71321 Casinos (except Casino Hotels)T</fullName>
+        <default>false</default>
+        <label>71321 Casinos (except Casino Hotels)T</label>
+    </customValue>
+    <customValue>
+        <fullName>713210 Casinos (except Casino Hotels)</fullName>
+        <default>false</default>
+        <label>713210 Casinos (except Casino Hotels)</label>
+    </customValue>
+    <customValue>
+        <fullName>71329 Other Gambling IndustriesT</fullName>
+        <default>false</default>
+        <label>71329 Other Gambling IndustriesT</label>
+    </customValue>
+    <customValue>
+        <fullName>713290 Other Gambling Industries</fullName>
+        <default>false</default>
+        <label>713290 Other Gambling Industries</label>
+    </customValue>
+    <customValue>
+        <fullName>7139 Other Amusement and Recreation IndustriesT</fullName>
+        <default>false</default>
+        <label>7139 Other Amusement and Recreation IndustriesT</label>
+    </customValue>
+    <customValue>
+        <fullName>71391 Golf Courses and Country ClubsT</fullName>
+        <default>false</default>
+        <label>71391 Golf Courses and Country ClubsT</label>
+    </customValue>
+    <customValue>
+        <fullName>713910 Golf Courses and Country Clubs</fullName>
+        <default>false</default>
+        <label>713910 Golf Courses and Country Clubs</label>
+    </customValue>
+    <customValue>
+        <fullName>71392 Skiing FacilitiesT</fullName>
+        <default>false</default>
+        <label>71392 Skiing FacilitiesT</label>
+    </customValue>
+    <customValue>
+        <fullName>713920 Skiing Facilities</fullName>
+        <default>false</default>
+        <label>713920 Skiing Facilities</label>
+    </customValue>
+    <customValue>
+        <fullName>71393 MarinasT</fullName>
+        <default>false</default>
+        <label>71393 MarinasT</label>
+    </customValue>
+    <customValue>
+        <fullName>713930 Marinas</fullName>
+        <default>false</default>
+        <label>713930 Marinas</label>
+    </customValue>
+    <customValue>
+        <fullName>71394 Fitness and Recreational Sports CentersT</fullName>
+        <default>false</default>
+        <label>71394 Fitness and Recreational Sports CentersT</label>
+    </customValue>
+    <customValue>
+        <fullName>713940 Fitness and Recreational Sports Centers</fullName>
+        <default>false</default>
+        <label>713940 Fitness and Recreational Sports Centers</label>
+    </customValue>
+    <customValue>
+        <fullName>71395 Bowling CentersT</fullName>
+        <default>false</default>
+        <label>71395 Bowling CentersT</label>
+    </customValue>
+    <customValue>
+        <fullName>713950 Bowling Centers</fullName>
+        <default>false</default>
+        <label>713950 Bowling Centers</label>
+    </customValue>
+    <customValue>
+        <fullName>71399 All Other Amusement and Recreation IndustriesT</fullName>
+        <default>false</default>
+        <label>71399 All Other Amusement and Recreation IndustriesT</label>
+    </customValue>
+    <customValue>
+        <fullName>713990 All Other Amusement and Recreation Industries</fullName>
+        <default>false</default>
+        <label>713990 All Other Amusement and Recreation Industries</label>
+    </customValue>
+    <masterLabel>NAICS Code First Level Set3</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

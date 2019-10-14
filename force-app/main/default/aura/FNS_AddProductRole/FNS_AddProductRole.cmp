@@ -1,0 +1,54 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId,force:hasSObjectName,flexipage:availableForAllPageTypes">
+    <!-- PUBLIC ATTRIBUTES START-->
+    <aura:attribute name="productRoleId" type="String"/>
+    <aura:attribute name="productId" type="String" />
+    <aura:attribute name="roleName" type="String" default= "Accountant"/>
+    <aura:attribute name="roleFinAccountLkp" type="String"/>
+    <aura:attribute name="productRoleRow" type="Integer"/>
+    <aura:attribute name="objFields" type="List"/> 
+    <aura:attribute name="objName" type="String"/>
+    <aura:attribute name="errorMessage" type="String" default=""/>
+    <aura:attribute name="roleObjPklist" type="String"/>
+    <!-- PUBLIC ATTRIBUTES END-->
+    <!-- HANDLERS START-->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:handler event="force:refreshView" action="{!c.doInit}" />
+    <!-- HANDLERS END-->
+    <!-- Register Event START-->
+    <aura:registerEvent name="deletedProductRole" type="c:FNS_DeletedProductRole"/>
+    <aura:registerEvent name="showStatus" type="c:FNS_ShowStatus"/>
+    <aura:registerEvent name="handleError" type="c:FNS_HandleError"/>
+    <!-- Register Event END-->
+    <!-- Aura Method START-->
+    <aura:method name="saveProductRole" action="{!c.saveProductRole}" access="PUBLIC">
+        <aura:attribute name="finAccount" type="String"/>
+    </aura:method>
+    <!-- Aura Method END-->
+    
+    <!-- MARK UP START-->
+    <lightning:recordEditForm class="FNS_addProductrRolesForm" aura:id="productRoleEditForm" objectApiName="{!v.objName}" 
+                              onsuccess="{!c.handleSuccess}"
+                              recordId="{!v.productRoleId}" 
+                              onerror="{!c.onError}">
+        <lightning:messages/>
+        <aura:if isTrue="{!!empty(v.errorMessage)}">
+            <div class="slds-text-color_destructive slds-align_absolute-center">
+                {!v.errorMessage}
+            </div>
+        </aura:if>
+        &nbsp;
+        <lightning:layout multipleRows="true" class="slds-page-header slds-p-around_medium slds-grid_align-spread">
+            <div class=" slds-size_1-of-1" style="text-align: right;">
+                <a onclick="{!c.removeCmp}">
+                    <lightning:icon variant="error" iconName="utility:delete" class="slds-icon slds-icon_small" size="x-small" alternativeText="icon"/>
+                </a>
+            </div>
+            {!v.body}
+            
+            <lightning:inputField fieldName="{!v.roleObjPklist}" value="{!v.roleName}" class="slds-hide"/>
+            <lightning:inputField aura:id="finAccount" fieldName="{!v.roleFinAccountLkp}" class="slds-hide"/>
+        </lightning:layout>
+        
+    </lightning:recordEditForm>    
+    <!-- MARK UP END-->
+</aura:component>

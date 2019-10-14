@@ -1,0 +1,48 @@
+<aura:component >
+<!-- PUBLIC ATTRIBUTES START-->
+<aura:attribute name="feeId" type="String"/>
+<aura:attribute name="feeRow" type="Integer"/>
+<aura:attribute name="objFields" type="object[]"/>
+<aura:attribute name="objName" type="String"/>
+<aura:attribute name="financialProduct" type="String"/>
+<aura:attribute name="errorMessage" type="String" default=""/>
+<!-- PUBLIC ATTRIBUTES END-->
+ 
+<!-- HANDLERS START-->
+<aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+<aura:handler event="force:refreshView" action="{!c.doInit}" />
+<!-- HANDLERS END-->
+
+<!-- Aura Method START-->
+<aura:method name="saveFees" action="{!c.saveFees}" access="PUBLIC">
+	<aura:attribute name="finAccount" type="String"/>
+</aura:method>
+<!-- Aura Method END-->
+
+<!-- Register Event START-->
+<aura:registerEvent name="showStatus" type="c:FNS_ShowStatus"/>
+<aura:registerEvent name="deletedFee" type="c:FNS_DeletedFee"/>
+<aura:registerEvent name="handleError" type="c:FNS_HandleError"/>
+<!-- Register Event END-->
+
+ <!-- MARK UP START-->
+<lightning:recordEditForm aura:id="feeForm"
+						  onsuccess="{!c.handleSuccess}"
+						  recordId="{!v.feeId}" 
+						  onerror="{!c.onError}"
+						  objectApiName="{!v.objName}">
+	<!-- the messages component is for error messages -->
+	<lightning:messages />
+	
+		<aura:if isTrue="{!!empty(v.errorMessage)}">
+			<div class="slds-text-color_destructive slds-align_absolute-center">
+				{!v.errorMessage}
+			</div>
+		</aura:if>
+	<lightning:layout multipleRows="true" class="slds-page-header slds-p-around_medium slds-grid_align-spread">
+		{!v.body}
+		<lightning:inputField aura:id="finProduct" fieldName="{!v.financialProduct}" class="slds-hide"/>
+	</lightning:layout>
+</lightning:recordEditForm>
+ <!-- MARK UP END-->
+</aura:component>

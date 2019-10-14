@@ -1,0 +1,189 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,force:hasRecordId" controller="FNS_ProductWizardController">
+    <ltng:require scripts="{!$Resource.FinastraLightningResources + '/js/lodash.js'}" afterScriptsLoaded="{!c.doInit}"/>
+    <aura:attribute name="wrapper" type="object"/>
+    <aura:attribute name="productId" type="String"/>
+    <aura:attribute name="newProductId" type="String"/>
+    <aura:attribute name="loanList" type="Object[]"/>
+    <aura:attribute name="pricingList" type="Object[]"/>
+    <aura:attribute name="productList" type="List" description="store product with there child loans"/>
+    <aura:attribute name="errorMessages" type="Object[]"/>
+    <aura:attribute name="errorLst" type="Object[]"/>
+    <aura:attribute name="OpptyRecord" type="Object"/>
+    <aura:attribute name="productCount" type="Integer" default="0"/>
+    <aura:attribute name="pricingReqFlds" type="String[]"/>
+    <aura:attribute name="showModal" type="boolean"/> 
+    <aura:attribute name="showLoanTable" type="Boolean" default="false"/>
+    <aura:attribute name="showLoanFields" type="Boolean" default="false"/>
+    <aura:attribute name="showPricingFields" type="Boolean" default="false"/>
+    <aura:attribute name="showMoreFields" type="boolean" />
+    <aura:attribute name="isLoading" type="boolean" default="true"/>
+    <aura:attribute name="loanIdToEdit" type="String" />
+    <aura:attribute name="isLoanEdit" type="Boolean" default="false" />
+    <aura:attribute name="popupHeader" type="String" default=""/>
+    <aura:attribute name="spinner" type="Boolean"/>
+    <aura:attribute name="loanListToSave" type="object[]" />
+    <aura:attribute name="picklistValues" type="object" />
+    <aura:attribute name="loanRowData" type="object" />
+    <aura:attribute name="loanRowIndex" type="Integer" />
+    <aura:attribute name="isCalledAfterEdit" type="Boolean" default="false" />
+    <aura:attribute name="saveMethodsCalled" type="String[]"/>
+    <aura:attribute name="allSaveMethodsCalled" type="Boolean" default="false"/>
+    <aura:attribute name="willHandleCompActions" type="String[]" default="['SET_ERROR','ADD_ERROR','REMOVE_ERROR', 'DEL_REC']" />
+    
+    <aura:handler event="force:refreshView" action="{!c.doInit}" />
+    
+    <!-- Handler get Response is used when adding the row to the table -->
+    <aura:handler name="getResponseEvent" event="c:FNS_GetResponseEvent" action="{!c.getResponse}"/>
+    <!-- Handler to edit the product from the detail screen -->
+    <aura:handler name="editProductEvent" event="c:FNS_EditProductEvent" action="{!c.editProductRecord}"/>
+    <!-- Handler to delete the product from the detail screen -->
+    <aura:handler name="deleteProductEvent" event="c:FNS_DeleteProductEvent" action="{!c.deleteProductRecord}"/>
+    <!-- Handler to edit the loan from the detail screen -->
+    <aura:handler name="editLoanEvent" event="c:FNS_EditLoanEvent" action="{!c.editLoanRecord}"/>
+    <!-- Handler to delete the loan from the detail screen -->
+    <aura:handler name="deleteLoanEvent" event="c:FNS_DeleteLoanEvent" action="{!c.deleteLoanRecord}"/>
+    <aura:handler name="deletedPricing" event="c:FNS_DeletedPricing" action="{!c.deletePricing}"/>
+    <aura:handler name="recordEditEvent" event="c:FNS_RecordEditEvent" action="{!c.editRecord}"/>
+    <aura:handler name="closeLoanEditorEvent" event="c:FNS_CloseLoanEditorEvent" action="{!c.closeLoanEditor}"/>
+    
+    <aura:handler name="baseCompEvent" includeFacets="true" event="c:FNS_BaseComponentEvent" action="{!c.handleCompEvent}"/>
+    <aura:handler name="change" value="{!v.saveMethodsCalled}" action="{!c.processingCompleted}"/>
+    <aura:handler name="change" value="{!v.allSaveMethodsCalled}" action="{!c.processingCompleted}"/>
+    
+    <!-- get the opportunity record - Do we need it? -->
+    <force:recordData aura:id="record"
+                      layoutType="FULL"
+                      recordId="{!v.recordId}"
+                      targetError="{!v.recordError}"
+                      targetRecord="{!v.record}"
+                      targetFields="{!v.OpptyRecord }"
+                      mode="VIEW"/>
+    <aura:if isTrue="{!!v.isLoading}">
+        <lightning:card title="{! 'Products (' + v.productCount + ')'}" iconName="utility:database"  class="slds-text-heading_small slds-card_boundary FNS_iconcolor fns-fieldset-form-theme">
+            <aura:set attribute="actions">
+                <aura:if isTrue="true">
+                    <lightning:button class="slds-button slds-button_neutral" variant="Neutral" label="{!$Label.c.FNS_NEW}" title="{!$Label.c.FNS_NEW}" onclick="{! c.openModal }"/>
+                </aura:if>
+            </aura:set>
+            <aura:if isTrue="{!v.showModal}">
+                <section aura:id="sectionHeader" role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open slds-modal_medium" aria-labelledby="header43" aria-modal="true" aria-describedby="modal-content-id-1">
+                    <div class="slds-col slds-size_1-of-1 slds-modal__container" id="modalHeader">
+                        <header class="slds-modal__header">
+                            <lightning:buttonIcon iconName="utility:close"
+                                                  onclick="{! c.closeModal }"
+                                                  alternativeText="{!$Label.c.FNS_CLOSE}"
+                                                  variant="bare-inverse"
+                                                  class="slds-modal__close"/>
+                            <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate slds-p-around_small">{!v.popupHeader}</h2>
+                        </header>
+                        <aura:if isTrue="{!v.spinner}">
+                            <lightning:spinner alternativeText="Loading" class="FNS_spinner" variant="brand" size="medium"/>
+                        </aura:if>
+                        <aura:if isTrue="{!v.showModal}">
+                            <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                                <c:FNS_PageMessages messages="{!v.errorMessages}"/>
+                                <div class="slds-p-bottom_large slds-p-horizontal_small">
+                                    <aura:if isTrue="{!v.isLoanEdit}">
+                                        <c:FNS_FieldSetForm aura:id="loanFormEdit" 
+                                                            isLoanEdit="{!v.isLoanEdit}"
+                                                            objectLabel="{!v.wrapper.loan.ObjectLabel}" 
+                                                            objectName="{!v.wrapper.loan.ObjectName}" 
+                                                            fields="{!v.wrapper.loan.fields}" 
+                                                            requiredFields="{!v.wrapper.loan.requiredFields}" 
+                                                            moreFields="{!v.wrapper.loan.moreFields}"  
+                                                            currentRecordId="{!v.loanIdToEdit}" />
+                                        <aura:set attribute="else">
+                                            <div style="float:left; font-size: 125%;font-weight:500;">{!$Label.c.FNS_PRODUCT}</div>
+                                            <div style="float:right;">
+                                                <lightning:button aura:id="addLoanHeader" label="{!$Label.c.FNS_ADDLOAN}" onclick="{!c.addLoan}" />
+                                            </div>
+                                            <br/>
+                                            <br/>
+                                            <div class="slds-box fns-fieldset-form-theme" aura:id="mainForm">
+                                                <c:FNS_FieldSetForm aura:id="productForm" objectLabel="{!v.wrapper.product.ObjectLabel}" objectName="{!v.wrapper.product.ObjectName}" 
+                                                                    fields="{#v.wrapper.product.fields}" requiredFields="{!v.wrapper.product.requiredFields}" moreFields="" 
+                                                                    currentRecordId="{!v.productId}" uniqFormId="product" showBorder = "false" requireFieldValidation = "true"/>
+                                                <lightning:card title="{!$Label.c.FNS_PRICING}" class ="slds-theme_default fns-fieldset-form-theme">
+                                                    <aura:set attribute="actions">
+                                                        <lightning:button label="{!$Label.c.FNS_ADDPRICING}" onclick="{!c.addPricing}"/>
+                                                    </aura:set>
+                                                    <p class="slds-theme_default slds-p-horizontal_small fns-fieldset-form-theme" id="disgus">
+                                                        <aura:iteration items="{!v.pricingList}" var="pricingId" indexVar="index">
+                                                            <c:FNS_FieldSetForm aura:id="pricingForm"
+                                                                                uniqFormId="{!'Pricing'+index}"
+                                                                                scrollToLocation="true"
+                                                                                objectLabel="{!v.wrapper.pricing.ObjectLabel}" 
+                                                                                objectName="{!v.wrapper.pricing.ObjectName}" 
+                                                                                fields="{#v.wrapper.pricing.fields}" 
+                                                                                requiredFields="{!v.pricingReqFlds}" 
+                                                                                moreFields="{#v.wrapper.pricing.moreFields}" 
+                                                                                currentRecordId="{!pricingId.length > 2 ? pricingId :''}"
+                                                                                showBorder = "true" showDelete = "true" 
+                                                                                pricingIndex="{!pricingId.length > 2 ? pricingId : index}" 
+                                                                                requireFieldValidation = "true"/>
+                                                        </aura:iteration>
+                                                    </p>
+                                                </lightning:card>
+                                                <div class="slds-p-vertical_x-small">
+                                                    <div class="slds-border_top" />
+                                                </div>
+                                                
+                                                <c:FNS_FieldSetForm aura:id="productFormMore" objectLabel="{!v.wrapper.product.ObjectLabel}" objectName="{!v.wrapper.product.ObjectName}" 
+                                                                    fields="" requiredFields="{#v.wrapper.product.requiredFields}" uniqFormId="productMore"
+                                                                    moreFields="{#v.wrapper.product.moreFields}" currentRecordId="{!v.productId}"  requireFieldValidation = "true" />
+                                            </div>
+                                            <aura:if isTrue="{!v.showLoanTable}">
+                                                <br/>
+                                                <article class="slds-card">
+                                                    <div class="slds-card__header slds-grid">
+                                                        <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                                                            <div class="slds-media__figure">
+                                                                <lightning:icon iconName="standard:report" />
+                                                                <span class="slds-icon_container slds-icon-standard-account" title="{!v.wrapper.loan.ObjectLabel}">
+                                                                    <span class="slds-assistive-text">{!v.wrapper.loan.ObjectLabel}</span>
+                                                                </span>
+                                                            </div>
+                                                            <div class="slds-media__body">
+                                                                <h2 class="slds-card__header-title">
+                                                                    <a href="javascript:void(0);" class="slds-card__header-link slds-truncate" title="Accounts">
+                                                                        <span>{!v.wrapper.loan.ObjectLabel}</span>
+                                                                    </a>
+                                                                </h2>
+                                                            </div>
+                                                            <div class="slds-no-flex">
+                                                                <lightning:button label="New Loan" onclick="{!c.addLoan}" />
+                                                            </div>
+                                                        </header>
+                                                    </div>
+                                                    <footer class="slds-card__footer fns_data-table-heading">
+                                                        <c:FNS_DataTable rawData="{!v.loanList}" objectName= "{!v.wrapper.loan.ObjectName}" fieldSetName='FNS_FinancialAccountTransaction' />
+                                                    </footer>
+                                                </article>
+                                                <br/>
+                                                <div style="float:left; font-size: 125%;font-weight:500;">NEW LOANS</div>
+                                                <br/><br/>
+                                                
+                                                <aura:if isTrue="{!v.showLoanFields}">
+                                                    <c:FNS_FieldSetForm aura:id="loanForm" objectLabel="{!v.wrapper.loan.ObjectLabel}" objectName="{!v.wrapper.loan.ObjectName}" fields="{!v.wrapper.loan.fields}" 
+                                                                        requiredFields="{!v.wrapper.loan.requiredFields}" moreFields="{!v.wrapper.loan.moreFields}" showBorder = "true"  requireFieldValidation = "false" 
+                                                                        isCalledAfterEdit="{!v.isCalledAfterEdit}" loanRowData="{!v.loanRowData}" loanRowIndex="{!v.loanRowIndex}"/>
+                                                </aura:if>
+                                            </aura:if>
+                                            
+                                        </aura:set>
+                                    </aura:if>
+                                </div>
+                            </div>
+                        </aura:if>
+                        <footer class="slds-modal__footer slds-grid slds-grid_align-spread">
+                            <button class="slds-button slds-button_neutral" onclick="{!c.closeModal}">{!$Label.c.FNS_CLOSE}</button>
+                            <button class="slds-button slds-button_brand" onclick="{!c.submit}">{!$Label.c.FNS_SAVE}</button>   
+                        </footer>
+                    </div>
+                </section>
+                <div aura:id ="sectionFooter" class="slds-backdrop slds-backdrop_open"></div>
+            </aura:if>
+            <c:FNS_ShowProduct productList="{!v.productList}" productCount="{!v.productCount}" isReadOnly="{!v.wrapper.opportunityReadOnly}"/>
+        </lightning:card>
+    </aura:if>
+</aura:component>

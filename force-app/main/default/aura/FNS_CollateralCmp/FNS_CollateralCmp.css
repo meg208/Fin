@@ -1,0 +1,79 @@
+.THIS .slds-card {
+    position: relative;
+    padding: 0;
+    background: #fff;
+    border: 1px solid #dddbda!important;
+    border-radius: .25rem;
+    background-clip: padding-box;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.1);
+}
+
+.THIS .slds-modal__close{
+    top:-2rem !important;
+}
+
+.THIS .FNS_spinner{
+    background-color: rgba(255, 255, 255, 0.75);
+    margin-top: 45px;
+    margin-bottom: 45px; 
+}
+
+.THIS .fns-collateral-body{
+    padding: 0 2.5rem !important;
+}
+
+.THIS .fns-file-upload-section{
+    border : 1px dashed lightgray !important;
+}
+
+.THIS .slds-file-selector__body > .slds-file-selector__button {
+    transform: translateX(40%);
+    margin-top: -20%;
+}
+
+.THIS .slds-file-selector__dropzone{
+    /*border : none;*/
+}
+
+.THIS .slds-file-selector__body > .slds-file-selector__text {
+    transform: translateX(-80%);
+    padding-bottom: 2%;
+    margin-top: 10%;
+}
+
+.THIS .cFNS_FieldSetForm .slds-form-element__label{
+    font-weight: 400 !important;
+}
+
+.THIS .cFNS_FieldSetForm lightning-calendar>.slds-datepicker {
+    position: absolute!important;
+    top: 0!important;
+    transform: translateY(0%)!important;
+}
+
+.THIS .slds-checkbox_standalone [type=checkbox] {
+    top:0.15rem;
+    width: 1.5rem;
+    height: 1.5rem;    
+}
+
+.THIS .slds-checkbox .slds-checkbox_faux {
+    top:0.15rem;
+    width: 1.5rem;
+    height: 1.5rem;    
+}
+
+.THIS .slds-checkbox .slds-checkbox_faux::after {
+    height: .35rem !important;
+    width: .75rem !important;
+}
+
+.THIS .fns-required {
+    display: inline-flex;
+    transform: translateY(20px);
+    color: rgb(194, 57, 52);
+}
+
+.THIS .fns-button-text{
+    font-size: .8125rem;
+}

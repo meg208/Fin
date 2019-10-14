@@ -1,0 +1,96 @@
+.THIS .FNS_smallTiles{
+    line-height: 1.5rem;
+    text-align: center;
+}
+
+.THIS .slds-box{
+    padding:.7rem !important;
+    border-radius: .25rem !important;
+    border: 1px solid #DBDBDB !important;
+}
+
+.THIS .FNS_tileText{
+    font-size: 9.5px;
+    font-style: Salesforce Sans Regular;
+    color: #4A4A4A;
+}
+
+.THIS .FNS_tileTextClicked{
+    font-size: 9.5px;
+    font-style: Salesforce Sans Regular;
+    color: white;
+    margin-top: -0.1rem;
+}
+
+.THIS .FNS_tiles{
+    height: 64px;
+    width: 123px;
+    cursor: pointer;
+    background-color:#fff;
+    box-shadow: 1px 2px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.THIS .FNS_popoverTile_body{
+    visibility: hidden;
+    height: 0;
+    opacity: 0;
+    position: absolute;
+}
+
+.THIS .FNS_popoverTile:hover .FNS_popoverTile_body {
+    color: black;
+    left: -1rem;
+    visibility: visible;
+    background-color: white;
+    opacity: 1;
+    z-index: 1;
+    top: 3rem;
+    height: auto;
+    position: absolute;
+    font-size: 1rem;
+    padding: .5rem;
+    min-width: 9rem;
+    font-size: small;
+}
+
+.THIS .FNS_isRed{
+    color: #D3001A;
+    font-size: 30px;
+    font-style: Salesforce Sans bold;
+}
+
+.THIS .FNS_isOrange{
+    color: #FBB800;
+    font-size: 30px;
+    font-style: Salesforce Sans bold;
+}
+
+.THIS .FNS_isGreen{
+    color: #249D00;
+    font-size: 30px;
+    font-style: Salesforce Sans bold;
+}
+
+.THIS .FNS_isGrey{
+    color: Grey;
+    font-size: 30px;
+    font-style: Salesforce Sans bold;
+}
+
+/*.THIS .FNS_isBlack{
+color: Black;
+font-size: 30px;
+font-style: Salesforce Sans bold;
+}*/
+
+.THIS .FNS_isClicked{
+    background-color: #4169E1;
+    font-size: 30px;
+    font-style: Salesforce Sans bold;
+    color: white;
+}
+
+.THIS .FNS_popoverTileText{
+    font-weight: normal;
+    white-space: nowrap;
+}

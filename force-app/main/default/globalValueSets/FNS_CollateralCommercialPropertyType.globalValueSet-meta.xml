@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>5674</fullName>
+        <default>false</default>
+        <label>Permanent - Owner Occupied</label>
+    </customValue>
+    <customValue>
+        <fullName>6330</fullName>
+        <default>false</default>
+        <label>Construction -- Income Producing</label>
+    </customValue>
+    <customValue>
+        <fullName>6331</fullName>
+        <default>false</default>
+        <label>Construction -- Owner Occupied</label>
+    </customValue>
+    <customValue>
+        <fullName>6332</fullName>
+        <default>false</default>
+        <label>Letter of Credit -- Income Producing</label>
+    </customValue>
+    <customValue>
+        <fullName>6333</fullName>
+        <default>false</default>
+        <label>Letter of Credit --Owner Occupied</label>
+    </customValue>
+    <customValue>
+        <fullName>6419</fullName>
+        <default>false</default>
+        <label>Permanent - Income Producing</label>
+    </customValue>
+    <customValue>
+        <fullName>6420</fullName>
+        <default>false</default>
+        <label>Line of Credit - Income Producing</label>
+    </customValue>
+    <customValue>
+        <fullName>6421</fullName>
+        <default>false</default>
+        <label>Line of Credit - Owner Occupied</label>
+    </customValue>
+    <customValue>
+        <fullName>6422</fullName>
+        <default>false</default>
+        <label>Mini Perm - Income Producing</label>
+    </customValue>
+    <customValue>
+        <fullName>6423</fullName>
+        <default>false</default>
+        <label>Mini Perm - Owner Occupied</label>
+    </customValue>
+    <description>This is used to map CommercialPropertyType in collateral functionality.</description>
+    <masterLabel>CollateralCommercialPropertyType</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

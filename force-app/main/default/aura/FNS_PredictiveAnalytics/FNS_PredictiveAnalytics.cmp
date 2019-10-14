@@ -1,0 +1,85 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes" controller="FNS_PredictiveAnalyticsController">
+    
+    <!-- Aura Attribute -->
+    <aura:attribute name="predictiveAnalytics" type="object"/>
+    <aura:attribute name="predictiveAnalyticsWrapper" type="List"/>
+    <aura:attribute name="ispopovershown" type="Boolean" default="false"/>
+    <aura:attribute name="paError" type="String" />
+    <!-- Aura Handler -->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:handler event="force:refreshView" action="{!c.doInit}" />
+    <lightning:navigation aura:id="navigation"/>
+    <div id="main" class="container">
+        <lightning:card class="FNS_PredictiveAnalytics">            
+            <aura:set attribute="title">
+                <lightning:icon iconName="standard:news" size="small" class="FNS_icon"/> 
+                <span class="slds-p-left_small slds-text-title_bold FNS_header">
+                    {!$Label.c.FNS_PREDICTIVE_ANALYTICS} ({!v.predictiveAnalytics.length})
+                </span>
+            </aura:set>
+            
+            <aura:set attribute="footer">
+                <aura:if isTrue="{!v.predictiveAnalytics.length >= 5}">
+                    <div class="FNS_footer  slds-align_absolute-center" >
+                        <a onclick="{!c.viewAll}"> {!$Label.c.FNS_VIEW_ALL}  ({!v.predictiveAnalytics.length}) </a>
+                    </div>
+                </aura:if>
+            </aura:set>
+            <aura:if isTrue="{!v.paError != 'Empty'}"> 
+                <div class="FNS_ERROR">{!v.paError}</div>
+                <aura:set attribute="else">  
+                    <p class="slds-p-horizontal_small  FNS_Body slds-scrollable" style="height: 11rem;"  aura:id="objList" >
+                        <aura:if isTrue = "{!v.predictiveAnalytics.length == 0}"> 
+                            {!$Label.c.FNS_NO_PREDICTIVE_ANALYTICS}
+                            
+                            <aura:set attribute="else">
+                                <aura:iteration items="{!v.predictiveAnalytics}" var="item" end="5" indexVar="index">
+                                    <p> 
+                                        
+                                        <aura:if isTrue="{! (mod(index,2)==0) ? 'true':'false'}">
+                                            <div ariadescribed-by="showhover" onmouseover="{!c.showempinfo}" onmouseout="{!c.hideempinfo}" 
+                                                 class="{!(equals(v.predictiveAnalytics.length-1, index) ? '' : 'slds-border_bottom') + (' slds-p-vertical_small')}">
+                                                {!$Label.c.FNS_REVIEW}&nbsp; 
+                                                
+                                                <!-- TO NAVIGATE ON SAME PAGE AND OPEN IN NEW TAB  --> <!-- commented code to be removed after testing-->
+                                                <a href="{!'/one/one.app?#/sObject/'+ item.CustomerId + '/view'}"  class="slds-text-link">{!item.CustomerName}</a>
+                                                <!--<a id="{!item.CustomerId}" href="#" class="slds-text-link"  data-field-name="{!item.CustomerId}" onclick="{!c.openRecord}">{!item.CustomerName}</a>-->
+                                                
+                                                &nbsp;(<a href="{!'/one/one.app?#/sObject/'+ item.FacilityId + '/view'}" class="slds-text-link">{!item.FacilityName}</a> / 
+                                                <!--&nbsp;(<a id="{!item.FacilityId}" href="#" class="slds-text-link" data-field-name="{!item.FacilityId}" onclick="{!c.openRecord}">{!item.FacilityName}</a> / -->
+                                                
+                                                <a href="{!'/one/one.app?#/sObject/'+ item.LoanId + '/view'}" class="slds-text-link"  >
+                                                    {!item.LoanName}</a>) &nbsp;{!item.Recommendation}
+                                                <!--<a id="{!item.LoanId}" href="#" class="slds-text-link" data-field-name="{!item.LoanId}" onclick="{!c.openRecord}">{!item.LoanName}</a>) &nbsp;{!item.Recommendation}-->
+                                                
+                                            </div>
+                                            <aura:set attribute="else">
+                                                <aura:if isTrue="{! (mod(index,2)==1) ? 'true':'false'}">
+                                                    <div ariadescribed-by="showhover" onclick="{!c.showempinfo}" onmouseout="{!c.hideempinfo}" class="{!(equals(v.predictiveAnalytics.length-1, index) ? '' : 'slds-border_bottom') + (' slds-p-vertical_small')}">
+                                                        {!$Label.c.FNS_REVIEW}&nbsp; 
+                                                        
+                                                        <!-- TO NAVIGATE ON SAME PAGE AND OPEN IN NEW TAB  -->
+                                                        <a href="{!'/one/one.app?#/sObject/'+ item.CustomerId + '/view'}" class="slds-text-link">{!item.CustomerName}</a>
+                                                        <!--<a id="{!item.CustomerId}" href="#" class="slds-text-link"  data-field-name="{!item.CustomerId}" onclick="{!c.openRecord}" >{!item.CustomerName}</a>-->
+                                                        
+                                                        &nbsp;(<a href="{!'/one/one.app?#/sObject/'+ item.FacilityId + '/view'}" class="slds-text-link">{!item.FacilityName}</a> / 
+                                                        <!--&nbsp;(<a id="{!item.FacilityId}" href="#" data-field-name="{!item.FacilityId}" class="slds-text-link" onclick="{!c.openRecord}" >{!item.FacilityName}</a> /--> 
+                                                        
+                                                        <a href="{!'/one/one.app?#/sObject/'+ item.LoanId + '/view'}" class="slds-text-link"  >
+                                                            {!item.LoanName}</a>) &nbsp;{!item.Recommendation}
+                                                        <!--<a id="{!item.LoanId}" href="#" class="slds-text-link" data-field-name="{!item.FacilityId}" onclick="{!c.openRecord}">{!item.LoanName}</a>) &nbsp;{!item.Recommendation}-->
+                                                        
+                                                    </div>
+                                                </aura:if>  
+                                            </aura:set>
+                                        </aura:if>  
+                                    </p>
+                                </aura:iteration>
+                            </aura:set>
+                        </aura:if>
+                    </p>
+                </aura:set>
+            </aura:if>
+        </lightning:card>
+    </div>
+</aura:component>

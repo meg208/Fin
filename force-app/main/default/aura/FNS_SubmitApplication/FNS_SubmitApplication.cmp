@@ -1,0 +1,46 @@
+<aura:component implements="force:lightningQuickActionWithoutHeader,force:hasRecordId" 
+                controller="FNS_SubmitApplicationCompController">
+    
+	<aura:attribute name="isFilterApply" type="Boolean" default="false"/>
+	<aura:attribute name="isLoaded" type="Boolean" default="false"/>
+    <aura:attribute name="recordId" type="String"/>
+    <aura:attribute name="message" type="String"/>
+    <aura:attribute name="isDisabled" type="Boolean" default="false"/>
+    <aura:attribute name="productCnt" type="Integer" />
+	 <aura:attribute name="responseError" type="String"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:handler event="force:refreshView" action="{!c.doInit}" />
+    <aura:if isTrue="{!v.isLoaded}">
+        <aura:if isTrue="{!not(empty(v.responseError))}">
+              	<div class="FNS_ERROR">{!v.responseError}</div>	
+        </aura:if>
+		<div class="{!v.isFilterApply ? 'slds-show slds-is-relative slds-p-around_medium slds-m-bottom_small slds-float_right' : 'slds-hide'}">
+			<lightning:spinner alternativeText="Loading" variant="brand" size="small"/>
+		</div>
+		<div class="slds-modal__header slds-size_1-of-1">
+			<h4 class="slds-text-heading_medium" >{!$Label.c.FNS_APPLICATION_SUBMIT_HEADER}</h4>
+		</div>
+		<div class="slds-modal__content slds-p-around_x-small slds-align_absolute-center slds-size_1-of-1 slds-is-relative slds-p-around_x-large" aura:id="modalbody" id="modalbody">
+			{!v.message}
+		</div>
+		<!-- MODAL FOOTER -->
+		<div class="slds-modal__footer slds-size_1-of-1">
+			<lightning:button label="Close" onclick="{!c.handleClose}"/> 
+			<lightning:button label="Yes" disabled = "{!v.isDisabled}" variant="brand" onclick="{!c.handleYes}"/>
+		</div>
+		
+		<aura:html tag="style">
+			.cuf-content {
+				padding: 0 0rem !important;
+			}
+			.slds-p-around-medium {
+				padding: 0rem !important;
+			}       
+			.slds-modal__content{
+				overflow-y:hidden !important;
+				height:unset !important;
+				max-height:unset !important;
+			}
+		</aura:html>
+    </aura:if>
+</aura:component>

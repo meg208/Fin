@@ -1,0 +1,1070 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FNS_NAICSCodeSet3__c</fullName>
+    <externalId>false</externalId>
+    <label>NAICS Code Set3</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>FNS_NAICSCode__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetName>FNS_NAICSCodeFirstLevelSet3</valueSetName>
+        <valueSettings>
+            <controllingFieldValue>71	Arts, Entertainment, and Recreation</controllingFieldValue>
+            <valueName>711 Performing Arts, Spectator Sports, and Related IndustriesT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>71	Arts, Entertainment, and Recreation</controllingFieldValue>
+            <valueName>7111 Performing Arts CompaniesT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>71	Arts, Entertainment, and Recreation</controllingFieldValue>
+            <valueName>71111 Theater Companies and Dinner TheatersT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>71	Arts, Entertainment, and Recreation</controllingFieldValue>
+            <valueName>711110 Theater Companies and Dinner Theaters</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>71	Arts, Entertainment, and Recreation</controllingFieldValue>
+            <valueName>71112 Dance CompaniesT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>71	Arts, Entertainment, and Recreation</controllingFieldValue>
+            <valueName>711120 Dance Companies</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>71	Arts, Entertainment, and Recreation</controllingFieldValue>
+            <valueName>71113 Musical Groups and ArtistsT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>71	Arts, Entertainment, and Recreation</controllingFieldValue>
+            <valueName>711130 Musical Groups and Artists</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>71	Arts, Entertainment, and Recreation</controllingFieldValue>
+            <valueName>71119 Other Performing Arts CompaniesT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>71	Arts, Entertainment, and Recreation</controllingFieldValue>
+            <valueName>711190 Other Performing Arts Companies</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>71	Arts, Entertainment, and Recreation</controllingFieldValue>
+            <valueName>7112 Spectator SportsT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>71	Arts, Entertainment, and Recreation</controllingFieldValue>
+            <valueName>71121 Spectator SportsT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>71	Arts, Entertainment, and Recreation</controllingFieldValue>
+            <valueName>711211 Sports Teams and Clubs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>71	Arts, Entertainment, and Recreation</controllingFieldValue>
+            <valueName>711212 Racetracks</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>71	Arts, Entertainment, and Recreation</controllingFieldValue>
+            <valueName>711219 Other Spectator Sports</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>71	Arts, Entertainment, and Recreation</controllingFieldValue>
+            <valueName>7113 Promoters of Performing Arts, Sports, and Similar EventsT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>71	Arts, Entertainment, and Recreation</controllingFieldValue>
+            <valueName>71131 Promoters of Performing Arts, Sports, and Similar Events with FacilitiesT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>71	Arts, Entertainment, and Recreation</controllingFieldValue>
+            <valueName>711310 Promoters of Performing Arts, Sports, and Similar Events with Facilities</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>71	Arts, Entertainment, and Recreation</controllingFieldValue>
+            <valueName>71132 Promoters of Performing Arts, Sports, and Similar Events without FacilitiesT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>71	Arts, Entertainment, and Recreation</controllingFieldValue>
+            <valueName>711320 Promoters of Performing Arts, Sports, and Similar Events without Facilities</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>71	Arts, Entertainment, and Recreation</controllingFieldValue>
+            <valueName>7114 Agents and Managers for Artists, Athletes, Entertainers, and Other Public FiguresT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>71	Arts, Entertainment, and Recreation</controllingFieldValue>
+            <valueName>71141 Agents and Managers for Artists, Athletes, Entertainers, and Other Public FiguresT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>71	Arts, Entertainment, and Recreation</controllingFieldValue>
+            <valueName>711410 Agents and Managers for Artists, Athletes, Entertainers, and Other Public Figures</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>71	Arts, Entertainment, and Recreation</controllingFieldValue>
+            <valueName>7115 Independent Artists, Writers, and PerformersT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>71	Arts, Entertainment, and Recreation</controllingFieldValue>
+            <valueName>71151 Independent Artists, Writers, and PerformersT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>71	Arts, Entertainment, and Recreation</controllingFieldValue>
+            <valueName>711510 Independent Artists, Writers, and Performers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>71	Arts, Entertainment, and Recreation</controllingFieldValue>
+            <valueName>712 Museums, Historical Sites, and Similar InstitutionsT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>71	Arts, Entertainment, and Recreation</controllingFieldValue>
+            <valueName>7121 Museums, Historical Sites, and Similar InstitutionsT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>71	Arts, Entertainment, and Recreation</controllingFieldValue>
+            <valueName>71211 MuseumsT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>71	Arts, Entertainment, and Recreation</controllingFieldValue>
+            <valueName>712110 Museums</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>71	Arts, Entertainment, and Recreation</controllingFieldValue>
+            <valueName>71212 Historical SitesT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>71	Arts, Entertainment, and Recreation</controllingFieldValue>
+            <valueName>712120 Historical Sites</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>71	Arts, Entertainment, and Recreation</controllingFieldValue>
+            <valueName>71213 Zoos and Botanical GardensT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>71	Arts, Entertainment, and Recreation</controllingFieldValue>
+            <valueName>712130 Zoos and Botanical Gardens</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>71	Arts, Entertainment, and Recreation</controllingFieldValue>
+            <valueName>71219 Nature Parks and Other Similar InstitutionsT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>71	Arts, Entertainment, and Recreation</controllingFieldValue>
+            <valueName>712190 Nature Parks and Other Similar Institutions</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>71	Arts, Entertainment, and Recreation</controllingFieldValue>
+            <valueName>713 Amusement, Gambling, and Recreation IndustriesT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>71	Arts, Entertainment, and Recreation</controllingFieldValue>
+            <valueName>7131 Amusement Parks and ArcadesT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>71	Arts, Entertainment, and Recreation</controllingFieldValue>
+            <valueName>71311 Amusement and Theme ParksT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>71	Arts, Entertainment, and Recreation</controllingFieldValue>
+            <valueName>713110 Amusement and Theme Parks</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>71	Arts, Entertainment, and Recreation</controllingFieldValue>
+            <valueName>71312 Amusement ArcadesT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>71	Arts, Entertainment, and Recreation</controllingFieldValue>
+            <valueName>713120 Amusement Arcades</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>71	Arts, Entertainment, and Recreation</controllingFieldValue>
+            <valueName>7132 Gambling IndustriesT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>71	Arts, Entertainment, and Recreation</controllingFieldValue>
+            <valueName>71321 Casinos (except Casino Hotels)T</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>71	Arts, Entertainment, and Recreation</controllingFieldValue>
+            <valueName>713210 Casinos (except Casino Hotels)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>71	Arts, Entertainment, and Recreation</controllingFieldValue>
+            <valueName>71329 Other Gambling IndustriesT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>71	Arts, Entertainment, and Recreation</controllingFieldValue>
+            <valueName>713290 Other Gambling Industries</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>71	Arts, Entertainment, and Recreation</controllingFieldValue>
+            <valueName>7139 Other Amusement and Recreation IndustriesT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>71	Arts, Entertainment, and Recreation</controllingFieldValue>
+            <valueName>71391 Golf Courses and Country ClubsT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>71	Arts, Entertainment, and Recreation</controllingFieldValue>
+            <valueName>713910 Golf Courses and Country Clubs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>71	Arts, Entertainment, and Recreation</controllingFieldValue>
+            <valueName>71392 Skiing FacilitiesT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>71	Arts, Entertainment, and Recreation</controllingFieldValue>
+            <valueName>713920 Skiing Facilities</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>71	Arts, Entertainment, and Recreation</controllingFieldValue>
+            <valueName>71393 MarinasT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>71	Arts, Entertainment, and Recreation</controllingFieldValue>
+            <valueName>713930 Marinas</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>71	Arts, Entertainment, and Recreation</controllingFieldValue>
+            <valueName>71394 Fitness and Recreational Sports CentersT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>71	Arts, Entertainment, and Recreation</controllingFieldValue>
+            <valueName>713940 Fitness and Recreational Sports Centers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>71	Arts, Entertainment, and Recreation</controllingFieldValue>
+            <valueName>71395 Bowling CentersT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>71	Arts, Entertainment, and Recreation</controllingFieldValue>
+            <valueName>713950 Bowling Centers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>71	Arts, Entertainment, and Recreation</controllingFieldValue>
+            <valueName>71399 All Other Amusement and Recreation IndustriesT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>71	Arts, Entertainment, and Recreation</controllingFieldValue>
+            <valueName>713990 All Other Amusement and Recreation Industries</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>72	Accommodation and Food Services</controllingFieldValue>
+            <valueName>721 AccommodationT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>72	Accommodation and Food Services</controllingFieldValue>
+            <valueName>7211 Traveler AccommodationT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>72	Accommodation and Food Services</controllingFieldValue>
+            <valueName>72111 Hotels (except Casino Hotels) and MotelsT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>72	Accommodation and Food Services</controllingFieldValue>
+            <valueName>721110 Hotels (except Casino Hotels) and Motels</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>72	Accommodation and Food Services</controllingFieldValue>
+            <valueName>72112 Casino HotelsT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>72	Accommodation and Food Services</controllingFieldValue>
+            <valueName>721120 Casino Hotels</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>72	Accommodation and Food Services</controllingFieldValue>
+            <valueName>72119 Other Traveler AccommodationT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>72	Accommodation and Food Services</controllingFieldValue>
+            <valueName>721191 Bed-and-Breakfast Inns</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>72	Accommodation and Food Services</controllingFieldValue>
+            <valueName>721199 All Other Traveler Accommodation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>72	Accommodation and Food Services</controllingFieldValue>
+            <valueName>7212 RV (Recreational Vehicle) Parks and Recreational CampsT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>72	Accommodation and Food Services</controllingFieldValue>
+            <valueName>72121 RV (Recreational Vehicle) Parks and Recreational CampsT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>72	Accommodation and Food Services</controllingFieldValue>
+            <valueName>721211 RV (Recreational Vehicle) Parks and Campgrounds</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>72	Accommodation and Food Services</controllingFieldValue>
+            <valueName>721214 Recreational and Vacation Camps (except Campgrounds)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>72	Accommodation and Food Services</controllingFieldValue>
+            <valueName>7213 Rooming and Boarding Houses, Dormitories, and Workers&#39; CampsT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>72	Accommodation and Food Services</controllingFieldValue>
+            <valueName>72131 Rooming and Boarding Houses, Dormitories, and Workers&#39; CampsT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>72	Accommodation and Food Services</controllingFieldValue>
+            <valueName>721310 Rooming and Boarding Houses, Dormitories, and Workers&#39; Camps</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>72	Accommodation and Food Services</controllingFieldValue>
+            <valueName>722 Food Services and Drinking PlacesT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>72	Accommodation and Food Services</controllingFieldValue>
+            <valueName>7223 Special Food ServicesT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>72	Accommodation and Food Services</controllingFieldValue>
+            <valueName>72231 Food Service ContractorsT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>72	Accommodation and Food Services</controllingFieldValue>
+            <valueName>722310 Food Service Contractors</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>72	Accommodation and Food Services</controllingFieldValue>
+            <valueName>72232 CaterersT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>72	Accommodation and Food Services</controllingFieldValue>
+            <valueName>722320 Caterers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>72	Accommodation and Food Services</controllingFieldValue>
+            <valueName>72233 Mobile Food ServicesT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>72	Accommodation and Food Services</controllingFieldValue>
+            <valueName>722330 Mobile Food Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>72	Accommodation and Food Services</controllingFieldValue>
+            <valueName>7224 Drinking Places (Alcoholic Beverages)T</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>72	Accommodation and Food Services</controllingFieldValue>
+            <valueName>72241 Drinking Places (Alcoholic Beverages)T</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>72	Accommodation and Food Services</controllingFieldValue>
+            <valueName>722410 Drinking Places (Alcoholic Beverages)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>72	Accommodation and Food Services</controllingFieldValue>
+            <valueName>7225 Restaurants and Other Eating PlacesT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>72	Accommodation and Food Services</controllingFieldValue>
+            <valueName>72251 Restaurants and Other Eating PlacesT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>72	Accommodation and Food Services</controllingFieldValue>
+            <valueName>722511 Full-Service Restaurants</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>72	Accommodation and Food Services</controllingFieldValue>
+            <valueName>722513 Limited-Service Restaurants</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>72	Accommodation and Food Services</controllingFieldValue>
+            <valueName>722514 Cafeterias, Grill Buffets, and Buffets</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>72	Accommodation and Food Services</controllingFieldValue>
+            <valueName>722515 Snack and Nonalcoholic Beverage Bars</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>811 Repair and MaintenanceT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>8111 Automotive Repair and MaintenanceT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>81111 Automotive Mechanical and Electrical Repair and MaintenanceT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>811111 General Automotive Repair</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>811112 Automotive Exhaust System Repair</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>811113 Automotive Transmission Repair</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>811118 Other Automotive Mechanical and Electrical Repair and Maintenance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>81112 Automotive Body, Paint, Interior, and Glass RepairT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>811121 Automotive Body, Paint, and Interior Repair and Maintenance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>811122 Automotive Glass Replacement Shops</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>81119 Other Automotive Repair and MaintenanceT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>811191 Automotive Oil Change and Lubrication Shops</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>811192 Car Washes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>811198 All Other Automotive Repair and Maintenance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>8112 Electronic and Precision Equipment Repair and MaintenanceT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>81121 Electronic and Precision Equipment Repair and MaintenanceT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>811211 Consumer Electronics Repair and Maintenance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>811212 Computer and Office Machine Repair and Maintenance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>811213 Communication Equipment Repair and Maintenance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>811219 Other Electronic and Precision Equipment Repair and Maintenance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>8113 Commercial and Industrial Machinery and Equipment (except Automotive and Electronic) Repair and MaintenanceT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>81131 Commercial and Industrial Machinery and Equipment (except Automotive and Electronic) Repair and MaintenanceT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>811310 Commercial and Industrial Machinery and Equipment (except Automotive and Electronic) Repair and Maintenance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>8114 Personal and Household Goods Repair and MaintenanceT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>81141 Home and Garden Equipment and Appliance Repair and MaintenanceT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>811411 Home and Garden Equipment Repair and Maintenance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>811412 Appliance Repair and Maintenance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>81142 Reupholstery and Furniture RepairT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>811420 Reupholstery and Furniture Repair</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>81143 Footwear and Leather Goods RepairT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>811430 Footwear and Leather Goods Repair</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>81149 Other Personal and Household Goods Repair and MaintenanceT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>811490 Other Personal and Household Goods Repair and Maintenance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>812 Personal and Laundry ServicesT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>8121 Personal Care Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>81211 Hair, Nail, and Skin Care Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>812111 Barber Shops</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>812112 Beauty Salons</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>812113 Nail Salons</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>81219 Other Personal Care Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>812191 Diet and Weight Reducing Centers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>812199 Other Personal Care Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>8122 Death Care Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>81221 Funeral Homes and Funeral Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>812210 Funeral Homes and Funeral Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>81222 Cemeteries and Crematories</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>812220 Cemeteries and Crematories</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>8123 Drycleaning and Laundry Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>81231 Coin-Operated Laundries and Drycleaners</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>812310 Coin-Operated Laundries and Drycleaners</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>81232 Drycleaning and Laundry Services (except Coin-Operated)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>812320 Drycleaning and Laundry Services (except Coin-Operated)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>81233 Linen and Uniform Supply</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>812331 Linen Supply</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>812332 Industrial Launderers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>8129 Other Personal Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>81291 Pet Care (except Veterinary) Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>812910 Pet Care (except Veterinary) Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>81292 Photofinishing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>812921 Photofinishing Laboratories (except One-Hour)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>812922 One-Hour Photofinishing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>81293 Parking Lots and Garages</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>812930 Parking Lots and Garages</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>81299 All Other Personal Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>812990 All Other Personal Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>813 Religious, Grantmaking, Civic, Professional, and Similar OrganizationsT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>8131 Religious Organizations</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>81311 Religious Organizations</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>813110 Religious Organizations</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>8132 Grantmaking and Giving Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>81321 Grantmaking and Giving Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>813211 Grantmaking Foundations</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>813212 Voluntary Health Organizations</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>813219 Other Grantmaking and Giving Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>8133 Social Advocacy Organizations</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>81331 Social Advocacy Organizations</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>813311 Human Rights Organizations</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>813312 Environment, Conservation and Wildlife Organizations</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>813319 Other Social Advocacy Organizations</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>8134 Civic and Social Organizations</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>81341 Civic and Social Organizations</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>813410 Civic and Social Organizations</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>8139 Business, Professional, Labor, Political, and Similar Organizations</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>81391 Business Associations</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>813910 Business Associations</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>81392 Professional Organizations</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>813920 Professional Organizations</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>81393 Labor Unions and Similar Labor Organizations</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>813930 Labor Unions and Similar Labor Organizations</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>81394 Political Organizations</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>813940 Political Organizations</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>81399 Other Similar Organizations (except Business, Professional, Labor, and Political Organizations)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>813990 Other Similar Organizations (except Business, Professional, Labor, and Political Organizations)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>814 Private HouseholdsT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>8141 Private HouseholdsT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>81411 Private HouseholdsT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>81	Other Services (except Public Administration)</controllingFieldValue>
+            <valueName>814110 Private Households</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>92	Public Administration</controllingFieldValue>
+            <valueName>921 Executive, Legislative, and Other General Government Support</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>92	Public Administration</controllingFieldValue>
+            <valueName>9211 Executive, Legislative, and Other General Government Support</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>92	Public Administration</controllingFieldValue>
+            <valueName>92111 Executive Offices</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>92	Public Administration</controllingFieldValue>
+            <valueName>921110 Executive Offices</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>92	Public Administration</controllingFieldValue>
+            <valueName>92112 Legislative Bodies</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>92	Public Administration</controllingFieldValue>
+            <valueName>921120 Legislative Bodies</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>92	Public Administration</controllingFieldValue>
+            <valueName>92113 Public Finance Activities</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>92	Public Administration</controllingFieldValue>
+            <valueName>921130 Public Finance Activities</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>92	Public Administration</controllingFieldValue>
+            <valueName>92114 Executive and Legislative Offices, Combined</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>92	Public Administration</controllingFieldValue>
+            <valueName>921140 Executive and Legislative Offices, Combined</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>92	Public Administration</controllingFieldValue>
+            <valueName>92115 American Indian and Alaska Native Tribal Governments</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>92	Public Administration</controllingFieldValue>
+            <valueName>921150 American Indian and Alaska Native Tribal Governments</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>92	Public Administration</controllingFieldValue>
+            <valueName>92119 Other General Government Support</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>92	Public Administration</controllingFieldValue>
+            <valueName>921190 Other General Government Support</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>92	Public Administration</controllingFieldValue>
+            <valueName>922 Justice, Public Order, and Safety Activities</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>92	Public Administration</controllingFieldValue>
+            <valueName>9221 Justice, Public Order, and Safety Activities</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>92	Public Administration</controllingFieldValue>
+            <valueName>92211 Courts</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>92	Public Administration</controllingFieldValue>
+            <valueName>922110 Courts</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>92	Public Administration</controllingFieldValue>
+            <valueName>92212 Police Protection</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>92	Public Administration</controllingFieldValue>
+            <valueName>922120 Police Protection</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>92	Public Administration</controllingFieldValue>
+            <valueName>92213 Legal Counsel and Prosecution</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>92	Public Administration</controllingFieldValue>
+            <valueName>922130 Legal Counsel and Prosecution</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>92	Public Administration</controllingFieldValue>
+            <valueName>92214 Correctional Institutions</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>92	Public Administration</controllingFieldValue>
+            <valueName>922140 Correctional Institutions</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>92	Public Administration</controllingFieldValue>
+            <valueName>92215 Parole Offices and Probation Offices</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>92	Public Administration</controllingFieldValue>
+            <valueName>922150 Parole Offices and Probation Offices</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>92	Public Administration</controllingFieldValue>
+            <valueName>92216 Fire Protection</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>92	Public Administration</controllingFieldValue>
+            <valueName>922160 Fire Protection</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>92	Public Administration</controllingFieldValue>
+            <valueName>92219 Other Justice, Public Order, and Safety Activities</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>92	Public Administration</controllingFieldValue>
+            <valueName>922190 Other Justice, Public Order, and Safety Activities</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>92	Public Administration</controllingFieldValue>
+            <valueName>923 Administration of Human Resource Programs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>92	Public Administration</controllingFieldValue>
+            <valueName>9231 Administration of Human Resource Programs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>92	Public Administration</controllingFieldValue>
+            <valueName>92311 Administration of Education Programs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>92	Public Administration</controllingFieldValue>
+            <valueName>923110 Administration of Education Programs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>92	Public Administration</controllingFieldValue>
+            <valueName>92312 Administration of Public Health Programs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>92	Public Administration</controllingFieldValue>
+            <valueName>923120 Administration of Public Health Programs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>92	Public Administration</controllingFieldValue>
+            <valueName>92313 Administration of Human Resource Programs (except Education, Public Health, and Veterans&#39; Affairs Programs)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>92	Public Administration</controllingFieldValue>
+            <valueName>923130 Administration of Human Resource Programs (except Education, Public Health, and Veterans&#39; Affairs Programs)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>92	Public Administration</controllingFieldValue>
+            <valueName>92314 Administration of Veterans&#39; Affairs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>92	Public Administration</controllingFieldValue>
+            <valueName>923140 Administration of Veterans&#39; Affairs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>92	Public Administration</controllingFieldValue>
+            <valueName>924 Administration of Environmental Quality Programs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>92	Public Administration</controllingFieldValue>
+            <valueName>9241 Administration of Environmental Quality Programs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>92	Public Administration</controllingFieldValue>
+            <valueName>92411 Administration of Air and Water Resource and Solid Waste Management Programs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>92	Public Administration</controllingFieldValue>
+            <valueName>924110 Administration of Air and Water Resource and Solid Waste Management Programs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>92	Public Administration</controllingFieldValue>
+            <valueName>92412 Administration of Conservation Programs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>92	Public Administration</controllingFieldValue>
+            <valueName>924120 Administration of Conservation Programs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>92	Public Administration</controllingFieldValue>
+            <valueName>925 Administration of Housing Programs, Urban Planning, and Community Development</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>92	Public Administration</controllingFieldValue>
+            <valueName>9251 Administration of Housing Programs, Urban Planning, and Community Development</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>92	Public Administration</controllingFieldValue>
+            <valueName>92511 Administration of Housing Programs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>92	Public Administration</controllingFieldValue>
+            <valueName>925110 Administration of Housing Programs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>92	Public Administration</controllingFieldValue>
+            <valueName>92512 Administration of Urban Planning and Community and Rural Development</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>92	Public Administration</controllingFieldValue>
+            <valueName>925120 Administration of Urban Planning and Community and Rural Development</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>92	Public Administration</controllingFieldValue>
+            <valueName>926 Administration of Economic Programs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>92	Public Administration</controllingFieldValue>
+            <valueName>9261 Administration of Economic Programs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>92	Public Administration</controllingFieldValue>
+            <valueName>92611 Administration of General Economic Programs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>92	Public Administration</controllingFieldValue>
+            <valueName>926110 Administration of General Economic Programs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>92	Public Administration</controllingFieldValue>
+            <valueName>92612 Regulation and Administration of Transportation Programs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>92	Public Administration</controllingFieldValue>
+            <valueName>926120 Regulation and Administration of Transportation Programs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>92	Public Administration</controllingFieldValue>
+            <valueName>92613 Regulation and Administration of Communications, Electric, Gas, and Other Utilities</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>92	Public Administration</controllingFieldValue>
+            <valueName>926130 Regulation and Administration of Communications, Electric, Gas, and Other Utilities</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>92	Public Administration</controllingFieldValue>
+            <valueName>92614 Regulation of Agricultural Marketing and Commodities</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>92	Public Administration</controllingFieldValue>
+            <valueName>926140 Regulation of Agricultural Marketing and Commodities</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>92	Public Administration</controllingFieldValue>
+            <valueName>92615 Regulation, Licensing, and Inspection of Miscellaneous Commercial Sectors</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>92	Public Administration</controllingFieldValue>
+            <valueName>926150 Regulation, Licensing, and Inspection of Miscellaneous Commercial Sectors</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>92	Public Administration</controllingFieldValue>
+            <valueName>927 Space Research and Technology</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>92	Public Administration</controllingFieldValue>
+            <valueName>9271 Space Research and Technology</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>92	Public Administration</controllingFieldValue>
+            <valueName>92711 Space Research and Technology</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>92	Public Administration</controllingFieldValue>
+            <valueName>927110 Space Research and Technology</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>92	Public Administration</controllingFieldValue>
+            <valueName>928 National Security and International Affairs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>92	Public Administration</controllingFieldValue>
+            <valueName>9281 National Security and International Affairs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>92	Public Administration</controllingFieldValue>
+            <valueName>92811 National Security</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>92	Public Administration</controllingFieldValue>
+            <valueName>928110 National Security</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>92	Public Administration</controllingFieldValue>
+            <valueName>92812 International Affairs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>92	Public Administration</controllingFieldValue>
+            <valueName>928120 International Affairs</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

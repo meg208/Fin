@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FNS_RelatedRoles</fullName>
+    <active>true</active>
+    <label>Related Roles</label>
+    <picklistValues>
+        <picklist>FNS_RoleOfEntity__c</picklist>
+        <values>
+            <fullName>Guarantor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Borrower</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Grantor</fullName>
+            <default>false</default>
+        </values>        
+    </picklistValues>
+    <picklistValues>
+        <picklist>FNS_Type__c</picklist>
+        <values>
+            <fullName>Company</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Individual</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

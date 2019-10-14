@@ -1,0 +1,13 @@
+.THIS .slds-modal__footer {
+    text-align: center;
+}
+.THIS .ahm_width_backdrop{
+	margin-left: -50rem;
+    width: 200rem;
+    height: 100rem;
+    margin-top: -20rem;
+}
+.THIS.FNS_ERROR{ 
+    color: red;
+    margin-left: 12px;
+}

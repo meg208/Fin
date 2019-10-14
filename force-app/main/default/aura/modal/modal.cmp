@@ -1,0 +1,93 @@
+<aura:component >
+    <!-- ATTRIBUTES -->
+    <!-- GLOBAL ATTRIBUTES -->   
+    <aura:attribute name="left" type="Aura.Component[]" access="global" />
+    <aura:attribute name="right" type="Aura.Component[]" access="global" />
+    <aura:attribute name="center" type="Aura.Component[]" access="global" />
+    <aura:attribute name="closeCrossIcon" type="Aura.Component[]" access="global" />
+    <!-- GLOBAL ATTRIBUTES END -->
+    
+    <!-- PUBLIC ATTRIBUTES -->
+    <aura:attribute name="title" type="String" />
+    <!-- PUBLIC ATTRIBUTES END -->
+    <!-- ATTRIBUTES END -->
+    
+    <!-- MARK UP -->
+    <div class="slds-modal slds-fade-in-open slds-modal_medium">
+        
+        <div class="{!$Browser.isTablet ? 'FNS-modal-container' : 'slds-modal__container'}">
+            <div class="{!and(empty(v.title), !$Browser.isTablet) ? 'FNS-slds-modal__header' : 'slds-modal__header'}">
+                
+                {!v.closeCrossIcon}
+                <div class="slds-align_absolute-center">
+                    <h2 class="slds-text-heading_medium slds-truncate">
+                        {!v.title}
+                    </h2>
+                </div>
+                
+                <!-- TO BE USED IN CASE OF IPAD IF NEEDED -->
+                <aura:if isTrue="{!$Browser.isTablet}"> 
+                    <div class="{!'slds-float_left FNS-margin-btn'}">
+                        <aura:iteration items="{!v.left}" var="action">
+                            <span class="{!$Browser.isIPad ? ' ' : 'slds-p-horizontal_x-small'}">
+                                {!action}
+                            </span>
+                        </aura:iteration>
+                    </div>
+                    <div class="{!'slds-float_right FNS-margin-btn'}">
+                        <aura:iteration items="{!v.right}" var="action">
+                            <span class="{!v.isDone ? '' : 'slds-p-horizontal_xxx-small'}">
+                                {!action}
+                            </span>
+                        </aura:iteration>
+                    </div>
+                </aura:if>
+            </div>
+            
+            <!-- MODAL BODY -->
+            <div aura:id="modalContent" id="scrollHeight" 
+                 class="slds-modal__content">
+                <div tabindex="0" aura:id="scrollableDiv" class="FNS_modal-content-container FNS_focusBorderHider">
+                    {!v.body}
+                </div>
+            </div>             
+            <!-- MODAL BODY END-->
+            
+            <!-- MODAL FOOTER -->
+            <div class="{!'slds-modal__footer ' + 
+                        (or(and(empty(v.left) , and(empty(v.right), empty(v.center))), $Browser.isTablet) ? 'slds-hide' : '')}">
+                <aura:if isTrue="{!!$Browser.isTablet}">
+                    
+                    <!-- LEFT ALIGNED BUTTONS -->
+                    <div class="slds-float_left">
+                        <aura:iteration items="{!v.left}" var="action">
+                            <span class="slds-p-horizontal_x-small">{!action}</span>
+                        </aura:iteration>
+                    </div>
+                    <!-- LEFT ALIGNED BUTTONS END -->
+                    
+                    <!-- RIGHT ALIGNED BUTTONS -->
+                    <div class="slds-float_right slds-p-horizontal_xx-small">
+                        <aura:iteration items="{!v.right}" var="action">
+                            <span class="slds-p-horizontal_xx-small">{!action}</span>
+                        </aura:iteration>
+                    </div>
+                    <!-- RIGHT ALIGNED BUTTONS END -->
+
+                    <!-- CENTER ALIGNED BUTTONS -->
+                    <div class="slds-align_absolute-center">
+                        <aura:iteration items="{!v.center}" var="action">
+                            <span class="slds-p-horizontal_x-small">{!action}</span>
+                        </aura:iteration>
+                    </div>
+                    <!-- CENTER ALIGNED BUTTONS END -->
+                </aura:if>
+            </div>
+            <!-- MODAL FOOTER END -->
+        </div>
+    </div>
+    <div class="{!'slds-backdrop slds-backdrop_open ' + ($Browser.isTablet ? 'slds-hide' : 'slds-show')}" 
+         aura:id="backdrop"></div>
+    <!-- MARK UP END-->
+    
+</aura:component>

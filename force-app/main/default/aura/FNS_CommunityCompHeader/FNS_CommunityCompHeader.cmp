@@ -1,0 +1,45 @@
+<aura:component implements="flexipage:availableForAllPageTypes,forceCommunity:themeLayout,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes">
+     
+    <aura:attribute name="isHomeTab" type="Boolean" default="true" />
+    <aura:attribute name="isOpen" type="Boolean" default="false"/>
+    <aura:attribute name="communityDomain" type="String" />
+    <aura:attribute name="record" type="Object" />
+    <force:recordData recordId="{!$SObjectType.CurrentUser.Id}"
+                      layoutType="FULL"
+                      targetFields="{!v.record}" />
+    
+    
+    <!-- <aura:handler name="init" value="{!this}" action="{!c.doInit}"/-->
+    <aura:registerEvent name="cmpCommunityCompHeaderEvent"  type="c:FNS_CommunityCompHeaderEvent"/>
+    <!-- Record Details -->
+    <div class="slds-page-header" role="banner">
+        <lightning:layout multipleRows="true" class="FNS_header_background slds-border_top"> 
+            <lightning:layoutItem size="12" smallDeviceSize="12" mediumDeviceSize="12" largeDeviceSize="3" padding="around-small"> 
+                <img src="{!$Resource.FinastraLogo}"/>
+            </lightning:layoutItem>
+            <lightning:layoutItem size="12" class="slds-grid slds-grid_align-spread slds-m-top_xx-large" smallDeviceSize="12" mediumDeviceSize="12" largeDeviceSize="9" > 
+               <div class="slds-col FNS_tabcontent-hide">
+                    <lightning:tabset selectedTabId="one"> 
+                        <lightning:tab label="Home" id="one" onactive="{!c.fireComponentEvent}" >
+                        </lightning:tab> 
+                        <lightning:tab label="Contact us" id="two" onactive="{!c.setTabContent}">
+                        </lightning:tab> 
+                    </lightning:tabset>
+               </div>
+               <div class="slds-col slds-p-right_small slds-list_horizontal">
+                   <lightning:icon iconName="utility:notification" class="slds-m-right_small slds-p-top_xx-small fns-notification-color" size="small" title="No New Notifications"/>
+                   <div class="slds-is-relative" onclick="{!c.openPicker}" title="{!v.record.Name}">
+                       <lightning:icon iconName="action:user" size="x-small"/>
+                       <aura:if isTrue="{!v.isOpen}">
+                       <div class="slds-dropdown slds-dropdown_right slds-nubbin_top-right FNS_Dropdown">
+                           <div class="slds-card__header">
+                                <a href="{!v.communityDomain +'/secur/logout.jsp'}">Logout</a>
+                           </div>
+                       </div>
+                   </aura:if>
+                   </div>  
+               </div>
+            </lightning:layoutItem>
+        </lightning:layout>  
+    </div>
+</aura:component>

@@ -1,0 +1,4 @@
+<apex:page controller="FNS_AuthorizeFFDCConroller" action="{!getParam}">
+    
+  
+</apex:page>

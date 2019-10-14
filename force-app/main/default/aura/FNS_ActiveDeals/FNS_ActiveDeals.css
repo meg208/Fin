@@ -1,0 +1,377 @@
+.THIS .FNS_textColor{
+    color: #2582E0;
+}
+.THIS .FNS_disable-link
+{
+    color:#A2A2A2;
+}
+.THIS .slds-card__header {
+    padding-top: .9rem!important;
+    
+}
+.THIS .FNS_margin-filter{
+    /*margin-top: .4rem;*/
+    color: #2b2826;
+}
+.THIS .FNS_errorText{
+    color: red;
+}
+
+.THIS .FNS_cardLayout{
+    width: 1334px;
+    height: 519px;
+}
+
+.THIS .FNS_textSize{
+    font-size:1rem;
+    color: #2C2C2C;
+}
+.THIS .FNS_filterModal .uiInput--input.input{
+    min-height: calc(1.875rem + (1px * 2));
+}
+
+.THIS .FNS_texttrnasform-set{
+     text-transform:uppercase;
+}
+
+.THIS .FNS_backgroundRed{
+    background-color: #D3001A;
+    border-radius: 0.2rem;
+    padding: .2rem .3rem;
+    height: 18px;
+    display: inline;
+    line-height: 0.7rem;
+    font-style: Salesforce Sans;
+    font-size: 9px;
+    color: #FFFFFF;
+}
+
+.THIS .FNS_backgroundOrange{
+    background-color: #FBB800;
+    border-radius: 0.2rem;
+    padding: .2rem .3rem;
+    height: 18px;
+    display: inline;
+    line-height: 0.7rem;
+    font-style: Salesforce Sans;
+    font-size: 9px;
+    color: #FFFFFF;
+}
+
+.THIS .FNS_backgroundGreen{
+    background-color: #249D00;
+    border-radius: 0.2rem;
+    padding: .2rem .3rem;
+    height: 18px;
+    display: inline;
+    line-height: 0.7rem;
+    font-style: Salesforce Sans;
+    font-size: 9px;
+    color: #FFFFFF;
+}
+
+.THIS .FNS_box{
+    border-radius: .25rem;
+    border: 1px solid rgb(221, 219, 218);    
+    
+}
+.THIS .FNS_tableText{
+    white-space: normal;    
+}
+
+.THIS .FNS_cardTextOpportunityName{
+    font-style: Salesforce Sans Regular;
+    color: #016ECC;
+    font-size: 15px;
+}
+
+.THIS .FNS_cardTextAccountName{
+    font-style: Salesforce Sans Regular;
+    color: #016ECC;
+    font-size: 14px;
+}
+
+.THIS .FNS_cardTextAmount{
+    font-style: Salesforce Sans Regular;
+    color: #4A4A4A;
+    font-size: 17px;
+}
+
+.THIS .FNS_cardTextStageAndDate{
+    font-style: Salesforce Sans Regular;
+    color: #4A4A4A;
+    font-size: 12px;
+}
+
+.THIS .FNS_cardTextViewAll{
+    font-style: Salesforce Sans Regular;
+    color: #006ED6;
+    font-size: 14px;
+}
+
+.THIS .FNS_tile{
+    min-height: 165px;
+    max-height: 190px;
+    margin-right: 0.75rem;
+    /*width: 318px;*/
+    box-shadow: 1px 2px 3px 0 rgba(0, 0, 0, 0.1);
+}
+.THIS .slds-popover
+{
+    /* font-family:Salesforce Regular; */
+}
+.THIS .FNS_fillIcon{
+    background-color: #009CBE;
+ }
+
+.THIS .FNS_filterIconDisabled svg{
+    fill: #DCDCDC;
+}
+
+.THIS .FNS_filterIconEnabled svg{
+    fill: #191970;
+}
+
+.THIS .FNS_filterModal{
+    top: 117%;
+    right: -3%;
+    min-width: 37rem;
+    min-height: 10rem;
+    background-color: rgb(245,245,245);
+    padding-bottom:0;
+    z-index: 1;
+}
+
+.THIS .FNS_filterBody{
+    background-color: rgb(245,245,245); 
+    font-size: .87rem;
+}
+
+.THIS .FNS_filterFooter{
+    background-color: grey;
+}
+
+.THIS .FNS_savedFilter{
+    margin-left: 25%;
+}
+
+.THIS .FNS_Label{
+    font-style: Salesforce Sans Regular;
+}
+
+.THIS .FNS_popover_bodyRed{
+    visibility: hidden;
+    height: 0;
+    opacity: 0;
+    position: absolute;
+}
+
+.THIS .FNS_popover_bodyOrange{
+    visibility: hidden;
+    height: 0;
+    opacity: 0;
+    position: absolute;
+}
+
+.THIS .FNS_popover_bodyGreen{
+    visibility: hidden;
+    height: 0;
+    opacity: 0;
+    position: absolute;
+}
+
+.THIS .FNS_popover:hover .FNS_popover_bodyRed {
+    background-color: #D3001A;
+    left: 0;
+    max-width: 5rem;
+    visibility: visible;
+    position: absolute;
+    opacity: 1;
+    z-index: 1;
+    top: 2rem;
+    border:transparent;
+    min-width: max-content;
+}
+
+.THIS .FNS_Red{
+    background-color: #D3001A;
+}
+
+.THIS .FNS_popover_bodyRedClicked {
+    background-color: #D3001A;
+    left: 0;
+    max-width: 5rem;
+    display: inline;
+    visibility: visible;
+    position: absolute;
+    opacity: 1;
+    z-index: 1;
+    top: 2rem;
+    border-radius: 0.25rem;
+    border:transparent;
+    min-width: max-content;
+}
+
+.THIS .FNS_popover:hover .FNS_popover_bodyOrange {
+    background-color: #FBB800;
+    left: 0;
+    max-width: 5rem;
+    visibility: visible;
+    position: absolute;
+    opacity: 1;
+    z-index: 1;
+    top: 2rem;
+    border:transparent;
+    min-width: max-content;
+}
+
+.THIS .FNS_Orange{
+    background-color: #FBB800;
+}
+
+.THIS .FNS_popover_bodyOrangeClicked {
+    background-color: #FBB800;
+    left: 0;
+    max-width: 5rem;
+    display: inline;
+    visibility: visible;
+    position: absolute;
+    opacity: 1;
+    z-index: 1;
+    top: 2rem;
+    border-radius: 0.25rem;
+    border:transparent;
+    min-width: max-content;
+}
+
+.THIS .FNS_popoverHide{
+    outline: none;
+    display: inline;
+}
+
+
+.THIS .FNS_popover:hover .FNS_popover_bodyGreen {
+    background-color: #249D00;
+    left: 0;
+    max-width: 5rem;
+    visibility: visible;
+    position: absolute;
+    opacity: 1;
+    z-index: 1;
+    top: 2rem;
+    border:transparent;
+    min-width: max-content;
+}
+
+.THIS .FNS_Green{
+    background-color: #249D00;
+}
+
+.THIS .FNS_popover_bodyGreenClicked {
+    background-color: #249D00;
+    left: 0;
+    max-width: 5rem;
+    display: inline;
+    visibility: visible;
+    position: absolute;
+    opacity: 1;
+    z-index: 1;
+    top: 2rem;
+    border-radius: 0.25rem;
+    border:transparent;
+    min-width: max-content;
+}
+
+.THIS .FNS_trackingItemsText{
+    color:#016ECC;
+    text-decoration: underline;
+   /* font-family:Salesforce Semi Bold; */
+    font-weight: Bold;
+    font-size:.625rem;
+}
+
+.THIS .FNS_tileSize{
+    width: 25%;
+}
+
+.THIS .slds-box{
+    padding:.7rem !important;
+    border-radius: .25rem !important;
+    border: 1px solid rgb(221, 219, 218) !important;
+}
+
+.THIS .FNS_filterBody .slds-card__header{
+    /*padding-top: .75rem!important;*/
+    padding-left: 1rem!important;   
+}
+
+.THIS .FNS_filterBody .slds-card__footer{
+    position: fixed !important;
+    width: 100% !important;
+    padding: .75rem 1rem !important;
+    margin-top: .75rem !important;
+    text-align: center !important;
+    font-size: .8125rem !important;
+    border-top: 1px solid rgb(221, 219, 218) !important;
+    background-color: #E0E0E0;
+}
+
+.THIS .FNS_spinnerBackground{
+    background-color: #E0E0E0;
+}
+
+
+@media screen and (max-width: 1024px) {
+    .THIS .FNS_tileSize{
+        width: 50%;
+    }
+}
+
+.THIS .FNS_popoverHeight{    
+    overflow: auto;
+}
+
+.THIS .FNS_popoverTextOpportunityName{  
+    color: black;
+    line-height: 2rem;
+}
+
+.THIS .FNS_popoverText{  
+    color: black;
+}
+
+.THIS .Fns_background{
+    background:#E0E0E0;
+}
+
+.THIS .FNS_spinnerBackground .slds-spinner_container{
+    background:transparent !important;
+}
+.THIS .slds-card__body {
+     margin-bottom: 0 !important;
+}
+.THIS .FNS_DashedFont {
+    font-size:0.875rem !important;
+}
+.THIS .FNS_ERROR{
+    color: red;
+    margin-left: 16px;
+    margin-top: 14px;
+}
+.THIS .slds-form-element_horizontal .slds-form-element__label{
+    float: none !important;
+    max-width: none !important;
+    margin-bottom: .125rem;
+}
+.THIS .slds-form-element__control{
+    padding-left: 0 !important;
+}
+.THIS .slds-form-element_horizontal{
+    max-width: none !important;
+    padding: 0 !important;
+    margin-bottom: 0 !important;
+}
+.THIS .slds-form .slds-form-element_stacked{
+    margin-bottom: 0 !important; 
+    padding: 0 !important;
+}

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BusinessProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FNS_ApplicationProcess</fullName>
+    <isActive>true</isActive>
+    <values>
+        <fullName>Booked</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Booking</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Canceled</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Complete</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Decisioned</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Doc Preparation</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Initial Input</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Proposal</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Submitted to Underwriting</fullName>
+        <default>false</default>
+    </values>
+</BusinessProcess>

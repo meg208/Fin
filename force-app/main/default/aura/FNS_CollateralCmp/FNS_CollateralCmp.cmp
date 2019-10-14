@@ -1,0 +1,158 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,force:hasRecordId" controller="FNS_CollateralCmpController">
+    <aura:attribute name="typeName" type="String" />
+    <aura:attribute name="collateralId" type="String" />
+    <aura:attribute name="wrapper" type="object"/>
+    <aura:attribute name="collateralList" type="object"/>
+    <aura:attribute name="addressWrapper" type="object"/>
+    <aura:attribute name="collateraTypeWrapper" type="object"/>
+    <aura:attribute name="isOpen" type="boolean" default="false"/>
+    <aura:attribute name="showModal" type="boolean" default="false"/>
+    <aura:attribute name="uploaded" type="String" default="false" />
+    <aura:attribute name="accept" type="List" default="['.txt','.pdf']"/>
+    <aura:attribute name="multiple" type="Boolean" default="false"/>
+    <aura:attribute name="collateralCount" type="Integer" default="0"/>
+    <aura:attribute name="popupHeader" type="String" default=""/>
+    <aura:attribute name="documentId" type="String" />
+    <aura:attribute name="fileName" type="String" />
+    <aura:attribute name="columnNames" type="Object[]"/>
+    <aura:attribute name="showCollMoreFields" type="boolean" />
+    <aura:attribute name="isScriptLoaded" type="boolean" default="false"/>
+    <aura:attribute name="productsList" type="Object[]" />
+    <aura:attribute name="selectedProductsList" type="string[]" />
+    <aura:attribute name="showCollateralTypeForm" type="Boolean" default="false"/>
+    <aura:attribute name="collateralTypeValues" type="Object" />
+    <aura:attribute name="collateralType" type="String" />
+    <aura:attribute name="spinner" type="Boolean"/>
+    <aura:attribute name="errorMessages" type="Object[]"/>
+    <aura:attribute name="errorLst" type="Object[]"/>
+    <aura:attribute name="willHandleCompActions" type="String[]" default="['SET_ERROR','ADD_ERROR','REMOVE_ERROR', 'DEL_REC']" />
+    
+    <aura:handler name="baseCompEvent" includeFacets="true" event="c:FNS_BaseComponentEvent" action="{!c.handleCompEvent}"/>
+    
+	<aura:handler event="force:refreshView" action="{!c.doInit}" />
+    
+    <ltng:require scripts="{!$Resource.FinastraLightningResources + '/js/lodash.js'}" afterScriptsLoaded="{!c.doInit}"/>
+
+    <lightning:card title="{! 'Collaterals (' + v.collateralCount + ')'}" iconName="custom:custom13"  class="slds-text-heading_small slds-card_boundary FNS_iconcolor ">
+        <aura:set attribute="actions">
+            
+            <lightning:button class="slds-button slds-button_neutral fns-button-text" variant="Neutral" label="{!$Label.c.FNS_NEW}" title="{!$Label.c.FNS_NEW}" onclick="{!c.openModal}"/>
+            
+        </aura:set>
+        
+        <aura:if isTrue="{!v.isScriptLoaded}">
+            <c:FNS_CollateralDataTable rowData="{!v.collateralList}"
+                        columnNames="{!v.columnNames}"
+                        />
+        </aura:if>
+        
+        <aura:if isTrue='{!v.showModal}'>
+            <c:modal aura:id="sectionHeader" title="{!v.popupHeader}">
+                <c:FNS_PageMessages messages="{!v.errorMessages}"/>
+                
+                <aura:if isTrue="{!v.spinner}">
+                    <lightning:spinner alternativeText="Loading" class="FNS_spinner" variant="brand" size="medium"/>
+                </aura:if>
+                
+                <aura:if isTrue= "{!v.uploaded == 'false'}">
+                    <p class="slds-p-vertical_small">{!$Label.c.FNS_DOCUMENT_UPLOAD_DOCS}</p>
+                    <div class="slds-box slds-align_absolute-center fns-file-upload-section">
+                        <lightning:fileUpload multiple="{!v.multiple}" 
+                                                accept="{!v.accept}" recordId="{!v.recordId}" 
+                                                onuploadfinished="{!c.handleUploadFinished}" /> 
+                    </div>
+                </aura:if>
+                    
+                <aura:if isTrue= "{!v.uploaded == 'true'}">
+                    <div class="slds-box">
+                        Document <b>{!v.fileName} </b> <span class= "slds-p-left_xxx-small">{!$Label.c.FNS_DOCUMENT_UPLOADED} </span>
+                        <br></br>
+                    </div>
+                </aura:if>
+               
+                <div>
+                    <lightning:recordEditForm aura:id="recordForm" 
+                                              objectApiName="FNS_Collateral__c">
+                    <div class="slds-theme_default slds-text-body_regular">
+                        <lightning:layout horizontalAlign="left" verticalAlign="top" multipleRows="true">
+                            <lightning:layoutItem flexibility="auto" size="12" smallDeviceSize="4" mediumDeviceSize="4" largeDeviceSize="4">
+                                <lightning:inputField aura:id="FNS_CollateralCategory__c" fieldName="FNS_CollateralCategory__c" variant="label-stacked" class="slds-p-top_small slds-m-top_medium" onchange="{!c.showFieldSet}"/>
+                            </lightning:layoutItem>
+                            
+                            <lightning:layoutItem flexibility="auto" size="12" smallDeviceSize="4" mediumDeviceSize="4" largeDeviceSize="4">
+                                <lightning:inputField aura:id="FNS_CollateralType__c" fieldName="FNS_CollateralType__c" variant="label-stacked" class="slds-p-top_small slds-m-top_medium" />
+                            </lightning:layoutItem>
+                            
+                            <lightning:layoutItem flexibility="auto" size="12" smallDeviceSize="4" mediumDeviceSize="4" largeDeviceSize="4">
+                                <lightning:inputField aura:id="FNS_CollateralOwner__c" fieldName="FNS_CollateralOwner__c" variant="label-stacked" class="slds-p-top_small slds-m-top_medium" />
+                            </lightning:layoutItem>
+                            
+                            <lightning:layoutItem flexibility="auto" size="12" smallDeviceSize="4" mediumDeviceSize="4" largeDeviceSize="4">
+                                <div class="fns-required slds-col slds-size_1-of-1">*</div>
+                                    <c:FNS_MultiSelect aura:id="FNS_ProductsList__c" options="{!v.productsList}" label=" &nbsp; Related Products (SHIFT+CLICK to select multiple)" selectChange="{!c.handleProductSelectedChangeEvent}" selectedItems="{!v.selectedProductsList}" width="99%" />
+                            </lightning:layoutItem>
+                            
+                            <lightning:layoutItem flexibility="auto" size="12" smallDeviceSize="12" mediumDeviceSize="12" largeDeviceSize="12">
+                                <lightning:inputField aura:id="FNS_Description__c" fieldName="FNS_Description__c" variant="label-stacked" class="slds-p-top_small slds-m-top_medium" />
+                            </lightning:layoutItem>
+                        </lightning:layout>
+                    </div>
+                    </lightning:recordEditForm>
+                
+                    <lightning:button aura:id="btnShowCollMoreFields" variant="base" iconName="utility:add" iconPosition="left" label="SHOW MORE COLLATERAL FIELDS" onclick="{! c.showCollMoreFields }"/>
+                    <div class="{!v.showCollMoreFields ? '' : 'slds-hide'}">
+                        <!-- Base Collateral more fields-->
+                        <c:FNS_FieldSetForm aura:id="collateralBaseForm" 
+                                            objectLabel="{#v.wrapper.objectLabel}" 
+                                            objectName="{#v.wrapper.objectName}" 
+                                            fields="{#v.wrapper.fields}"
+                                            requiredFields="{#v.wrapper.requiredFields}"
+                                            moreFields="" 
+                                            currentRecordId=""
+                                            requireFieldValidation="true"
+                                            hasMoreFields="false" />
+                        <!-- Base Collateral address fields-->
+                        <c:FNS_FieldSetForm aura:id="collateralAddressForm" 
+                                            objectLabel="{#v.addressWrapper.objectLabel}" 
+                                            objectName="{#v.addressWrapper.objectName}" 
+                                            fields="{#v.addressWrapper.fields}"
+                                            requiredFields="{#v.addressWrapper.requiredFields}"
+                                            moreFields="" 
+                                            currentRecordId=""
+                                            requireFieldValidation="true"
+                                            hasMoreFields="false" />
+                        
+                        <!-- Dynamic form based on Collateral type selection-->
+                        <div class="{!v.showCollateralTypeForm ? '' : 'slds-hide'}">
+                            <c:FNS_FieldSetForm aura:id="collateralForm" 
+                                                objectLabel="{!v.collateraTypeWrapper.objectLabel}" 
+                                                objectName="{!v.collateraTypeWrapper.objectName}" 
+                                                fields="{!v.collateraTypeWrapper.fields}"
+                                                requiredFields="{!v.collateraTypeWrapper.requiredFields}"
+                                                moreFields="" 
+                                                currentRecordId=""
+                                                requireFieldValidation="true"
+                                                hasMoreFields="false" />
+                        </div>
+                    </div> 
+                </div>
+                
+                <aura:set attribute="left">
+                    <lightning:button variant="neutral" label="Close" onclick="{!c.closeModal}"/>
+                </aura:set>
+                
+                <aura:set attribute="right">
+                    <lightning:button variant="brand" label="Save" onclick="{!c.saveRecord}"/>
+                </aura:set>
+                
+                <aura:set attribute="closeCrossIcon">
+                    <lightning:buttonIcon alternativeText="Close"
+                                          class="{!'slds-button slds-modal__close slds-button--icon-inverse' + ($Browser.isTablet ? 
+                                                 ' slds-hide' : ' slds-show')}"
+                                          variant="bare" size="large" iconName="utility:close"
+                                          onclick="{!c.closeModal}"/>
+                </aura:set>
+            </c:modal>
+       </aura:if>
+    </lightning:card>
+</aura:component>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <description>This custom setting used to map collateral type with the field-set name.</description>
+    <enableFeeds>false</enableFeeds>
+    <label>Collateral Type FieldSet Config</label>
+    <visibility>Public</visibility>
+</CustomObject>

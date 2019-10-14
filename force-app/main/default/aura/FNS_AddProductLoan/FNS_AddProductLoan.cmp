@@ -1,0 +1,56 @@
+<aura:component controller="FNS_FieldSetFormController" implements="flexipage:availableForRecordHome,force:hasRecordId,force:hasSObjectName,flexipage:availableForAllPageTypes">
+    <!-- PUBLIC ATTRIBUTES START-->
+    <aura:attribute name="productLoanId" type="String"/>
+    <aura:attribute name="fields" type="Object[]" access="private" />
+    <aura:attribute name="fieldNames" type="object"/>
+    <aura:attribute name="objFields" type="object[]"/>
+    <aura:attribute name="objName" type="String"/>
+    <aura:attribute name="productLoanRow" type="Integer"/>
+    <aura:attribute name="errorMessage" type="String" default=""/>
+    <!-- PUBLIC ATTRIBUTES END-->
+    
+    <!-- HANDLERS START-->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:handler event="force:refreshView" action="{!c.doInit}" />
+    <!-- HANDLERS END-->
+    <!-- Register Event START-->
+    <aura:registerEvent name="showStatus" type="c:FNS_ShowStatus"/>
+    <aura:registerEvent name="deletedProductLoan" type="c:FNS_DeletedProductLoan"/>
+    <aura:registerEvent name="handleError" type="c:FNS_HandleError"/>
+    <!-- Register Event END-->
+    <!-- Aura Method START-->
+    <aura:method name="saveProductLoan" action="{!c.saveProductLoan}" access="PUBLIC">
+        <aura:attribute name="finAccount" type="String"/>
+        <aura:attribute name="OpportunityId" type="String"/>
+    </aura:method>
+    <!-- Aura Method END-->
+    
+    <!-- MARK UP START-->
+    <lightning:recordEditForm aura:id="productLoanEditForm"
+                              onsuccess="{!c.handleSuccess}"
+                              recordId="{!v.productLoanId}" 
+                              onerror="{!c.onError}"
+                              objectApiName="{!v.objName}"
+                              >
+        <lightning:messages />
+        
+        <aura:if isTrue="{!!empty(v.errorMessage)}">
+            <div class="slds-text-color_destructive slds-align_absolute-center">
+                {!v.errorMessage}
+            </div>
+        </aura:if>
+        &nbsp;
+        <lightning:layout multipleRows="true" class="slds-page-header slds-p-around_medium slds-grid_align-spread FNS_datepicker">
+            <div class=" slds-size_1-of-1" style = "text-align:right;">
+                <a onclick="{!c.removeCmp}">
+                    <lightning:icon variant="error" iconName="utility:delete" class="slds-icon slds-icon_small" size="x-small" alternativeText="icon"/>
+                </a>
+            </div>
+            {!v.body}
+            <lightning:inputField aura:id="finAccountLkp" fieldName="{!v.fieldNames.loanFinAccountLkp}" class="slds-hide slds-size_5-of-12"/>
+            <lightning:inputField aura:id="loanOpportunityLkp" fieldName="{!v.fieldNames.loanOpportunityLkp}" class="slds-hide slds-size_5-of-12"/>
+        </lightning:layout>
+        
+    </lightning:recordEditForm>    
+    <!-- MARK UP END-->
+</aura:component>
