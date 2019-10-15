@@ -10,12 +10,19 @@
     "MultiCurrency",
     "ContactsToMultipleAccounts"
   ],
-  "orgPreferences": {
-    "enabled": [
-      "S1DesktopEnabled",
-      "ChatterEnabled",
-      "NetworksEnabled",
-      "IsOpportunityTeamEnabled"      
-    ]
+  
+    "settings": {
+      "lightningExperienceSettings": {
+          "enableS1DesktopEnabled": true
+      },
+      "chatterSettings": {
+          "enableChatter": true
+      },
+      "communitiesSettings": {
+          "enableNetworksEnabled": true
+      },
+      "opportunitySettings": {
+          "enableOpportunityTeam": true
+      }
   }
 }
